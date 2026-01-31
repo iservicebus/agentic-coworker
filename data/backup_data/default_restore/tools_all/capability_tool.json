@@ -1,0 +1,472 @@
+{
+  "default": [
+    {
+      "capability_name": "content_creation_publishing",
+      "tenant_name": "default",
+      "tool_name": "generate_greeting",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "identity_access_management",
+      "tenant_name": "default",
+      "tool_name": "get_auth_provider_url",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "tenant_name": "default",
+      "tool_name": "compose_email_message",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "tenant_name": "default",
+      "tool_name": "list_calendar_events",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "tenant_name": "default",
+      "tool_name": "send_email_by_gmail_w_upload",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "profiles_identity_graph",
+      "tenant_name": "default",
+      "tool_name": "get_gmail_user_profile",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "tenant_name": "default",
+      "tool_name": "send_email_by_gmail",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "tenant_name": "default",
+      "tool_name": "list_gmail_messages",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "tenant_name": "default",
+      "tool_name": "get_gmail_message_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "tenant_name": "default",
+      "tool_name": "delete_email_message_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "tenant_name": "default",
+      "tool_name": "list_google_calendars",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "tenant_name": "default",
+      "tool_name": "get_google_calendar_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "tenant_name": "default",
+      "tool_name": "subscribe_google_calendar",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "tenant_name": "default",
+      "tool_name": "create_google_calendar_event",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "content_creation_publishing",
+      "tenant_name": "default",
+      "tool_name": "list_youtube_playlists",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "tenant_name": "default",
+      "tool_name": "delete_google_calendar_event",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "feeds_recommendations",
+      "tenant_name": "default",
+      "tool_name": "list_youtube_videos",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "tenant_name": "default",
+      "tool_name": "get_google_calendar_event",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "tenant_name": "default",
+      "tool_name": "get_google_drive_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "tenant_name": "default",
+      "tool_name": "list_google_drive_files",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "tenant_name": "default",
+      "tool_name": "delete_google_drive_file_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "feeds_recommendations",
+      "tenant_name": "default",
+      "tool_name": "search_youtube_content",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "tenant_name": "default",
+      "tool_name": "get_google_drive_metadata",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "tenant_name": "default",
+      "tool_name": "list_shared_google_drives",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "tenant_name": "default",
+      "tool_name": "create_shared_google_drive",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "tenant_name": "default",
+      "tool_name": "delete_shared_google_drive",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "tenant_name": "default",
+      "tool_name": "retrieve_google_drive_file_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "tenant_name": "default",
+      "tool_name": "download_google_drive_file_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "tenant_name": "default",
+      "tool_name": "upload_google_drive_file",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "tenant_name": "default",
+      "tool_name": "create_google_drive_file_metadata",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "list_github_organizations",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "get_github_organization_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "update_github_organization_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "get_github_user_profile",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "profiles_identity_graph",
+      "tenant_name": "default",
+      "tool_name": "update_github_user_profile",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "get_github_public_user_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "retrieve_github_user_profile_by_username",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "list_github_users",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "retrieve_github_user_context_by_username",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "search_github_code",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "search_github_commits",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "search_github_users",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "search_github_issues",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "search_github_repositories",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "update_github_repository_by_owner",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "delete_github_repository_by_owner",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "artifact_registry",
+      "tenant_name": "default",
+      "tool_name": "list_repository_artifacts_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "list_github_repository_branches",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "get_github_repository_branch_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "secure_dev_compliance",
+      "tenant_name": "default",
+      "tool_name": "list_github_code_scanning_analyses",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "secure_dev_compliance",
+      "tenant_name": "default",
+      "tool_name": "delete_github_code_scanning_analysis",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "get_github_repository_commit_comment",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "rename_github_repository_branch",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "secure_dev_compliance",
+      "tenant_name": "default",
+      "tool_name": "get_code_scanning_analysis_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "list_github_repository_commit_comments",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "get_github_repository_content_by_path",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "upsert_github_repository_file",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "list_github_repository_forks",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "list_github_issues_pull_requests",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "delete_github_repository_file",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "create_github_repository_fork",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "release_management_handoff",
+      "tenant_name": "default",
+      "tool_name": "list_github_repository_releases",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "list_github_repositories_for_authenticated_user",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "tenant_name": "default",
+      "tool_name": "post_servicenow_records_in_now_table",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "tenant_name": "default",
+      "tool_name": "get_servicenow_records_in_table_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "tenant_name": "default",
+      "tool_name": "update_servicenow_record_in_table_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "order_capture_orchestration",
+      "tenant_name": "default",
+      "tool_name": "list_sap_customer_orders",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "tenant_name": "default",
+      "tool_name": "get_servicenow_records_by_tableName",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "enterprise_search_discovery",
+      "tenant_name": "default",
+      "tool_name": "search_arxiv_research_papers",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "content_creation_publishing",
+      "tenant_name": "default",
+      "tool_name": "create_linkedin_post",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default",
+      "tool_name": "list_github_public_repositories_by_user",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "identity_access_management",
+      "tenant_name": "default",
+      "tool_name": "get_linkedin_user_info",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "investor_relations_comms",
+      "tenant_name": "default",
+      "tool_name": "search_sec_filings",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "data_engineering_integration",
+      "tenant_name": "default",
+      "tool_name": "retrieve_equity_bars_intraday",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "data_engineering_integration",
+      "tenant_name": "default",
+      "tool_name": "retrieve_equity_ohlcv_daily",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "data_governance",
+      "tenant_name": "default",
+      "tool_name": "fred_economic_data_search",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "data_engineering_integration",
+      "tenant_name": "default",
+      "tool_name": "list_economic_data_time_series_observations",
+      "tool_tenant": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "tenant_name": "default",
+      "tool_name": "delete_servicenow_record_in_table_by_sys_id",
+      "tool_tenant": "default"
+    }
+  ]
+}

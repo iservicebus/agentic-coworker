@@ -1,0 +1,107 @@
+You are a strict JSON Schema expert.
+
+Below is a JSON schema that failed validation against the official JSON Schema meta-schema, along with the validation error messages.
+
+Your task:
+1. Analyze the errors and explain briefly what was wrong.
+2. Produce a corrected, fully valid JSON Schema that preserves the original intent and semantics.
+3. Ensure the fixed schema passes Draft 2020-12 meta-schema validation.
+4. Return only valid JSON (no extra commentary) in the final output block.
+
+---
+
+❌ Validation Errors:
+
+{{error_messages}}
+
+---
+
+🧩 Invalid JSON Schema:
+{{invalid_json}}
+
+---
+Additional Instructions: Generate the Simplest Possible JSON Schema
+
+Always favor simplicity.
+Generate the most human-readable and minimal JSON Schema that still follows the generic schema rules.
+Avoid advanced features unless they are strictly required by the API documentation.
+
+Prefer these patterns:
+
+Use "properties" with explicit keys — never patternProperties or propertyNames unless arbitrary keys are required.
+
+Use "required" instead of minProperties / maxProperties.
+
+Use "type": ["string","number","boolean"] instead of anyOf / oneOf when listing multiple simple types.
+
+Use "additionalProperties": false for fixed objects, and
+"additionalProperties": { "type": ["string","number","boolean"] } for open maps (e.g., query or headers).
+
+Keep description concise and non-redundant.
+
+Simplify the structure of inputSchema:
+Each of the following — aint_path, aint_query, aint_headers, aint_body — should use direct property definitions:
+
+"aint_path": {
+  "type": "object",
+  "properties": {
+    "userId": {
+      "type": "string",
+      "description": "Use 'me' for the authenticated user."
+    }
+  },
+  "required": ["userId"],
+  "additionalProperties": false
+}
+
+
+Avoid unnecessary complexity:
+
+❌ No patternProperties, propertyNames, dependencies, allOf, anyOf, or oneOf unless absolutely necessary.
+
+❌ No minProperties, maxProperties, or overly restrictive format values unless specified by documentation.
+
+Conflict rule:
+When multiple valid modeling options exist, choose the simpler one.
+
+Example reference structure:
+
+{
+  "type": "object",
+  "properties": {
+    "aint_path": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" }
+      },
+      "required": ["id"],
+      "additionalProperties": false
+    },
+    "aint_query": {
+      "type": "object",
+      "additionalProperties": { "type": ["string","number","boolean"] }
+    }
+  },
+  "required": ["aint_path"],
+  "additionalProperties": false
+}
+
+
+✅ Checklist Before Output
+
+ Uses direct properties (no regex-based definitions)
+
+ Uses required properly (no minProperties/maxProperties)
+
+ No unnecessary combinators (anyOf, allOf, etc.)
+
+ Correct additionalProperties usage
+
+ Security tokens only in staticInput
+
+ Body is omitted or simply defined when unused
+
+ ---
+
+Please output the corrected JSON schema in a single valid JSON block without meta data such as "$schema, $id, $comments etal except for description. I must ensure the output is valid JSON
+

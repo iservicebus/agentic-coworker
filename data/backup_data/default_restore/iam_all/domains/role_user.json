@@ -1,0 +1,44 @@
+{
+  "default": [
+    {
+      "user": "admin",
+      "roles": [
+        "administrator"
+      ]
+    },
+    {
+      "user": "ops",
+      "roles": [
+        "operator",
+        "builder"
+      ]
+    },
+    {
+      "user": "dev",
+      "roles": [
+        "administrator",
+        "builder"
+      ]
+    },
+    {
+      "agent": "agent-ops",
+      "roles": [
+        "go_to_market_sales_and_cs_role"
+      ]
+    },
+    {
+      "agent": "agent-admin",
+      "roles": [
+        "go_to_market_sales_and_cs_role",
+        "workplace_productivity_role"
+      ]
+    },
+    {
+      "agent": "agent-dev",
+      "roles": [
+        "product_and_engineering_role",
+        "workplace_productivity_role"
+      ]
+    }
+  ]
+}

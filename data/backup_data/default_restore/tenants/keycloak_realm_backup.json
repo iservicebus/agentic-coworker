@@ -1,0 +1,12 @@
+{
+  "default": {
+    "realm": {
+      "realm": "default",
+      "enabled": true,
+      "sslRequired": "none",
+      "accessTokenLifespan": 1800,
+      "ssoSessionIdleTimeout": 3600,
+      "ssoSessionMaxLifespan": 28800
+    }
+  }
+}

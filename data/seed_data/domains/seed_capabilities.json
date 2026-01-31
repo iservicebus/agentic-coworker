@@ -1,0 +1,3687 @@
+{
+  "default":[
+  {
+    "name": "go_to_market_sales_and_customer_success",
+    "label": "Go-to-Market, Sales & Customer Success",
+    "capabilities": [
+      {
+        "name": "marketing_automation_campaigns",
+        "label": "Marketing Automation & Campaign Operations",
+        "description": "Plan and run targeted, measurable campaigns across channels to create and nurture demand, orchestrating segmentation, journeys, and attribution with sales-ready handoffs. It operates primarily on Segmentation, journeys, attribution, and multi-channel to create and accelerate qualified demand It coordinates recurring activities such as segment, orchestrate, nurture, score, and attribute to deliver consistent business outcomes",
+        "business_context": [
+          "segmentation",
+          "journeys",
+          "attribution",
+          "multi_channel"
+        ],
+        "business_processes": [
+          "segment",
+          "orchestrate",
+          "nurture",
+          "score",
+          "attribute"
+        ],
+        "outcome": "Create and accelerate qualified demand.",
+        "business_intent": [
+          "Create and accelerate qualified demand",
+          "Help me create and accelerate qualified demand"
+        ]
+      },
+      {
+        "name": "lead_management_routing",
+        "label": "Lead Management & Routing",
+        "description": "Capture, deduplicate, and route leads to the right owners quickly with qualification rules and SLAs to protect speed-to-contact and conversion. It operates primarily on Intake, dedupe, scoring, SLAs, and territories to maximize conversion from inquiry to opportunity It coordinates recurring activities such as capture, qualify, route, notify, and audit to deliver consistent business outcomes",
+        "business_context": [
+          "intake",
+          "dedupe",
+          "scoring",
+          "slas",
+          "territories"
+        ],
+        "business_processes": [
+          "capture",
+          "qualify",
+          "route",
+          "notify",
+          "audit"
+        ],
+        "outcome": "Maximize conversion from inquiry to opportunity.",
+        "business_intent": [
+          "Maximize conversion from inquiry to opportunity",
+          "Help me maximize conversion from inquiry to opportunity"
+        ]
+      },
+      {
+        "name": "crm_data_stewardship",
+        "label": "Customer Relationship Management (CRM) & Data Stewardship",
+        "description": "Maintain a single view of accounts, contacts, and activities to support pipeline, forecasting, and lifecycle engagement with governed data quality. It operates primarily on Golden records, dedupe, and data quality rules to enable trusted customer and pipeline data It coordinates recurring activities such as standardize, merge, validate, publish, and govern to deliver consistent business outcomes",
+        "business_context": [
+          "golden_records",
+          "dedupe",
+          "data_quality_rules"
+        ],
+        "business_processes": [
+          "standardize",
+          "merge",
+          "validate",
+          "publish",
+          "govern"
+        ],
+        "outcome": "Enable trusted customer and pipeline data.",
+        "business_intent": [
+          "Enable trusted customer and pipeline data",
+          "Help me enable trusted customer and pipeline data"
+        ]
+      },
+      {
+        "name": "sales_operations_forecasting",
+        "label": "Sales Operations & Forecasting",
+        "description": "Drive predictable revenue with capacity planning, pipeline hygiene, and forecast calls anchored in stage definitions and conversion analytics. It operates primarily on Stages, conversion, cadence, and coverage to improve forecast accuracy and attainment It coordinates recurring activities such as calibrate, forecast, commit, reconcile, and report to deliver consistent business outcomes",
+        "business_context": [
+          "stages",
+          "conversion",
+          "cadence",
+          "coverage"
+        ],
+        "business_processes": [
+          "calibrate",
+          "forecast",
+          "commit",
+          "reconcile",
+          "report"
+        ],
+        "outcome": "Improve forecast accuracy and attainment.",
+        "business_intent": [
+          "Improve forecast accuracy and attainment",
+          "Help me improve forecast accuracy and attainment"
+        ]
+      },
+      {
+        "name": "cpq_deal_desk",
+        "label": "Configure-Price-Quote (CPQ) & Deal Desk",
+        "description": "Accelerate and control pricing and quotes with guardrails, approvals, and structured discounts tied to value and margin. It operates primarily on Price books, approvals, terms, and bundles to quote fast with control and margin discipline It coordinates recurring activities such as configure, price, quote, approve, and finalize to deliver consistent business outcomes",
+        "business_context": [
+          "price_books",
+          "approvals",
+          "terms",
+          "bundles"
+        ],
+        "business_processes": [
+          "configure",
+          "price",
+          "quote",
+          "approve",
+          "finalize"
+        ],
+        "outcome": "Quote fast with control and margin discipline.",
+        "business_intent": [
+          "Quote fast with control and margin discipline",
+          "Help me quote fast with control and margin discipline"
+        ]
+      },
+      {
+        "name": "order_capture_orchestration",
+        "label": "Order Capture & Orchestration",
+        "description": "Convert quotes to clean orders and orchestrate fulfillment signals to downstream systems with clear statuses and exceptions. It operates primarily on Quote-to-order, statuses, and exceptions to ensure clean order flow to fulfillment It coordinates recurring activities such as validate, convert, allocate, signal, and reconcile to deliver consistent business outcomes",
+        "business_context": [
+          "quote_to_order",
+          "statuses",
+          "exceptions"
+        ],
+        "business_processes": [
+          "validate",
+          "convert",
+          "allocate",
+          "signal",
+          "reconcile"
+        ],
+        "outcome": "Ensure clean order flow to fulfillment.",
+        "business_intent": [
+          "Ensure clean order flow to fulfillment",
+          "Help me ensure clean order flow to fulfillment"
+        ]
+      },
+      {
+        "name": "commercial_billing_cash_coordination",
+        "label": "Commercial Billing & Cash Coordination",
+        "description": "Coordinate invoice readiness, terms, and revenue events with Finance to minimize friction and speed cash. It operates primarily on Terms, milestones, and collections liaison to enable timely, accurate billing and cash It coordinates recurring activities such as prepare, transmit, follow_up, reconcile, and escalate to deliver consistent business outcomes",
+        "business_context": [
+          "terms",
+          "milestones",
+          "collections_liaison"
+        ],
+        "business_processes": [
+          "prepare",
+          "transmit",
+          "follow_up",
+          "reconcile",
+          "escalate"
+        ],
+        "outcome": "Enable timely, accurate billing and cash.",
+        "business_intent": [
+          "Enable timely, accurate billing and cash",
+          "Help me enable timely, accurate billing and cash"
+        ]
+      },
+      {
+        "name": "customer_service_case_management",
+        "label": "Customer Service & Case Management",
+        "description": "Resolve customer issues efficiently through omnichannel intake, triage, and SLA-driven workflows that protect satisfaction and loyalty. It operates primarily on Omnichannel, SLAs, and entitlements to restore customer satisfaction quickly It coordinates recurring activities such as intake, triage, resolve, verify, and close to deliver consistent business outcomes",
+        "business_context": [
+          "omnichannel",
+          "slas",
+          "entitlements"
+        ],
+        "business_processes": [
+          "intake",
+          "triage",
+          "resolve",
+          "verify",
+          "close"
+        ],
+        "outcome": "Restore customer satisfaction quickly.",
+        "business_intent": [
+          "Restore customer satisfaction quickly",
+          "Help me restore customer satisfaction quickly"
+        ]
+      },
+      {
+        "name": "customer_knowledge_self_service",
+        "label": "Customer Knowledge & Self-Service",
+        "description": "Publish and govern customer-facing knowledge to deflect tickets and improve first-contact resolution, integrated with support flows. It operates primarily on KB articles, search, and feedback loops to deflect issues and speed resolution It coordinates recurring activities such as author, tag, publish, measure, and improve to deliver consistent business outcomes",
+        "business_context": [
+          "kb_articles",
+          "search",
+          "feedback_loops"
+        ],
+        "business_processes": [
+          "author",
+          "tag",
+          "publish",
+          "measure",
+          "improve"
+        ],
+        "outcome": "Deflect issues and speed resolution.",
+        "business_intent": [
+          "Deflect issues and speed resolution",
+          "Help me deflect issues and speed resolution"
+        ]
+      },
+      {
+        "name": "customer_success_lifecycle",
+        "label": "Customer Success Lifecycle",
+        "description": "Guide onboarding, adoption, and renewal with playbooks, success plans, and executive business reviews tied to measurable outcomes. It operates primarily on Playbooks, health, and value realization to drive adoption, renewal, and expansion It coordinates recurring activities such as plan, onboard, review, renew, and expand to deliver consistent business outcomes",
+        "business_context": [
+          "playbooks",
+          "health",
+          "value_realization"
+        ],
+        "business_processes": [
+          "plan",
+          "onboard",
+          "review",
+          "renew",
+          "expand"
+        ],
+        "outcome": "Drive adoption, renewal, and expansion.",
+        "business_intent": [
+          "Drive adoption, renewal, and expansion",
+          "Help me drive adoption, renewal, and expansion"
+        ]
+      },
+      {
+        "name": "customer_health_retention_analytics",
+        "label": "Customer Health & Retention Analytics",
+        "description": "Model health and churn risk using product signals, support history, and commercial data to trigger proactive interventions. It operates primarily on Usage, tickets, entitlements, and commercial to reduce churn and increase NRR It coordinates recurring activities such as ingest, score, alert, intervene, and track to deliver consistent business outcomes",
+        "business_context": [
+          "usage",
+          "tickets",
+          "entitlements",
+          "commercial"
+        ],
+        "business_processes": [
+          "ingest",
+          "score",
+          "alert",
+          "intervene",
+          "track"
+        ],
+        "outcome": "Reduce churn and increase NRR.",
+        "business_intent": [
+          "Reduce churn and increase NRR",
+          "Help me reduce churn and increase NRR"
+        ]
+      },
+      {
+        "name": "contract_lifecycle_management",
+        "label": "Contract Lifecycle Management (CLM)",
+        "description": "Control authoring, negotiation, and obligations tracking across standard templates and clause libraries to reduce cycle time and risk. It operates primarily on Templates, clauses, redlines, and e-sign to shorten cycles and enforce obligations It coordinates recurring activities such as draft, negotiate, approve, execute, and monitor to deliver consistent business outcomes",
+        "business_context": [
+          "templates",
+          "clauses",
+          "redlines",
+          "e_sign"
+        ],
+        "business_processes": [
+          "draft",
+          "negotiate",
+          "approve",
+          "execute",
+          "monitor"
+        ],
+        "outcome": "Shorten cycles and enforce obligations.",
+        "business_intent": [
+          "Shorten cycles and enforce obligations",
+          "Help me shorten cycles and enforce obligations"
+        ]
+      },
+      {
+        "name": "partner_channel_management",
+        "label": "Partner & Channel Management",
+        "description": "Recruit, enable, and performance-manage partners with deal registration, MDF, and co-selling motions. It operates primarily on Recruitment, enablement, and incentives to scale revenue through high-quality partners It coordinates recurring activities such as recruit, onboard, register, enable, and measure to deliver consistent business outcomes",
+        "business_context": [
+          "recruitment",
+          "enablement",
+          "incentives"
+        ],
+        "business_processes": [
+          "recruit",
+          "onboard",
+          "register",
+          "enable",
+          "measure"
+        ],
+        "outcome": "Scale revenue through high-quality partners.",
+        "business_intent": [
+          "Scale revenue through high-quality partners",
+          "Help me scale revenue through high-quality partners"
+        ]
+      },
+      {
+        "name": "mdf_incentives_programs",
+        "label": "MDF & Partner Incentives Programs",
+        "description": "Fund, approve, and settle market-development funds and incentives with evidence and performance tracking. It operates primarily on Claims, proof of performance, and settlements to drive partner growth with accountable spend It coordinates recurring activities such as budget, approve, claim, settle, and report to deliver consistent business outcomes",
+        "business_context": [
+          "claims",
+          "proof_of_performance",
+          "settlements"
+        ],
+        "business_processes": [
+          "budget",
+          "approve",
+          "claim",
+          "settle",
+          "report"
+        ],
+        "outcome": "Drive partner growth with accountable spend.",
+        "business_intent": [
+          "Drive partner growth with accountable spend",
+          "Help me drive partner growth with accountable spend"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "product_design_and_engineering",
+    "label": "Product Design & Engineering",
+    "capabilities": [
+      {
+        "name": "portfolio_roadmap_governance",
+        "label": "Portfolio & Roadmap Governance",
+        "description": "Prioritize and fund the right bets through evidence-based intake, scoring, and roadmap cadences linked to outcomes. It operates primarily on Intake, scoring, OKRs, and guardrails to maximize product ROI and alignment It coordinates recurring activities such as intake, prioritize, approve, sequence, and review to deliver consistent business outcomes",
+        "business_context": [
+          "intake",
+          "scoring",
+          "okrs",
+          "guardrails"
+        ],
+        "business_processes": [
+          "intake",
+          "prioritize",
+          "approve",
+          "sequence",
+          "review"
+        ],
+        "outcome": "Maximize product ROI and alignment.",
+        "business_intent": [
+          "Maximize product ROI and alignment",
+          "Help me maximize product ROI and alignment"
+        ]
+      },
+      {
+        "name": "requirements_backlog",
+        "label": "Requirements & Backlog Management",
+        "description": "Translate strategy into actionable work with user stories, acceptance criteria, and traceability across discovery and delivery. It operates primarily on Stories, epics, acceptance, and traceability to create clear, testable requirements It coordinates recurring activities such as define, refine, estimate, sequence, and accept to deliver consistent business outcomes",
+        "business_context": [
+          "stories",
+          "epics",
+          "acceptance",
+          "traceability"
+        ],
+        "business_processes": [
+          "define",
+          "refine",
+          "estimate",
+          "sequence",
+          "accept"
+        ],
+        "outcome": "Create clear, testable requirements.",
+        "business_intent": [
+          "Create clear, testable requirements",
+          "Help me create clear, testable requirements"
+        ]
+      },
+      {
+        "name": "design_systems_research",
+        "label": "Design Systems & Research",
+        "description": "Design lovable experiences using a reusable system, prototyping, and continuous user research to de-risk decisions. It operates primarily on Design system, prototyping, and testing to ship coherent, usable experiences It coordinates recurring activities such as hypothesize, prototype, test, iterate, and standardize to deliver consistent business outcomes",
+        "business_context": [
+          "design_system",
+          "prototyping",
+          "testing"
+        ],
+        "business_processes": [
+          "hypothesize",
+          "prototype",
+          "test",
+          "iterate",
+          "standardize"
+        ],
+        "outcome": "Ship coherent, usable experiences.",
+        "business_intent": [
+          "Ship coherent, usable experiences",
+          "Help me ship coherent, usable experiences"
+        ]
+      },
+      {
+        "name": "plm_change_control",
+        "label": "Product Lifecycle Management (PLM) & Change Control",
+        "description": "Govern product structure and changes with BOM/records control and formal engineering change processes. It operates primarily on BOM, specs, and ECO/ECR governance to control product data and changes It coordinates recurring activities such as baseline, propose, approve, release, and audit to deliver consistent business outcomes",
+        "business_context": [
+          "bom",
+          "specs",
+          "eco_ecr_governance"
+        ],
+        "business_processes": [
+          "baseline",
+          "propose",
+          "approve",
+          "release",
+          "audit"
+        ],
+        "outcome": "Control product data and changes.",
+        "business_intent": [
+          "Control product data and changes",
+          "Help me control product data and changes"
+        ]
+      },
+      {
+        "name": "software_engineering_delivery",
+        "label": "Software Engineering & Delivery",
+        "description": "Design, build, test, and operate software using modern engineering practices, automation, and continuous delivery. It operates primarily on Languages, frameworks, CI/CD, testing, and observability to ship reliable, maintainable software at speed It coordinates recurring activities such as design, implement, test, refactor, deploy, and operate to deliver consistent business outcomes",
+        "business_context": [
+          "languages",
+          "frameworks",
+          "ci_cd",
+          "testing",
+          "observability"
+        ],
+        "business_processes": [
+          "design",
+          "implement",
+          "test",
+          "refactor",
+          "deploy",
+          "operate"
+        ],
+        "outcome": "Ship reliable, maintainable software at speed.",
+        "business_intent": [
+          "Ship reliable, maintainable software at speed",
+          "Help me ship reliable, maintainable software at speed"
+        ]
+      },
+      {
+        "name": "source_control_code_review",
+        "label": "Source Control & Code Review",
+        "description": "Protect quality and flow with branching strategies, protected merges, and automated checks. It operates primarily on PR policies, code owners, and checks to improve code quality and flow It coordinates recurring activities such as branch, commit, review, merge, and enforce to deliver consistent business outcomes",
+        "business_context": [
+          "pr_policies",
+          "code_owners",
+          "checks"
+        ],
+        "business_processes": [
+          "branch",
+          "commit",
+          "review",
+          "merge",
+          "enforce"
+        ],
+        "outcome": "Improve code quality and flow.",
+        "business_intent": [
+          "Improve code quality and flow",
+          "Help me improve code quality and flow"
+        ]
+      },
+      {
+        "name": "secure_dev_compliance",
+        "label": "Secure Development & Compliance",
+        "description": "Bake in security and compliance using SAST/DAST/SCA, secrets management, and release governance. It operates primarily on Scan gates, SBOM, and policies to prevent vulnerabilities and policy drift It coordinates recurring activities such as scan, triage, remediate, attest, and approve to deliver consistent business outcomes",
+        "business_context": [
+          "scan_gates",
+          "sbom",
+          "policies"
+        ],
+        "business_processes": [
+          "scan",
+          "triage",
+          "remediate",
+          "attest",
+          "approve"
+        ],
+        "outcome": "Prevent vulnerabilities and policy drift.",
+        "business_intent": [
+          "Prevent vulnerabilities and policy drift",
+          "Help me prevent vulnerabilities and policy drift"
+        ]
+      },
+      {
+        "name": "artifact_registry",
+        "label": "Artifact & Package Registry",
+        "description": "Publish and govern build outputs and dependencies with provenance and retention controls. It operates primarily on Containers, packages, and immutability to ensure trusted, reusable artifacts It coordinates recurring activities such as publish, version, sign, retain, and deprecate to deliver consistent business outcomes",
+        "business_context": [
+          "containers",
+          "packages",
+          "immutability"
+        ],
+        "business_processes": [
+          "publish",
+          "version",
+          "sign",
+          "retain",
+          "deprecate"
+        ],
+        "outcome": "Ensure trusted, reusable artifacts.",
+        "business_intent": [
+          "Ensure trusted, reusable artifacts",
+          "Help me ensure trusted, reusable artifacts"
+        ]
+      },
+      {
+        "name": "release_management_handoff",
+        "label": "Release Management & Change Handoff",
+        "description": "Coordinate releases and change records with clear approvals, comms, and rollback plans. It operates primarily on Change records, CAB, and runbooks to deliver controlled, auditable releases It coordinates recurring activities such as package, approve, announce, deploy, and review to deliver consistent business outcomes",
+        "business_context": [
+          "change_records",
+          "cab",
+          "runbooks"
+        ],
+        "business_processes": [
+          "package",
+          "approve",
+          "announce",
+          "deploy",
+          "review"
+        ],
+        "outcome": "Deliver controlled, auditable releases.",
+        "business_intent": [
+          "Deliver controlled, auditable releases",
+          "Help me deliver controlled, auditable releases"
+        ]
+      },
+      {
+        "name": "dev_productivity_telemetry",
+        "label": "Developer Productivity & Telemetry",
+        "description": "Measure and improve flow using DORA/SPACE and bottleneck analysis. It operates primarily on Lead time, CFR, MTTR, and sentiment to continuously improve delivery performance It coordinates recurring activities such as instrument, analyze, benchmark, optimize, and report to deliver consistent business outcomes",
+        "business_context": [
+          "lead_time",
+          "cfr",
+          "mttr",
+          "sentiment"
+        ],
+        "business_processes": [
+          "instrument",
+          "analyze",
+          "benchmark",
+          "optimize",
+          "report"
+        ],
+        "outcome": "Continuously improve delivery performance.",
+        "business_intent": [
+          "Continuously improve delivery performance",
+          "Help me continuously improve delivery performance"
+        ]
+      },
+      {
+        "name": "gtm_readiness_launch",
+        "label": "Go-to-Market Readiness & Launch",
+        "description": "Prepare pricing, packaging, enablement, and support materials to land the product successfully. It operates primarily on Positioning, enablement, and readiness checks to enable adoption and revenue at launch It coordinates recurring activities such as plan, enable, pilot, launch, and iterate to deliver consistent business outcomes",
+        "business_context": [
+          "positioning",
+          "enablement",
+          "readiness_checks"
+        ],
+        "business_processes": [
+          "plan",
+          "enable",
+          "pilot",
+          "launch",
+          "iterate"
+        ],
+        "outcome": "Enable adoption and revenue at launch.",
+        "business_intent": [
+          "Enable adoption and revenue at launch",
+          "Help me enable adoption and revenue at launch"
+        ]
+      },
+      {
+        "name": "value_pricing_configuration",
+        "label": "Value & Pricing Configuration",
+        "description": "Align monetization with value via offer structure, metering, and price tests. It operates primarily on Packaging, meters, and experiments to capture value with fair pricing It coordinates recurring activities such as model, test, calibrate, publish, and monitor to deliver consistent business outcomes",
+        "business_context": [
+          "packaging",
+          "meters",
+          "experiments"
+        ],
+        "business_processes": [
+          "model",
+          "test",
+          "calibrate",
+          "publish",
+          "monitor"
+        ],
+        "outcome": "Capture value with fair pricing.",
+        "business_intent": [
+          "Capture value with fair pricing",
+          "Help me capture value with fair pricing"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "supply_chain_and_operations",
+    "label": "Supply Chain & Operations",
+    "capabilities": [
+      {
+        "name": "demand_planning",
+        "label": "Demand Planning",
+        "description": "Forecast demand using consensus inputs and seasonality to balance service and inventory. It operates primarily on Consensus, promotions, and seasonality to provide reliable demand signals It coordinates recurring activities such as forecast, reconcile, approve, publish, and monitor to deliver consistent business outcomes",
+        "business_context": [
+          "consensus",
+          "promotions",
+          "seasonality"
+        ],
+        "business_processes": [
+          "forecast",
+          "reconcile",
+          "approve",
+          "publish",
+          "monitor"
+        ],
+        "outcome": "Provide reliable demand signals.",
+        "business_intent": [
+          "Provide reliable demand signals",
+          "Help me provide reliable demand signals"
+        ]
+      },
+      {
+        "name": "sop_ibp",
+        "label": "Sales & Operations Planning / Integrated Business Planning (S&OP/IBP)",
+        "description": "Align cross-functional plans through scenarios, constraints, and executive reviews. It operates primarily on Scenario planning, constraints, and cadences to optimize the integrated plan It coordinates recurring activities such as aggregate, simulate, decide, align, and communicate to deliver consistent business outcomes",
+        "business_context": [
+          "scenario_planning",
+          "constraints",
+          "cadences"
+        ],
+        "business_processes": [
+          "aggregate",
+          "simulate",
+          "decide",
+          "align",
+          "communicate"
+        ],
+        "outcome": "Optimize the integrated plan.",
+        "business_intent": [
+          "Optimize the integrated plan",
+          "Help me optimize the integrated plan"
+        ]
+      },
+      {
+        "name": "source_to_pay",
+        "label": "Source-to-Pay (S2P)",
+        "description": "Secure supply at the right cost and risk from sourcing to payment. It operates primarily on Events, contracts, catalogs, and AP link to ensure reliable, cost-effective supply It coordinates recurring activities such as source, award, contract, order, and pay to deliver consistent business outcomes",
+        "business_context": [
+          "events",
+          "contracts",
+          "catalogs",
+          "ap_link"
+        ],
+        "business_processes": [
+          "source",
+          "award",
+          "contract",
+          "order",
+          "pay"
+        ],
+        "outcome": "Ensure reliable, cost-effective supply.",
+        "business_intent": [
+          "Ensure reliable, cost-effective supply",
+          "Help me ensure reliable, cost-effective supply"
+        ]
+      },
+      {
+        "name": "supplier_management",
+        "label": "Supplier Management",
+        "description": "Onboard and govern suppliers with performance and risk controls. It operates primarily on Scorecards, audits, and corrective actions to assure supplier capability and compliance It coordinates recurring activities such as onboard, qualify, assess, mitigate, and review to deliver consistent business outcomes",
+        "business_context": [
+          "scorecards",
+          "audits",
+          "corrective_actions"
+        ],
+        "business_processes": [
+          "onboard",
+          "qualify",
+          "assess",
+          "mitigate",
+          "review"
+        ],
+        "outcome": "Assure supplier capability and compliance.",
+        "business_intent": [
+          "Assure supplier capability and compliance",
+          "Help me assure supplier capability and compliance"
+        ]
+      },
+      {
+        "name": "manufacturing_execution",
+        "label": "Manufacturing Execution System (MES)",
+        "description": "Execute the plan with shop-floor control and quality checkpoints. It operates primarily on Work orders, routings, labor, and scrap to meet plan with quality and throughput It coordinates recurring activities such as schedule, start, record, inspect, and complete to deliver consistent business outcomes",
+        "business_context": [
+          "work_orders",
+          "routings",
+          "labor",
+          "scrap"
+        ],
+        "business_processes": [
+          "schedule",
+          "start",
+          "record",
+          "inspect",
+          "complete"
+        ],
+        "outcome": "Meet plan with quality and throughput.",
+        "business_intent": [
+          "Meet plan with quality and throughput",
+          "Help me meet plan with quality and throughput"
+        ]
+      },
+      {
+        "name": "quality_management",
+        "label": "Quality Management",
+        "description": "Prevent and correct defects with inspections, nonconformance, and CAPA. It operates primarily on IQC/IPQC/OQC, NCR, and audits to ensure conformance and reduce defects It coordinates recurring activities such as inspect, log, analyze, correct, and verify to deliver consistent business outcomes",
+        "business_context": [
+          "iqc_ipqc_oqc",
+          "ncr",
+          "audits"
+        ],
+        "business_processes": [
+          "inspect",
+          "log",
+          "analyze",
+          "correct",
+          "verify"
+        ],
+        "outcome": "Ensure conformance and reduce defects.",
+        "business_intent": [
+          "Ensure conformance and reduce defects",
+          "Help me ensure conformance and reduce defects"
+        ]
+      },
+      {
+        "name": "logistics_inventory_ops",
+        "label": "Logistics & Inventory Operations",
+        "description": "Control inventory accuracy and warehouse/yard/transport flows as a unified logistics operation. It operates primarily on WMS, YMS, TMS, and cycle counts to move and store goods efficiently and accurately It coordinates recurring activities such as receive, putaway, pick, ship, and reconcile to deliver consistent business outcomes",
+        "business_context": [
+          "wms",
+          "yms",
+          "tms",
+          "cycle_counts"
+        ],
+        "business_processes": [
+          "receive",
+          "putaway",
+          "pick",
+          "ship",
+          "reconcile"
+        ],
+        "outcome": "Move and store goods efficiently and accurately.",
+        "business_intent": [
+          "Move and store goods efficiently and accurately",
+          "Help me move and store goods efficiently and accurately"
+        ]
+      },
+      {
+        "name": "fulfillment_returns",
+        "label": "Fulfillment & Returns",
+        "description": "Allocate orders, pick-pack-ship, and handle returns with grading and disposition. It operates primarily on OMS, ASN/POD, and RMA grading to deliver on time and handle returns fairly It coordinates recurring activities such as allocate, ship, confirm, inspect, and refund to deliver consistent business outcomes",
+        "business_context": [
+          "oms",
+          "asn_pod",
+          "rma_grading"
+        ],
+        "business_processes": [
+          "allocate",
+          "ship",
+          "confirm",
+          "inspect",
+          "refund"
+        ],
+        "outcome": "Deliver on time and handle returns fairly.",
+        "business_intent": [
+          "Deliver on time and handle returns fairly",
+          "Help me deliver on time and handle returns fairly"
+        ]
+      },
+      {
+        "name": "control_tower_visibility",
+        "label": "Control Tower & Visibility",
+        "description": "Sense, predict, and act on exceptions with event correlation and ETA predictions. It operates primarily on Events, ETA, alerts, and playbooks to proactively resolve supply chain risks It coordinates recurring activities such as ingest, predict, alert, orchestrate, and measure to deliver consistent business outcomes",
+        "business_context": [
+          "events",
+          "eta",
+          "alerts",
+          "playbooks"
+        ],
+        "business_processes": [
+          "ingest",
+          "predict",
+          "alert",
+          "orchestrate",
+          "measure"
+        ],
+        "outcome": "Proactively resolve supply chain risks.",
+        "business_intent": [
+          "Proactively resolve supply chain risks",
+          "Help me proactively resolve supply chain risks"
+        ]
+      },
+      {
+        "name": "procurement_requisition_po",
+        "label": "Procurement: Requisition & Purchase Orders",
+        "description": "Create and approve requisitions, manage catalogs, and issue purchase orders with budget and policy checks. It operates primarily on Catalogs, approval flows, budgets, and vendors to control compliant buying before spend occurs It coordinates recurring activities such as request, approve, source, issue_po, and amend to deliver consistent business outcomes",
+        "business_context": [
+          "catalogs",
+          "approval_flows",
+          "budgets",
+          "vendors"
+        ],
+        "business_processes": [
+          "request",
+          "approve",
+          "source",
+          "issue_po",
+          "amend"
+        ],
+        "outcome": "Control compliant buying before spend occurs.",
+        "business_intent": [
+          "Control compliant buying before spend occurs",
+          "Help me control compliant buying before spend occurs"
+        ]
+      },
+      {
+        "name": "receiving_3way_match",
+        "label": "Receiving & 3-Way Match",
+        "description": "Record goods/services receipts, perform 3-way match (PO, receipt, invoice), and route discrepancies. It operates primarily on GRNs, tolerances, exceptions, and RMAs to ensure accurate receipt and payment control It coordinates recurring activities such as receive, verify, match, reconcile, and escalate to deliver consistent business outcomes",
+        "business_context": [
+          "grns",
+          "tolerances",
+          "exceptions",
+          "rmas"
+        ],
+        "business_processes": [
+          "receive",
+          "verify",
+          "match",
+          "reconcile",
+          "escalate"
+        ],
+        "outcome": "Ensure accurate receipt and payment control.",
+        "business_intent": [
+          "Ensure accurate receipt and payment control",
+          "Help me ensure accurate receipt and payment control"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "finance_and_corporate_accounting",
+    "label": "Finance & Corporate Accounting",
+    "capabilities": [
+      {
+        "name": "general_ledger",
+        "label": "General Ledger",
+        "description": "Maintain accurate, auditable books by governing postings and reconciliations. It operates primarily on Chart of accounts, subledgers, and controls to preserve financial integrity It coordinates recurring activities such as post, reconcile, reclass, adjust, and certify to deliver consistent business outcomes",
+        "business_context": [
+          "chart_of_accounts",
+          "subledgers",
+          "controls"
+        ],
+        "business_processes": [
+          "post",
+          "reconcile",
+          "reclass",
+          "adjust",
+          "certify"
+        ],
+        "outcome": "Preserve financial integrity.",
+        "business_intent": [
+          "Preserve financial integrity",
+          "Help me preserve financial integrity"
+        ]
+      },
+      {
+        "name": "close_consolidation",
+        "label": "Financial Close & Consolidation",
+        "description": "Close entities, consolidate, and produce compliant statements on time. It operates primarily on Intercompany, eliminations, and disclosures to deliver timely, accurate financials It coordinates recurring activities such as close, consolidate, eliminate, report, and file to deliver consistent business outcomes",
+        "business_context": [
+          "intercompany",
+          "eliminations",
+          "disclosures"
+        ],
+        "business_processes": [
+          "close",
+          "consolidate",
+          "eliminate",
+          "report",
+          "file"
+        ],
+        "outcome": "Deliver timely, accurate financials.",
+        "business_intent": [
+          "Deliver timely, accurate financials",
+          "Help me deliver timely, accurate financials"
+        ]
+      },
+      {
+        "name": "management_reporting_bi",
+        "label": "Management Reporting & Business Intelligence (BI)",
+        "description": "Provide insights and variance analysis with governed metrics and dashboards. It operates primarily on KPIs, variance, and drill-through to enable informed decisions It coordinates recurring activities such as aggregate, analyze, visualize, distribute, and iterate to deliver consistent business outcomes",
+        "business_context": [
+          "kpis",
+          "variance",
+          "drill_through"
+        ],
+        "business_processes": [
+          "aggregate",
+          "analyze",
+          "visualize",
+          "distribute",
+          "iterate"
+        ],
+        "outcome": "Enable informed decisions.",
+        "business_intent": [
+          "Enable informed decisions",
+          "Help me enable informed decisions"
+        ]
+      },
+      {
+        "name": "planning_budgeting_forecasting",
+        "label": "Planning, Budgeting & Forecasting",
+        "description": "Model scenarios and run rolling forecasts to align resources with outcomes. It operates primarily on Drivers, versions, and approvals to allocate capital effectively It coordinates recurring activities such as model, version, approve, publish, and monitor to deliver consistent business outcomes",
+        "business_context": [
+          "drivers",
+          "versions",
+          "approvals"
+        ],
+        "business_processes": [
+          "model",
+          "version",
+          "approve",
+          "publish",
+          "monitor"
+        ],
+        "outcome": "Allocate capital effectively.",
+        "business_intent": [
+          "Allocate capital effectively",
+          "Help me allocate capital effectively"
+        ]
+      },
+      {
+        "name": "treasury_cash",
+        "label": "Treasury & Cash",
+        "description": "Safeguard liquidity and manage risk via positioning, investing, and hedging. It operates primarily on Banking, FX, and covenants to optimize cash and risk It coordinates recurring activities such as position, invest, hedge, reconcile, and report to deliver consistent business outcomes",
+        "business_context": [
+          "banking",
+          "fx",
+          "covenants"
+        ],
+        "business_processes": [
+          "position",
+          "invest",
+          "hedge",
+          "reconcile",
+          "report"
+        ],
+        "outcome": "Optimize cash and risk.",
+        "business_intent": [
+          "Optimize cash and risk",
+          "Help me optimize cash and risk"
+        ]
+      },
+      {
+        "name": "ap_ar_operations",
+        "label": "Accounts Payable & Accounts Receivable (AP/AR) Operations",
+        "description": "Control payments and collections with matching, approvals, invoicing, and cash application. It operates primarily on 3-way match, terms, and disputes to pay correctly and collect faster It coordinates recurring activities such as capture, match, approve, invoice, and apply to deliver consistent business outcomes",
+        "business_context": [
+          "3_way_match",
+          "terms",
+          "disputes"
+        ],
+        "business_processes": [
+          "capture",
+          "match",
+          "approve",
+          "invoice",
+          "apply"
+        ],
+        "outcome": "Pay correctly and collect faster.",
+        "business_intent": [
+          "Pay correctly and collect faster",
+          "Help me pay correctly and collect faster"
+        ]
+      },
+      {
+        "name": "revenue_recognition",
+        "label": "Revenue Recognition",
+        "description": "Recognize revenue correctly across timing and obligations with audit-ready schedules. It operates primarily on Allocations, deferrals, and SSP to compliant revenue treatment It coordinates recurring activities such as allocate, schedule, recognize, adjust, and disclose to deliver consistent business outcomes",
+        "business_context": [
+          "allocations",
+          "deferrals",
+          "ssp"
+        ],
+        "business_processes": [
+          "allocate",
+          "schedule",
+          "recognize",
+          "adjust",
+          "disclose"
+        ],
+        "outcome": "Compliant revenue treatment.",
+        "business_intent": [
+          "Compliant revenue treatment",
+          "Help me compliant revenue treatment"
+        ]
+      },
+      {
+        "name": "tax_management",
+        "label": "Tax Management",
+        "description": "Determine, file, and remit taxes while managing transfer pricing and risk. It operates primarily on Nexus, VAT/GST, and TP docs to comply globally at lowest risk It coordinates recurring activities such as determine, calculate, file, remit, and defend to deliver consistent business outcomes",
+        "business_context": [
+          "nexus",
+          "vat_gst",
+          "tp_docs"
+        ],
+        "business_processes": [
+          "determine",
+          "calculate",
+          "file",
+          "remit",
+          "defend"
+        ],
+        "outcome": "Comply globally at lowest risk.",
+        "business_intent": [
+          "Comply globally at lowest risk",
+          "Help me comply globally at lowest risk"
+        ]
+      },
+      {
+        "name": "statutory_reporting_audit",
+        "label": "Statutory Reporting & Audit",
+        "description": "Coordinate audits and filings with strong evidence and remediation tracking. It operates primarily on Regulators, external auditors, and SOX to achieve clean audit outcomes It coordinates recurring activities such as prepare, evidence, respond, file, and remediate to deliver consistent business outcomes",
+        "business_context": [
+          "regulators",
+          "external_auditors",
+          "sox"
+        ],
+        "business_processes": [
+          "prepare",
+          "evidence",
+          "respond",
+          "file",
+          "remediate"
+        ],
+        "outcome": "Achieve clean audit outcomes.",
+        "business_intent": [
+          "Achieve clean audit outcomes",
+          "Help me achieve clean audit outcomes"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "enterprise_strategy_corporate_services_and_delivery",
+    "label": "Enterprise Strategy, Corporate Services & Delivery",
+    "capabilities": [
+      {
+        "name": "strategy_okrs",
+        "label": "Strategy & Objectives and Key Results (OKRs)",
+        "description": "Set direction and cascade measurable outcomes with regular reviews and course corrections. It operates primarily on North star, KRs, and cadences to align the enterprise on outcomes It coordinates recurring activities such as define, align, track, review, and adapt to deliver consistent business outcomes",
+        "business_context": [
+          "north_star",
+          "krs",
+          "cadences"
+        ],
+        "business_processes": [
+          "define",
+          "align",
+          "track",
+          "review",
+          "adapt"
+        ],
+        "outcome": "Align the enterprise on outcomes.",
+        "business_intent": [
+          "Align the enterprise on outcomes",
+          "Help me align the enterprise on outcomes"
+        ]
+      },
+      {
+        "name": "enterprise_portfolio_management",
+        "label": "Enterprise Portfolio Management",
+        "description": "Maximize value via intake, scoring, funding, and governance across initiatives. It operates primarily on Business cases, gates, and capacity to invest in the highest-value work It coordinates recurring activities such as intake, score, fund, monitor, and rebalance to deliver consistent business outcomes",
+        "business_context": [
+          "business_cases",
+          "gates",
+          "capacity"
+        ],
+        "business_processes": [
+          "intake",
+          "score",
+          "fund",
+          "monitor",
+          "rebalance"
+        ],
+        "outcome": "Invest in the highest-value work.",
+        "business_intent": [
+          "Invest in the highest-value work",
+          "Help me invest in the highest-value work"
+        ]
+      },
+      {
+        "name": "pmo_delivery_governance",
+        "label": "Project Management Office (PMO) & Delivery Governance",
+        "description": "Standardize methods and controls to deliver predictable scope, schedule, and benefit. It operates primarily on Stage gates, RAID, and status cadence to drive predictable project outcomes It coordinates recurring activities such as plan, execute, control, escalate, and close to deliver consistent business outcomes",
+        "business_context": [
+          "stage_gates",
+          "raid",
+          "status_cadence"
+        ],
+        "business_processes": [
+          "plan",
+          "execute",
+          "control",
+          "escalate",
+          "close"
+        ],
+        "outcome": "Drive predictable project outcomes.",
+        "business_intent": [
+          "Drive predictable project outcomes",
+          "Help me drive predictable project outcomes"
+        ]
+      },
+      {
+        "name": "capital_planning_benefits",
+        "label": "Capital Planning & Benefits Realization",
+        "description": "Approve investments and track realized value against baselines and assumptions. It operates primarily on NPV/IRR, baselines, and benefits to ensure investments return value It coordinates recurring activities such as model, approve, baseline, realize, and report to deliver consistent business outcomes",
+        "business_context": [
+          "npv_irr",
+          "baselines",
+          "benefits"
+        ],
+        "business_processes": [
+          "model",
+          "approve",
+          "baseline",
+          "realize",
+          "report"
+        ],
+        "outcome": "Ensure investments return value.",
+        "business_intent": [
+          "Ensure investments return value",
+          "Help me ensure investments return value"
+        ]
+      },
+      {
+        "name": "ma_divestitures",
+        "label": "Mergers & Acquisitions (M&A) / Divestitures",
+        "description": "Manage diligence and integration/separation to capture deal value at controlled risk. It operates primarily on IMO/SMO, Day 1/100, and TSA to realize deal synergies safely It coordinates recurring activities such as assess, integrate, separate, track, and realize to deliver consistent business outcomes",
+        "business_context": [
+          "imo_smo",
+          "day_1_100",
+          "tsa"
+        ],
+        "business_processes": [
+          "assess",
+          "integrate",
+          "separate",
+          "track",
+          "realize"
+        ],
+        "outcome": "Realize deal synergies safely.",
+        "business_intent": [
+          "Realize deal synergies safely",
+          "Help me realize deal synergies safely"
+        ]
+      },
+      {
+        "name": "legal_matter_contract",
+        "label": "Legal Matter & Contract Management",
+        "description": "Run matters and contract workflows with e-discovery and retention compliance. It operates primarily on Matters, discovery, and records to reduce legal risk and cycle time It coordinates recurring activities such as intake, draft, review, approve, and archive to deliver consistent business outcomes",
+        "business_context": [
+          "matters",
+          "discovery",
+          "records"
+        ],
+        "business_processes": [
+          "intake",
+          "draft",
+          "review",
+          "approve",
+          "archive"
+        ],
+        "outcome": "Reduce legal risk and cycle time.",
+        "business_intent": [
+          "Reduce legal risk and cycle time",
+          "Help me reduce legal risk and cycle time"
+        ]
+      },
+      {
+        "name": "investor_relations_comms",
+        "label": "Investor Relations & Communications",
+        "description": "Manage market communications and disclosures to sustain trust and compliance. It operates primarily on Calendar, scripts, and Reg FD to maintain transparent market engagement It coordinates recurring activities such as schedule, brief, disclose, monitor, and respond to deliver consistent business outcomes",
+        "business_context": [
+          "calendar",
+          "scripts",
+          "reg_fd"
+        ],
+        "business_processes": [
+          "schedule",
+          "brief",
+          "disclose",
+          "monitor",
+          "respond"
+        ],
+        "outcome": "Maintain transparent market engagement.",
+        "business_intent": [
+          "Maintain transparent market engagement",
+          "Help me maintain transparent market engagement"
+        ]
+      },
+      {
+        "name": "professional_services_automation",
+        "label": "Professional Services Automation (PSA)",
+        "description": "Improve utilization and margin via staffing, time/expense capture, and billing. It operates primarily on Skills, T&E, WIP, and margins to optimize services performance It coordinates recurring activities such as staff, log, approve, bill, and analyze to deliver consistent business outcomes",
+        "business_context": [
+          "skills",
+          "t_e",
+          "wip",
+          "margins"
+        ],
+        "business_processes": [
+          "staff",
+          "log",
+          "approve",
+          "bill",
+          "analyze"
+        ],
+        "outcome": "Optimize services performance.",
+        "business_intent": [
+          "Optimize services performance",
+          "Help me optimize services performance"
+        ]
+      },
+      {
+        "name": "project_accounting",
+        "label": "Project Accounting",
+        "description": "Control project financials with cost capture, revenue methods, and margin reporting. It operates primarily on WBS, cost codes, and rev methods to ensure project financial control It coordinates recurring activities such as capture, allocate, recognize, report, and close to deliver consistent business outcomes",
+        "business_context": [
+          "wbs",
+          "cost_codes",
+          "rev_methods"
+        ],
+        "business_processes": [
+          "capture",
+          "allocate",
+          "recognize",
+          "report",
+          "close"
+        ],
+        "outcome": "Ensure project financial control.",
+        "business_intent": [
+          "Ensure project financial control",
+          "Help me ensure project financial control"
+        ]
+      },
+      {
+        "name": "shared_services_catalog",
+        "label": "Shared Services & Service Catalog",
+        "description": "Provide standardized services with intake, routing, fulfillment, and SLA measurement. It operates primarily on Catalog, queues, SLAs, and knowledge to deliver consistent shared services It coordinates recurring activities such as catalog, request, route, fulfill, and measure to deliver consistent business outcomes",
+        "business_context": [
+          "catalog",
+          "queues",
+          "slas",
+          "knowledge"
+        ],
+        "business_processes": [
+          "catalog",
+          "request",
+          "route",
+          "fulfill",
+          "measure"
+        ],
+        "outcome": "Deliver consistent shared services.",
+        "business_intent": [
+          "Deliver consistent shared services",
+          "Help me deliver consistent shared services"
+        ]
+      },
+      {
+        "name": "service_performance_improvement",
+        "label": "Service Performance & Continuous Improvement",
+        "description": "Define and monitor SLAs/OLAs/XLAs and drive cross-functional improvements. It operates primarily on Scorecards, KPIs, and RCAs to continuously improve service outcomes It coordinates recurring activities such as define, monitor, alert, improve, and report to deliver consistent business outcomes",
+        "business_context": [
+          "scorecards",
+          "kpis",
+          "rcas"
+        ],
+        "business_processes": [
+          "define",
+          "monitor",
+          "alert",
+          "improve",
+          "report"
+        ],
+        "outcome": "Continuously improve service outcomes.",
+        "business_intent": [
+          "Continuously improve service outcomes",
+          "Help me continuously improve service outcomes"
+        ]
+      },
+      {
+        "name": "real_estate_facilities",
+        "label": "Real Estate & Facilities",
+        "description": "Manage leases, space, and operations to optimize cost and workplace experience. It operates primarily on Leases, space planning, and vendors to right-size and run workplaces effectively It coordinates recurring activities such as plan, allocate, maintain, track, and optimize to deliver consistent business outcomes",
+        "business_context": [
+          "leases",
+          "space_planning",
+          "vendors"
+        ],
+        "business_processes": [
+          "plan",
+          "allocate",
+          "maintain",
+          "track",
+          "optimize"
+        ],
+        "outcome": "Right-size and run workplaces effectively.",
+        "business_intent": [
+          "Right-size and run workplaces effectively",
+          "Help me right-size and run workplaces effectively"
+        ]
+      },
+      {
+        "name": "sustainability_esg",
+        "label": "Sustainability & Environmental, Social, and Governance (ESG)",
+        "description": "Collect, assure, and disclose ESG data to improve performance and transparency. It operates primarily on GRI/SASB, audits, and controls to improve ESG outcomes and reporting It coordinates recurring activities such as collect, calculate, assure, disclose, and improve to deliver consistent business outcomes",
+        "business_context": [
+          "gri_sasb",
+          "audits",
+          "controls"
+        ],
+        "business_processes": [
+          "collect",
+          "calculate",
+          "assure",
+          "disclose",
+          "improve"
+        ],
+        "outcome": "Improve ESG outcomes and reporting.",
+        "business_intent": [
+          "Improve ESG outcomes and reporting",
+          "Help me improve ESG outcomes and reporting"
+        ]
+      },
+      {
+        "name": "automation_process_optimization",
+        "label": "Automation & Process Optimization",
+        "description": "Identify, build, and govern automations to reduce manual effort and errors. It operates primarily on RPA, citizen dev, and guardrails to increase efficiency and quality It coordinates recurring activities such as discover, automate, govern, monitor, and iterate to deliver consistent business outcomes",
+        "business_context": [
+          "rpa",
+          "citizen_dev",
+          "guardrails"
+        ],
+        "business_processes": [
+          "discover",
+          "automate",
+          "govern",
+          "monitor",
+          "iterate"
+        ],
+        "outcome": "Increase efficiency and quality.",
+        "business_intent": [
+          "Increase efficiency and quality",
+          "Help me increase efficiency and quality"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "digital_ai_platform_data_security",
+    "label": "Digital & AI Platform, Data & Security (DAPDS)",
+    "capabilities": [
+      {
+        "name": "itsm",
+        "label": "IT Service Management (ITSM)",
+        "description": "Restore service quickly and prevent recurrence with incident, problem, and change controls. It operates primarily on SLAs, runbooks, and CAB to maintain service reliability It coordinates recurring activities such as log, triage, resolve, root_cause, and change to deliver consistent business outcomes",
+        "business_context": [
+          "slas",
+          "runbooks",
+          "cab"
+        ],
+        "business_processes": [
+          "log",
+          "triage",
+          "resolve",
+          "root_cause",
+          "change"
+        ],
+        "outcome": "Maintain service reliability.",
+        "business_intent": [
+          "Maintain service reliability",
+          "Help me maintain service reliability"
+        ]
+      },
+      {
+        "name": "sre_observability",
+        "label": "Site Reliability Engineering (SRE) & Observability",
+        "description": "Meet SLOs with instrumentation, on-call, error budgets, and continuous reliability work. It operates primarily on SLO/SLI, paging, and runbooks to proactively ensure reliability It coordinates recurring activities such as instrument, alert, respond, tune, and report to deliver consistent business outcomes",
+        "business_context": [
+          "slo_sli",
+          "paging",
+          "runbooks"
+        ],
+        "business_processes": [
+          "instrument",
+          "alert",
+          "respond",
+          "tune",
+          "report"
+        ],
+        "outcome": "Proactively ensure reliability.",
+        "business_intent": [
+          "Proactively ensure reliability",
+          "Help me proactively ensure reliability"
+        ]
+      },
+      {
+        "name": "cloud_infrastructure_ops",
+        "label": "Cloud & Infrastructure Operations",
+        "description": "Provision and operate compute, storage, and network securely with IaC and DR. It operates primarily on IaC, capacity, and DR/BCP to provide secure, scalable platforms It coordinates recurring activities such as provision, configure, patch, scale, and decommission to deliver consistent business outcomes",
+        "business_context": [
+          "iac",
+          "capacity",
+          "dr_bcp"
+        ],
+        "business_processes": [
+          "provision",
+          "configure",
+          "patch",
+          "scale",
+          "decommission"
+        ],
+        "outcome": "Provide secure, scalable platforms.",
+        "business_intent": [
+          "Provide secure, scalable platforms",
+          "Help me provide secure, scalable platforms"
+        ]
+      },
+      {
+        "name": "developer_experience_platform",
+        "label": "Developer Experience Platform (Environments & Portal)",
+        "description": "Accelerate inner-loop productivity with standardized environments, golden paths, and self-serve portal onboarding. It operates primarily on Dev containers, templates, and docs to speed safe, consistent delivery It coordinates recurring activities such as provision, scaffold, document, guide, and measure to deliver consistent business outcomes",
+        "business_context": [
+          "dev_containers",
+          "templates",
+          "docs"
+        ],
+        "business_processes": [
+          "provision",
+          "scaffold",
+          "document",
+          "guide",
+          "measure"
+        ],
+        "outcome": "Speed safe, consistent delivery.",
+        "business_intent": [
+          "Speed safe, consistent delivery",
+          "Help me speed safe, consistent delivery"
+        ]
+      },
+      {
+        "name": "devops_ci_cd",
+        "label": "DevOps Continuous Integration / Continuous Delivery (CI/CD)",
+        "description": "Automate build, test, and deploy with policy gates across environments. It operates primarily on Pipelines, artifacts, and policies to ship frequently with confidence It coordinates recurring activities such as build, test, package, deploy, and rollback to deliver consistent business outcomes",
+        "business_context": [
+          "pipelines",
+          "artifacts",
+          "policies"
+        ],
+        "business_processes": [
+          "build",
+          "test",
+          "package",
+          "deploy",
+          "rollback"
+        ],
+        "outcome": "Ship frequently with confidence.",
+        "business_intent": [
+          "Ship frequently with confidence",
+          "Help me ship frequently with confidence"
+        ]
+      },
+      {
+        "name": "identity_access_management",
+        "label": "Identity & Access Management (IAM)",
+        "description": "Grant least-privilege access with federation, lifecycle automation, and reviews. It operates primarily on SSO, JML, and access reviews to control secure access It coordinates recurring activities such as verify, provision, authorize, review, and revoke to deliver consistent business outcomes",
+        "business_context": [
+          "sso",
+          "jml",
+          "access_reviews"
+        ],
+        "business_processes": [
+          "verify",
+          "provision",
+          "authorize",
+          "review",
+          "revoke"
+        ],
+        "outcome": "Control secure access.",
+        "business_intent": [
+          "Control secure access",
+          "Help me control secure access"
+        ]
+      },
+      {
+        "name": "data_engineering_integration",
+        "label": "Data Engineering & Integration",
+        "description": "Deliver trusted, timely data via batch/stream pipelines and golden records. It operates primarily on ETL/ELT, MDM, and CDC/streaming to enable analytics and operations with quality data It coordinates recurring activities such as ingest, transform, validate, publish, and reconcile to deliver consistent business outcomes",
+        "business_context": [
+          "etl_elt",
+          "mdm",
+          "cdc_streaming"
+        ],
+        "business_processes": [
+          "ingest",
+          "transform",
+          "validate",
+          "publish",
+          "reconcile"
+        ],
+        "outcome": "Enable analytics and operations with quality data.",
+        "business_intent": [
+          "Enable analytics and operations with quality data",
+          "Help me enable analytics and operations with quality data"
+        ]
+      },
+      {
+        "name": "data_governance",
+        "label": "Data Governance",
+        "description": "Catalog, classify, and steward data with policies and ownership. It operates primarily on Catalog, lineage, and stewardship to protect and standardize data use It coordinates recurring activities such as discover, classify, assign, enforce, and audit to deliver consistent business outcomes",
+        "business_context": [
+          "catalog",
+          "lineage",
+          "stewardship"
+        ],
+        "business_processes": [
+          "discover",
+          "classify",
+          "assign",
+          "enforce",
+          "audit"
+        ],
+        "outcome": "Protect and standardize data use.",
+        "business_intent": [
+          "Protect and standardize data use",
+          "Help me protect and standardize data use"
+        ]
+      },
+      {
+        "name": "privacy_compliance",
+        "label": "Privacy Compliance",
+        "description": "Assess processing, enforce retention/DLP, and fulfill data rights requests. It operates primarily on DPIA, retention, and DSRs to comply with privacy obligations It coordinates recurring activities such as inventory, assess, enforce, fulfill, and evidence to deliver consistent business outcomes",
+        "business_context": [
+          "dpia",
+          "retention",
+          "dsrs"
+        ],
+        "business_processes": [
+          "inventory",
+          "assess",
+          "enforce",
+          "fulfill",
+          "evidence"
+        ],
+        "outcome": "Comply with privacy obligations.",
+        "business_intent": [
+          "Comply with privacy obligations",
+          "Help me comply with privacy obligations"
+        ]
+      },
+      {
+        "name": "mlops_ai_platform",
+        "label": "Machine Learning Operations (MLOps) & AI Platform",
+        "description": "Operationalize governed AI using model registry, feature store, and drift monitoring. It operates primarily on Policies, reproducibility, and drift to safely scale AI impact It coordinates recurring activities such as train, register, deploy, monitor, and retrain to deliver consistent business outcomes",
+        "business_context": [
+          "policies",
+          "reproducibility",
+          "drift"
+        ],
+        "business_processes": [
+          "train",
+          "register",
+          "deploy",
+          "monitor",
+          "retrain"
+        ],
+        "outcome": "Safely scale AI impact.",
+        "business_intent": [
+          "Safely scale AI impact",
+          "Help me safely scale AI impact"
+        ]
+      },
+      {
+        "name": "security_operations",
+        "label": "Security Operations (SecOps)",
+        "description": "Detect, respond, and recover from threats while managing vulnerabilities. It operates primarily on SOC, SIEM/EDR, and VRM to reduce attack likelihood and impact It coordinates recurring activities such as detect, triage, contain, eradicate, and recover to deliver consistent business outcomes",
+        "business_context": [
+          "soc",
+          "siem_edr",
+          "vrm"
+        ],
+        "business_processes": [
+          "detect",
+          "triage",
+          "contain",
+          "eradicate",
+          "recover"
+        ],
+        "outcome": "Reduce attack likelihood and impact.",
+        "business_intent": [
+          "Reduce attack likelihood and impact",
+          "Help me reduce attack likelihood and impact"
+        ]
+      },
+      {
+        "name": "api_integration_platform",
+        "label": "API & Integration Platform Product Management",
+        "description": "Design, publish, and secure APIs and integration products with lifecycle controls. It operates primarily on Gateways, quotas, and versioning to enable reusable, secure connectivity It coordinates recurring activities such as design, publish, secure, monitor, and deprecate to deliver consistent business outcomes",
+        "business_context": [
+          "gateways",
+          "quotas",
+          "versioning"
+        ],
+        "business_processes": [
+          "design",
+          "publish",
+          "secure",
+          "monitor",
+          "deprecate"
+        ],
+        "outcome": "Enable reusable, secure connectivity.",
+        "business_intent": [
+          "Enable reusable, secure connectivity",
+          "Help me enable reusable, secure connectivity"
+        ]
+      },
+      {
+        "name": "finops",
+        "label": "Cloud Financial Operations (FinOps)",
+        "description": "Allocate, optimize, and forecast cloud spend without sacrificing performance. It operates primarily on Budgets, rightsizing, and commitments to control cost-to-serve It coordinates recurring activities such as allocate, analyze, optimize, forecast, and report to deliver consistent business outcomes",
+        "business_context": [
+          "budgets",
+          "rightsizing",
+          "commitments"
+        ],
+        "business_processes": [
+          "allocate",
+          "analyze",
+          "optimize",
+          "forecast",
+          "report"
+        ],
+        "outcome": "Control cost-to-serve.",
+        "business_intent": [
+          "Control cost-to-serve",
+          "Help me control cost-to-serve"
+        ]
+      },
+      {
+        "name": "customer_data_platform_cdp",
+        "label": "Customer Data Platform (CDP)",
+        "description": "Unify first-party profiles and events, resolve identities, and segment audiences with consent enforcement. It operates primarily on Identity resolution, profiles, and audiences to enable governed personalization and measurement It coordinates recurring activities such as ingest, unify, segment, activate, and govern to deliver consistent business outcomes",
+        "business_context": [
+          "identity_resolution",
+          "profiles",
+          "audiences"
+        ],
+        "business_processes": [
+          "ingest",
+          "unify",
+          "segment",
+          "activate",
+          "govern"
+        ],
+        "outcome": "Enable governed personalization and measurement.",
+        "business_intent": [
+          "Enable governed personalization and measurement",
+          "Help me enable governed personalization and measurement"
+        ]
+      },
+      {
+        "name": "usage_metering_billing",
+        "label": "Usage Metering & Rating",
+        "description": "Collect, aggregate, and rate product usage for billing, analytics, and entitlements. It operates primarily on Meters, aggregation windows, and rating to bill accurately and inform adoption/NRR It coordinates recurring activities such as collect, aggregate, rate, export, and reconcile to deliver consistent business outcomes",
+        "business_context": [
+          "meters",
+          "aggregation_windows",
+          "rating"
+        ],
+        "business_processes": [
+          "collect",
+          "aggregate",
+          "rate",
+          "export",
+          "reconcile"
+        ],
+        "outcome": "Bill accurately and inform adoption/NRR.",
+        "business_intent": [
+          "Bill accurately and inform adoption/NRR",
+          "Help me bill accurately and inform adoption/NRR"
+        ]
+      },
+      {
+        "name": "platform_product_management",
+        "label": "Digital Platform & Enterprise App Product Management",
+        "description": "Own the digital platform and core enterprise applications as products, managing roadmaps, intake, adoption, and stakeholder alignment. It operates primarily on Roadmaps, OKRs, intake, and governance forums to align platform capabilities to business outcomes and maximize adoption It coordinates recurring activities such as discover, prioritize, design, plan, and evangelize to deliver consistent business outcomes",
+        "business_context": [
+          "roadmaps",
+          "okrs",
+          "intake",
+          "governance_forums"
+        ],
+        "business_processes": [
+          "discover",
+          "prioritize",
+          "design",
+          "plan",
+          "evangelize"
+        ],
+        "outcome": "Align platform capabilities to business outcomes and maximize adoption.",
+        "business_intent": [
+          "Align platform capabilities to business outcomes and maximize adoption",
+          "Help me align platform capabilities to business outcomes and maximize adoption"
+        ]
+      },
+      {
+        "name": "application_security_devsecops",
+        "label": "Application Security & DevSecOps",
+        "description": "Embed security into the SDLC with threat modeling, secure coding practices, automated testing, and software supply chain controls. It operates primarily on SSDLC, threat models, SAST/DAST, and SCA/SBOM to prevent vulnerabilities early and ensure secure delivery It coordinates recurring activities such as model, scan, validate, enforce, and educate to deliver consistent business outcomes",
+        "business_context": [
+          "ssdlc",
+          "threat_models",
+          "sast_dast",
+          "sca_sbom"
+        ],
+        "business_processes": [
+          "model",
+          "scan",
+          "validate",
+          "enforce",
+          "educate"
+        ],
+        "outcome": "Prevent vulnerabilities early and ensure secure delivery.",
+        "business_intent": [
+          "Prevent vulnerabilities early and ensure secure delivery",
+          "Help me prevent vulnerabilities early and ensure secure delivery"
+        ]
+      },
+      {
+        "name": "security_architecture_risk_compliance",
+        "label": "Security Architecture, Risk & Compliance (GRC)",
+        "description": "Define security patterns, controls, and reference architectures, assess risk, and evidence compliance against internal and external standards. It operates primarily on Control frameworks, patterns, risk register, and audits to bake security into designs and meet regulatory/control obligations It coordinates recurring activities such as define, assess, approve, track, and attest to deliver consistent business outcomes",
+        "business_context": [
+          "control_frameworks",
+          "patterns",
+          "risk_register",
+          "audits"
+        ],
+        "business_processes": [
+          "define",
+          "assess",
+          "approve",
+          "track",
+          "attest"
+        ],
+        "outcome": "Bake security into designs and meet regulatory/control obligations.",
+        "business_intent": [
+          "Bake security into designs and meet regulatory/control obligations",
+          "Help me bake security into designs and meet regulatory/control obligations"
+        ]
+      },
+      {
+        "name": "genai_platform_guardrails",
+        "label": "Generative AI Platform & Guardrails",
+        "description": "Provide governed generative AI capabilities including model catalog, orchestration, safety guardrails, and evaluation frameworks. It operates primarily on LLMs, prompt orchestration, safety filters, and evaluations to safely scale generative AI use cases across the enterprise It coordinates recurring activities such as register, orchestrate, constrain, evaluate, and monitor to deliver consistent business outcomes",
+        "business_context": [
+          "llms",
+          "prompt_orchestration",
+          "safety_filters",
+          "evaluations"
+        ],
+        "business_processes": [
+          "register",
+          "orchestrate",
+          "constrain",
+          "evaluate",
+          "monitor"
+        ],
+        "outcome": "Safely scale generative AI use cases across the enterprise.",
+        "business_intent": [
+          "Safely scale generative AI use cases across the enterprise",
+          "Help me safely scale generative AI use cases across the enterprise"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "risk_compliance_and_governance",
+    "label": "Risk, Compliance & Governance",
+    "capabilities": [
+      {
+        "name": "enterprise_risk_management",
+        "label": "Enterprise Risk Management (ERM)",
+        "description": "Identify, assess, and monitor risks with appetite and KRIs tied to owners. It operates primarily on Registers, KRIs, and ownership to reduce enterprise risk exposure It coordinates recurring activities such as identify, assess, mitigate, monitor, and report to deliver consistent business outcomes",
+        "business_context": [
+          "registers",
+          "kris",
+          "ownership"
+        ],
+        "business_processes": [
+          "identify",
+          "assess",
+          "mitigate",
+          "monitor",
+          "report"
+        ],
+        "outcome": "Reduce enterprise risk exposure.",
+        "business_intent": [
+          "Reduce enterprise risk exposure",
+          "Help me reduce enterprise risk exposure"
+        ]
+      },
+      {
+        "name": "policy_control_management",
+        "label": "Policy & Control Management",
+        "description": "Define, map, test, and certify controls with tracked remediation. It operates primarily on Libraries, mappings, and testing to ensure an effective control environment It coordinates recurring activities such as define, map, test, certify, and remediate to deliver consistent business outcomes",
+        "business_context": [
+          "libraries",
+          "mappings",
+          "testing"
+        ],
+        "business_processes": [
+          "define",
+          "map",
+          "test",
+          "certify",
+          "remediate"
+        ],
+        "outcome": "Ensure an effective control environment.",
+        "business_intent": [
+          "Ensure an effective control environment",
+          "Help me ensure an effective control environment"
+        ]
+      },
+      {
+        "name": "internal_audit",
+        "label": "Internal Audit",
+        "description": "Deliver independent assurance via risk-based plans, fieldwork, and reporting. It operates primarily on Plans, evidence, and findings to assure governance and controls It coordinates recurring activities such as plan, execute, evidence, report, and follow_up to deliver consistent business outcomes",
+        "business_context": [
+          "plans",
+          "evidence",
+          "findings"
+        ],
+        "business_processes": [
+          "plan",
+          "execute",
+          "evidence",
+          "report",
+          "follow_up"
+        ],
+        "outcome": "Assure governance and controls.",
+        "business_intent": [
+          "Assure governance and controls",
+          "Help me assure governance and controls"
+        ]
+      },
+      {
+        "name": "issue_remediation_management",
+        "label": "Issue & Remediation Management",
+        "description": "Drive timely fixes with ownership, milestones, and validation to close. It operates primarily on Owners, due dates, and validation to resolve issues effectively It coordinates recurring activities such as log, assign, remediate, validate, and close to deliver consistent business outcomes",
+        "business_context": [
+          "owners",
+          "due_dates",
+          "validation"
+        ],
+        "business_processes": [
+          "log",
+          "assign",
+          "remediate",
+          "validate",
+          "close"
+        ],
+        "outcome": "Resolve issues effectively.",
+        "business_intent": [
+          "Resolve issues effectively",
+          "Help me resolve issues effectively"
+        ]
+      },
+      {
+        "name": "third_party_risk_management",
+        "label": "Third-Party Risk Management (TPRM)",
+        "description": "Assess and monitor vendor risk with controls, SLAs, and escalation. It operates primarily on Due diligence, monitoring, and contracts to reduce external dependency risk It coordinates recurring activities such as assess, score, contract, monitor, and escalate to deliver consistent business outcomes",
+        "business_context": [
+          "due_diligence",
+          "monitoring",
+          "contracts"
+        ],
+        "business_processes": [
+          "assess",
+          "score",
+          "contract",
+          "monitor",
+          "escalate"
+        ],
+        "outcome": "Reduce external dependency risk.",
+        "business_intent": [
+          "Reduce external dependency risk",
+          "Help me reduce external dependency risk"
+        ]
+      },
+      {
+        "name": "privacy_compliance_risk",
+        "label": "Privacy & Compliance",
+        "description": "Maintain processing inventories, run DPIAs, and fulfill data subject requests. It operates primarily on GDPR/CCPA and records of processing to meet regulatory obligations It coordinates recurring activities such as inventory, assess, fulfill, audit, and report to deliver consistent business outcomes",
+        "business_context": [
+          "gdpr_ccpa",
+          "records_of_processing"
+        ],
+        "business_processes": [
+          "inventory",
+          "assess",
+          "fulfill",
+          "audit",
+          "report"
+        ],
+        "outcome": "Meet regulatory obligations.",
+        "business_intent": [
+          "Meet regulatory obligations",
+          "Help me meet regulatory obligations"
+        ]
+      },
+      {
+        "name": "business_continuity_dr",
+        "label": "Business Continuity & Disaster Recovery (BCP/DR)",
+        "description": "Sustain operations via BIAs, continuity plans, DR tests, and readiness improvements. It operates primarily on RTO/RPO, exercises, and crisis comms to ensure resilience under disruption It coordinates recurring activities such as analyze, plan, test, activate, and improve to deliver consistent business outcomes",
+        "business_context": [
+          "rto_rpo",
+          "exercises",
+          "crisis_comms"
+        ],
+        "business_processes": [
+          "analyze",
+          "plan",
+          "test",
+          "activate",
+          "improve"
+        ],
+        "outcome": "Ensure resilience under disruption.",
+        "business_intent": [
+          "Ensure resilience under disruption",
+          "Help me ensure resilience under disruption"
+        ]
+      },
+      {
+        "name": "ethics_training",
+        "label": "Ethics & Compliance Training",
+        "description": "Publish policies, enroll training, collect attestations, and track adoption. It operates primarily on LMS, attestations, and hotline to foster an ethical, compliant culture It coordinates recurring activities such as publish, enroll, attest, track, and report to deliver consistent business outcomes",
+        "business_context": [
+          "lms",
+          "attestations",
+          "hotline"
+        ],
+        "business_processes": [
+          "publish",
+          "enroll",
+          "attest",
+          "track",
+          "report"
+        ],
+        "outcome": "Foster an ethical, compliant culture.",
+        "business_intent": [
+          "Foster an ethical, compliant culture",
+          "Help me foster an ethical, compliant culture"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "social_communication_and_community",
+    "label": "Social Communication & Community",
+    "capabilities": [
+      {
+        "name": "profiles_identity_graph",
+        "label": "Profiles & Identity Graph",
+        "description": "Represent people and connections with accounts, presence, and verification. It operates primarily on Profiles, edges, and privacy to model identity and social ties It coordinates recurring activities such as create, connect, verify, update, and deactivate to deliver consistent business outcomes",
+        "business_context": [
+          "profiles",
+          "edges",
+          "privacy"
+        ],
+        "business_processes": [
+          "create",
+          "connect",
+          "verify",
+          "update",
+          "deactivate"
+        ],
+        "outcome": "Model identity and social ties.",
+        "business_intent": [
+          "Model identity and social ties",
+          "Help me model identity and social ties"
+        ]
+      },
+      {
+        "name": "messaging",
+        "label": "Messaging",
+        "description": "Enable fast conversations with optional E2E encryption, spam controls, and media. It operates primarily on E2E optional, rate limits, and media to support reliable realtime chat It coordinates recurring activities such as send, receive, notify, search, and moderate to deliver consistent business outcomes",
+        "business_context": [
+          "e2e_optional",
+          "rate_limits",
+          "media"
+        ],
+        "business_processes": [
+          "send",
+          "receive",
+          "notify",
+          "search",
+          "moderate"
+        ],
+        "outcome": "Support reliable realtime chat.",
+        "business_intent": [
+          "Support reliable realtime chat",
+          "Help me support reliable realtime chat"
+        ]
+      },
+      {
+        "name": "email_experiences",
+        "label": "Email Experiences",
+        "description": "Send and organize large-scale communications honoring preferences and deliverability. It operates primarily on Templates, suppression, and routing to communicate asynchronously at scale It coordinates recurring activities such as compose, send, classify, route, and measure to deliver consistent business outcomes",
+        "business_context": [
+          "templates",
+          "suppression",
+          "routing"
+        ],
+        "business_processes": [
+          "compose",
+          "send",
+          "classify",
+          "route",
+          "measure"
+        ],
+        "outcome": "Communicate asynchronously at scale.",
+        "business_intent": [
+          "Communicate asynchronously at scale",
+          "Help me communicate asynchronously at scale"
+        ]
+      },
+      {
+        "name": "voice_video_meetings",
+        "label": "Voice/Video & Meetings",
+        "description": "Run real-time sessions with recording, transcription, and moderation. It operates primarily on SFU/MCU, recording, and ASR to enable rich live collaboration It coordinates recurring activities such as join, stream, record, transcribe, and moderate to deliver consistent business outcomes",
+        "business_context": [
+          "sfu_mcu",
+          "recording",
+          "asr"
+        ],
+        "business_processes": [
+          "join",
+          "stream",
+          "record",
+          "transcribe",
+          "moderate"
+        ],
+        "outcome": "Enable rich live collaboration.",
+        "business_intent": [
+          "Enable rich live collaboration",
+          "Help me enable rich live collaboration"
+        ]
+      },
+      {
+        "name": "live_streaming",
+        "label": "Live Streaming",
+        "description": "Broadcast to audiences with moderation, chat, and replay workflows. It operates primarily on Ingest, CDN, and interactivity to reach audiences in real time It coordinates recurring activities such as go_live, moderate, clip, replay, and analyze to deliver consistent business outcomes",
+        "business_context": [
+          "ingest",
+          "cdn",
+          "interactivity"
+        ],
+        "business_processes": [
+          "go_live",
+          "moderate",
+          "clip",
+          "replay",
+          "analyze"
+        ],
+        "outcome": "Reach audiences in real time.",
+        "business_intent": [
+          "Reach audiences in real time",
+          "Help me reach audiences in real time"
+        ]
+      },
+      {
+        "name": "feeds_recommendations",
+        "label": "Feeds & Recommendations",
+        "description": "Rank and recommend content safely with policy-aware models. It operates primarily on Ranking, safety filters, and logs to maximize relevant engagement It coordinates recurring activities such as ingest, rank, recommend, throttle, and log to deliver consistent business outcomes",
+        "business_context": [
+          "ranking",
+          "safety_filters",
+          "logs"
+        ],
+        "business_processes": [
+          "ingest",
+          "rank",
+          "recommend",
+          "throttle",
+          "log"
+        ],
+        "outcome": "Maximize relevant engagement.",
+        "business_intent": [
+          "Maximize relevant engagement",
+          "Help me maximize relevant engagement"
+        ]
+      },
+      {
+        "name": "communities_governance",
+        "label": "Communities & Governance",
+        "description": "Create and govern groups with roles, rules enforcement, and appeals. It operates primarily on Roles, mod tools, and policies to foster healthy communities It coordinates recurring activities such as create, invite, assign_roles, enforce, and archive to deliver consistent business outcomes",
+        "business_context": [
+          "roles",
+          "mod_tools",
+          "policies"
+        ],
+        "business_processes": [
+          "create",
+          "invite",
+          "assign_roles",
+          "enforce",
+          "archive"
+        ],
+        "outcome": "Foster healthy communities.",
+        "business_intent": [
+          "Foster healthy communities",
+          "Help me foster healthy communities"
+        ]
+      },
+      {
+        "name": "content_creation_publishing",
+        "label": "Content Creation & Publishing",
+        "description": "Compose, schedule, and distribute posts with analytics feedback. It operates primarily on Schedulers, drafts, and insights to empower consistent publishing It coordinates recurring activities such as compose, schedule, publish, edit, and delete to deliver consistent business outcomes",
+        "business_context": [
+          "schedulers",
+          "drafts",
+          "insights"
+        ],
+        "business_processes": [
+          "compose",
+          "schedule",
+          "publish",
+          "edit",
+          "delete"
+        ],
+        "outcome": "Empower consistent publishing.",
+        "business_intent": [
+          "Empower consistent publishing",
+          "Help me empower consistent publishing"
+        ]
+      },
+      {
+        "name": "trust_safety",
+        "label": "Trust & Safety",
+        "description": "Detect abuse, enforce policies, and handle appeals transparently. It operates primarily on ML/rules, transparency, and SLAs to protect users and platform integrity It coordinates recurring activities such as detect, triage, enforce, notify, and appeal to deliver consistent business outcomes",
+        "business_context": [
+          "ml_rules",
+          "transparency",
+          "slas"
+        ],
+        "business_processes": [
+          "detect",
+          "triage",
+          "enforce",
+          "notify",
+          "appeal"
+        ],
+        "outcome": "Protect users and platform integrity.",
+        "business_intent": [
+          "Protect users and platform integrity",
+          "Help me protect users and platform integrity"
+        ]
+      },
+      {
+        "name": "notifications_growth",
+        "label": "Notifications & Growth",
+        "description": "Drive healthy re-engagement with targeted, rate-limited notifications and digests. It operates primarily on Rate limits, channels, and experiments to bring users back with value It coordinates recurring activities such as target, send, throttle, measure, and optimize to deliver consistent business outcomes",
+        "business_context": [
+          "rate_limits",
+          "channels",
+          "experiments"
+        ],
+        "business_processes": [
+          "target",
+          "send",
+          "throttle",
+          "measure",
+          "optimize"
+        ],
+        "outcome": "Bring users back with value.",
+        "business_intent": [
+          "Bring users back with value",
+          "Help me bring users back with value"
+        ]
+      },
+      {
+        "name": "creator_tools_analytics",
+        "label": "Creator Tools & Analytics",
+        "description": "Provide creation suites, insights, and monetization hooks tied to payouts. It operates primarily on Brand accounts, payouts, and UGC to help creators grow and earn It coordinates recurring activities such as create, tag, monetize, analyze, and withdraw to deliver consistent business outcomes",
+        "business_context": [
+          "brand_accounts",
+          "payouts",
+          "ugc"
+        ],
+        "business_processes": [
+          "create",
+          "tag",
+          "monetize",
+          "analyze",
+          "withdraw"
+        ],
+        "outcome": "Help creators grow and earn.",
+        "business_intent": [
+          "Help creators grow and earn",
+          "Help me help creators grow and earn"
+        ]
+      },
+      {
+        "name": "privacy_encryption",
+        "label": "Privacy & Encryption",
+        "description": "Protect communications and data with E2E encryption, consent, and device trust. It operates primarily on Keys, consent, and device posture to safeguard user privacy It coordinates recurring activities such as encrypt, consent, restrict, revoke, and audit to deliver consistent business outcomes",
+        "business_context": [
+          "keys",
+          "consent",
+          "device_posture"
+        ],
+        "business_processes": [
+          "encrypt",
+          "consent",
+          "restrict",
+          "revoke",
+          "audit"
+        ],
+        "outcome": "Safeguard user privacy.",
+        "business_intent": [
+          "Safeguard user privacy",
+          "Help me safeguard user privacy"
+        ]
+      },
+      {
+        "name": "loyalty_referrals_rewards",
+        "label": "Loyalty, Referrals & Rewards",
+        "description": "Accrue and redeem points, issue tiers and perks, and track referrals across channels. It operates primarily on Tiers, accrual rules, and redemptions to increase retention and advocacy It coordinates recurring activities such as enroll, accrue, redeem, tier, and report to deliver consistent business outcomes",
+        "business_context": [
+          "tiers",
+          "accrual_rules",
+          "redemptions"
+        ],
+        "business_processes": [
+          "enroll",
+          "accrue",
+          "redeem",
+          "tier",
+          "report"
+        ],
+        "outcome": "Increase retention and advocacy.",
+        "business_intent": [
+          "Increase retention and advocacy",
+          "Help me increase retention and advocacy"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "content_and_collaboration",
+    "label": "Content & Collaboration",
+    "capabilities": [
+      {
+        "name": "document_sheet_slide_editors",
+        "label": "Document/Sheet/Slide Editors",
+        "description": "Create shared artifacts with rich editors, templates, and AI assist. It operates primarily on Docs, sheets, and slides to author high-quality content together It coordinates recurring activities such as create, edit, format, export, and share to deliver consistent business outcomes",
+        "business_context": [
+          "docs",
+          "sheets",
+          "slides"
+        ],
+        "business_processes": [
+          "create",
+          "edit",
+          "format",
+          "export",
+          "share"
+        ],
+        "outcome": "Author high-quality content together.",
+        "business_intent": [
+          "Author high-quality content together",
+          "Help me author high-quality content together"
+        ]
+      },
+      {
+        "name": "real_time_coauthoring",
+        "label": "Real-Time Co-Authoring",
+        "description": "Reduce friction in synchronous work with presence and conflict resolution. It operates primarily on Presence, offline sync, and merge to collaborate fluidly in real time It coordinates recurring activities such as coedit, comment, resolve, sync, and merge to deliver consistent business outcomes",
+        "business_context": [
+          "presence",
+          "offline_sync",
+          "merge"
+        ],
+        "business_processes": [
+          "coedit",
+          "comment",
+          "resolve",
+          "sync",
+          "merge"
+        ],
+        "outcome": "Collaborate fluidly in real time.",
+        "business_intent": [
+          "Collaborate fluidly in real time",
+          "Help me collaborate fluidly in real time"
+        ]
+      },
+      {
+        "name": "comments_approvals",
+        "label": "Comments & Approvals",
+        "description": "Move work from draft to approved with tasks, reviews, and trails. It operates primarily on Mentions, assignments, and audit to accelerate review cycles It coordinates recurring activities such as comment, assign, approve, track, and archive to deliver consistent business outcomes",
+        "business_context": [
+          "mentions",
+          "assignments",
+          "audit"
+        ],
+        "business_processes": [
+          "comment",
+          "assign",
+          "approve",
+          "track",
+          "archive"
+        ],
+        "outcome": "Accelerate review cycles.",
+        "business_intent": [
+          "Accelerate review cycles",
+          "Help me accelerate review cycles"
+        ]
+      },
+      {
+        "name": "knowledge_base_wiki",
+        "label": "Knowledge Base & Wiki",
+        "description": "Curate institutional knowledge with taxonomy, tagging, and lifecycle governance. It operates primarily on Templates, ownership, and curation to make knowledge discoverable and durable It coordinates recurring activities such as author, tag, publish, curate, and retire to deliver consistent business outcomes",
+        "business_context": [
+          "templates",
+          "ownership",
+          "curation"
+        ],
+        "business_processes": [
+          "author",
+          "tag",
+          "publish",
+          "curate",
+          "retire"
+        ],
+        "outcome": "Make knowledge discoverable and durable.",
+        "business_intent": [
+          "Make knowledge discoverable and durable",
+          "Help me make knowledge discoverable and durable"
+        ]
+      },
+      {
+        "name": "whiteboards_diagramming",
+        "label": "Whiteboards & Diagramming",
+        "description": "Visualize ideas and systems collaboratively with stencils and connectors. It operates primarily on Stencils, layers, and exports to think and design visually together It coordinates recurring activities such as draw, arrange, link, export, and embed to deliver consistent business outcomes",
+        "business_context": [
+          "stencils",
+          "layers",
+          "exports"
+        ],
+        "business_processes": [
+          "draw",
+          "arrange",
+          "link",
+          "export",
+          "embed"
+        ],
+        "outcome": "Think and design visually together.",
+        "business_intent": [
+          "Think and design visually together",
+          "Help me think and design visually together"
+        ]
+      },
+      {
+        "name": "file_storage_sync",
+        "label": "File Storage & Synchronization",
+        "description": "Provide governed file access with versioning and multi-device sync. It operates primarily on Version history, quotas, and devices to store and retrieve files reliably It coordinates recurring activities such as upload, version, sync, organize, and restore to deliver consistent business outcomes",
+        "business_context": [
+          "version_history",
+          "quotas",
+          "devices"
+        ],
+        "business_processes": [
+          "upload",
+          "version",
+          "sync",
+          "organize",
+          "restore"
+        ],
+        "outcome": "Store and retrieve files reliably.",
+        "business_intent": [
+          "Store and retrieve files reliably",
+          "Help me store and retrieve files reliably"
+        ]
+      },
+      {
+        "name": "sharing_permissions",
+        "label": "Sharing & Permissions",
+        "description": "Grant secure access with roles, external link controls, and audit. It operates primarily on RBAC/ABAC and external sharing to share with the right people safely It coordinates recurring activities such as grant, restrict, audit, revoke, and report to deliver consistent business outcomes",
+        "business_context": [
+          "rbac_abac",
+          "external_sharing"
+        ],
+        "business_processes": [
+          "grant",
+          "restrict",
+          "audit",
+          "revoke",
+          "report"
+        ],
+        "outcome": "Share with the right people safely.",
+        "business_intent": [
+          "Share with the right people safely",
+          "Help me share with the right people safely"
+        ]
+      },
+      {
+        "name": "meeting_notes_transcription",
+        "label": "Meeting Notes & Transcription",
+        "description": "Turn conversations into actions via recording, transcription, and summaries. It operates primarily on ASR, summaries, and tasks to capture and act on meeting outcomes It coordinates recurring activities such as record, transcribe, summarize, assign, and distribute to deliver consistent business outcomes",
+        "business_context": [
+          "asr",
+          "summaries",
+          "tasks"
+        ],
+        "business_processes": [
+          "record",
+          "transcribe",
+          "summarize",
+          "assign",
+          "distribute"
+        ],
+        "outcome": "Capture and act on meeting outcomes.",
+        "business_intent": [
+          "Capture and act on meeting outcomes",
+          "Help me capture and act on meeting outcomes"
+        ]
+      },
+      {
+        "name": "enterprise_search_discovery",
+        "label": "Enterprise Search & Discovery",
+        "description": "Increase findability with indexing, semantic ranking, and suggestions. It operates primarily on Embeddings, ranking, and telemetry to help people find the right content It coordinates recurring activities such as index, query, rank, suggest, and track to deliver consistent business outcomes",
+        "business_context": [
+          "embeddings",
+          "ranking",
+          "telemetry"
+        ],
+        "business_processes": [
+          "index",
+          "query",
+          "rank",
+          "suggest",
+          "track"
+        ],
+        "outcome": "Help people find the right content.",
+        "business_intent": [
+          "Help people find the right content",
+          "Help me help people find the right content"
+        ]
+      },
+      {
+        "name": "retention_ediscovery",
+        "label": "Retention & Electronic Discovery (eDiscovery)",
+        "description": "Apply retention/DLP and execute holds and exports for legal matters. It operates primarily on Policies, cases, and exports to comply without hindering work It coordinates recurring activities such as classify, retain, hold, export, and purge to deliver consistent business outcomes",
+        "business_context": [
+          "policies",
+          "cases",
+          "exports"
+        ],
+        "business_processes": [
+          "classify",
+          "retain",
+          "hold",
+          "export",
+          "purge"
+        ],
+        "outcome": "Comply without hindering work.",
+        "business_intent": [
+          "Comply without hindering work",
+          "Help me comply without hindering work"
+        ]
+      },
+      {
+        "name": "integrations_apis",
+        "label": "Integrations & Application Programming Interfaces (APIs)",
+        "description": "Extend and connect the toolchain with events, APIs, and automations. It operates primarily on Webhooks, SDKs, and connectors to integrate content into workflows It coordinates recurring activities such as subscribe, call, transform, sync, and automate to deliver consistent business outcomes",
+        "business_context": [
+          "webhooks",
+          "sdks",
+          "connectors"
+        ],
+        "business_processes": [
+          "subscribe",
+          "call",
+          "transform",
+          "sync",
+          "automate"
+        ],
+        "outcome": "Integrate content into workflows.",
+        "business_intent": [
+          "Integrate content into workflows",
+          "Help me integrate content into workflows"
+        ]
+      },
+      {
+        "name": "content_cms_dam",
+        "label": "Content Management & Digital Asset Management (CMS/DAM)",
+        "description": "Manage content and creative assets with versions, rights, and channel exports. It operates primarily on Taxonomy, renditions, approvals, and rights to deliver on-brand, reusable content at scale It coordinates recurring activities such as ingest, tag, approve, publish, and retire to deliver consistent business outcomes",
+        "business_context": [
+          "taxonomy",
+          "renditions",
+          "approvals",
+          "rights"
+        ],
+        "business_processes": [
+          "ingest",
+          "tag",
+          "approve",
+          "publish",
+          "retire"
+        ],
+        "outcome": "Deliver on-brand, reusable content at scale.",
+        "business_intent": [
+          "Deliver on-brand, reusable content at scale",
+          "Help me deliver on-brand, reusable content at scale"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "online_buying_selling_and_marketplaces",
+    "label": "Online Buying, Selling & Marketplaces",
+    "capabilities": [
+      {
+        "name": "catalog_listings",
+        "label": "Catalog & Listings",
+        "description": "Model taxonomy, attributes, and media to enable rich discovery. It operates primarily on Variants, compliance, and content quality to make products accurate and browsable It coordinates recurring activities such as create, validate, enrich, publish, and retire to deliver consistent business outcomes",
+        "business_context": [
+          "variants",
+          "compliance",
+          "content_quality"
+        ],
+        "business_processes": [
+          "create",
+          "validate",
+          "enrich",
+          "publish",
+          "retire"
+        ],
+        "outcome": "Make products accurate and browsable.",
+        "business_intent": [
+          "Make products accurate and browsable",
+          "Help me make products accurate and browsable"
+        ]
+      },
+      {
+        "name": "search_merchandising",
+        "label": "Search & Merchandising",
+        "description": "Match buyers to inventory via ranking, placements, and recommendations. It operates primarily on Search/browse and A/B tests to improve discovery and conversion It coordinates recurring activities such as index, rank, recommend, place, and measure to deliver consistent business outcomes",
+        "business_context": [
+          "search_browse",
+          "a_b_tests"
+        ],
+        "business_processes": [
+          "index",
+          "rank",
+          "recommend",
+          "place",
+          "measure"
+        ],
+        "outcome": "Improve discovery and conversion.",
+        "business_intent": [
+          "Improve discovery and conversion",
+          "Help me improve discovery and conversion"
+        ]
+      },
+      {
+        "name": "pricing_promotions",
+        "label": "Pricing & Promotions",
+        "description": "Optimize price and offers with rules, elasticity, and targeted campaigns. It operates primarily on Price rules, targeting, and lift to balance margin and growth It coordinates recurring activities such as set, simulate, approve, activate, and settle to deliver consistent business outcomes",
+        "business_context": [
+          "price_rules",
+          "targeting",
+          "lift"
+        ],
+        "business_processes": [
+          "set",
+          "simulate",
+          "approve",
+          "activate",
+          "settle"
+        ],
+        "outcome": "Balance margin and growth.",
+        "business_intent": [
+          "Balance margin and growth",
+          "Help me balance margin and growth"
+        ]
+      },
+      {
+        "name": "cart_checkout",
+        "label": "Cart & Checkout",
+        "description": "Provide a fast, trusted flow with taxes, shipping, fraud signals, and wallets. It operates primarily on Tax/ship calc, risk checks, and wallets to reduce friction to purchase It coordinates recurring activities such as add, calculate, authorize, confirm, and notify to deliver consistent business outcomes",
+        "business_context": [
+          "tax_ship_calc",
+          "risk_checks",
+          "wallets"
+        ],
+        "business_processes": [
+          "add",
+          "calculate",
+          "authorize",
+          "confirm",
+          "notify"
+        ],
+        "outcome": "Reduce friction to purchase.",
+        "business_intent": [
+          "Reduce friction to purchase",
+          "Help me reduce friction to purchase"
+        ]
+      },
+      {
+        "name": "order_lifecycle_oms",
+        "label": "Order Lifecycle & Order Management System (OMS)",
+        "description": "Screen, allocate, and orchestrate orders through fulfillment with status tracking. It operates primarily on Fraud, allocation, and exceptions to fulfill accurately and on time It coordinates recurring activities such as screen, allocate, ship, track, and complete to deliver consistent business outcomes",
+        "business_context": [
+          "fraud",
+          "allocation",
+          "exceptions"
+        ],
+        "business_processes": [
+          "screen",
+          "allocate",
+          "ship",
+          "track",
+          "complete"
+        ],
+        "outcome": "Fulfill accurately and on time.",
+        "business_intent": [
+          "Fulfill accurately and on time",
+          "Help me fulfill accurately and on time"
+        ]
+      },
+      {
+        "name": "returns_rma",
+        "label": "Returns & Return Merchandise Authorization (RMA)",
+        "description": "Handle returns fairly via labels, inspection/grade, and refund/exchange. It operates primarily on Labels, grading, and settlement to resolve post-purchase issues It coordinates recurring activities such as initiate, authorize, receive, decide, and refund to deliver consistent business outcomes",
+        "business_context": [
+          "labels",
+          "grading",
+          "settlement"
+        ],
+        "business_processes": [
+          "initiate",
+          "authorize",
+          "receive",
+          "decide",
+          "refund"
+        ],
+        "outcome": "Resolve post-purchase issues.",
+        "business_intent": [
+          "Resolve post-purchase issues",
+          "Help me resolve post-purchase issues"
+        ]
+      },
+      {
+        "name": "seller_tools_onboarding",
+        "label": "Seller Tools & Onboarding",
+        "description": "Verify and onboard sellers, manage catalogs, and monitor SLAs. It operates primarily on KYC/KYB, dashboards, and SLAs to grow healthy supply-side It coordinates recurring activities such as apply, verify, onboard, manage, and report to deliver consistent business outcomes",
+        "business_context": [
+          "kyc_kyb",
+          "dashboards",
+          "slas"
+        ],
+        "business_processes": [
+          "apply",
+          "verify",
+          "onboard",
+          "manage",
+          "report"
+        ],
+        "outcome": "Grow healthy supply-side.",
+        "business_intent": [
+          "Grow healthy supply-side",
+          "Help me grow healthy supply-side"
+        ]
+      },
+      {
+        "name": "risk_marketplace_trust",
+        "label": "Risk & Marketplace Trust",
+        "description": "Protect GMV with rules/ML, holds, investigations, and escalations. It operates primarily on Signals, holds, and cases to contain fraud and abuse It coordinates recurring activities such as score, hold, investigate, release, and escalate to deliver consistent business outcomes",
+        "business_context": [
+          "signals",
+          "holds",
+          "cases"
+        ],
+        "business_processes": [
+          "score",
+          "hold",
+          "investigate",
+          "release",
+          "escalate"
+        ],
+        "outcome": "Contain fraud and abuse.",
+        "business_intent": [
+          "Contain fraud and abuse",
+          "Help me contain fraud and abuse"
+        ]
+      },
+      {
+        "name": "customer_service_tools",
+        "label": "Customer Service",
+        "description": "Resolve buyer/seller issues through omnichannel care with knowledge deflection. It operates primarily on Tickets, chat, and KB to restore satisfaction efficiently It coordinates recurring activities such as intake, classify, resolve, refund, and follow_up to deliver consistent business outcomes",
+        "business_context": [
+          "tickets",
+          "chat",
+          "kb"
+        ],
+        "business_processes": [
+          "intake",
+          "classify",
+          "resolve",
+          "refund",
+          "follow_up"
+        ],
+        "outcome": "Restore satisfaction efficiently.",
+        "business_intent": [
+          "Restore satisfaction efficiently",
+          "Help me restore satisfaction efficiently"
+        ]
+      },
+      {
+        "name": "disputes_chargebacks",
+        "label": "Disputes & Chargebacks",
+        "description": "Manage evidence and representment to minimize loss and ensure fairness. It operates primarily on Networks, SLAs, and evidence to handle payment disputes effectively It coordinates recurring activities such as collect, represent, adjudicate, settle, and report to deliver consistent business outcomes",
+        "business_context": [
+          "networks",
+          "slas",
+          "evidence"
+        ],
+        "business_processes": [
+          "collect",
+          "represent",
+          "adjudicate",
+          "settle",
+          "report"
+        ],
+        "outcome": "Handle payment disputes effectively.",
+        "business_intent": [
+          "Handle payment disputes effectively",
+          "Help me handle payment disputes effectively"
+        ]
+      },
+      {
+        "name": "commerce_analytics_bi",
+        "label": "Commerce Analytics & Business Intelligence (BI)",
+        "description": "Model attribution, cohorts, and funnels for growth and efficiency decisions. It operates primarily on Attribution, cohorts, and funnels to guide investment and operations It coordinates recurring activities such as ingest, model, visualize, alert, and share to deliver consistent business outcomes",
+        "business_context": [
+          "attribution",
+          "cohorts",
+          "funnels"
+        ],
+        "business_processes": [
+          "ingest",
+          "model",
+          "visualize",
+          "alert",
+          "share"
+        ],
+        "outcome": "Guide investment and operations.",
+        "business_intent": [
+          "Guide investment and operations",
+          "Help me guide investment and operations"
+        ]
+      },
+      {
+        "name": "store_ops_pos",
+        "label": "Store Operations & Point of Sale (POS)",
+        "description": "Process in-store sales and returns with tax, tender, and inventory updates unified with digital. It operates primarily on POS, receipts, promotions, and omni identity to unify store and digital commerce It coordinates recurring activities such as ring, redeem, return, reconcile, and post to deliver consistent business outcomes",
+        "business_context": [
+          "pos",
+          "receipts",
+          "promotions",
+          "omni_identity"
+        ],
+        "business_processes": [
+          "ring",
+          "redeem",
+          "return",
+          "reconcile",
+          "post"
+        ],
+        "outcome": "Unify store and digital commerce.",
+        "business_intent": [
+          "Unify store and digital commerce",
+          "Help me unify store and digital commerce"
+        ]
+      },
+      {
+        "name": "bopis_boris",
+        "label": "BOPIS/BORIS (Buy Online, Pickup/Return In Store)",
+        "description": "Coordinate order pickup and store returns with inventory reservations and SLA tracking. It operates primarily on Reservations, pickups, counterflows, and SLAs to deliver flexible omnichannel fulfillment It coordinates recurring activities such as reserve, notify, handoff, validate, and settle to deliver consistent business outcomes",
+        "business_context": [
+          "reservations",
+          "pickups",
+          "counterflows",
+          "slas"
+        ],
+        "business_processes": [
+          "reserve",
+          "notify",
+          "handoff",
+          "validate",
+          "settle"
+        ],
+        "outcome": "Deliver flexible omnichannel fulfillment.",
+        "business_intent": [
+          "Deliver flexible omnichannel fulfillment",
+          "Help me deliver flexible omnichannel fulfillment"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "trust_identity_and_payments_operations",
+    "label": "Trust, Identity & Payments Operations (TIPO)",
+    "capabilities": [
+      {
+        "name": "identity_proofing",
+        "label": "Identity Proofing (KYC/KYB)",
+        "description": "Establish trusted identities with document/biometric checks and sanctions screening. It operates primarily on KYC/KYB, PEP/sanctions, and device signals to verify users and businesses It coordinates recurring activities such as collect, verify, decide, record, and recheck to deliver consistent business outcomes",
+        "business_context": [
+          "kyc_kyb",
+          "pep_sanctions",
+          "device_signals"
+        ],
+        "business_processes": [
+          "collect",
+          "verify",
+          "decide",
+          "record",
+          "recheck"
+        ],
+        "outcome": "Verify users and businesses.",
+        "business_intent": [
+          "Verify users and businesses",
+          "Help me verify users and businesses"
+        ]
+      },
+      {
+        "name": "authentication",
+        "label": "Authentication",
+        "description": "Authenticate with low friction via risk-based challenges and passkeys/WebAuthn. It operates primarily on Step-up, device trust, and sessions to secure logins with minimal friction It coordinates recurring activities such as challenge, verify, issue_token, refresh, and revoke to deliver consistent business outcomes",
+        "business_context": [
+          "step_up",
+          "device_trust",
+          "sessions"
+        ],
+        "business_processes": [
+          "challenge",
+          "verify",
+          "issue_token",
+          "refresh",
+          "revoke"
+        ],
+        "outcome": "Secure logins with minimal friction.",
+        "business_intent": [
+          "Secure logins with minimal friction",
+          "Help me secure logins with minimal friction"
+        ]
+      },
+      {
+        "name": "authorization_entitlements",
+        "label": "Authorization & Entitlements",
+        "description": "Evaluate RBAC/ABAC policies and scopes to grant least-privilege access. It operates primarily on Policy engines and attributes to authorize precisely and consistently It coordinates recurring activities such as evaluate, permit, deny, log, and review to deliver consistent business outcomes",
+        "business_context": [
+          "policy_engines",
+          "attributes"
+        ],
+        "business_processes": [
+          "evaluate",
+          "permit",
+          "deny",
+          "log",
+          "review"
+        ],
+        "outcome": "Authorize precisely and consistently.",
+        "business_intent": [
+          "Authorize precisely and consistently",
+          "Help me authorize precisely and consistently"
+        ]
+      },
+      {
+        "name": "consent_privacy",
+        "label": "Consent & Privacy",
+        "description": "Capture purpose, enforce preferences, and maintain audit trails. It operates primarily on Consent records and DSRs to respect user choice and law It coordinates recurring activities such as collect, store, enforce, audit, and revoke to deliver consistent business outcomes",
+        "business_context": [
+          "consent_records",
+          "dsrs"
+        ],
+        "business_processes": [
+          "collect",
+          "store",
+          "enforce",
+          "audit",
+          "revoke"
+        ],
+        "outcome": "Respect user choice and law.",
+        "business_intent": [
+          "Respect user choice and law",
+          "Help me respect user choice and law"
+        ]
+      },
+      {
+        "name": "risk_scoring_fraud",
+        "label": "Risk Scoring & Fraud",
+        "description": "Score devices/behavior, enforce velocity policies, and run case reviews. It operates primarily on Device fingerprinting and ML/rules to block abuse and accept good users It coordinates recurring activities such as score, decide, limit, review, and learn to deliver consistent business outcomes",
+        "business_context": [
+          "device_fingerprinting",
+          "ml_rules"
+        ],
+        "business_processes": [
+          "score",
+          "decide",
+          "limit",
+          "review",
+          "learn"
+        ],
+        "outcome": "Block abuse and accept good users.",
+        "business_intent": [
+          "Block abuse and accept good users",
+          "Help me block abuse and accept good users"
+        ]
+      },
+      {
+        "name": "payment_processing",
+        "label": "Payment Processing",
+        "description": "Tokenize instruments, authorize/capture, settle, and reconcile across providers. It operates primarily on PSPs, tokens, and retries to move money securely and reliably It coordinates recurring activities such as tokenize, authorize, capture, settle, and reconcile to deliver consistent business outcomes",
+        "business_context": [
+          "psps",
+          "tokens",
+          "retries"
+        ],
+        "business_processes": [
+          "tokenize",
+          "authorize",
+          "capture",
+          "settle",
+          "reconcile"
+        ],
+        "outcome": "Move money securely and reliably.",
+        "business_intent": [
+          "Move money securely and reliably",
+          "Help me move money securely and reliably"
+        ]
+      },
+      {
+        "name": "bank_linking_payouts",
+        "label": "Bank Linking & Payouts",
+        "description": "Link accounts, verify, and disburse quickly via ACH/RTP with checks. It operates primarily on Micro-deposits, instant verify, and sanctions to enable fast, safe funding and payouts It coordinates recurring activities such as link, verify, fund, payout, and notify to deliver consistent business outcomes",
+        "business_context": [
+          "micro_deposits",
+          "instant_verify",
+          "sanctions"
+        ],
+        "business_processes": [
+          "link",
+          "verify",
+          "fund",
+          "payout",
+          "notify"
+        ],
+        "outcome": "Enable fast, safe funding and payouts.",
+        "business_intent": [
+          "Enable fast, safe funding and payouts",
+          "Help me enable fast, safe funding and payouts"
+        ]
+      },
+      {
+        "name": "wallets_cards",
+        "label": "Wallets & Cards",
+        "description": "Issue balances or PANs, tokenize to wallets, and manage lifecycle and limits. It operates primarily on Token vaults and NFC wallets to offer flexible, secure instruments It coordinates recurring activities such as issue, tokenize, spend, adjust, and close to deliver consistent business outcomes",
+        "business_context": [
+          "token_vaults",
+          "nfc_wallets"
+        ],
+        "business_processes": [
+          "issue",
+          "tokenize",
+          "spend",
+          "adjust",
+          "close"
+        ],
+        "outcome": "Offer flexible, secure instruments.",
+        "business_intent": [
+          "Offer flexible, secure instruments",
+          "Help me offer flexible, secure instruments"
+        ]
+      },
+      {
+        "name": "recurring_billing_dunning",
+        "label": "Recurring Billing & Dunning",
+        "description": "Schedule invoices, retry failures intelligently, and orchestrate dunning. It operates primarily on Billing cycles, retries, and comms to reduce involuntary churn It coordinates recurring activities such as schedule, bill, retry, dunn, and cancel to deliver consistent business outcomes",
+        "business_context": [
+          "billing_cycles",
+          "retries",
+          "comms"
+        ],
+        "business_processes": [
+          "schedule",
+          "bill",
+          "retry",
+          "dunn",
+          "cancel"
+        ],
+        "outcome": "Reduce involuntary churn.",
+        "business_intent": [
+          "Reduce involuntary churn",
+          "Help me reduce involuntary churn"
+        ]
+      },
+      {
+        "name": "disputes",
+        "label": "Disputes & Chargebacks",
+        "description": "Compile evidence and manage representment through decision and settlement. It operates primarily on Networks, SLAs, and evidence portals to resolve disputes fairly and efficiently It coordinates recurring activities such as intake, compile, submit, decide, and settle to deliver consistent business outcomes",
+        "business_context": [
+          "networks",
+          "slas",
+          "evidence_portals"
+        ],
+        "business_processes": [
+          "intake",
+          "compile",
+          "submit",
+          "decide",
+          "settle"
+        ],
+        "outcome": "Resolve disputes fairly and efficiently.",
+        "business_intent": [
+          "Resolve disputes fairly and efficiently",
+          "Help me resolve disputes fairly and efficiently"
+        ]
+      },
+      {
+        "name": "ledger_reporting",
+        "label": "Ledgering & Reporting",
+        "description": "Maintain subledgers and generate statements, rewards, and tax forms. It operates primarily on Subledgers, statements, and year-end to provide transparent financial records It coordinates recurring activities such as record, aggregate, generate, reconcile, and export to deliver consistent business outcomes",
+        "business_context": [
+          "subledgers",
+          "statements",
+          "year_end"
+        ],
+        "business_processes": [
+          "record",
+          "aggregate",
+          "generate",
+          "reconcile",
+          "export"
+        ],
+        "outcome": "Provide transparent financial records.",
+        "business_intent": [
+          "Provide transparent financial records",
+          "Help me provide transparent financial records"
+        ]
+      },
+      {
+        "name": "regulatory_operations",
+        "label": "Regulatory Operations",
+        "description": "Monitor AML, investigate alerts, and file SAR/CTR with evidence. It operates primarily on Policies and alert workflows to comply with financial regulations It coordinates recurring activities such as monitor, investigate, file, evidence, and audit to deliver consistent business outcomes",
+        "business_context": [
+          "policies",
+          "alert_workflows"
+        ],
+        "business_processes": [
+          "monitor",
+          "investigate",
+          "file",
+          "evidence",
+          "audit"
+        ],
+        "outcome": "Comply with financial regulations.",
+        "business_intent": [
+          "Comply with financial regulations",
+          "Help me comply with financial regulations"
+        ]
+      },
+      {
+        "name": "developer_apis_sandbox",
+        "label": "Developer APIs & Sandbox",
+        "description": "Provision keys, document APIs, simulate flows, and manage webhooks/versions. It operates primarily on Sandbox, versioning, and quotas to accelerate safe integrations It coordinates recurring activities such as provision, document, simulate, notify, and deprecate to deliver consistent business outcomes",
+        "business_context": [
+          "sandbox",
+          "versioning",
+          "quotas"
+        ],
+        "business_processes": [
+          "provision",
+          "document",
+          "simulate",
+          "notify",
+          "deprecate"
+        ],
+        "outcome": "Accelerate safe integrations.",
+        "business_intent": [
+          "Accelerate safe integrations",
+          "Help me accelerate safe integrations"
+        ]
+      },
+      {
+        "name": "entitlement_service",
+        "label": "Entitlement & Provisioning Service",
+        "description": "Activate products/services post-order by granting entitlements and provisioning tenants or features via IAM. It operates primarily on SKUs\u2192entitlements, tenants, and roles to shorten time-to-first-value after purchase It coordinates recurring activities such as map, provision, activate, audit, and revoke to deliver consistent business outcomes",
+        "business_context": [
+          "skus_entitlements",
+          "tenants",
+          "roles"
+        ],
+        "business_processes": [
+          "map",
+          "provision",
+          "activate",
+          "audit",
+          "revoke"
+        ],
+        "outcome": "Shorten time-to-first-value after purchase.",
+        "business_intent": [
+          "Shorten time-to-first-value after purchase",
+          "Help me shorten time-to-first-value after purchase"
+        ]
+      },
+      {
+        "name": "refunds_credits",
+        "label": "Refunds & Credits",
+        "description": "Issue refunds, store credits, or gift card adjustments based on return outcomes and policies. It operates primarily on Refund rails, partials, and charge reversals to resolve post-purchase outcomes quickly and fairly It coordinates recurring activities such as calculate, authorize, disburse, notify, and record to deliver consistent business outcomes",
+        "business_context": [
+          "refund_rails",
+          "partials",
+          "charge_reversals"
+        ],
+        "business_processes": [
+          "calculate",
+          "authorize",
+          "disburse",
+          "notify",
+          "record"
+        ],
+        "outcome": "Resolve post-purchase outcomes quickly and fairly.",
+        "business_intent": [
+          "Resolve post-purchase outcomes quickly and fairly",
+          "Help me resolve post-purchase outcomes quickly and fairly"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "workplace_management_and_productivity",
+    "label": "Workplace Management & Productivity",
+    "capabilities": [
+      {
+        "name": "task_management",
+        "label": "Task Management",
+        "description": "Coordinate work with boards, timelines, dependencies, and automations. It operates primarily on Backlogs, WIP limits, and rules to manage execution flow It coordinates recurring activities such as create, assign, progress, complete, and report to deliver consistent business outcomes",
+        "business_context": [
+          "backlogs",
+          "wip_limits",
+          "rules"
+        ],
+        "business_processes": [
+          "create",
+          "assign",
+          "progress",
+          "complete",
+          "report"
+        ],
+        "outcome": "Manage execution flow.",
+        "business_intent": [
+          "Manage execution flow",
+          "Help me manage execution flow"
+        ]
+      },
+      {
+        "name": "project_portfolio",
+        "label": "Project & Portfolio",
+        "description": "Deliver initiatives predictably with planning, capacity, status, and risks. It operates primarily on Programs, capacity, and RAID to achieve on-time, on-scope delivery It coordinates recurring activities such as plan, allocate, track, escalate, and close to deliver consistent business outcomes",
+        "business_context": [
+          "programs",
+          "capacity",
+          "raid"
+        ],
+        "business_processes": [
+          "plan",
+          "allocate",
+          "track",
+          "escalate",
+          "close"
+        ],
+        "outcome": "Achieve on-time, on-scope delivery.",
+        "business_intent": [
+          "Achieve on-time, on-scope delivery",
+          "Help me achieve on-time, on-scope delivery"
+        ]
+      },
+      {
+        "name": "okr_goal_management",
+        "label": "Objectives and Key Results (OKR) & Goal Management",
+        "description": "Define objectives, cascade key results, and run regular check-ins. It operates primarily on Cascades and weekly updates to align teams on outcomes It coordinates recurring activities such as define, align, update, score, and review to deliver consistent business outcomes",
+        "business_context": [
+          "cascades",
+          "weekly_updates"
+        ],
+        "business_processes": [
+          "define",
+          "align",
+          "update",
+          "score",
+          "review"
+        ],
+        "outcome": "Align teams on outcomes.",
+        "business_intent": [
+          "Align teams on outcomes",
+          "Help me align teams on outcomes"
+        ]
+      },
+      {
+        "name": "calendars_scheduling",
+        "label": "Calendars & Scheduling",
+        "description": "Make time coordination effortless with availability, conferencing, and rooms. It operates primarily on Free/busy, rooms, and reminders to reduce scheduling friction It coordinates recurring activities such as search, propose, confirm, remind, and reschedule to deliver consistent business outcomes",
+        "business_context": [
+          "free_busy",
+          "rooms",
+          "reminders"
+        ],
+        "business_processes": [
+          "search",
+          "propose",
+          "confirm",
+          "remind",
+          "reschedule"
+        ],
+        "outcome": "Reduce scheduling friction.",
+        "business_intent": [
+          "Reduce scheduling friction",
+          "Help me reduce scheduling friction"
+        ]
+      },
+      {
+        "name": "dashboards_reporting",
+        "label": "Dashboards & Reporting",
+        "description": "Create shared visibility with KPIs, slicing/dicing, and alerts. It operates primarily on KPI dictionary and telemetry to improve transparency and decisions It coordinates recurring activities such as aggregate, visualize, share, alert, and iterate to deliver consistent business outcomes",
+        "business_context": [
+          "kpi_dictionary",
+          "telemetry"
+        ],
+        "business_processes": [
+          "aggregate",
+          "visualize",
+          "share",
+          "alert",
+          "iterate"
+        ],
+        "outcome": "Improve transparency and decisions.",
+        "business_intent": [
+          "Improve transparency and decisions",
+          "Help me improve transparency and decisions"
+        ]
+      },
+      {
+        "name": "forms_surveys",
+        "label": "Forms & Surveys",
+        "description": "Capture structured input at scale with branching logic and integrations. It operates primarily on Anonymity, branching, and webhooks to collect and route feedback/data It coordinates recurring activities such as design, distribute, collect, analyze, and route to deliver consistent business outcomes",
+        "business_context": [
+          "anonymity",
+          "branching",
+          "webhooks"
+        ],
+        "business_processes": [
+          "design",
+          "distribute",
+          "collect",
+          "analyze",
+          "route"
+        ],
+        "outcome": "Collect and route feedback/data.",
+        "business_intent": [
+          "Collect and route feedback/data",
+          "Help me collect and route feedback/data"
+        ]
+      },
+      {
+        "name": "approvals_workflows",
+        "label": "Approvals & Workflows",
+        "description": "Automate routing, SLAs, and escalations with full audit trails. It operates primarily on Rules, SLAs, and audits to standardize decisions and speed cycles It coordinates recurring activities such as route, approve_reject, escalate, log, and audit to deliver consistent business outcomes",
+        "business_context": [
+          "rules",
+          "slas",
+          "audits"
+        ],
+        "business_processes": [
+          "route",
+          "approve_reject",
+          "escalate",
+          "log",
+          "audit"
+        ],
+        "outcome": "Standardize decisions and speed cycles.",
+        "business_intent": [
+          "Standardize decisions and speed cycles",
+          "Help me standardize decisions and speed cycles"
+        ]
+      },
+      {
+        "name": "e_signature_agreements",
+        "label": "Electronic Signature (E-Signature) & Agreements",
+        "description": "Generate, sign, and retain agreements securely with identity checks. It operates primarily on Templates, IDs, and retention to execute agreements quickly and safely It coordinates recurring activities such as generate, send, sign, archive, and renew to deliver consistent business outcomes",
+        "business_context": [
+          "templates",
+          "ids",
+          "retention"
+        ],
+        "business_processes": [
+          "generate",
+          "send",
+          "sign",
+          "archive",
+          "renew"
+        ],
+        "outcome": "Execute agreements quickly and safely.",
+        "business_intent": [
+          "Execute agreements quickly and safely",
+          "Help me execute agreements quickly and safely"
+        ]
+      },
+      {
+        "name": "meeting_productivity",
+        "label": "Meeting Productivity",
+        "description": "Turn meetings into outcomes with agendas, notes/transcripts, and action sync. It operates primarily on Transcripts, summaries, and tasks to reduce meeting waste It coordinates recurring activities such as prepare, capture, summarize, assign, and follow_up to deliver consistent business outcomes",
+        "business_context": [
+          "transcripts",
+          "summaries",
+          "tasks"
+        ],
+        "business_processes": [
+          "prepare",
+          "capture",
+          "summarize",
+          "assign",
+          "follow_up"
+        ],
+        "outcome": "Reduce meeting waste.",
+        "business_intent": [
+          "Reduce meeting waste",
+          "Help me reduce meeting waste"
+        ]
+      },
+      {
+        "name": "admin_policies_integrations",
+        "label": "Administration, Policies & Integrations",
+        "description": "Configure RBAC, monitor activity, and govern integrations and apps. It operates primarily on RBAC, logs, and app governance to operate the work OS safely It coordinates recurring activities such as configure, provision, monitor, integrate, and audit to deliver consistent business outcomes",
+        "business_context": [
+          "rbac",
+          "logs",
+          "app_governance"
+        ],
+        "business_processes": [
+          "configure",
+          "provision",
+          "monitor",
+          "integrate",
+          "audit"
+        ],
+        "outcome": "Operate the work OS safely.",
+        "business_intent": [
+          "Operate the work OS safely",
+          "Help me operate the work OS safely"
+        ]
+      },
+      {
+        "name": "experiment_platform",
+        "label": "Experimentation & Feature Flags Platform",
+        "description": "Run A/B tests and manage feature flags with guardrails and analytics. It operates primarily on Randomization, exposure, metrics, and holdouts to safely optimize experiences and conversion It coordinates recurring activities such as assign, launch, measure, decide, and roll_back to deliver consistent business outcomes",
+        "business_context": [
+          "randomization",
+          "exposure",
+          "metrics",
+          "holdouts"
+        ],
+        "business_processes": [
+          "assign",
+          "launch",
+          "measure",
+          "decide",
+          "roll_back"
+        ],
+        "outcome": "Safely optimize experiences and conversion.",
+        "business_intent": [
+          "Safely optimize experiences and conversion",
+          "Help me safely optimize experiences and conversion"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "people_work_and_learning",
+    "label": "People, Work & Learning",
+    "capabilities": [
+      {
+        "name": "talent_acquisition",
+        "label": "Talent Acquisition",
+        "description": "Source, assess, and coordinate interviews to hire qualified talent efficiently. It operates primarily on Branding, screening, and scheduling to fill roles with quality and speed It coordinates recurring activities such as source, assess, schedule, offer, and onboard to deliver consistent business outcomes",
+        "business_context": [
+          "branding",
+          "screening",
+          "scheduling"
+        ],
+        "business_processes": [
+          "source",
+          "assess",
+          "schedule",
+          "offer",
+          "onboard"
+        ],
+        "outcome": "Fill roles with quality and speed.",
+        "business_intent": [
+          "Fill roles with quality and speed",
+          "Help me fill roles with quality and speed"
+        ]
+      },
+      {
+        "name": "onboarding_offboarding",
+        "label": "Onboarding & Offboarding",
+        "description": "Orchestrate JML transitions across access, equipment, training, and exits. It operates primarily on JML, provisioning, and orientation to make employee transitions smooth and compliant It coordinates recurring activities such as provision, orient, transfer, deprovision, and archive to deliver consistent business outcomes",
+        "business_context": [
+          "jml",
+          "provisioning",
+          "orientation"
+        ],
+        "business_processes": [
+          "provision",
+          "orient",
+          "transfer",
+          "deprovision",
+          "archive"
+        ],
+        "outcome": "Make employee transitions smooth and compliant.",
+        "business_intent": [
+          "Make employee transitions smooth and compliant",
+          "Help me make employee transitions smooth and compliant"
+        ]
+      },
+      {
+        "name": "org_position_management",
+        "label": "Organization & Position Management",
+        "description": "Maintain accurate org structures and positions with headcount reconciliation. It operates primarily on Org charts, positions, and reqs to reflect the real organization It coordinates recurring activities such as define, assign, update, reconcile, and report to deliver consistent business outcomes",
+        "business_context": [
+          "org_charts",
+          "positions",
+          "reqs"
+        ],
+        "business_processes": [
+          "define",
+          "assign",
+          "update",
+          "reconcile",
+          "report"
+        ],
+        "outcome": "Reflect the real organization.",
+        "business_intent": [
+          "Reflect the real organization",
+          "Help me reflect the real organization"
+        ]
+      },
+      {
+        "name": "time_payroll",
+        "label": "Time & Payroll",
+        "description": "Capture time, apply pay rules, and process payroll with tax compliance. It operates primarily on Time rules, calendars, and taxes to pay people correctly and on time It coordinates recurring activities such as capture, calculate, approve, pay, and reconcile to deliver consistent business outcomes",
+        "business_context": [
+          "time_rules",
+          "calendars",
+          "taxes"
+        ],
+        "business_processes": [
+          "capture",
+          "calculate",
+          "approve",
+          "pay",
+          "reconcile"
+        ],
+        "outcome": "Pay people correctly and on time.",
+        "business_intent": [
+          "Pay people correctly and on time",
+          "Help me pay people correctly and on time"
+        ]
+      },
+      {
+        "name": "benefits_administration",
+        "label": "Benefits Administration",
+        "description": "Manage enrollments, eligibility, and life events with carrier integrations. It operates primarily on Vendors, plans, and life events to deliver valued, compliant benefits It coordinates recurring activities such as enroll, verify, update, communicate, and report to deliver consistent business outcomes",
+        "business_context": [
+          "vendors",
+          "plans",
+          "life_events"
+        ],
+        "business_processes": [
+          "enroll",
+          "verify",
+          "update",
+          "communicate",
+          "report"
+        ],
+        "outcome": "Deliver valued, compliant benefits.",
+        "business_intent": [
+          "Deliver valued, compliant benefits",
+          "Help me deliver valued, compliant benefits"
+        ]
+      },
+      {
+        "name": "compensation_management",
+        "label": "Compensation Management",
+        "description": "Run fair, competitive cycles with budgets, ranges, and governance. It operates primarily on Budgets, ranges, and equity to reward performance responsibly It coordinates recurring activities such as model, allocate, approve, publish, and audit to deliver consistent business outcomes",
+        "business_context": [
+          "budgets",
+          "ranges",
+          "equity"
+        ],
+        "business_processes": [
+          "model",
+          "allocate",
+          "approve",
+          "publish",
+          "audit"
+        ],
+        "outcome": "Reward performance responsibly.",
+        "business_intent": [
+          "Reward performance responsibly",
+          "Help me reward performance responsibly"
+        ]
+      },
+      {
+        "name": "talent_development_learning",
+        "label": "Talent Development & Learning",
+        "description": "Develop skills and continuity via reviews, learning paths, and certifications. It operates primarily on Calibration, LMS, and credentials to grow capability and readiness It coordinates recurring activities such as evaluate, learn, assess, certify, and review to deliver consistent business outcomes",
+        "business_context": [
+          "calibration",
+          "lms",
+          "credentials"
+        ],
+        "business_processes": [
+          "evaluate",
+          "learn",
+          "assess",
+          "certify",
+          "review"
+        ],
+        "outcome": "Grow capability and readiness.",
+        "business_intent": [
+          "Grow capability and readiness",
+          "Help me grow capability and readiness"
+        ]
+      },
+      {
+        "name": "workforce_planning_scheduling",
+        "label": "Workforce Planning & Scheduling",
+        "description": "Forecast capacity and schedule shifts while enforcing compliance. It operates primarily on Rosters, shift bidding, and rules to match labor to demand efficiently It coordinates recurring activities such as forecast, schedule, swap, approve, and optimize to deliver consistent business outcomes",
+        "business_context": [
+          "rosters",
+          "shift_bidding",
+          "rules"
+        ],
+        "business_processes": [
+          "forecast",
+          "schedule",
+          "swap",
+          "approve",
+          "optimize"
+        ],
+        "outcome": "Match labor to demand efficiently.",
+        "business_intent": [
+          "Match labor to demand efficiently",
+          "Help me match labor to demand efficiently"
+        ]
+      },
+      {
+        "name": "employee_relations_ehs",
+        "label": "Employee Relations & Environment, Health, and Safety (EHS)",
+        "description": "Ensure safe, fair workplaces through investigations and corrective actions. It operates primarily on Cases, actions, and OSHA reporting to protect people and the company It coordinates recurring activities such as report, investigate, resolve, track, and prevent to deliver consistent business outcomes",
+        "business_context": [
+          "cases",
+          "actions",
+          "osha_reporting"
+        ],
+        "business_processes": [
+          "report",
+          "investigate",
+          "resolve",
+          "track",
+          "prevent"
+        ],
+        "outcome": "Protect people and the company.",
+        "business_intent": [
+          "Protect people and the company",
+          "Help me protect people and the company"
+        ]
+      },
+      {
+        "name": "external_talent_marketplace",
+        "label": "External Talent Marketplace",
+        "description": "Match opportunities to talent with contracting, delivery tracking, and payouts. It operates primarily on Profiles, ratings, and escrow/payouts to flex capacity with trusted experts It coordinates recurring activities such as post, match, contract, deliver, and pay to deliver consistent business outcomes",
+        "business_context": [
+          "profiles",
+          "ratings",
+          "escrow_payouts"
+        ],
+        "business_processes": [
+          "post",
+          "match",
+          "contract",
+          "deliver",
+          "pay"
+        ],
+        "outcome": "Flex capacity with trusted experts.",
+        "business_intent": [
+          "Flex capacity with trusted experts",
+          "Help me flex capacity with trusted experts"
+        ]
+      },
+      {
+        "name": "skills_credentials",
+        "label": "Skills & Credentials",
+        "description": "Assess competence, issue verified badges, and maintain portable portfolios. It operates primarily on Assessments, badges, and profiles to make skills visible and portable It coordinates recurring activities such as assess, verify, issue, update, and share to deliver consistent business outcomes",
+        "business_context": [
+          "assessments",
+          "badges",
+          "profiles"
+        ],
+        "business_processes": [
+          "assess",
+          "verify",
+          "issue",
+          "update",
+          "share"
+        ],
+        "outcome": "Make skills visible and portable.",
+        "business_intent": [
+          "Make skills visible and portable",
+          "Help me make skills visible and portable"
+        ]
+      },
+      {
+        "name": "people_analytics_bi",
+        "label": "People Analytics & Business Intelligence (BI)",
+        "description": "Model hiring, retention, engagement, and diversity metrics for decisions. It operates primarily on HRIS, surveys, and productivity to inform talent strategy with evidence It coordinates recurring activities such as ingest, model, benchmark, visualize, and advise to deliver consistent business outcomes",
+        "business_context": [
+          "hris",
+          "surveys",
+          "productivity"
+        ],
+        "business_processes": [
+          "ingest",
+          "model",
+          "benchmark",
+          "visualize",
+          "advise"
+        ],
+        "outcome": "Inform talent strategy with evidence.",
+        "business_intent": [
+          "Inform talent strategy with evidence",
+          "Help me inform talent strategy with evidence"
+        ]
+      }
+    ]
+  }
+]
+}

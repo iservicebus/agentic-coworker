@@ -1,0 +1,116 @@
+{
+  "default": [
+    {
+      "provider_id": "aintegrator",
+      "type": "oauth",
+      "client_id": "agent-host",
+      "tenant_name": "default",
+      "provider_type": "keycloak",
+      "provider_name": "Aintegrator",
+      "encrypted_secret": "55c8090fb75e82b162c58eb915a1163ac72ebd1bcd2b9e1e7044c9",
+      "is_built_in": true,
+      "iv": "f1b9787d9f632739942c1a2f",
+      "options": {
+        "token": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/token",
+        "issuer": "http://host.docker.internal:8888/realms/default",
+        "userinfo": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/userinfo",
+        "authorization": {
+          "url": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/auth",
+          "params": {
+            "scope": "openid email profile"
+          }
+        },
+        "jwks_endpoint": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/certs"
+      }
+    },
+    {
+      "provider_id": "github",
+      "type": "oauth",
+      "tenant_name": "default",
+      "provider_type": "github",
+      "provider_name": "Github",
+      "is_built_in": true,
+      "options": {
+        "authorization": {
+          "params": {
+            "scope": "user repo admin:org"
+          }
+        }
+      }
+    },
+    {
+      "provider_id": "google",
+      "type": "oauth",
+      "tenant_name": "default",
+      "provider_type": "google",
+      "provider_name": "Google",
+      "is_built_in": true,
+      "options": {
+        "authorization": {
+          "params": {
+            "scope": "openid https://mail.google.com/ https://www.googleapis.com/auth/contacts profile https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/documents https://www.googleapis.com/auth/youtube  https://www.googleapis.com/auth/spreadsheets",
+            "prompt": "consent",
+            "access_type": "offline"
+          }
+        }
+      }
+    },
+    {
+      "provider_id": "keycloak",
+      "type": "oauth",
+      "client_id": "agent-host",
+      "tenant_name": "default",
+      "provider_type": "keycloak",
+      "provider_name": "Keycloak",
+      "encrypted_secret": "4f79bab676768a9d189e8bd6060a5d872235c729506ccfe45ccf24",
+      "is_built_in": true,
+      "iv": "3792408f947d69acdbb6c5c2",
+      "options": {
+        "token": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/token",
+        "issuer": "http://host.docker.internal:8888/realms/default",
+        "userinfo": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/userinfo",
+        "authorization": {
+          "url": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/auth",
+          "params": {
+            "scope": "openid email profile"
+          }
+        },
+        "jwks_endpoint": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/certs"
+      }
+    },
+    {
+      "provider_id": "linkedin",
+      "type": "oauth",
+      "tenant_name": "default",
+      "provider_type": "linkedin",
+      "provider_name": "Linkedin",
+      "is_built_in": true,
+      "options": {
+        "authorization": {
+          "url": "https://www.linkedin.com/oauth/v2/authorization",
+          "params": {
+            "scope": "openid profile email w_member_social"
+          }
+        }
+      }
+    },
+    {
+      "provider_id": "servicenow",
+      "type": "oauth",
+      "tenant_name": "default",
+      "provider_type": "servicenow",
+      "provider_name": "ServiceNow",
+      "is_built_in": true,
+      "options": {
+        "token": "https://dev296096.service-now.com/oauth_token.do",
+        "userinfo": "https://dev296096.service-now.com/api/now/table/sys_user?sysparm_limit=1",
+        "authorization": {
+          "url": "https://dev296096.service-now.com/oauth_auth.do",
+          "params": {
+            "state": false
+          }
+        }
+      }
+    }
+  ]
+}

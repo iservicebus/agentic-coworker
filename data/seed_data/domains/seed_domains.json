@@ -1,0 +1,244 @@
+{
+  "default":[
+  {
+    "name": "go_to_market_sales_and_customer_success",
+    "label": "Go-to-Market, Sales & Customer Success",
+    "description": "This domain manages the full customer lifecycle from initial market engagement and lead generation through sales execution, fulfillment, service, and renewal. It primarily deals with customers, leads, opportunities, sales teams, partners, marketing campaigns, and the content and offers used to engage them. The domain connects marketing, sales, finance, and service activities into a coherent end-to-end revenue engine. It supports outcomes such as revenue growth, customer acquisition, retention, and satisfaction. It also ensures customer-facing processes are coordinated, measurable, and continuously optimized.",
+    "scope": "Includes brand and demand generation, marketing campaigns, lead and opportunity management, account management, pricing and packaging, sales enablement, channel and partner management, customer service, renewals, and expansion; coordinates with Finance for billing and revenue recognition and with Supply Chain for fulfillment, returns, and service logistics. Tools in this domain typically manage customers, leads, opportunities, sales orders, renewals, and campaign performance in service of commercial growth.",
+    "domain_entities": [
+      "Marketing campaign",
+      "Lead",
+      "Sales opportunity",
+      "Customer account",
+      "Sales order",
+      "Customer contract",
+      "Support case",
+      "Renewal or expansion motion"
+    ],
+    "domain_purposes": "This domain exists to drive profitable revenue growth and customer lifetime value by orchestrating how demand is created, opportunities are converted, and relationships are expanded. It enables consistent, high-quality customer experiences across marketing, sales, and service touchpoints. It ensures that go-to-market motions are data-driven, scalable, and aligned to financial and operational goals, with tools often focused on customers, leads, opportunities, sales orders, renewals, and marketing campaigns."
+  },
+  {
+    "name": "product_design_and_engineering",
+    "label": "Product Design & Engineering",
+    "description": "This domain integrates product management, design, and engineering into a continuous lifecycle from idea to launch and beyond. It primarily deals with product roadmaps, features, requirements, design assets, code repositories, branches, builds, releases, code-scanning results, and other developer artifacts. The domain supports teams that discover opportunities, define solutions, and build secure, reliable products and services. It enables predictable delivery, high product quality, and a strong developer experience. It underpins innovation, product-market fit, and long-term platform resilience.",
+    "scope": "Includes product discovery and research, portfolio and roadmap management, requirements and backlog management, user experience and design systems, development toolchains, source control, branches and pull requests, CI/CD pipelines, testing and quality, code scanning, and readiness for launch and rollout; coordinates with Go-to-Market for launches and with Digital & AI Platform, Data & Security for infrastructure and operations. Tools in this domain typically manage code, repositories, branches, builds, releases, and developer workflows.",
+    "domain_entities": [
+      "Product",
+      "Product roadmap",
+      "Feature or user story",
+      "Design asset",
+      "Code repository",
+      "Branch",
+      "Release or build",
+      "Test case or quality report"
+    ],
+    "domain_purposes": "This domain exists to enable teams to discover, design, build, and ship high-quality products efficiently and safely. It improves engineering productivity, product reliability, and customer value realization through modern practices and automation. It ensures that product investments are planned, governed, and delivered in line with strategic objectives, with tools focused on managing code, repositories, branches, builds, releases, and related engineering artifacts."
+  },
+  {
+    "name": "supply_chain_and_operations",
+    "label": "Supply Chain & Operations",
+    "description": "This domain plans, sources, manufactures, stores, and delivers products and services reliably and cost-effectively. It primarily deals with materials, suppliers, production assets, inventory, warehouses, logistics providers, and customer orders. The domain governs how demand is translated into supply plans and how goods move across the value chain from origin to consumption. It supports service levels, working capital efficiency, and cost optimization. It also ensures operational transparency and resilience across global networks.",
+    "scope": "Includes demand and supply planning, procurement and sourcing, manufacturing and production, inventory control, warehousing, transportation and logistics, and returns management; coordinates closely with Finance for cost and inventory accounting and with Go-to-Market and Customer Success for order fulfillment and post-sale operations.",
+    "domain_entities": [
+      "Demand plan",
+      "Supply plan",
+      "Purchase order",
+      "Supplier",
+      "Production order",
+      "Inventory item",
+      "Warehouse location",
+      "Shipment or delivery"
+    ],
+    "domain_purposes": "This domain exists to ensure products and services are available, delivered on time, and produced at optimal cost and quality. It drives operational excellence, service reliability, and asset utilization across the value chain. It protects margins and customer satisfaction by improving planning accuracy, lead times, and end-to-end visibility."
+  },
+  {
+    "name": "assets_and_maintenance",
+    "label": "Assets & Maintenance",
+    "description": "This domain oversees the lifecycle, reliability, and performance of physical and digital assets used to deliver products and services. It primarily deals with equipment, infrastructure, asset records, maintenance plans, work orders, and spare parts. The domain coordinates field service operations, maintenance scheduling, and asset data management to maximize uptime and safety. It supports compliance with regulatory and safety standards as well as cost control. It also underpins long-term asset strategy, renewal, and modernization decisions.",
+    "scope": "Includes enterprise asset management, asset lifecycle tracking, maintenance planning and scheduling, field service operations, and spare parts coordination across fixed and mobile assets; integrates with Supply Chain for parts replenishment and with Finance for asset capitalization and depreciation.",
+    "domain_entities": [
+      "Asset",
+      "Asset hierarchy",
+      "Maintenance plan",
+      "Maintenance work order",
+      "Field service job",
+      "Spare part",
+      "Asset health or condition record"
+    ],
+    "domain_purposes": "This domain exists to maintain and optimize asset performance, ensuring safety, reliability, and cost-effective operations. It enables preventive, corrective, and predictive maintenance practices that reduce downtime and extend asset life. It ensures that asset decisions are data-driven and compliant with financial and regulatory requirements."
+  },
+  {
+    "name": "finance_and_corporate_accounting",
+    "label": "Finance & Corporate Accounting",
+    "description": "This domain safeguards financial integrity, liquidity, and performance across the enterprise. It primarily deals with financial transactions, accounts, ledgers, budgets, forecasts, tax positions, and financial statements. The domain connects operational activities from sales, procurement, and operations into a coherent financial view. It supports internal and external reporting, statutory compliance, and decision support. It underpins investor confidence, capital allocation, and long-term financial health.",
+    "scope": "Includes general ledger and sub-ledger accounting, accounts payable and receivable, treasury and cash management, tax, financial planning and analysis, consolidation and reporting, and performance management; coordinates with all operational domains for transaction capture, reconciliations, and financial controls.",
+    "domain_entities": [
+      "Financial transaction",
+      "Account",
+      "Journal entry",
+      "Invoice",
+      "Budget",
+      "Forecast",
+      "Financial statement",
+      "Tax record"
+    ],
+    "domain_purposes": "This domain exists to ensure accurate, timely, and compliant financial recording and reporting. It enables informed decision-making by providing insight into performance, risk, and value creation. It protects the enterprise through strong financial controls, regulatory compliance, and efficient close and planning processes."
+  },
+  {
+    "name": "enterprise_strategy_corporate_services_and_delivery",
+    "label": "Enterprise Strategy, Corporate Services & Delivery",
+    "description": "This domain sets enterprise direction, governs corporate portfolios, and orchestrates cross-functional program delivery. It primarily deals with strategies, objectives and key results, portfolios, initiatives, policies, shared services, and corporate stakeholder relationships. The domain aligns funding, resources, and governance with strategic outcomes. It supports consistent execution of major change programs and corporate services at scale. It also underpins transparency, accountability, and stakeholder confidence across the enterprise.",
+    "scope": "Includes enterprise strategy and OKRs, portfolio and program management, corporate governance and policy, legal and company secretariat, investor relations, ESG and sustainability oversight, real estate and facilities, and shared services delivery; coordinates with all business domains to align plans, investments, and governance.",
+    "domain_entities": [
+      "Enterprise strategy",
+      "Objective and key result",
+      "Portfolio",
+      "Program or project",
+      "Corporate policy",
+      "Shared service",
+      "ESG commitment or metric",
+      "Investor communication"
+    ],
+    "domain_purposes": "This domain exists to define where the enterprise is heading and ensure that investments and programs deliver on that direction. It enables consistent governance, prioritization, and execution of strategic initiatives and corporate services. It protects enterprise value by balancing performance, risk, compliance, and stakeholder expectations."
+  },
+  {
+    "name": "digital_ai_platform_data_security",
+    "label": "Digital & AI Platform, Data & Security (DAPDS)",
+    "description": "This domain provides the core digital platforms, data foundations, and security controls that underpin business applications and services. It primarily deals with infrastructure, platforms, data assets, integration services, AI/ML workflows, enterprise-wide identities, access policies, security events, and observability telemetry. The domain ensures that systems are scalable, reliable, observable, and secure. It supports data-driven decision-making, digital experiences, and AI-powered capabilities across business domains. It also protects information assets and service continuity against threats and failures.",
+    "scope": "Includes cloud and on-prem infrastructure, enterprise application platforms, data platforms and pipelines, analytics and AI/ML operations, enterprise-wide identity and access management (SSO across multiple applications, platform IAM), cybersecurity operations (threat detection, security scanning, incident response), DevOps/SRE, and FinOps; coordinates with Product Design & Engineering and all business domains to host, secure, and operate applications and data. Tools in this domain typically deliver cross-channel infrastructure, platform IAM, and security capabilities rather than channel-specific social or communication features.",
+    "domain_entities": [
+      "Infrastructure resource",
+      "Platform service",
+      "Data asset",
+      "Data pipeline",
+      "Machine learning model",
+      "User identity",
+      "Access policy",
+      "Security incident"
+    ],
+    "domain_purposes": "This domain exists to enable secure, resilient, and scalable digital services, data, and AI capabilities for the enterprise. It improves reliability, performance, and observability of critical platforms while controlling cost and risk. It protects systems and data through strong identity, access, and security practices, focusing on enterprise-wide SSO, platform IAM, security scanning, and incident response across channels rather than the local identity or profiles of specific social or communication networks."
+  },
+  {
+    "name": "risk_compliance_and_governance",
+    "label": "Risk, Compliance & Governance",
+    "description": "This domain provides independent oversight of risks, controls, and compliance obligations across the enterprise. It primarily deals with risk registers, control frameworks, policies, audits, regulatory obligations, and continuity plans. The domain monitors how well the business adheres to internal standards and external regulations. It supports transparent reporting to management, regulators, and other stakeholders. It also underpins organizational resilience, ethical conduct, and trust.",
+    "scope": "Includes enterprise risk management, internal controls, regulatory compliance, ethics and integrity programs, internal audit, and business continuity and resilience planning; coordinates with all domains to assess risks, design controls, and monitor compliance.",
+    "domain_entities": [
+      "Risk",
+      "Control",
+      "Control test",
+      "Policy or standard",
+      "Regulatory obligation",
+      "Audit finding",
+      "Issue or remediation action",
+      "Business continuity plan"
+    ],
+    "domain_purposes": "This domain exists to identify, assess, and mitigate risks that could impact enterprise objectives or stakeholders. It enforces policies and controls that ensure compliance with laws, regulations, and ethical standards. It improves transparency and resilience by surfacing issues early and driving remediation and continuous improvement."
+  },
+  {
+    "name": "social_communication_and_community",
+    "label": "Social Communication & Community",
+    "description": "This domain enables individuals, teams, and communities to communicate and interact in real time and asynchronously. It primarily deals with user profiles and identities within communication or social networks, conversations, messages, calls, livestreams, forums, groups, feeds, and posts. The domain supports both private collaboration and public or semi-public community engagement across channels such as email, messaging, conferencing, and social networks. It balances rich interaction and discoverability with safety, moderation, and privacy controls. It underpins engagement, relationship-building, and information flow across networks.",
+    "scope": "Includes messaging, email, voice and video calls, conferencing, livestreams, forums, social feeds and groups, reactions, notifications, and presence. It also includes managing user identity and profile information specifically in the context of communication and social networks when used for posting, messaging, or social presence. It coordinates with Content & Collaboration for shared artifacts and documents and with Digital & AI Platform, Data & Security for underlying infrastructure and security.",
+    "domain_entities": [
+      "User profile",
+      "Social network profile",
+      "Conversation",
+      "Message",
+      "Call or meeting session",
+      "Livestream",
+      "Community or group",
+      "Post or thread",
+      "Moderation action",
+      "Notification"
+    ],
+    "domain_purposes": "This domain exists to connect people and communities through secure, reliable, and engaging communication experiences. It enables content creation, sharing, and interaction via messages, posts, comments, threads, feeds, and livestreams while maintaining trust, safety, and privacy. It improves collaboration, community health, and engagement across digital channels, including the use of social network identities and profiles when they are used for communication, posting, or community participation."
+  },
+  {
+    "name": "content_and_collaboration",
+    "label": "Content & Collaboration",
+    "description": "This domain empowers individuals and teams to create, organize, and collaborate on digital content. It primarily deals with documents, spreadsheets, presentations, wikis, whiteboards, files, and their associated metadata, versions, and permissions. The domain supports co-authoring, review workflows, and knowledge management across projects and functions. It connects people, ideas, and decisions through shared workspaces and content. It underpins productivity, alignment, and institutional memory.",
+    "scope": "Includes authoring and co-editing tools, file storage and organization, document and knowledge management, sharing and permissions, review and approval workflows, and archival and retention; coordinates with Social Communication & Community and Workplace Management & Productivity to link content with conversations and work execution. Tools in this domain typically manage documents, files, folders, drives, wikis, whiteboards, and knowledge artifacts.",
+    "domain_entities": [
+      "Document",
+      "Spreadsheet",
+      "Presentation",
+      "Wiki or knowledge article",
+      "Whiteboard",
+      "File",
+      "Workspace or folder",
+      "Content permission or access rule"
+    ],
+    "domain_purposes": "This domain exists to enable seamless creation, collaboration, and governance of shared content. It improves productivity and decision quality by making information easy to create, find, trust, and reuse. It protects sensitive information through structured permissions, retention, and content lifecycle controls and typically covers tools that manage documents, files, folders, and related collaborative artifacts."
+  },
+  {
+    "name": "online_buying_selling_and_marketplaces",
+    "label": "Online Buying, Selling & Marketplaces",
+    "description": "This domain facilitates the discovery, purchase, and sale of goods and services in digital channels. It primarily deals with product catalogs, listings, search experiences, carts, orders, seller profiles, buyer accounts, and marketplace policies. The domain orchestrates how buyers navigate offerings, transact, and receive fulfillment and support. It supports trust, transparency, and efficient resolution of issues between participants. It drives commerce growth, conversion, and satisfaction across online marketplaces.",
+    "scope": "Includes catalog and merchandising, search and recommendations, product detail and content, cart and checkout, order management, fulfillment and shipping coordination, returns and refunds, and dispute resolution; coordinates with Trust, Identity & Payments Operations for payments and risk and with Supply Chain & Operations for fulfillment.",
+    "domain_entities": [
+      "Product listing",
+      "Catalog item",
+      "Buyer account",
+      "Seller account",
+      "Shopping cart",
+      "Order",
+      "Fulfillment or shipment",
+      "Return or dispute case"
+    ],
+    "domain_purposes": "This domain exists to enable seamless, trusted digital commerce between buyers and sellers. It improves conversion, average order value, and retention by optimizing discovery, transaction flows, and post-purchase experiences. It protects marketplace integrity through policies, ratings, and resolution mechanisms."
+  },
+  {
+    "name": "trust_identity_and_payments_operations",
+    "label": "Trust, Identity & Payments Operations (TIPO)",
+    "description": "This domain unifies identity, trust, and payments operations to enable secure and compliant money movement. It primarily deals with user and business identities, authentication flows, risk scores, payment instruments, transactions, and disputes. The domain verifies who participants are, manages access to financial capabilities, and evaluates fraud and credit risks. It orchestrates payment authorization, settlement, refunds, and chargebacks across channels and partners. It supports trust, regulatory compliance, and smooth financial experiences for users and merchants.",
+    "scope": "Includes identity and access management for payments contexts, authentication and authorization, KYC/KYB and sanctions screening, fraud and risk scoring, consent and privacy preferences, payment method management, payment processing and routing, and dispute and chargeback management; coordinates with Online Buying, Selling & Marketplaces, Finance, and Risk, Compliance & Governance.",
+    "domain_entities": [
+      "User identity",
+      "Business identity",
+      "Authentication session",
+      "Risk or fraud assessment",
+      "Payment method",
+      "Payment transaction",
+      "Payout",
+      "Dispute or chargeback"
+    ],
+    "domain_purposes": "This domain exists to verify identities, manage access, and enable trusted financial transactions at scale. It protects users, merchants, and the enterprise from fraud, abuse, and non-compliance while keeping experiences as frictionless as possible. It ensures that money movement is reliable, auditable, and aligned with regulatory and partner obligations."
+  },
+  {
+    "name": "workplace_management_and_productivity",
+    "label": "Workplace Management & Productivity",
+    "description": "This domain supports how individuals and teams plan, execute, and track work across projects, tasks, and goals. It primarily deals with work items, projects, milestones, goals and OKRs, schedules, forms, approvals, and meeting artifacts. The domain provides structure for assigning responsibilities, managing dependencies, and tracking progress. It integrates work management with calendars, collaboration tools, and reporting. It enables transparency, coordination, and continuous improvement in how work gets done.",
+    "scope": "Includes task and project management, goal and OKR tracking, scheduling and calendaring, event and meeting management, forms and workflows, approvals, e-signature, and meeting productivity tools; coordinates with Content & Collaboration and People, Work & Learning to link work execution with content and roles. Tools in this domain typically operate on events, calendars, tasks, projects, and goals/OKRs used for planning and executing work.",
+    "domain_entities": [
+      "Task",
+      "Project",
+      "Milestone",
+      "Goal or OKR",
+      "Work request or intake",
+      "Form or workflow",
+      "Approval record",
+      "Meeting or session",
+      "Calendar event"
+    ],
+    "domain_purposes": "This domain exists to help teams plan, prioritize, and complete work efficiently and predictably. It improves productivity, alignment, and visibility by centralizing work items, dependencies, schedules, and progress in one system of record. It enables automation of common workflows and supports data-driven performance management, with tools often focused on events, calendars, tasks, projects, and goals/OKRs."
+  },
+  {
+    "name": "people_work_and_learning",
+    "label": "People, Work & Learning",
+    "description": "This domain manages the end-to-end lifecycle of people who work with or for the organization, including employees, contractors, and external talent. It primarily deals with roles, positions, candidates, employees, contingent workers, learning content, skills, schedules, and compensation records. The domain connects talent acquisition, HR operations, workforce management, and learning ecosystems. It supports engagement, development, and well-being while ensuring compliance with labor and employment requirements. It underpins workforce planning, capability building, and culture.",
+    "scope": "Includes workforce planning, talent acquisition and onboarding, core HR records, time and attendance, scheduling, payroll and benefits administration, performance and talent management, learning and development, and health, safety, and well-being; coordinates with Workplace Management & Productivity, Finance, and external talent and learning marketplaces.",
+    "domain_entities": [
+      "Position or role",
+      "Candidate",
+      "Employee record",
+      "Contingent worker",
+      "Compensation and payroll record",
+      "Time and attendance record",
+      "Learning course or asset",
+      "Skill or competency profile"
+    ],
+    "domain_purposes": "This domain exists to attract, develop, compensate, and retain the people needed to achieve enterprise goals. It improves workforce experience, productivity, and capability through integrated HR and learning processes. It protects both the organization and individuals by ensuring fair, compliant, and transparent people practices."
+  }
+]
+}

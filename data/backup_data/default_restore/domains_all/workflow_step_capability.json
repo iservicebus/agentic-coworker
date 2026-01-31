@@ -1,0 +1,349 @@
+{
+  "default": [
+    {
+      "workflow_step_name": "clarify_direction",
+      "capability_name": "strategy_okrs",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "shape_the_portfolio",
+      "capability_name": "enterprise_portfolio_management",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "frame_initiatives",
+      "capability_name": "portfolio_roadmap_governance",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "translate_into_work",
+      "capability_name": "requirements_backlog",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "translate_into_work",
+      "capability_name": "document_sheet_slide_editors",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "translate_into_work",
+      "capability_name": "comments_approvals",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "translate_into_work",
+      "capability_name": "enterprise_search_discovery",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "coordinate_execution",
+      "capability_name": "portfolio_roadmap_governance",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "measure_impact",
+      "capability_name": "management_reporting_bi",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "measure_impact",
+      "capability_name": "dashboards_reporting",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "adjust_strategy",
+      "capability_name": "strategy_okrs",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "adjust_strategy",
+      "capability_name": "planning_budgeting_forecasting",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "understand_the_need",
+      "capability_name": "design_systems_research",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "design_the_solution",
+      "capability_name": "design_systems_research",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "build_and_integrate",
+      "capability_name": "developer_experience_platform",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "build_and_integrate",
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "assure_quality_and_security",
+      "capability_name": "devops_ci_cd",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "assure_quality_and_security",
+      "capability_name": "artifact_registry",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "assure_quality_and_security",
+      "capability_name": "secure_dev_compliance",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "release_and_adopt",
+      "capability_name": "release_management_handoff",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "operate_and_protect",
+      "capability_name": "cloud_infrastructure_ops",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "operate_and_protect",
+      "capability_name": "security_operations",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "operate_and_protect",
+      "capability_name": "sre_observability",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "learn_and_iterate",
+      "capability_name": "service_performance_improvement",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "create_and_capture_demand",
+      "capability_name": "lead_management_routing",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "create_and_capture_demand",
+      "capability_name": "marketing_automation_campaigns",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "create_and_capture_demand",
+      "capability_name": "content_creation_publishing",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "create_and_capture_demand",
+      "capability_name": "feeds_recommendations",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "create_and_capture_demand",
+      "capability_name": "communities_governance",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "create_and_capture_demand",
+      "capability_name": "loyalty_referrals_rewards",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "qualify_and_shape_opportunities",
+      "capability_name": "crm_data_stewardship",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "qualify_and_shape_opportunities",
+      "capability_name": "lead_management_routing",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "agree_on_value_and_terms",
+      "capability_name": "cpq_deal_desk",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "agree_on_value_and_terms",
+      "capability_name": "value_pricing_configuration",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "commit_and_capture_the_order",
+      "capability_name": "order_capture_orchestration",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "commit_and_capture_the_order",
+      "capability_name": "catalog_listings",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "commit_and_capture_the_order",
+      "capability_name": "search_merchandising",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "commit_and_capture_the_order",
+      "capability_name": "cart_checkout",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "commit_and_capture_the_order",
+      "capability_name": "order_lifecycle_oms",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "commit_and_capture_the_order",
+      "capability_name": "returns_rma",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "deliver_the_promise",
+      "capability_name": "order_capture_orchestration",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "collect_cash_and_account",
+      "capability_name": "ap_ar_operations",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "collect_cash_and_account",
+      "capability_name": "commercial_billing_cash_coordination",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "collect_cash_and_account",
+      "capability_name": "authentication",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "collect_cash_and_account",
+      "capability_name": "risk_scoring_fraud",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "collect_cash_and_account",
+      "capability_name": "payment_processing",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "collect_cash_and_account",
+      "capability_name": "recurring_billing_dunning",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "collect_cash_and_account",
+      "capability_name": "refunds_credits",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "collect_cash_and_account",
+      "capability_name": "disputes",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "collect_cash_and_account",
+      "capability_name": "regulatory_operations",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "recognize_value_and_grow",
+      "capability_name": "general_ledger",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "recognize_value_and_grow",
+      "capability_name": "revenue_recognition",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "plan_the_workforce",
+      "capability_name": "people_analytics_bi",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "attract_and_select_talent",
+      "capability_name": "talent_acquisition",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "onboard_and_enable",
+      "capability_name": "onboarding_offboarding",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "organize_and_guide_work",
+      "capability_name": "calendars_scheduling",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "organize_and_guide_work",
+      "capability_name": "task_management",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "grow_and_support_talent",
+      "capability_name": "talent_development_learning",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "reward_and_comply",
+      "capability_name": "time_payroll",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "analyze_and_adapt",
+      "capability_name": "people_analytics_bi",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "understand_risk_and_obligations",
+      "capability_name": "enterprise_risk_management",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "set_policy_and_appetite",
+      "capability_name": "policy_control_management",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "embed_controls",
+      "capability_name": "third_party_risk_management",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "embed_controls",
+      "capability_name": "supplier_management",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "monitor_and_detect",
+      "capability_name": "itsm",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "respond_and_remediate",
+      "capability_name": "issue_remediation_management",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "assure_and_report",
+      "capability_name": "statutory_reporting_audit",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "assure_and_report",
+      "capability_name": "internal_audit",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "maintain_resilience",
+      "capability_name": "business_continuity_dr",
+      "tenant_name": "default"
+    }
+  ]
+}

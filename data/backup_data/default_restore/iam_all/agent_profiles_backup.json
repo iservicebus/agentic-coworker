@@ -1,0 +1,25 @@
+{
+  "default": [
+    {
+      "agent_id": "agent-admin",
+      "tenant_name": "default",
+      "context": null,
+      "created_at": "2026-01-25T02:08:22.168042+00:00",
+      "updated_at": "2026-01-25T02:08:22.168042+00:00"
+    },
+    {
+      "agent_id": "agent-dev",
+      "tenant_name": "default",
+      "context": null,
+      "created_at": "2026-01-25T02:08:22.215414+00:00",
+      "updated_at": "2026-01-25T02:08:22.215414+00:00"
+    },
+    {
+      "agent_id": "agent-ops",
+      "tenant_name": "default",
+      "context": null,
+      "created_at": "2026-01-25T02:08:22.236129+00:00",
+      "updated_at": "2026-01-25T02:08:22.236130+00:00"
+    }
+  ]
+}

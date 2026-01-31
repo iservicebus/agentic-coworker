@@ -1,0 +1,70 @@
+[project]
+name = "agent-ops"
+version = "0.1.0"
+description = "Agent Operations"
+authors = [
+    { name = "Jingnan Zhou" }
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "requests",
+    "numpy",
+    # Integrator dependencies (required since integrator source is embedded)
+    "fastapi",
+    "uvicorn",
+    "python-dotenv",
+    "SQLAlchemy",
+    "psycopg2-binary",
+    "pydantic",
+    "pydantic-settings",
+    "python-jose[cryptography]",
+    "httpx",
+    "python-json-logger >= 2.0",
+    "protobuf>=4.21.6",
+    "PyYAML",
+    "litellm[vertex_ai]",
+    "google-auth",
+    "google-generativeai",
+    "python-multipart",
+    "playwright",
+    "mcp",
+    "nats-py",
+    "etcd3 @ git+https://github.com/jingnanzhou/python-etcd3.git",
+    "pgvector",
+    "neo4j",
+    "langchain",
+    "langchain-openai",
+    "openai>=1.0.0,<2.0.0",
+    "langchain-google-genai",
+    "langchain-core>=1.2.7",
+    "langgraph",
+    "jinja2",
+    "langchain-mcp-adapters>=0.2.1",
+]
+
+[project.scripts]
+agent-ops = "agent_ops.__main__:main"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+
+[tool.mypy]
+python_version = "3.10"
+strict = true
+ignore_missing_imports = true
+check_untyped_defs = true
+show_error_codes = true
+pretty = true
+# Optional: explicitly define source paths
+# This is not always necessary if you're running `mypy src/`
+mypy_path = "src"
+files = ["src"]

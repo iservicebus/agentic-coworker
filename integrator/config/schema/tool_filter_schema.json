@@ -1,0 +1,71 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Tool Filter Schema",
+    "description": "Schema for tool filter objects used in agent context to define filtering criteria for MCP tools with hierarchical structure: role->domain->capability->skill",
+    "type": "object",
+    "properties": {
+        "tool_query": {
+            "type": "string",
+            "description": "Search query string to filter tools by description or name",
+            "default": ""
+        },
+        "roles": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Role name"
+                    },
+                    "domains": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "name": {
+                                    "type": "string",
+                                    "description": "Domain name"
+                                },
+                                "capabilities": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "object",
+                                        "properties": {
+                                            "name": {
+                                                "type": "string",
+                                                "description": "Capability name"
+                                            },
+                                            "skills": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "description": "Array of skill names under this capability",
+                                                "default": []
+                                            }
+                                        },
+                                        "required": ["name"],
+                                        "additionalProperties": false
+                                    },
+                                    "description": "Array of capabilities under this domain",
+                                    "default": []
+                                }
+                            },
+                            "required": ["name"],
+                            "additionalProperties": false
+                        },
+                        "description": "Array of domains under this role",
+                        "default": []
+                    }
+                },
+                "required": ["name"],
+                "additionalProperties": false
+            },
+            "description": "Array of roles with hierarchical structure containing domains, capabilities, and skills",
+            "default": []
+        }
+    },
+    "required": ["tool_query", "roles"],
+    "additionalProperties": false
+}

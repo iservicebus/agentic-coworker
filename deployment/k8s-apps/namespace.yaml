@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: aintegrator
+  labels:
+    name: aintegrator
+    app: aintegrator-platform

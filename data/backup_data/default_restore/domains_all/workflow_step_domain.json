@@ -1,0 +1,239 @@
+{
+  "default": [
+    {
+      "workflow_step_name": "clarify_direction",
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "shape_the_portfolio",
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "frame_initiatives",
+      "domain_name": "product_design_and_engineering",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "translate_into_work",
+      "domain_name": "product_design_and_engineering",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "translate_into_work",
+      "domain_name": "content_and_collaboration",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "coordinate_execution",
+      "domain_name": "product_design_and_engineering",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "measure_impact",
+      "domain_name": "finance_and_corporate_accounting",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "measure_impact",
+      "domain_name": "workplace_management_and_productivity",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "adjust_strategy",
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "adjust_strategy",
+      "domain_name": "finance_and_corporate_accounting",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "understand_the_need",
+      "domain_name": "product_design_and_engineering",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "design_the_solution",
+      "domain_name": "product_design_and_engineering",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "build_and_integrate",
+      "domain_name": "digital_ai_platform_data_security",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "build_and_integrate",
+      "domain_name": "product_design_and_engineering",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "assure_quality_and_security",
+      "domain_name": "digital_ai_platform_data_security",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "assure_quality_and_security",
+      "domain_name": "product_design_and_engineering",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "release_and_adopt",
+      "domain_name": "product_design_and_engineering",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "operate_and_protect",
+      "domain_name": "digital_ai_platform_data_security",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "learn_and_iterate",
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "create_and_capture_demand",
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "create_and_capture_demand",
+      "domain_name": "social_communication_and_community",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "qualify_and_shape_opportunities",
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "agree_on_value_and_terms",
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "agree_on_value_and_terms",
+      "domain_name": "product_design_and_engineering",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "commit_and_capture_the_order",
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "commit_and_capture_the_order",
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "deliver_the_promise",
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "collect_cash_and_account",
+      "domain_name": "finance_and_corporate_accounting",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "collect_cash_and_account",
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "collect_cash_and_account",
+      "domain_name": "trust_identity_and_payments_operations",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "recognize_value_and_grow",
+      "domain_name": "finance_and_corporate_accounting",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "plan_the_workforce",
+      "domain_name": "people_work_and_learning",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "attract_and_select_talent",
+      "domain_name": "people_work_and_learning",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "onboard_and_enable",
+      "domain_name": "people_work_and_learning",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "organize_and_guide_work",
+      "domain_name": "workplace_management_and_productivity",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "grow_and_support_talent",
+      "domain_name": "people_work_and_learning",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "reward_and_comply",
+      "domain_name": "people_work_and_learning",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "analyze_and_adapt",
+      "domain_name": "people_work_and_learning",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "understand_risk_and_obligations",
+      "domain_name": "risk_compliance_and_governance",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "set_policy_and_appetite",
+      "domain_name": "risk_compliance_and_governance",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "embed_controls",
+      "domain_name": "risk_compliance_and_governance",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "embed_controls",
+      "domain_name": "supply_chain_and_operations",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "monitor_and_detect",
+      "domain_name": "digital_ai_platform_data_security",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "respond_and_remediate",
+      "domain_name": "risk_compliance_and_governance",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "assure_and_report",
+      "domain_name": "finance_and_corporate_accounting",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "assure_and_report",
+      "domain_name": "risk_compliance_and_governance",
+      "tenant_name": "default"
+    },
+    {
+      "workflow_step_name": "maintain_resilience",
+      "domain_name": "risk_compliance_and_governance",
+      "tenant_name": "default"
+    }
+  ]
+}

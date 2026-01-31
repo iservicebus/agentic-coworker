@@ -1,0 +1,203 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: integrator
+  namespace: aintegrator
+  labels:
+    app: integrator
+    component: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: integrator
+  template:
+    metadata:
+      labels:
+        app: integrator
+        component: backend
+    spec:
+      containers:
+      - name: integrator
+        image: integrator:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 6060
+          name: http
+          protocol: TCP
+        env:
+        - name: ENV_LOADED
+          value: "true"
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: INTEGRATOR_PORT
+        - name: PYTHONPATH
+          value: "/app/src"
+        # VLLM Configuration
+        - name: VLLM_MODEL
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: VLLM_MODEL
+        - name: MAX_TEXT_EXTRACTION_LENGTH
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: MAX_TEXT_EXTRACTION_LENGTH
+        # Azure Configuration
+        - name: AZURE_API_VERSION
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: AZURE_API_VERSION
+        - name: AZURE_API_BASE
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: AZURE_API_BASE
+        - name: AZURE_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: AZURE_API_KEY
+        # LangChain Configuration
+        - name: LC_PROVIDER
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: LC_PROVIDER
+        - name: AZURE_OPENAI_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: AZURE_OPENAI_API_KEY
+        - name: AZURE_OPENAI_ENDPOINT
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: AZURE_OPENAI_ENDPOINT
+        - name: AZURE_OPENAI_EMBEDDING_MODEL
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: AZURE_OPENAI_EMBEDDING_MODEL
+        - name: AZURE_OPENAI_API_VERSION
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: AZURE_OPENAI_API_VERSION
+        - name: AZURE_OPENAI_MODEL
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: AZURE_OPENAI_MODEL
+        - name: AZURE_OPENAI_DEPLOYMENT_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: AZURE_OPENAI_DEPLOYMENT_NAME
+        # Service URLs
+        - name: IAM_URL
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: IAM_URL
+        - name: REALM
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: REALM
+        - name: MCP_URL
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: MCP_URL
+        # Database
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: DATABASE_URL
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: SECRET_KEY
+        # ETCD
+        - name: ETCD_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: ETCD_HOST
+        - name: ETCD_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: ETCD_PORT
+        # Neo4j
+        - name: NEO4J_URI
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: NEO4J_URI
+        - name: NEO4J_USER
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: NEO4J_USER
+        - name: NEO4J_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: NEO4J_PASSWORD
+        # Google Cloud (if needed)
+        - name: GOOGLE_CLOUD_PROJECT
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: GOOGLE_CLOUD_PROJECT
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 6060
+          initialDelaySeconds: 40
+          periodSeconds: 30
+          timeoutSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 6060
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+      restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: integrator-service
+  namespace: aintegrator
+  labels:
+    app: integrator
+spec:
+  type: NodePort
+  selector:
+    app: integrator
+  ports:
+  - port: 6060
+    targetPort: 6060
+    nodePort: 30060
+    protocol: TCP
+    name: http

@@ -1,0 +1,8 @@
+{
+  "tenants": [
+    {
+      "name": "default",
+      "description": "Default tenant"
+    }
+  ]
+}

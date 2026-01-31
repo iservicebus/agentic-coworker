@@ -1,0 +1,819 @@
+{
+  "default": [
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "marketing_automation_campaigns",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "lead_management_routing",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "crm_data_stewardship",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "sales_operations_forecasting",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "cpq_deal_desk",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "order_capture_orchestration",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "commercial_billing_cash_coordination",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "customer_service_case_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "customer_knowledge_self_service",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "customer_success_lifecycle",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "customer_health_retention_analytics",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "contract_lifecycle_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "partner_channel_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "go_to_market_sales_and_customer_success",
+      "capability_name": "mdf_incentives_programs",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "product_design_and_engineering",
+      "capability_name": "portfolio_roadmap_governance",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "product_design_and_engineering",
+      "capability_name": "requirements_backlog",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "product_design_and_engineering",
+      "capability_name": "design_systems_research",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "product_design_and_engineering",
+      "capability_name": "plm_change_control",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "product_design_and_engineering",
+      "capability_name": "software_engineering_delivery",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "product_design_and_engineering",
+      "capability_name": "source_control_code_review",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "product_design_and_engineering",
+      "capability_name": "secure_dev_compliance",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "product_design_and_engineering",
+      "capability_name": "artifact_registry",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "product_design_and_engineering",
+      "capability_name": "release_management_handoff",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "product_design_and_engineering",
+      "capability_name": "dev_productivity_telemetry",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "product_design_and_engineering",
+      "capability_name": "gtm_readiness_launch",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "product_design_and_engineering",
+      "capability_name": "value_pricing_configuration",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "supply_chain_and_operations",
+      "capability_name": "demand_planning",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "supply_chain_and_operations",
+      "capability_name": "sop_ibp",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "supply_chain_and_operations",
+      "capability_name": "source_to_pay",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "supply_chain_and_operations",
+      "capability_name": "supplier_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "supply_chain_and_operations",
+      "capability_name": "manufacturing_execution",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "supply_chain_and_operations",
+      "capability_name": "quality_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "supply_chain_and_operations",
+      "capability_name": "logistics_inventory_ops",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "supply_chain_and_operations",
+      "capability_name": "fulfillment_returns",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "supply_chain_and_operations",
+      "capability_name": "control_tower_visibility",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "supply_chain_and_operations",
+      "capability_name": "procurement_requisition_po",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "supply_chain_and_operations",
+      "capability_name": "receiving_3way_match",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "finance_and_corporate_accounting",
+      "capability_name": "general_ledger",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "finance_and_corporate_accounting",
+      "capability_name": "close_consolidation",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "finance_and_corporate_accounting",
+      "capability_name": "management_reporting_bi",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "finance_and_corporate_accounting",
+      "capability_name": "planning_budgeting_forecasting",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "finance_and_corporate_accounting",
+      "capability_name": "treasury_cash",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "finance_and_corporate_accounting",
+      "capability_name": "ap_ar_operations",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "finance_and_corporate_accounting",
+      "capability_name": "revenue_recognition",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "finance_and_corporate_accounting",
+      "capability_name": "tax_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "finance_and_corporate_accounting",
+      "capability_name": "statutory_reporting_audit",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "strategy_okrs",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "enterprise_portfolio_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "pmo_delivery_governance",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "capital_planning_benefits",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "ma_divestitures",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "legal_matter_contract",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "investor_relations_comms",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "professional_services_automation",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "project_accounting",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "shared_services_catalog",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "service_performance_improvement",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "real_estate_facilities",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "sustainability_esg",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+      "capability_name": "automation_process_optimization",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "itsm",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "sre_observability",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "cloud_infrastructure_ops",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "developer_experience_platform",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "devops_ci_cd",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "identity_access_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "data_engineering_integration",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "data_governance",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "privacy_compliance",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "mlops_ai_platform",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "security_operations",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "api_integration_platform",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "finops",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "customer_data_platform_cdp",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "usage_metering_billing",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "platform_product_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "application_security_devsecops",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "security_architecture_risk_compliance",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "digital_ai_platform_data_security",
+      "capability_name": "genai_platform_guardrails",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "risk_compliance_and_governance",
+      "capability_name": "enterprise_risk_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "risk_compliance_and_governance",
+      "capability_name": "policy_control_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "risk_compliance_and_governance",
+      "capability_name": "internal_audit",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "risk_compliance_and_governance",
+      "capability_name": "issue_remediation_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "risk_compliance_and_governance",
+      "capability_name": "third_party_risk_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "risk_compliance_and_governance",
+      "capability_name": "privacy_compliance_risk",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "risk_compliance_and_governance",
+      "capability_name": "business_continuity_dr",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "risk_compliance_and_governance",
+      "capability_name": "ethics_training",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "profiles_identity_graph",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "messaging",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "email_experiences",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "voice_video_meetings",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "live_streaming",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "feeds_recommendations",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "communities_governance",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "content_creation_publishing",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "trust_safety",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "notifications_growth",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "creator_tools_analytics",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "privacy_encryption",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "social_communication_and_community",
+      "capability_name": "loyalty_referrals_rewards",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "content_and_collaboration",
+      "capability_name": "document_sheet_slide_editors",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "content_and_collaboration",
+      "capability_name": "real_time_coauthoring",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "content_and_collaboration",
+      "capability_name": "comments_approvals",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "content_and_collaboration",
+      "capability_name": "knowledge_base_wiki",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "content_and_collaboration",
+      "capability_name": "whiteboards_diagramming",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "content_and_collaboration",
+      "capability_name": "file_storage_sync",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "content_and_collaboration",
+      "capability_name": "sharing_permissions",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "content_and_collaboration",
+      "capability_name": "meeting_notes_transcription",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "content_and_collaboration",
+      "capability_name": "enterprise_search_discovery",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "content_and_collaboration",
+      "capability_name": "retention_ediscovery",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "content_and_collaboration",
+      "capability_name": "integrations_apis",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "content_and_collaboration",
+      "capability_name": "content_cms_dam",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "catalog_listings",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "search_merchandising",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "pricing_promotions",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "cart_checkout",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "order_lifecycle_oms",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "returns_rma",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "seller_tools_onboarding",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "risk_marketplace_trust",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "customer_service_tools",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "disputes_chargebacks",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "commerce_analytics_bi",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "store_ops_pos",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "online_buying_selling_and_marketplaces",
+      "capability_name": "bopis_boris",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "identity_proofing",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "authentication",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "authorization_entitlements",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "consent_privacy",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "risk_scoring_fraud",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "payment_processing",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "bank_linking_payouts",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "wallets_cards",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "recurring_billing_dunning",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "disputes",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "ledger_reporting",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "regulatory_operations",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "developer_apis_sandbox",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "entitlement_service",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "trust_identity_and_payments_operations",
+      "capability_name": "refunds_credits",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "workplace_management_and_productivity",
+      "capability_name": "task_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "workplace_management_and_productivity",
+      "capability_name": "project_portfolio",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "workplace_management_and_productivity",
+      "capability_name": "okr_goal_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "workplace_management_and_productivity",
+      "capability_name": "calendars_scheduling",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "workplace_management_and_productivity",
+      "capability_name": "dashboards_reporting",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "workplace_management_and_productivity",
+      "capability_name": "forms_surveys",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "workplace_management_and_productivity",
+      "capability_name": "approvals_workflows",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "workplace_management_and_productivity",
+      "capability_name": "e_signature_agreements",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "workplace_management_and_productivity",
+      "capability_name": "meeting_productivity",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "workplace_management_and_productivity",
+      "capability_name": "admin_policies_integrations",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "workplace_management_and_productivity",
+      "capability_name": "experiment_platform",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "people_work_and_learning",
+      "capability_name": "talent_acquisition",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "people_work_and_learning",
+      "capability_name": "onboarding_offboarding",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "people_work_and_learning",
+      "capability_name": "org_position_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "people_work_and_learning",
+      "capability_name": "time_payroll",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "people_work_and_learning",
+      "capability_name": "benefits_administration",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "people_work_and_learning",
+      "capability_name": "compensation_management",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "people_work_and_learning",
+      "capability_name": "talent_development_learning",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "people_work_and_learning",
+      "capability_name": "workforce_planning_scheduling",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "people_work_and_learning",
+      "capability_name": "employee_relations_ehs",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "people_work_and_learning",
+      "capability_name": "external_talent_marketplace",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "people_work_and_learning",
+      "capability_name": "skills_credentials",
+      "tenant_name": "default"
+    },
+    {
+      "domain_name": "people_work_and_learning",
+      "capability_name": "people_analytics_bi",
+      "tenant_name": "default"
+    }
+  ]
+}

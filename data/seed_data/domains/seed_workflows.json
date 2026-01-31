@@ -1,0 +1,1373 @@
+{
+  "default":[
+  {
+    "name": "strategy_plan_portfolio_execute_improve",
+    "label": "Strategy \u2192 Plan \u2192 Portfolio \u2192 Execute \u2192 Improve",
+    "description": "When the enterprise needs to change or steer the business, we align strategy, portfolio, and execution so the organization delivers the right work and continuously learns and adjusts.",
+    "value_metrics": [
+      "Strategic OKR attainment",
+      "Portfolio spend aligned to strategy",
+      "Time from strategy decision to first value"
+    ],
+    "source_id": "SF1",
+    "steps": [
+      {
+        "order": 1,
+        "name": "clarify_direction",
+        "label": "Clarify direction",
+        "intent": "Decide what outcomes matter and why for the enterprise.",
+        "description": "Decide what outcomes matter and why for the enterprise.",
+        "source_id": "SF1-1",
+        "domains": [
+          {
+            "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+            "domain_label": "Enterprise Strategy, Corporate Services & Delivery",
+            "domain_description": "This domain sets enterprise direction, governs corporate portfolios, and orchestrates cross-functional program delivery. It primarily deals with strategies, objectives and key results, portfolios, initiatives, policies, shared services, and corporate stakeholder relationships. The domain aligns funding, resources, and governance with strategic outcomes. It supports consistent execution of major change programs and corporate services at scale. It also underpins transparency, accountability, and stakeholder confidence across the enterprise.",
+            "required_capabilities": [
+              {
+                "capability_id": "strategy_okrs",
+                "capability_label": "Strategy & Objectives and Key Results (OKRs)",
+                "capability_description": "Set direction and cascade measurable outcomes with regular reviews and course corrections. It operates primarily on North star, KRs, and cadences to align the enterprise on outcomes It coordinates recurring activities such as define, align, track, review, and adapt to deliver consistent business outcomes",
+                "capability_outcome": "Align the enterprise on outcomes.",
+                "chain_id": "T1",
+                "chain_step_index": 1,
+                "notes": "Defines OKRs and strategic outcomes that anchor the rest of the flow."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "name": "shape_the_portfolio",
+        "label": "Shape the portfolio",
+        "intent": "Choose where to invest, what to stop, and how to balance risk and reward.",
+        "description": "Choose where to invest, what to stop, and how to balance risk and reward.",
+        "source_id": "SF1-2",
+        "domains": [
+          {
+            "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+            "domain_label": "Enterprise Strategy, Corporate Services & Delivery",
+            "domain_description": "This domain sets enterprise direction, governs corporate portfolios, and orchestrates cross-functional program delivery. It primarily deals with strategies, objectives and key results, portfolios, initiatives, policies, shared services, and corporate stakeholder relationships. The domain aligns funding, resources, and governance with strategic outcomes. It supports consistent execution of major change programs and corporate services at scale. It also underpins transparency, accountability, and stakeholder confidence across the enterprise.",
+            "required_capabilities": [
+              {
+                "capability_id": "enterprise_portfolio_management",
+                "capability_label": "Enterprise Portfolio Management",
+                "capability_description": "Maximize value via intake, scoring, funding, and governance across initiatives. It operates primarily on Business cases, gates, and capacity to invest in the highest-value work It coordinates recurring activities such as intake, score, fund, monitor, and rebalance to deliver consistent business outcomes",
+                "capability_outcome": "Invest in the highest-value work.",
+                "chain_id": "T1",
+                "chain_step_index": 2,
+                "notes": "Selects and balances initiatives and investments."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "name": "frame_initiatives",
+        "label": "Frame initiatives",
+        "intent": "Turn strategic bets into coherent programs, products, and initiatives.",
+        "description": "Turn strategic bets into coherent programs, products, and initiatives.",
+        "source_id": "SF1-3",
+        "domains": [
+          {
+            "domain_name": "product_design_and_engineering",
+            "domain_label": "Product Design & Engineering",
+            "domain_description": "This domain integrates product management, design, and engineering into a continuous lifecycle from idea to launch and beyond. It primarily deals with product roadmaps, features, requirements, design assets, code repositories, branches, builds, releases, code-scanning results, and other developer artifacts. The domain supports teams that discover opportunities, define solutions, and build secure, reliable products and services. It enables predictable delivery, high product quality, and a strong developer experience. It underpins innovation, product-market fit, and long-term platform resilience.",
+            "required_capabilities": [
+              {
+                "capability_id": "portfolio_roadmap_governance",
+                "capability_label": "Portfolio & Roadmap Governance",
+                "capability_description": "Prioritize and fund the right bets through evidence-based intake, scoring, and roadmap cadences linked to outcomes. It operates primarily on Intake, scoring, OKRs, and guardrails to maximize product ROI and alignment It coordinates recurring activities such as intake, prioritize, approve, sequence, and review to deliver consistent business outcomes",
+                "capability_outcome": "Maximize product ROI and alignment.",
+                "chain_id": "T1",
+                "chain_step_index": 3,
+                "notes": "Frames initiatives, themes, and roadmaps and sets governance."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "name": "translate_into_work",
+        "label": "Translate into work",
+        "intent": "Break initiatives into ready work with owners, milestones, and measures.",
+        "description": "Break initiatives into ready work with owners, milestones, and measures.",
+        "source_id": "SF1-4",
+        "domains": [
+          {
+            "domain_name": "product_design_and_engineering",
+            "domain_label": "Product Design & Engineering",
+            "domain_description": "This domain integrates product management, design, and engineering into a continuous lifecycle from idea to launch and beyond. It primarily deals with product roadmaps, features, requirements, design assets, code repositories, branches, builds, releases, code-scanning results, and other developer artifacts. The domain supports teams that discover opportunities, define solutions, and build secure, reliable products and services. It enables predictable delivery, high product quality, and a strong developer experience. It underpins innovation, product-market fit, and long-term platform resilience.",
+            "required_capabilities": [
+              {
+                "capability_id": "requirements_backlog",
+                "capability_label": "Requirements & Backlog Management",
+                "capability_description": "Translate strategy into actionable work with user stories, acceptance criteria, and traceability across discovery and delivery. It operates primarily on Stories, epics, acceptance, and traceability to create clear, testable requirements It coordinates recurring activities such as define, refine, estimate, sequence, and accept to deliver consistent business outcomes",
+                "capability_outcome": "Create clear, testable requirements.",
+                "chain_id": "T1",
+                "chain_step_index": 8,
+                "notes": "Breaks initiatives into backlog items that teams can execute."
+              }
+            ]
+          },
+          {
+            "domain_name": "content_and_collaboration",
+            "domain_label": "Content & Collaboration",
+            "domain_description": "Create, govern, and find shared knowledge and content (docs, sheets, slides, wikis) that teams use to translate strategy into executable work.",
+            "required_capabilities": [
+              {
+                "capability_id": "document_sheet_slide_editors",
+                "capability_label": "Document/Sheet/Slide Editors",
+                "capability_description": "Create shared artifacts with rich editors, templates, and AI assist. It operates primarily on Docs, sheets, and slides to author high-quality content together It coordinates recurring activities such as create, edit, format, export, and share to deliver consistent business outcomes",
+                "capability_outcome": "Author high-quality content together.",
+                "chain_id": "T1",
+                "chain_step_index": 9,
+                "notes": "Capture and maintain strategy artifacts (OKRs, business cases, roadmaps) in shared documents/sheets/slides."
+              },
+              {
+                "capability_id": "comments_approvals",
+                "capability_label": "Comments & Approvals",
+                "capability_description": "Move work from draft to approved with tasks, reviews, and trails. It operates primarily on Mentions, assignments, and audit to accelerate review cycles It coordinates recurring activities such as comment, assign, approve, track, and archive to deliver consistent business outcomes",
+                "capability_outcome": "Accelerate review cycles.",
+                "chain_id": "T1",
+                "chain_step_index": 10,
+                "notes": "Coordinate stakeholder review/approval cycles and decision traceability for strategy-to-work translation."
+              },
+              {
+                "capability_id": "enterprise_search_discovery",
+                "capability_label": "Enterprise Search & Discovery",
+                "capability_description": "Increase findability with indexing, semantic ranking, and suggestions. It operates primarily on Embeddings, ranking, and telemetry to help people find the right content It coordinates recurring activities such as index, query, rank, suggest, and track to deliver consistent business outcomes",
+                "capability_outcome": "Help people find the right content.",
+                "chain_id": "T1",
+                "chain_step_index": 11,
+                "notes": "Enable enterprise discovery of strategy, standards, and portfolio artifacts."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "name": "coordinate_execution",
+        "label": "Coordinate execution",
+        "intent": "Keep execution aligned, sequenced, and unblocked across teams.",
+        "description": "Keep execution aligned, sequenced, and unblocked across teams.",
+        "source_id": "SF1-5",
+        "domains": [
+          {
+            "domain_name": "product_design_and_engineering",
+            "domain_label": "Product Design & Engineering",
+            "domain_description": "This domain integrates product management, design, and engineering into a continuous lifecycle from idea to launch and beyond. It primarily deals with product roadmaps, features, requirements, design assets, code repositories, branches, builds, releases, code-scanning results, and other developer artifacts. The domain supports teams that discover opportunities, define solutions, and build secure, reliable products and services. It enables predictable delivery, high product quality, and a strong developer experience. It underpins innovation, product-market fit, and long-term platform resilience.",
+            "required_capabilities": [
+              {
+                "capability_id": "portfolio_roadmap_governance",
+                "capability_label": "Portfolio & Roadmap Governance",
+                "capability_description": "Prioritize and fund the right bets through evidence-based intake, scoring, and roadmap cadences linked to outcomes. It operates primarily on Intake, scoring, OKRs, and guardrails to maximize product ROI and alignment It coordinates recurring activities such as intake, prioritize, approve, sequence, and review to deliver consistent business outcomes",
+                "capability_outcome": "Maximize product ROI and alignment.",
+                "chain_id": "T1",
+                "chain_step_index": 3,
+                "notes": "Provides forums and views to coordinate execution against roadmaps."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 6,
+        "name": "measure_impact",
+        "label": "Measure impact",
+        "intent": "Measure whether strategic work is delivering the intended outcomes.",
+        "description": "Measure whether strategic work is delivering the intended outcomes.",
+        "source_id": "SF1-6",
+        "domains": [
+          {
+            "domain_name": "finance_and_corporate_accounting",
+            "domain_label": "Finance & Corporate Accounting",
+            "domain_description": "This domain safeguards financial integrity, liquidity, and performance across the enterprise. It primarily deals with financial transactions, accounts, ledgers, budgets, forecasts, tax positions, and financial statements. The domain connects operational activities from sales, procurement, and operations into a coherent financial view. It supports internal and external reporting, statutory compliance, and decision support. It underpins investor confidence, capital allocation, and long-term financial health.",
+            "required_capabilities": [
+              {
+                "capability_id": "management_reporting_bi",
+                "capability_label": "Management Reporting & Business Intelligence (BI)",
+                "capability_description": "Provide insights and variance analysis with governed metrics and dashboards. It operates primarily on KPIs, variance, and drill-through to enable informed decisions It coordinates recurring activities such as aggregate, analyze, visualize, distribute, and iterate to deliver consistent business outcomes",
+                "capability_outcome": "Enable informed decisions.",
+                "chain_id": "T13",
+                "chain_step_index": 3,
+                "notes": "Aggregates performance data and KPIs against strategic objectives."
+              }
+            ]
+          },
+          {
+            "domain_name": "workplace_management_and_productivity",
+            "domain_label": "Workplace Management & Productivity",
+            "domain_description": "This domain supports how individuals and teams plan, execute, and track work across projects, tasks, and goals. It primarily deals with work items, projects, milestones, goals and OKRs, schedules, forms, approvals, and meeting artifacts. The domain provides structure for assigning responsibilities, managing dependencies, and tracking progress. It integrates work management with calendars, collaboration tools, and reporting. It enables transparency, coordination, and continuous improvement in how work gets done.",
+            "required_capabilities": [
+              {
+                "capability_id": "dashboards_reporting",
+                "capability_label": "Dashboards & Reporting",
+                "capability_description": "Create shared visibility with KPIs, slicing/dicing, and alerts. It operates primarily on KPI dictionary and telemetry to improve transparency and decisions It coordinates recurring activities such as aggregate, visualize, share, alert, and iterate to deliver consistent business outcomes",
+                "capability_outcome": "Improve transparency and decisions.",
+                "chain_id": "T13",
+                "chain_step_index": 4,
+                "notes": "Provides executive dashboards to see strategy and portfolio performance."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 7,
+        "name": "adjust_strategy",
+        "label": "Adjust strategy",
+        "intent": "Refine strategy, portfolio, and plans based on learning and performance.",
+        "description": "Refine strategy, portfolio, and plans based on learning and performance.",
+        "source_id": "SF1-7",
+        "domains": [
+          {
+            "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+            "domain_label": "Enterprise Strategy, Corporate Services & Delivery",
+            "domain_description": "This domain sets enterprise direction, governs corporate portfolios, and orchestrates cross-functional program delivery. It primarily deals with strategies, objectives and key results, portfolios, initiatives, policies, shared services, and corporate stakeholder relationships. The domain aligns funding, resources, and governance with strategic outcomes. It supports consistent execution of major change programs and corporate services at scale. It also underpins transparency, accountability, and stakeholder confidence across the enterprise.",
+            "required_capabilities": [
+              {
+                "capability_id": "strategy_okrs",
+                "capability_label": "Strategy & Objectives and Key Results (OKRs)",
+                "capability_description": "Set direction and cascade measurable outcomes with regular reviews and course corrections. It operates primarily on North star, KRs, and cadences to align the enterprise on outcomes It coordinates recurring activities such as define, align, track, review, and adapt to deliver consistent business outcomes",
+                "capability_outcome": "Align the enterprise on outcomes.",
+                "chain_id": "T1",
+                "chain_step_index": 1,
+                "notes": "Updates objectives and key results to reflect adjusted strategy."
+              }
+            ]
+          },
+          {
+            "domain_name": "finance_and_corporate_accounting",
+            "domain_label": "Finance & Corporate Accounting",
+            "domain_description": "This domain safeguards financial integrity, liquidity, and performance across the enterprise. It primarily deals with financial transactions, accounts, ledgers, budgets, forecasts, tax positions, and financial statements. The domain connects operational activities from sales, procurement, and operations into a coherent financial view. It supports internal and external reporting, statutory compliance, and decision support. It underpins investor confidence, capital allocation, and long-term financial health.",
+            "required_capabilities": [
+              {
+                "capability_id": "planning_budgeting_forecasting",
+                "capability_label": "Planning, Budgeting & Forecasting",
+                "capability_description": "Model scenarios and run rolling forecasts to align resources with outcomes. It operates primarily on Drivers, versions, and approvals to allocate capital effectively It coordinates recurring activities such as model, version, approve, publish, and monitor to deliver consistent business outcomes",
+                "capability_outcome": "Allocate capital effectively.",
+                "chain_id": "T13",
+                "chain_step_index": 5,
+                "notes": "Runs re-planning and forecasting cycles to rebalance investments."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "design_build_secure_release_operate",
+    "label": "Design \u2192 Build \u2192 Secure \u2192 Release \u2192 Operate",
+    "description": "When a product, feature, or change is needed, we design, build, secure, release, and operate it so customers get reliable, secure products and platforms that keep improving.",
+    "value_metrics": [
+      "Deployment frequency",
+      "Change failure rate",
+      "Mean time to recover (MTTR)",
+      "Service availability"
+    ],
+    "source_id": "SF2",
+    "steps": [
+      {
+        "order": 1,
+        "name": "understand_the_need",
+        "label": "Understand the need",
+        "intent": "Clarify the problem, context, and users to be served.",
+        "description": "Clarify the problem, context, and users to be served.",
+        "source_id": "SF2-1",
+        "domains": [
+          {
+            "domain_name": "product_design_and_engineering",
+            "domain_label": "Product Design & Engineering",
+            "domain_description": "This domain integrates product management, design, and engineering into a continuous lifecycle from idea to launch and beyond. It primarily deals with product roadmaps, features, requirements, design assets, code repositories, branches, builds, releases, code-scanning results, and other developer artifacts. The domain supports teams that discover opportunities, define solutions, and build secure, reliable products and services. It enables predictable delivery, high product quality, and a strong developer experience. It underpins innovation, product-market fit, and long-term platform resilience.",
+            "required_capabilities": [
+              {
+                "capability_id": "design_systems_research",
+                "capability_label": "Design Systems & Research",
+                "capability_description": "Design lovable experiences using a reusable system, prototyping, and continuous user research to de-risk decisions. It operates primarily on Design system, prototyping, and testing to ship coherent, usable experiences It coordinates recurring activities such as hypothesize, prototype, test, iterate, and standardize to deliver consistent business outcomes",
+                "capability_outcome": "Ship coherent, usable experiences.",
+                "chain_id": "T1",
+                "chain_step_index": 4,
+                "notes": "Generates user research and design insights that frame the problem."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "name": "design_the_solution",
+        "label": "Design the solution",
+        "intent": "Decide how the experience and system should work end-to-end.",
+        "description": "Decide how the experience and system should work end-to-end.",
+        "source_id": "SF2-2",
+        "domains": [
+          {
+            "domain_name": "product_design_and_engineering",
+            "domain_label": "Product Design & Engineering",
+            "domain_description": "This domain integrates product management, design, and engineering into a continuous lifecycle from idea to launch and beyond. It primarily deals with product roadmaps, features, requirements, design assets, code repositories, branches, builds, releases, code-scanning results, and other developer artifacts. The domain supports teams that discover opportunities, define solutions, and build secure, reliable products and services. It enables predictable delivery, high product quality, and a strong developer experience. It underpins innovation, product-market fit, and long-term platform resilience.",
+            "required_capabilities": [
+              {
+                "capability_id": "design_systems_research",
+                "capability_label": "Design Systems & Research",
+                "capability_description": "Design lovable experiences using a reusable system, prototyping, and continuous user research to de-risk decisions. It operates primarily on Design system, prototyping, and testing to ship coherent, usable experiences It coordinates recurring activities such as hypothesize, prototype, test, iterate, and standardize to deliver consistent business outcomes",
+                "capability_outcome": "Ship coherent, usable experiences.",
+                "chain_id": "T1",
+                "chain_step_index": 4,
+                "notes": "Produces flows, prototypes, and patterns for the solution."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "name": "build_and_integrate",
+        "label": "Build & integrate",
+        "intent": "Implement software, data, and integrations following golden paths.",
+        "description": "Implement software, data, and integrations following golden paths.",
+        "source_id": "SF2-3",
+        "domains": [
+          {
+            "domain_name": "digital_ai_platform_data_security",
+            "domain_label": "Digital & AI Platform, Data & Security (DAPDS)",
+            "domain_description": "This domain provides the core digital platforms, data foundations, and security controls that underpin business applications and services. It primarily deals with infrastructure, platforms, data assets, integration services, AI/ML workflows, enterprise-wide identities, access policies, security events, and observability telemetry. The domain ensures that systems are scalable, reliable, observable, and secure. It supports data-driven decision-making, digital experiences, and AI-powered capabilities across business domains. It also protects information assets and service continuity against threats and failures.",
+            "required_capabilities": [
+              {
+                "capability_id": "developer_experience_platform",
+                "capability_label": "Developer Experience Platform (Environments & Portal)",
+                "capability_description": "Accelerate inner-loop productivity with standardized environments, golden paths, and self-serve portal onboarding. It operates primarily on Dev containers, templates, and docs to speed safe, consistent delivery It coordinates recurring activities such as provision, scaffold, document, guide, and measure to deliver consistent business outcomes",
+                "capability_outcome": "Speed safe, consistent delivery.",
+                "chain_id": "T2",
+                "chain_step_index": 1,
+                "notes": "Provides golden paths, templates, and environments for development."
+              }
+            ]
+          },
+          {
+            "domain_name": "product_design_and_engineering",
+            "domain_label": "Product Design & Engineering",
+            "domain_description": "This domain integrates product management, design, and engineering into a continuous lifecycle from idea to launch and beyond. It primarily deals with product roadmaps, features, requirements, design assets, code repositories, branches, builds, releases, code-scanning results, and other developer artifacts. The domain supports teams that discover opportunities, define solutions, and build secure, reliable products and services. It enables predictable delivery, high product quality, and a strong developer experience. It underpins innovation, product-market fit, and long-term platform resilience.",
+            "required_capabilities": [
+              {
+                "capability_id": "source_control_code_review",
+                "capability_label": "Source Control & Code Review",
+                "capability_description": "Protect quality and flow with branching strategies, protected merges, and automated checks. It operates primarily on PR policies, code owners, and checks to improve code quality and flow It coordinates recurring activities such as branch, commit, review, merge, and enforce to deliver consistent business outcomes",
+                "capability_outcome": "Improve code quality and flow.",
+                "chain_id": "T2",
+                "chain_step_index": 2,
+                "notes": "Controls source management, branching, and peer review."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "name": "assure_quality_and_security",
+        "label": "Assure quality & security",
+        "intent": "Validate that the change behaves, performs, and is secure enough.",
+        "description": "Validate that the change behaves, performs, and is secure enough.",
+        "source_id": "SF2-4",
+        "domains": [
+          {
+            "domain_name": "digital_ai_platform_data_security",
+            "domain_label": "Digital & AI Platform, Data & Security (DAPDS)",
+            "domain_description": "This domain provides the core digital platforms, data foundations, and security controls that underpin business applications and services. It primarily deals with infrastructure, platforms, data assets, integration services, AI/ML workflows, enterprise-wide identities, access policies, security events, and observability telemetry. The domain ensures that systems are scalable, reliable, observable, and secure. It supports data-driven decision-making, digital experiences, and AI-powered capabilities across business domains. It also protects information assets and service continuity against threats and failures.",
+            "required_capabilities": [
+              {
+                "capability_id": "devops_ci_cd",
+                "capability_label": "DevOps Continuous Integration / Continuous Delivery (CI/CD)",
+                "capability_description": "Automate build, test, and deploy with policy gates across environments. It operates primarily on Pipelines, artifacts, and policies to ship frequently with confidence It coordinates recurring activities such as build, test, package, deploy, and rollback to deliver consistent business outcomes",
+                "capability_outcome": "Ship frequently with confidence.",
+                "chain_id": "T2",
+                "chain_step_index": 4,
+                "notes": "Runs automated build, test, and validation pipelines."
+              }
+            ]
+          },
+          {
+            "domain_name": "product_design_and_engineering",
+            "domain_label": "Product Design & Engineering",
+            "domain_description": "This domain integrates product management, design, and engineering into a continuous lifecycle from idea to launch and beyond. It primarily deals with product roadmaps, features, requirements, design assets, code repositories, branches, builds, releases, code-scanning results, and other developer artifacts. The domain supports teams that discover opportunities, define solutions, and build secure, reliable products and services. It enables predictable delivery, high product quality, and a strong developer experience. It underpins innovation, product-market fit, and long-term platform resilience.",
+            "required_capabilities": [
+              {
+                "capability_id": "artifact_registry",
+                "capability_label": "Artifact & Package Registry",
+                "capability_description": "Publish and govern build outputs and dependencies with provenance and retention controls. It operates primarily on Containers, packages, and immutability to ensure trusted, reusable artifacts It coordinates recurring activities such as publish, version, sign, retain, and deprecate to deliver consistent business outcomes",
+                "capability_outcome": "Ensure trusted, reusable artifacts.",
+                "chain_id": "T2",
+                "chain_step_index": 5,
+                "notes": "Stores signed and versioned build artifacts used for promotion."
+              },
+              {
+                "capability_id": "secure_dev_compliance",
+                "capability_label": "Secure Development & Compliance",
+                "capability_description": "Bake in security and compliance using SAST/DAST/SCA, secrets management, and release governance. It operates primarily on Scan gates, SBOM, and policies to prevent vulnerabilities and policy drift It coordinates recurring activities such as scan, triage, remediate, attest, and approve to deliver consistent business outcomes",
+                "capability_outcome": "Prevent vulnerabilities and policy drift.",
+                "chain_id": "T2",
+                "chain_step_index": 3,
+                "notes": "Applies security policies, checks, and secure coding practices in the pipeline."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "name": "release_and_adopt",
+        "label": "Release & adopt",
+        "intent": "Release safely and drive adoption with the right enablement.",
+        "description": "Release safely and drive adoption with the right enablement.",
+        "source_id": "SF2-5",
+        "domains": [
+          {
+            "domain_name": "product_design_and_engineering",
+            "domain_label": "Product Design & Engineering",
+            "domain_description": "This domain integrates product management, design, and engineering into a continuous lifecycle from idea to launch and beyond. It primarily deals with product roadmaps, features, requirements, design assets, code repositories, branches, builds, releases, code-scanning results, and other developer artifacts. The domain supports teams that discover opportunities, define solutions, and build secure, reliable products and services. It enables predictable delivery, high product quality, and a strong developer experience. It underpins innovation, product-market fit, and long-term platform resilience.",
+            "required_capabilities": [
+              {
+                "capability_id": "release_management_handoff",
+                "capability_label": "Release Management & Change Handoff",
+                "capability_description": "Coordinate releases and change records with clear approvals, comms, and rollback plans. It operates primarily on Change records, CAB, and runbooks to deliver controlled, auditable releases It coordinates recurring activities such as package, approve, announce, deploy, and review to deliver consistent business outcomes",
+                "capability_outcome": "Deliver controlled, auditable releases.",
+                "chain_id": "T2",
+                "chain_step_index": 6,
+                "notes": "Manages approvals, release coordination, and deployment windows."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 6,
+        "name": "operate_and_protect",
+        "label": "Operate & protect",
+        "intent": "Operate the product or service reliably and securely.",
+        "description": "Operate the product or service reliably and securely.",
+        "source_id": "SF2-6",
+        "domains": [
+          {
+            "domain_name": "digital_ai_platform_data_security",
+            "domain_label": "Digital & AI Platform, Data & Security (DAPDS)",
+            "domain_description": "This domain provides the core digital platforms, data foundations, and security controls that underpin business applications and services. It primarily deals with infrastructure, platforms, data assets, integration services, AI/ML workflows, enterprise-wide identities, access policies, security events, and observability telemetry. The domain ensures that systems are scalable, reliable, observable, and secure. It supports data-driven decision-making, digital experiences, and AI-powered capabilities across business domains. It also protects information assets and service continuity against threats and failures.",
+            "required_capabilities": [
+              {
+                "capability_id": "cloud_infrastructure_ops",
+                "capability_label": "Cloud & Infrastructure Operations",
+                "capability_description": "Provision and operate compute, storage, and network securely with IaC and DR. It operates primarily on IaC, capacity, and DR/BCP to provide secure, scalable platforms It coordinates recurring activities such as provision, configure, patch, scale, and decommission to deliver consistent business outcomes",
+                "capability_outcome": "Provide secure, scalable platforms.",
+                "chain_id": "T2",
+                "chain_step_index": 9,
+                "notes": "Manages cloud infrastructure, scaling, and configuration."
+              },
+              {
+                "capability_id": "security_operations",
+                "capability_label": "Security Operations (SecOps)",
+                "capability_description": "Detect, respond, and recover from threats while managing vulnerabilities. It operates primarily on SOC, SIEM/EDR, and VRM to reduce attack likelihood and impact It coordinates recurring activities such as detect, triage, contain, eradicate, and recover to deliver consistent business outcomes",
+                "capability_outcome": "Reduce attack likelihood and impact.",
+                "chain_id": "T2",
+                "chain_step_index": 10,
+                "notes": "Detects, investigates, and responds to security events."
+              },
+              {
+                "capability_id": "sre_observability",
+                "capability_label": "Site Reliability Engineering (SRE) & Observability",
+                "capability_description": "Meet SLOs with instrumentation, on-call, error budgets, and continuous reliability work. It operates primarily on SLO/SLI, paging, and runbooks to proactively ensure reliability It coordinates recurring activities such as instrument, alert, respond, tune, and report to deliver consistent business outcomes",
+                "capability_outcome": "Proactively ensure reliability.",
+                "chain_id": "T2",
+                "chain_step_index": 8,
+                "notes": "Provides metrics, logs, and traces to operate services reliably."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 7,
+        "name": "learn_and_iterate",
+        "label": "Learn & iterate",
+        "intent": "Use signals to improve the product, platform, and flow.",
+        "description": "Use signals to improve the product, platform, and flow.",
+        "source_id": "SF2-7",
+        "domains": [
+          {
+            "domain_name": "enterprise_strategy_corporate_services_and_delivery",
+            "domain_label": "Enterprise Strategy, Corporate Services & Delivery",
+            "domain_description": "This domain sets enterprise direction, governs corporate portfolios, and orchestrates cross-functional program delivery. It primarily deals with strategies, objectives and key results, portfolios, initiatives, policies, shared services, and corporate stakeholder relationships. The domain aligns funding, resources, and governance with strategic outcomes. It supports consistent execution of major change programs and corporate services at scale. It also underpins transparency, accountability, and stakeholder confidence across the enterprise.",
+            "required_capabilities": [
+              {
+                "capability_id": "service_performance_improvement",
+                "capability_label": "Service Performance & Continuous Improvement",
+                "capability_description": "Define and monitor SLAs/OLAs/XLAs and drive cross-functional improvements. It operates primarily on Scorecards, KPIs, and RCAs to continuously improve service outcomes It coordinates recurring activities such as define, monitor, alert, improve, and report to deliver consistent business outcomes",
+                "capability_outcome": "Continuously improve service outcomes.",
+                "chain_id": "T2",
+                "chain_step_index": 11,
+                "notes": "Runs service reviews and improvement programs based on SLOs and incidents."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "market_sell_order_fulfill_bill_recognize",
+    "label": "Market \u2192 Sell \u2192 Order \u2192 Fulfill \u2192 Bill \u2192 Recognize",
+    "description": "When a potential customer shows intent, we orchestrate the end-to-end lead-to-cash journey to turn that intent into profitable, compliant revenue and a durable relationship.",
+    "value_metrics": [
+      "Net revenue retention (NRR)",
+      "Gross margin",
+      "Lead-to-cash cycle time",
+      "Customer NPS"
+    ],
+    "source_id": "SF3",
+    "steps": [
+      {
+        "order": 1,
+        "name": "create_and_capture_demand",
+        "label": "Create & capture demand",
+        "intent": "Make the right customers aware and interested, and turn anonymous interest into identifiable demand.",
+        "description": "Make the right customers aware and interested, and turn anonymous interest into identifiable demand.",
+        "source_id": "SF3-1",
+        "domains": [
+          {
+            "domain_name": "go_to_market_sales_and_customer_success",
+            "domain_label": "Go-to-Market, Sales & Customer Success",
+            "domain_description": "This domain manages the full customer lifecycle from initial market engagement and lead generation through sales execution, fulfillment, service, and renewal. It primarily deals with customers, leads, opportunities, sales teams, partners, marketing campaigns, and the content and offers used to engage them. The domain connects marketing, sales, finance, and service activities into a coherent end-to-end revenue engine. It supports outcomes such as revenue growth, customer acquisition, retention, and satisfaction. It also ensures customer-facing processes are coordinated, measurable, and continuously optimized.",
+            "required_capabilities": [
+              {
+                "capability_id": "lead_management_routing",
+                "capability_label": "Lead Management & Routing",
+                "capability_description": "Capture, deduplicate, and route leads to the right owners quickly with qualification rules and SLAs to protect speed-to-contact and conversion. It operates primarily on Intake, dedupe, scoring, SLAs, and territories to maximize conversion from inquiry to opportunity It coordinates recurring activities such as capture, qualify, route, notify, and audit to deliver consistent business outcomes",
+                "capability_outcome": "Maximize conversion from inquiry to opportunity.",
+                "chain_id": "T8",
+                "chain_step_index": 3,
+                "notes": "Turns responses into routed leads with SLAs and scoring."
+              },
+              {
+                "capability_id": "marketing_automation_campaigns",
+                "capability_label": "Marketing Automation & Campaign Operations",
+                "capability_description": "Plan and run targeted, measurable campaigns across channels to create and nurture demand, orchestrating segmentation, journeys, and attribution with sales-ready handoffs. It operates primarily on Segmentation, journeys, attribution, and multi-channel to create and accelerate qualified demand It coordinates recurring activities such as segment, orchestrate, nurture, score, and attribute to deliver consistent business outcomes",
+                "capability_outcome": "Create and accelerate qualified demand.",
+                "chain_id": "T8",
+                "chain_step_index": 1,
+                "notes": "Runs targeted campaigns and journeys to generate and nurture demand."
+              }
+            ]
+          },
+          {
+            "domain_name": "social_communication_and_community",
+            "domain_label": "Social Communication & Community",
+            "domain_description": "Engage audiences through social channels and communities to amplify demand generation, advocacy, and lifecycle engagement.",
+            "required_capabilities": [
+              {
+                "capability_id": "content_creation_publishing",
+                "capability_label": "Content Creation & Publishing",
+                "capability_description": "Compose, schedule, and distribute posts with analytics feedback. It operates primarily on Schedulers, drafts, and insights to empower consistent publishing It coordinates recurring activities such as compose, schedule, publish, edit, and delete to deliver consistent business outcomes",
+                "capability_outcome": "Empower consistent publishing.",
+                "chain_id": "T8",
+                "chain_step_index": 10,
+                "notes": "Publish campaigns and product content to social/community channels."
+              },
+              {
+                "capability_id": "feeds_recommendations",
+                "capability_label": "Feeds & Recommendations",
+                "capability_description": "Rank and recommend content safely with policy-aware models. It operates primarily on Ranking, safety filters, and logs to maximize relevant engagement It coordinates recurring activities such as ingest, rank, recommend, throttle, and log to deliver consistent business outcomes",
+                "capability_outcome": "Maximize relevant engagement.",
+                "chain_id": "T8",
+                "chain_step_index": 11,
+                "notes": "Target and personalize distribution to convert awareness into qualified interest."
+              },
+              {
+                "capability_id": "communities_governance",
+                "capability_label": "Communities & Governance",
+                "capability_description": "Create and govern groups with roles, rules enforcement, and appeals. It operates primarily on Roles, mod tools, and policies to foster healthy communities It coordinates recurring activities such as create, invite, assign_roles, enforce, and archive to deliver consistent business outcomes",
+                "capability_outcome": "Foster healthy communities.",
+                "chain_id": "T8",
+                "chain_step_index": 12,
+                "notes": "Run moderated communities that nurture demand and drive advocacy."
+              },
+              {
+                "capability_id": "loyalty_referrals_rewards",
+                "capability_label": "Loyalty, Referrals & Rewards",
+                "capability_description": "Accrue and redeem points, issue tiers and perks, and track referrals across channels. It operates primarily on Tiers, accrual rules, and redemptions to increase retention and advocacy It coordinates recurring activities such as enroll, accrue, redeem, tier, and report to deliver consistent business outcomes",
+                "capability_outcome": "Increase retention and advocacy.",
+                "chain_id": "T8",
+                "chain_step_index": 13,
+                "notes": "Incentivize advocacy and referrals to grow pipeline efficiently."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "name": "qualify_and_shape_opportunities",
+        "label": "Qualify & shape opportunities",
+        "intent": "Focus on winnable, valuable opportunities and understand their needs and constraints.",
+        "description": "Focus on winnable, valuable opportunities and understand their needs and constraints.",
+        "source_id": "SF3-2",
+        "domains": [
+          {
+            "domain_name": "go_to_market_sales_and_customer_success",
+            "domain_label": "Go-to-Market, Sales & Customer Success",
+            "domain_description": "This domain manages the full customer lifecycle from initial market engagement and lead generation through sales execution, fulfillment, service, and renewal. It primarily deals with customers, leads, opportunities, sales teams, partners, marketing campaigns, and the content and offers used to engage them. The domain connects marketing, sales, finance, and service activities into a coherent end-to-end revenue engine. It supports outcomes such as revenue growth, customer acquisition, retention, and satisfaction. It also ensures customer-facing processes are coordinated, measurable, and continuously optimized.",
+            "required_capabilities": [
+              {
+                "capability_id": "crm_data_stewardship",
+                "capability_label": "Customer Relationship Management (CRM) & Data Stewardship",
+                "capability_description": "Maintain a single view of accounts, contacts, and activities to support pipeline, forecasting, and lifecycle engagement with governed data quality. It operates primarily on Golden records, dedupe, and data quality rules to enable trusted customer and pipeline data It coordinates recurring activities such as standardize, merge, validate, publish, and govern to deliver consistent business outcomes",
+                "capability_outcome": "Enable trusted customer and pipeline data.",
+                "chain_id": "T8",
+                "chain_step_index": 2,
+                "notes": "Maintains clean accounts, contacts, and opportunities while qualifying."
+              },
+              {
+                "capability_id": "lead_management_routing",
+                "capability_label": "Lead Management & Routing",
+                "capability_description": "Capture, deduplicate, and route leads to the right owners quickly with qualification rules and SLAs to protect speed-to-contact and conversion. It operates primarily on Intake, dedupe, scoring, SLAs, and territories to maximize conversion from inquiry to opportunity It coordinates recurring activities such as capture, qualify, route, notify, and audit to deliver consistent business outcomes",
+                "capability_outcome": "Maximize conversion from inquiry to opportunity.",
+                "chain_id": "T8",
+                "chain_step_index": 3,
+                "notes": "Routes qualified leads and opportunities to the right sellers or teams."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "name": "agree_on_value_and_terms",
+        "label": "Agree on value & terms",
+        "intent": "Reach a mutually acceptable configuration, price, and set of commercial terms.",
+        "description": "Reach a mutually acceptable configuration, price, and set of commercial terms.",
+        "source_id": "SF3-3",
+        "domains": [
+          {
+            "domain_name": "go_to_market_sales_and_customer_success",
+            "domain_label": "Go-to-Market, Sales & Customer Success",
+            "domain_description": "This domain manages the full customer lifecycle from initial market engagement and lead generation through sales execution, fulfillment, service, and renewal. It primarily deals with customers, leads, opportunities, sales teams, partners, marketing campaigns, and the content and offers used to engage them. The domain connects marketing, sales, finance, and service activities into a coherent end-to-end revenue engine. It supports outcomes such as revenue growth, customer acquisition, retention, and satisfaction. It also ensures customer-facing processes are coordinated, measurable, and continuously optimized.",
+            "required_capabilities": [
+              {
+                "capability_id": "cpq_deal_desk",
+                "capability_label": "Configure-Price-Quote (CPQ) & Deal Desk",
+                "capability_description": "Accelerate and control pricing and quotes with guardrails, approvals, and structured discounts tied to value and margin. It operates primarily on Price books, approvals, terms, and bundles to quote fast with control and margin discipline It coordinates recurring activities such as configure, price, quote, approve, and finalize to deliver consistent business outcomes",
+                "capability_outcome": "Quote fast with control and margin discipline.",
+                "chain_id": "T8",
+                "chain_step_index": 5,
+                "notes": "Manages quoting, deal structuring, and approvals."
+              }
+            ]
+          },
+          {
+            "domain_name": "product_design_and_engineering",
+            "domain_label": "Product Design & Engineering",
+            "domain_description": "This domain integrates product management, design, and engineering into a continuous lifecycle from idea to launch and beyond. It primarily deals with product roadmaps, features, requirements, design assets, code repositories, branches, builds, releases, code-scanning results, and other developer artifacts. The domain supports teams that discover opportunities, define solutions, and build secure, reliable products and services. It enables predictable delivery, high product quality, and a strong developer experience. It underpins innovation, product-market fit, and long-term platform resilience.",
+            "required_capabilities": [
+              {
+                "capability_id": "value_pricing_configuration",
+                "capability_label": "Value & Pricing Configuration",
+                "capability_description": "Align monetization with value via offer structure, metering, and price tests. It operates primarily on Packaging, meters, and experiments to capture value with fair pricing It coordinates recurring activities such as model, test, calibrate, publish, and monitor to deliver consistent business outcomes",
+                "capability_outcome": "Capture value with fair pricing.",
+                "chain_id": "T8",
+                "chain_step_index": 4,
+                "notes": "Defines product and service structures, price rules, and guardrails."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "name": "commit_and_capture_the_order",
+        "label": "Commit & capture the order",
+        "intent": "Turn the agreed deal into a binding order or contract that the organization can fulfill.",
+        "description": "Turn the agreed deal into a binding order or contract that the organization can fulfill.",
+        "source_id": "SF3-4",
+        "domains": [
+          {
+            "domain_name": "go_to_market_sales_and_customer_success",
+            "domain_label": "Go-to-Market, Sales & Customer Success",
+            "domain_description": "This domain manages the full customer lifecycle from initial market engagement and lead generation through sales execution, fulfillment, service, and renewal. It primarily deals with customers, leads, opportunities, sales teams, partners, marketing campaigns, and the content and offers used to engage them. The domain connects marketing, sales, finance, and service activities into a coherent end-to-end revenue engine. It supports outcomes such as revenue growth, customer acquisition, retention, and satisfaction. It also ensures customer-facing processes are coordinated, measurable, and continuously optimized.",
+            "required_capabilities": [
+              {
+                "capability_id": "order_capture_orchestration",
+                "capability_label": "Order Capture & Orchestration",
+                "capability_description": "Convert quotes to clean orders and orchestrate fulfillment signals to downstream systems with clear statuses and exceptions. It operates primarily on Quote-to-order, statuses, and exceptions to ensure clean order flow to fulfillment It coordinates recurring activities such as validate, convert, allocate, signal, and reconcile to deliver consistent business outcomes",
+                "capability_outcome": "Ensure clean order flow to fulfillment.",
+                "chain_id": "T8",
+                "chain_step_index": 6,
+                "notes": "Turns accepted quotes into clean, executable orders."
+              }
+            ]
+          },
+          {
+            "domain_name": "online_buying_selling_and_marketplaces",
+            "domain_label": "Online Buying, Selling & Marketplaces",
+            "domain_description": "Support digital commerce (catalog \u2192 discovery \u2192 checkout \u2192 order management \u2192 returns), including marketplace-style selling motions.",
+            "required_capabilities": [
+              {
+                "capability_id": "catalog_listings",
+                "capability_label": "Catalog & Listings",
+                "capability_description": "Model taxonomy, attributes, and media to enable rich discovery. It operates primarily on Variants, compliance, and content quality to make products accurate and browsable It coordinates recurring activities such as create, validate, enrich, publish, and retire to deliver consistent business outcomes",
+                "capability_outcome": "Make products accurate and browsable.",
+                "chain_id": "T8",
+                "chain_step_index": 14,
+                "notes": "Maintain offers, SKUs, and listing content that supports conversion and accurate order capture."
+              },
+              {
+                "capability_id": "search_merchandising",
+                "capability_label": "Search & Merchandising",
+                "capability_description": "Match buyers to inventory via ranking, placements, and recommendations. It operates primarily on Search/browse and A/B tests to improve discovery and conversion It coordinates recurring activities such as index, rank, recommend, place, and measure to deliver consistent business outcomes",
+                "capability_outcome": "Improve discovery and conversion.",
+                "chain_id": "T8",
+                "chain_step_index": 15,
+                "notes": "Support discovery, ranking, and merchandising to convert intent to purchase."
+              },
+              {
+                "capability_id": "cart_checkout",
+                "capability_label": "Cart & Checkout",
+                "capability_description": "Provide a fast, trusted flow with taxes, shipping, fraud signals, and wallets. It operates primarily on Tax/ship calc, risk checks, and wallets to reduce friction to purchase It coordinates recurring activities such as add, calculate, authorize, confirm, and notify to deliver consistent business outcomes",
+                "capability_outcome": "Reduce friction to purchase.",
+                "chain_id": "T8",
+                "chain_step_index": 16,
+                "notes": "Capture buyer commitment via digital cart/checkout and order confirmation."
+              },
+              {
+                "capability_id": "order_lifecycle_oms",
+                "capability_label": "Order Lifecycle & Order Management System (OMS)",
+                "capability_description": "Screen, allocate, and orchestrate orders through fulfillment with status tracking. It operates primarily on Fraud, allocation, and exceptions to fulfill accurately and on time It coordinates recurring activities such as screen, allocate, ship, track, and complete to deliver consistent business outcomes",
+                "capability_outcome": "Fulfill accurately and on time.",
+                "chain_id": "T8",
+                "chain_step_index": 17,
+                "notes": "Orchestrate order states/exceptions and integration to downstream fulfillment."
+              },
+              {
+                "capability_id": "returns_rma",
+                "capability_label": "Returns & Return Merchandise Authorization (RMA)",
+                "capability_description": "Handle returns fairly via labels, inspection/grade, and refund/exchange. It operates primarily on Labels, grading, and settlement to resolve post-purchase issues It coordinates recurring activities such as initiate, authorize, receive, decide, and refund to deliver consistent business outcomes",
+                "capability_outcome": "Resolve post-purchase issues.",
+                "chain_id": "T8",
+                "chain_step_index": 18,
+                "notes": "Handle returns/exchanges to protect customer experience and margin."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "name": "deliver_the_promise",
+        "label": "Deliver the promise",
+        "intent": "Fulfill the product or service and deliver the expected experience.",
+        "description": "Fulfill the product or service and deliver the expected experience.",
+        "source_id": "SF3-5",
+        "domains": [
+          {
+            "domain_name": "go_to_market_sales_and_customer_success",
+            "domain_label": "Go-to-Market, Sales & Customer Success",
+            "domain_description": "This domain manages the full customer lifecycle from initial market engagement and lead generation through sales execution, fulfillment, service, and renewal. It primarily deals with customers, leads, opportunities, sales teams, partners, marketing campaigns, and the content and offers used to engage them. The domain connects marketing, sales, finance, and service activities into a coherent end-to-end revenue engine. It supports outcomes such as revenue growth, customer acquisition, retention, and satisfaction. It also ensures customer-facing processes are coordinated, measurable, and continuously optimized.",
+            "required_capabilities": [
+              {
+                "capability_id": "order_capture_orchestration",
+                "capability_label": "Order Capture & Orchestration",
+                "capability_description": "Convert quotes to clean orders and orchestrate fulfillment signals to downstream systems with clear statuses and exceptions. It operates primarily on Quote-to-order, statuses, and exceptions to ensure clean order flow to fulfillment It coordinates recurring activities such as validate, convert, allocate, signal, and reconcile to deliver consistent business outcomes",
+                "capability_outcome": "Ensure clean order flow to fulfillment.",
+                "chain_id": "T8",
+                "chain_step_index": 6,
+                "notes": "Acts as the order source and orchestrator that downstream fulfillment consumes."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 6,
+        "name": "collect_cash_and_account",
+        "label": "Collect cash & account",
+        "intent": "Invoice correctly, collect cash, and handle adjustments and disputes.",
+        "description": "Invoice correctly, collect cash, and handle adjustments and disputes.",
+        "source_id": "SF3-6",
+        "domains": [
+          {
+            "domain_name": "finance_and_corporate_accounting",
+            "domain_label": "Finance & Corporate Accounting",
+            "domain_description": "This domain safeguards financial integrity, liquidity, and performance across the enterprise. It primarily deals with financial transactions, accounts, ledgers, budgets, forecasts, tax positions, and financial statements. The domain connects operational activities from sales, procurement, and operations into a coherent financial view. It supports internal and external reporting, statutory compliance, and decision support. It underpins investor confidence, capital allocation, and long-term financial health.",
+            "required_capabilities": [
+              {
+                "capability_id": "ap_ar_operations",
+                "capability_label": "Accounts Payable & Accounts Receivable (AP/AR) Operations",
+                "capability_description": "Control payments and collections with matching, approvals, invoicing, and cash application. It operates primarily on 3-way match, terms, and disputes to pay correctly and collect faster It coordinates recurring activities such as capture, match, approve, invoice, and apply to deliver consistent business outcomes",
+                "capability_outcome": "Pay correctly and collect faster.",
+                "chain_id": "T8",
+                "chain_step_index": 8,
+                "notes": "Runs AR operations for invoicing, collections, and reconciliation."
+              }
+            ]
+          },
+          {
+            "domain_name": "go_to_market_sales_and_customer_success",
+            "domain_label": "Go-to-Market, Sales & Customer Success",
+            "domain_description": "This domain manages the full customer lifecycle from initial market engagement and lead generation through sales execution, fulfillment, service, and renewal. It primarily deals with customers, leads, opportunities, sales teams, partners, marketing campaigns, and the content and offers used to engage them. The domain connects marketing, sales, finance, and service activities into a coherent end-to-end revenue engine. It supports outcomes such as revenue growth, customer acquisition, retention, and satisfaction. It also ensures customer-facing processes are coordinated, measurable, and continuously optimized.",
+            "required_capabilities": [
+              {
+                "capability_id": "commercial_billing_cash_coordination",
+                "capability_label": "Commercial Billing & Cash Coordination",
+                "capability_description": "Coordinate invoice readiness, terms, and revenue events with Finance to minimize friction and speed cash. It operates primarily on Terms, milestones, and collections liaison to enable timely, accurate billing and cash It coordinates recurring activities such as prepare, transmit, follow_up, reconcile, and escalate to deliver consistent business outcomes",
+                "capability_outcome": "Enable timely, accurate billing and cash.",
+                "chain_id": "T8",
+                "chain_step_index": 7,
+                "notes": "Manages billing events and coordinates cash application."
+              }
+            ]
+          },
+          {
+            "domain_name": "trust_identity_and_payments_operations",
+            "domain_label": "Trust, Identity & Payments Operations (TIPO)",
+            "domain_description": "Protect the revenue engine with identity, fraud controls, payment operations, and regulatory processes.",
+            "required_capabilities": [
+              {
+                "capability_id": "authentication",
+                "capability_label": "Authentication",
+                "capability_description": "Authenticate with low friction via risk-based challenges and passkeys/WebAuthn. It operates primarily on Step-up, device trust, and sessions to secure logins with minimal friction It coordinates recurring activities such as challenge, verify, issue_token, refresh, and revoke to deliver consistent business outcomes",
+                "capability_outcome": "Secure logins with minimal friction.",
+                "chain_id": "T8",
+                "chain_step_index": 19,
+                "notes": "Authenticate customers to reduce fraud and friction at purchase and billing events."
+              },
+              {
+                "capability_id": "risk_scoring_fraud",
+                "capability_label": "Risk Scoring & Fraud",
+                "capability_description": "Score devices/behavior, enforce velocity policies, and run case reviews. It operates primarily on Device fingerprinting and ML/rules to block abuse and accept good users It coordinates recurring activities such as score, decide, limit, review, and learn to deliver consistent business outcomes",
+                "capability_outcome": "Block abuse and accept good users.",
+                "chain_id": "T8",
+                "chain_step_index": 20,
+                "notes": "Detect and prevent fraud/abuse impacting revenue collection."
+              },
+              {
+                "capability_id": "payment_processing",
+                "capability_label": "Payment Processing",
+                "capability_description": "Tokenize instruments, authorize/capture, settle, and reconcile across providers. It operates primarily on PSPs, tokens, and retries to move money securely and reliably It coordinates recurring activities such as tokenize, authorize, capture, settle, and reconcile to deliver consistent business outcomes",
+                "capability_outcome": "Move money securely and reliably.",
+                "chain_id": "T8",
+                "chain_step_index": 21,
+                "notes": "Authorize/capture payments and manage settlement across rails and wallets."
+              },
+              {
+                "capability_id": "recurring_billing_dunning",
+                "capability_label": "Recurring Billing & Dunning",
+                "capability_description": "Schedule invoices, retry failures intelligently, and orchestrate dunning. It operates primarily on Billing cycles, retries, and comms to reduce involuntary churn It coordinates recurring activities such as schedule, bill, retry, dunn, and cancel to deliver consistent business outcomes",
+                "capability_outcome": "Reduce involuntary churn.",
+                "chain_id": "T8",
+                "chain_step_index": 22,
+                "notes": "Manage subscriptions/recurring billing and dunning to reduce failed payments and churn."
+              },
+              {
+                "capability_id": "refunds_credits",
+                "capability_label": "Refunds & Credits",
+                "capability_description": "Issue refunds, store credits, or gift card adjustments based on return outcomes and policies. It operates primarily on Refund rails, partials, and charge reversals to resolve post-purchase outcomes quickly and fairly It coordinates recurring activities such as calculate, authorize, disburse, notify, and record to deliver consistent business outcomes",
+                "capability_outcome": "Resolve post-purchase outcomes quickly and fairly.",
+                "chain_id": "T8",
+                "chain_step_index": 23,
+                "notes": "Process refunds/credits tied to disputes, returns, and service adjustments."
+              },
+              {
+                "capability_id": "disputes",
+                "capability_label": "Disputes & Chargebacks",
+                "capability_description": "Compile evidence and manage representment through decision and settlement. It operates primarily on Networks, SLAs, and evidence portals to resolve disputes fairly and efficiently It coordinates recurring activities such as intake, compile, submit, decide, and settle to deliver consistent business outcomes",
+                "capability_outcome": "Resolve disputes fairly and efficiently.",
+                "chain_id": "T8",
+                "chain_step_index": 24,
+                "notes": "Handle chargebacks and disputes with evidence and operational workflows."
+              },
+              {
+                "capability_id": "regulatory_operations",
+                "capability_label": "Regulatory Operations",
+                "capability_description": "Monitor AML, investigate alerts, and file SAR/CTR with evidence. It operates primarily on Policies and alert workflows to comply with financial regulations It coordinates recurring activities such as monitor, investigate, file, evidence, and audit to deliver consistent business outcomes",
+                "capability_outcome": "Comply with financial regulations.",
+                "chain_id": "T8",
+                "chain_step_index": 25,
+                "notes": "Execute regulatory controls/workflows (e.g., AML/KYC ops, reporting) where applicable."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 7,
+        "name": "recognize_value_and_grow",
+        "label": "Recognize value & grow",
+        "intent": "Recognize revenue properly, understand profitability, and deepen the relationship.",
+        "description": "Recognize revenue properly, understand profitability, and deepen the relationship.",
+        "source_id": "SF3-7",
+        "domains": [
+          {
+            "domain_name": "finance_and_corporate_accounting",
+            "domain_label": "Finance & Corporate Accounting",
+            "domain_description": "This domain safeguards financial integrity, liquidity, and performance across the enterprise. It primarily deals with financial transactions, accounts, ledgers, budgets, forecasts, tax positions, and financial statements. The domain connects operational activities from sales, procurement, and operations into a coherent financial view. It supports internal and external reporting, statutory compliance, and decision support. It underpins investor confidence, capital allocation, and long-term financial health.",
+            "required_capabilities": [
+              {
+                "capability_id": "general_ledger",
+                "capability_label": "General Ledger",
+                "capability_description": "Maintain accurate, auditable books by governing postings and reconciliations. It operates primarily on Chart of accounts, subledgers, and controls to preserve financial integrity It coordinates recurring activities such as post, reconcile, reclass, adjust, and certify to deliver consistent business outcomes",
+                "capability_outcome": "Preserve financial integrity.",
+                "chain_id": "T7",
+                "chain_step_index": 3,
+                "notes": "Posts revenue and related entries to the central ledger."
+              },
+              {
+                "capability_id": "revenue_recognition",
+                "capability_label": "Revenue Recognition",
+                "capability_description": "Recognize revenue correctly across timing and obligations with audit-ready schedules. It operates primarily on Allocations, deferrals, and SSP to compliant revenue treatment It coordinates recurring activities such as allocate, schedule, recognize, adjust, and disclose to deliver consistent business outcomes",
+                "capability_outcome": "Compliant revenue treatment.",
+                "chain_id": "T8",
+                "chain_step_index": 9,
+                "notes": "Applies baseline revenue recognition policies to L2C events."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "workforce_lifecycle_acquire_enable_work_develop_pay_analyze",
+    "label": "Workforce Lifecycle: Acquire \u2192 Enable \u2192 Work \u2192 Develop \u2192 Pay \u2192 Analyze",
+    "description": "When a work need or role exists or changes, we plan, acquire, enable, organize, develop, and reward people so we have a sustainable, productive workforce aligned to strategy and economics.",
+    "value_metrics": [
+      "Employee engagement",
+      "Time to fill critical roles",
+      "Voluntary attrition rate",
+      "Productivity per FTE"
+    ],
+    "source_id": "SF4",
+    "steps": [
+      {
+        "order": 1,
+        "name": "plan_the_workforce",
+        "label": "Plan the workforce",
+        "intent": "Decide what roles, skills, and capacity are needed to deliver strategy.",
+        "description": "Decide what roles, skills, and capacity are needed to deliver strategy.",
+        "source_id": "SF4-1",
+        "domains": [
+          {
+            "domain_name": "people_work_and_learning",
+            "domain_label": "People, Work & Learning",
+            "domain_description": "This domain manages the end-to-end lifecycle of people who work with or for the organization, including employees, contractors, and external talent. It primarily deals with roles, positions, candidates, employees, contingent workers, learning content, skills, schedules, and compensation records. The domain connects talent acquisition, HR operations, workforce management, and learning ecosystems. It supports engagement, development, and well-being while ensuring compliance with labor and employment requirements. It underpins workforce planning, capability building, and culture.",
+            "required_capabilities": [
+              {
+                "capability_id": "people_analytics_bi",
+                "capability_label": "People Analytics & Business Intelligence (BI)",
+                "capability_description": "Model hiring, retention, engagement, and diversity metrics for decisions. It operates primarily on HRIS, surveys, and productivity to inform talent strategy with evidence It coordinates recurring activities such as ingest, model, benchmark, visualize, and advise to deliver consistent business outcomes",
+                "capability_outcome": "Inform talent strategy with evidence.",
+                "chain_id": "T16",
+                "chain_step_index": 5,
+                "notes": "Provides demand, supply, and scenario views for roles and skills."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "name": "attract_and_select_talent",
+        "label": "Attract & select talent",
+        "intent": "Find and choose people to fill those needs.",
+        "description": "Find and choose people to fill those needs.",
+        "source_id": "SF4-2",
+        "domains": [
+          {
+            "domain_name": "people_work_and_learning",
+            "domain_label": "People, Work & Learning",
+            "domain_description": "This domain manages the end-to-end lifecycle of people who work with or for the organization, including employees, contractors, and external talent. It primarily deals with roles, positions, candidates, employees, contingent workers, learning content, skills, schedules, and compensation records. The domain connects talent acquisition, HR operations, workforce management, and learning ecosystems. It supports engagement, development, and well-being while ensuring compliance with labor and employment requirements. It underpins workforce planning, capability building, and culture.",
+            "required_capabilities": [
+              {
+                "capability_id": "talent_acquisition",
+                "capability_label": "Talent Acquisition",
+                "capability_description": "Source, assess, and coordinate interviews to hire qualified talent efficiently. It operates primarily on Branding, screening, and scheduling to fill roles with quality and speed It coordinates recurring activities such as source, assess, schedule, offer, and onboard to deliver consistent business outcomes",
+                "capability_outcome": "Fill roles with quality and speed.",
+                "chain_id": "T16",
+                "chain_step_index": 1,
+                "notes": "Runs sourcing, recruiting, and selection processes for candidates."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "name": "onboard_and_enable",
+        "label": "Onboard & enable",
+        "intent": "Get people productive, connected, and compliant.",
+        "description": "Get people productive, connected, and compliant.",
+        "source_id": "SF4-3",
+        "domains": [
+          {
+            "domain_name": "people_work_and_learning",
+            "domain_label": "People, Work & Learning",
+            "domain_description": "This domain manages the end-to-end lifecycle of people who work with or for the organization, including employees, contractors, and external talent. It primarily deals with roles, positions, candidates, employees, contingent workers, learning content, skills, schedules, and compensation records. The domain connects talent acquisition, HR operations, workforce management, and learning ecosystems. It supports engagement, development, and well-being while ensuring compliance with labor and employment requirements. It underpins workforce planning, capability building, and culture.",
+            "required_capabilities": [
+              {
+                "capability_id": "onboarding_offboarding",
+                "capability_label": "Onboarding & Offboarding",
+                "capability_description": "Orchestrate JML transitions across access, equipment, training, and exits. It operates primarily on JML, provisioning, and orientation to make employee transitions smooth and compliant It coordinates recurring activities such as provision, orient, transfer, deprovision, and archive to deliver consistent business outcomes",
+                "capability_outcome": "Make employee transitions smooth and compliant.",
+                "chain_id": "T16",
+                "chain_step_index": 2,
+                "notes": "Manages the HR side of onboarding, compliance, and provisioning steps."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "name": "organize_and_guide_work",
+        "label": "Organize & guide work",
+        "intent": "Align goals, responsibilities, and day-to-day work.",
+        "description": "Align goals, responsibilities, and day-to-day work.",
+        "source_id": "SF4-4",
+        "domains": [
+          {
+            "domain_name": "workplace_management_and_productivity",
+            "domain_label": "Workplace Management & Productivity",
+            "domain_description": "This domain supports how individuals and teams plan, execute, and track work across projects, tasks, and goals. It primarily deals with work items, projects, milestones, goals and OKRs, schedules, forms, approvals, and meeting artifacts. The domain provides structure for assigning responsibilities, managing dependencies, and tracking progress. It integrates work management with calendars, collaboration tools, and reporting. It enables transparency, coordination, and continuous improvement in how work gets done.",
+            "required_capabilities": [
+              {
+                "capability_id": "calendars_scheduling",
+                "capability_label": "Calendars & Scheduling",
+                "capability_description": "Make time coordination effortless with availability, conferencing, and rooms. It operates primarily on Free/busy, rooms, and reminders to reduce scheduling friction It coordinates recurring activities such as search, propose, confirm, remind, and reschedule to deliver consistent business outcomes",
+                "capability_outcome": "Reduce scheduling friction.",
+                "chain_id": "T15",
+                "chain_step_index": 2,
+                "notes": "Coordinates meetings, shifts, and key workforce events."
+              },
+              {
+                "capability_id": "task_management",
+                "capability_label": "Task Management",
+                "capability_description": "Coordinate work with boards, timelines, dependencies, and automations. It operates primarily on Backlogs, WIP limits, and rules to manage execution flow It coordinates recurring activities such as create, assign, progress, complete, and report to deliver consistent business outcomes",
+                "capability_outcome": "Manage execution flow.",
+                "chain_id": "T15",
+                "chain_step_index": 1,
+                "notes": "Aligns and tracks work, responsibilities, and priorities for individuals and teams."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "name": "grow_and_support_talent",
+        "label": "Grow & support talent",
+        "intent": "Develop skills, wellbeing, and career paths.",
+        "description": "Develop skills, wellbeing, and career paths.",
+        "source_id": "SF4-5",
+        "domains": [
+          {
+            "domain_name": "people_work_and_learning",
+            "domain_label": "People, Work & Learning",
+            "domain_description": "This domain manages the end-to-end lifecycle of people who work with or for the organization, including employees, contractors, and external talent. It primarily deals with roles, positions, candidates, employees, contingent workers, learning content, skills, schedules, and compensation records. The domain connects talent acquisition, HR operations, workforce management, and learning ecosystems. It supports engagement, development, and well-being while ensuring compliance with labor and employment requirements. It underpins workforce planning, capability building, and culture.",
+            "required_capabilities": [
+              {
+                "capability_id": "talent_development_learning",
+                "capability_label": "Talent Development & Learning",
+                "capability_description": "Develop skills and continuity via reviews, learning paths, and certifications. It operates primarily on Calibration, LMS, and credentials to grow capability and readiness It coordinates recurring activities such as evaluate, learn, assess, certify, and review to deliver consistent business outcomes",
+                "capability_outcome": "Grow capability and readiness.",
+                "chain_id": "T16",
+                "chain_step_index": 4,
+                "notes": "Manages learning paths, development plans, and career programs."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 6,
+        "name": "reward_and_comply",
+        "label": "Reward & comply",
+        "intent": "Pay fairly, manage benefits, and meet regulatory obligations.",
+        "description": "Pay fairly, manage benefits, and meet regulatory obligations.",
+        "source_id": "SF4-6",
+        "domains": [
+          {
+            "domain_name": "people_work_and_learning",
+            "domain_label": "People, Work & Learning",
+            "domain_description": "This domain manages the end-to-end lifecycle of people who work with or for the organization, including employees, contractors, and external talent. It primarily deals with roles, positions, candidates, employees, contingent workers, learning content, skills, schedules, and compensation records. The domain connects talent acquisition, HR operations, workforce management, and learning ecosystems. It supports engagement, development, and well-being while ensuring compliance with labor and employment requirements. It underpins workforce planning, capability building, and culture.",
+            "required_capabilities": [
+              {
+                "capability_id": "time_payroll",
+                "capability_label": "Time & Payroll",
+                "capability_description": "Capture time, apply pay rules, and process payroll with tax compliance. It operates primarily on Time rules, calendars, and taxes to pay people correctly and on time It coordinates recurring activities such as capture, calculate, approve, pay, and reconcile to deliver consistent business outcomes",
+                "capability_outcome": "Pay people correctly and on time.",
+                "chain_id": "T16",
+                "chain_step_index": 3,
+                "notes": "Collects time and attendance and processes payroll."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 7,
+        "name": "analyze_and_adapt",
+        "label": "Analyze & adapt",
+        "intent": "Use workforce insights to change org design, roles, and strategy.",
+        "description": "Use workforce insights to change org design, roles, and strategy.",
+        "source_id": "SF4-7",
+        "domains": [
+          {
+            "domain_name": "people_work_and_learning",
+            "domain_label": "People, Work & Learning",
+            "domain_description": "This domain manages the end-to-end lifecycle of people who work with or for the organization, including employees, contractors, and external talent. It primarily deals with roles, positions, candidates, employees, contingent workers, learning content, skills, schedules, and compensation records. The domain connects talent acquisition, HR operations, workforce management, and learning ecosystems. It supports engagement, development, and well-being while ensuring compliance with labor and employment requirements. It underpins workforce planning, capability building, and culture.",
+            "required_capabilities": [
+              {
+                "capability_id": "people_analytics_bi",
+                "capability_label": "People Analytics & Business Intelligence (BI)",
+                "capability_description": "Model hiring, retention, engagement, and diversity metrics for decisions. It operates primarily on HRIS, surveys, and productivity to inform talent strategy with evidence It coordinates recurring activities such as ingest, model, benchmark, visualize, and advise to deliver consistent business outcomes",
+                "capability_outcome": "Inform talent strategy with evidence.",
+                "chain_id": "T16",
+                "chain_step_index": 5,
+                "notes": "Provides KPIs and analytics on engagement, attrition, and productivity."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "protect_comply_govern_assure_recover",
+    "label": "Protect \u2192 Comply \u2192 Govern \u2192 Assure \u2192 Recover",
+    "description": "Because the enterprise faces constant risks and obligations, we protect, comply, govern, assure, and recover so we operate within risk appetite, meet obligations, and withstand disruptions.",
+    "value_metrics": [
+      "Number of material risk incidents",
+      "Regulatory findings and audit issues",
+      "Time to detect and remediate incidents",
+      "Critical service availability during disruptions"
+    ],
+    "source_id": "SF5",
+    "steps": [
+      {
+        "order": 1,
+        "name": "understand_risk_and_obligations",
+        "label": "Understand risk & obligations",
+        "intent": "Know what could go wrong and what regulatory, contractual, and ethical obligations exist.",
+        "description": "Know what could go wrong and what regulatory, contractual, and ethical obligations exist.",
+        "source_id": "SF5-1",
+        "domains": [
+          {
+            "domain_name": "risk_compliance_and_governance",
+            "domain_label": "Risk, Compliance & Governance",
+            "domain_description": "This domain provides independent oversight of risks, controls, and compliance obligations across the enterprise. It primarily deals with risk registers, control frameworks, policies, audits, regulatory obligations, and continuity plans. The domain monitors how well the business adheres to internal standards and external regulations. It supports transparent reporting to management, regulators, and other stakeholders. It also underpins organizational resilience, ethical conduct, and trust.",
+            "required_capabilities": [
+              {
+                "capability_id": "enterprise_risk_management",
+                "capability_label": "Enterprise Risk Management (ERM)",
+                "capability_description": "Identify, assess, and monitor risks with appetite and KRIs tied to owners. It operates primarily on Registers, KRIs, and ownership to reduce enterprise risk exposure It coordinates recurring activities such as identify, assess, mitigate, monitor, and report to deliver consistent business outcomes",
+                "capability_outcome": "Reduce enterprise risk exposure.",
+                "chain_id": "T5",
+                "chain_step_index": 1,
+                "notes": "Identifies, assesses, and catalogs enterprise risks and obligations."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 2,
+        "name": "set_policy_and_appetite",
+        "label": "Set policy & appetite",
+        "intent": "Decide what is acceptable, what controls are required, and how much risk to take.",
+        "description": "Decide what is acceptable, what controls are required, and how much risk to take.",
+        "source_id": "SF5-2",
+        "domains": [
+          {
+            "domain_name": "risk_compliance_and_governance",
+            "domain_label": "Risk, Compliance & Governance",
+            "domain_description": "This domain provides independent oversight of risks, controls, and compliance obligations across the enterprise. It primarily deals with risk registers, control frameworks, policies, audits, regulatory obligations, and continuity plans. The domain monitors how well the business adheres to internal standards and external regulations. It supports transparent reporting to management, regulators, and other stakeholders. It also underpins organizational resilience, ethical conduct, and trust.",
+            "required_capabilities": [
+              {
+                "capability_id": "policy_control_management",
+                "capability_label": "Policy & Control Management",
+                "capability_description": "Define, map, test, and certify controls with tracked remediation. It operates primarily on Libraries, mappings, and testing to ensure an effective control environment It coordinates recurring activities such as define, map, test, certify, and remediate to deliver consistent business outcomes",
+                "capability_outcome": "Ensure an effective control environment.",
+                "chain_id": "T5",
+                "chain_step_index": 7,
+                "notes": "Defines and governs policies, standards, and control frameworks."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 3,
+        "name": "embed_controls",
+        "label": "Embed controls",
+        "intent": "Make risk and compliance part of everyday processes, systems, and data handling.",
+        "description": "Make risk and compliance part of everyday processes, systems, and data handling.",
+        "source_id": "SF5-3",
+        "domains": [
+          {
+            "domain_name": "risk_compliance_and_governance",
+            "domain_label": "Risk, Compliance & Governance",
+            "domain_description": "This domain provides independent oversight of risks, controls, and compliance obligations across the enterprise. It primarily deals with risk registers, control frameworks, policies, audits, regulatory obligations, and continuity plans. The domain monitors how well the business adheres to internal standards and external regulations. It supports transparent reporting to management, regulators, and other stakeholders. It also underpins organizational resilience, ethical conduct, and trust.",
+            "required_capabilities": [
+              {
+                "capability_id": "third_party_risk_management",
+                "capability_label": "Third-Party Risk Management (TPRM)",
+                "capability_description": "Assess and monitor vendor risk with controls, SLAs, and escalation. It operates primarily on Due diligence, monitoring, and contracts to reduce external dependency risk It coordinates recurring activities such as assess, score, contract, monitor, and escalate to deliver consistent business outcomes",
+                "capability_outcome": "Reduce external dependency risk.",
+                "chain_id": "T5",
+                "chain_step_index": 3,
+                "notes": "Embeds risk and control requirements into third-party onboarding and monitoring."
+              }
+            ]
+          },
+          {
+            "domain_name": "supply_chain_and_operations",
+            "domain_label": "Supply Chain & Operations",
+            "domain_description": "This domain plans, sources, manufactures, stores, and delivers products and services reliably and cost-effectively. It primarily deals with materials, suppliers, production assets, inventory, warehouses, logistics providers, and customer orders. The domain governs how demand is translated into supply plans and how goods move across the value chain from origin to consumption. It supports service levels, working capital efficiency, and cost optimization. It also ensures operational transparency and resilience across global networks.",
+            "required_capabilities": [
+              {
+                "capability_id": "supplier_management",
+                "capability_label": "Supplier Management",
+                "capability_description": "Onboard and govern suppliers with performance and risk controls. It operates primarily on Scorecards, audits, and corrective actions to assure supplier capability and compliance It coordinates recurring activities such as onboard, qualify, assess, mitigate, and review to deliver consistent business outcomes",
+                "capability_outcome": "Assure supplier capability and compliance.",
+                "chain_id": "T5",
+                "chain_step_index": 4,
+                "notes": "Ensures suppliers and partners operate under agreed controls."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 4,
+        "name": "monitor_and_detect",
+        "label": "Monitor & detect",
+        "intent": "Continuously watch for issues, breaches, and emerging risks.",
+        "description": "Continuously watch for issues, breaches, and emerging risks.",
+        "source_id": "SF5-4",
+        "domains": [
+          {
+            "domain_name": "digital_ai_platform_data_security",
+            "domain_label": "Digital & AI Platform, Data & Security (DAPDS)",
+            "domain_description": "This domain provides the core digital platforms, data foundations, and security controls that underpin business applications and services. It primarily deals with infrastructure, platforms, data assets, integration services, AI/ML workflows, enterprise-wide identities, access policies, security events, and observability telemetry. The domain ensures that systems are scalable, reliable, observable, and secure. It supports data-driven decision-making, digital experiences, and AI-powered capabilities across business domains. It also protects information assets and service continuity against threats and failures.",
+            "required_capabilities": [
+              {
+                "capability_id": "itsm",
+                "capability_label": "IT Service Management (ITSM)",
+                "capability_description": "Restore service quickly and prevent recurrence with incident, problem, and change controls. It operates primarily on SLAs, runbooks, and CAB to maintain service reliability It coordinates recurring activities such as log, triage, resolve, root_cause, and change to deliver consistent business outcomes",
+                "capability_outcome": "Maintain service reliability.",
+                "chain_id": "T5",
+                "chain_step_index": 6,
+                "notes": "Captures risk and control incidents as tickets/events to be triaged."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 5,
+        "name": "respond_and_remediate",
+        "label": "Respond & remediate",
+        "intent": "Fix issues, learn, and reduce the chance and impact of recurrence.",
+        "description": "Fix issues, learn, and reduce the chance and impact of recurrence.",
+        "source_id": "SF5-5",
+        "domains": [
+          {
+            "domain_name": "risk_compliance_and_governance",
+            "domain_label": "Risk, Compliance & Governance",
+            "domain_description": "This domain provides independent oversight of risks, controls, and compliance obligations across the enterprise. It primarily deals with risk registers, control frameworks, policies, audits, regulatory obligations, and continuity plans. The domain monitors how well the business adheres to internal standards and external regulations. It supports transparent reporting to management, regulators, and other stakeholders. It also underpins organizational resilience, ethical conduct, and trust.",
+            "required_capabilities": [
+              {
+                "capability_id": "issue_remediation_management",
+                "capability_label": "Issue & Remediation Management",
+                "capability_description": "Drive timely fixes with ownership, milestones, and validation to close. It operates primarily on Owners, due dates, and validation to resolve issues effectively It coordinates recurring activities such as log, assign, remediate, validate, and close to deliver consistent business outcomes",
+                "capability_outcome": "Resolve issues effectively.",
+                "chain_id": "T5",
+                "chain_step_index": 2,
+                "notes": "Manages remediation plans, ownership, and tracking for risk issues."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 6,
+        "name": "assure_and_report",
+        "label": "Assure & report",
+        "intent": "Provide evidence and narratives to boards, regulators, and stakeholders.",
+        "description": "Provide evidence and narratives to boards, regulators, and stakeholders.",
+        "source_id": "SF5-6",
+        "domains": [
+          {
+            "domain_name": "finance_and_corporate_accounting",
+            "domain_label": "Finance & Corporate Accounting",
+            "domain_description": "This domain safeguards financial integrity, liquidity, and performance across the enterprise. It primarily deals with financial transactions, accounts, ledgers, budgets, forecasts, tax positions, and financial statements. The domain connects operational activities from sales, procurement, and operations into a coherent financial view. It supports internal and external reporting, statutory compliance, and decision support. It underpins investor confidence, capital allocation, and long-term financial health.",
+            "required_capabilities": [
+              {
+                "capability_id": "statutory_reporting_audit",
+                "capability_label": "Statutory Reporting & Audit",
+                "capability_description": "Coordinate audits and filings with strong evidence and remediation tracking. It operates primarily on Regulators, external auditors, and SOX to achieve clean audit outcomes It coordinates recurring activities such as prepare, evidence, respond, file, and remediate to deliver consistent business outcomes",
+                "capability_outcome": "Achieve clean audit outcomes.",
+                "chain_id": "T5",
+                "chain_step_index": 9,
+                "notes": "Supports external audit and statutory reporting obligations related to risk."
+              }
+            ]
+          },
+          {
+            "domain_name": "risk_compliance_and_governance",
+            "domain_label": "Risk, Compliance & Governance",
+            "domain_description": "This domain provides independent oversight of risks, controls, and compliance obligations across the enterprise. It primarily deals with risk registers, control frameworks, policies, audits, regulatory obligations, and continuity plans. The domain monitors how well the business adheres to internal standards and external regulations. It supports transparent reporting to management, regulators, and other stakeholders. It also underpins organizational resilience, ethical conduct, and trust.",
+            "required_capabilities": [
+              {
+                "capability_id": "internal_audit",
+                "capability_label": "Internal Audit",
+                "capability_description": "Deliver independent assurance via risk-based plans, fieldwork, and reporting. It operates primarily on Plans, evidence, and findings to assure governance and controls It coordinates recurring activities such as plan, execute, evidence, report, and follow_up to deliver consistent business outcomes",
+                "capability_outcome": "Assure governance and controls.",
+                "chain_id": "T5",
+                "chain_step_index": 8,
+                "notes": "Plans and executes audits to test design and operating effectiveness of controls."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "order": 7,
+        "name": "maintain_resilience",
+        "label": "Maintain resilience",
+        "intent": "Ensure continuity and recovery when disruptions happen.",
+        "description": "Ensure continuity and recovery when disruptions happen.",
+        "source_id": "SF5-7",
+        "domains": [
+          {
+            "domain_name": "risk_compliance_and_governance",
+            "domain_label": "Risk, Compliance & Governance",
+            "domain_description": "This domain provides independent oversight of risks, controls, and compliance obligations across the enterprise. It primarily deals with risk registers, control frameworks, policies, audits, regulatory obligations, and continuity plans. The domain monitors how well the business adheres to internal standards and external regulations. It supports transparent reporting to management, regulators, and other stakeholders. It also underpins organizational resilience, ethical conduct, and trust.",
+            "required_capabilities": [
+              {
+                "capability_id": "business_continuity_dr",
+                "capability_label": "Business Continuity & Disaster Recovery (BCP/DR)",
+                "capability_description": "Sustain operations via BIAs, continuity plans, DR tests, and readiness improvements. It operates primarily on RTO/RPO, exercises, and crisis comms to ensure resilience under disruption It coordinates recurring activities such as analyze, plan, test, activate, and improve to deliver consistent business outcomes",
+                "capability_outcome": "Ensure resilience under disruption.",
+                "chain_id": "T5",
+                "chain_step_index": 5,
+                "notes": "Plans, tests, and executes continuity and disaster recovery for critical services."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]
+}

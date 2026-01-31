@@ -1,0 +1,94 @@
+{
+  "default": [
+    {
+      "domain": "go_to_market_sales_and_customer_success",
+      "roles": [
+        "go_to_market_sales_and_cs_role"
+      ]
+    },
+    {
+      "domain": "content_and_collaboration",
+      "roles": [
+        "go_to_market_sales_and_cs_role",
+        "workplace_productivity_role"
+      ]
+    },
+    {
+      "domain": "finance_and_corporate_accounting",
+      "roles": [
+        "finance_analyst_role",
+        "enterprise_strategy_and_pmo_role"
+      ]
+    },
+    {
+      "domain": "product_design_and_engineering",
+      "roles": [
+        "product_and_engineering_role"
+      ]
+    },
+    {
+      "domain": "digital_ai_platform_data_security",
+      "roles": [
+        "product_and_engineering_role",
+        "it_operations_role"
+      ]
+    },
+    {
+      "domain": "supply_chain_and_operations",
+      "roles": [
+        "supply_chain_and_operations_role"
+      ]
+    },
+    {
+      "domain": "assets_and_maintenance",
+      "roles": [
+        "supply_chain_and_operations_role"
+      ]
+    },
+    {
+      "domain": "people_work_and_learning",
+      "roles": [
+        "people_and_hr_role"
+      ]
+    },
+    {
+      "domain": "workplace_management_and_productivity",
+      "roles": [
+        "people_and_hr_role",
+        "it_operations_role",
+        "workplace_productivity_role"
+      ]
+    },
+    {
+      "domain": "enterprise_strategy_corporate_services_and_delivery",
+      "roles": [
+        "enterprise_strategy_and_pmo_role"
+      ]
+    },
+    {
+      "domain": "risk_compliance_and_governance",
+      "roles": [
+        "risk_and_compliance_role"
+      ]
+    },
+    {
+      "domain": "trust_identity_and_payments_operations",
+      "roles": [
+        "risk_and_compliance_role",
+        "commerce_and_payments_role"
+      ]
+    },
+    {
+      "domain": "online_buying_selling_and_marketplaces",
+      "roles": [
+        "commerce_and_payments_role"
+      ]
+    },
+    {
+      "domain": "social_communication_and_community",
+      "roles": [
+        "workplace_productivity_role"
+      ]
+    }
+  ]
+}
