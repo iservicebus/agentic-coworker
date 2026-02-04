@@ -25,8 +25,7 @@ def initialize_llm_model():
     model_provider = os.getenv("MODEL_PROVIDER", "azure_openai").lower()
 
     if model_provider == "google_genai":
-
-                # Updated to use Google GenAI provider
+        # Updated to use Google GenAI provider
         # The 'gemini-2.5-flash' model name follows Google's naming convention
         return init_chat_model(
             model=os.getenv("GOOGLE_MODEL"), 
@@ -36,14 +35,40 @@ def initialize_llm_model():
         )
     
     elif model_provider == "azure_openai":
-
         return init_chat_model(
-        model=os.environ["AZURE_OPENAI_MODEL"],
-        model_provider=model_provider,
-        azure_deployment=os.environ["AZURE_OPENAI_DEPLOYMENT_NAME"],
-        api_version=os.environ["AZURE_OPENAI_API_VERSION"],
-        temperature=0
+            model=os.environ["AZURE_OPENAI_MODEL"],
+            model_provider=model_provider,
+            azure_deployment=os.environ["AZURE_OPENAI_DEPLOYMENT_NAME"],
+            api_version=os.environ["AZURE_OPENAI_API_VERSION"],
+            temperature=1
         )
+
+    elif model_provider == "openai":
+        # OpenAI official API
+        return init_chat_model(
+            model=os.getenv("OPENAI_MODEL", "gpt-4o"),
+            model_provider=model_provider,
+            api_key=os.getenv("OPENAI_API_KEY")
+        )
+    
+    elif model_provider == "local_openai":
+        # Local OpenAI-compatible server (e.g., MLX, gpt-oss)
+        return init_chat_model(
+            model=os.environ["LOCAL_OPENAI_MODEL"],
+            model_provider="openai",  # Use openai provider for compatibility
+            base_url=os.environ["LOCAL_OPENAI_BASE_URL"],
+            api_key=os.environ["LOCAL_OPENAI_API_KEY"]
+        )
+    
+    elif model_provider == "anthropic":
+        # Anthropic Claude models
+        return init_chat_model(
+            model=os.getenv("ANTHROPIC_MODEL"),
+            model_provider=model_provider,
+            api_key=os.getenv("ANTHROPIC_API_KEY"),
+            temperature=0
+        )
+
     else:
         raise ValueError(f"Unsupported provider: {model_provider}")
     
@@ -52,36 +77,106 @@ def initialize_embedding_model():
     model_provider = os.getenv("MODEL_PROVIDER", "azure_openai").lower()
 
     if model_provider == "google_genai":
-
-        return init_embeddings(
-                    model=os.getenv("GOOGLE_EMBEDDING_MODEL"),
-                    provider=model_provider,
-                    api_key=os.environ.get("GOOGLE_API_KEY"),
-                    output_dimensionality=1536, 
-            )
-
+        from langchain_google_genai import GoogleGenerativeAIEmbeddings
+        
+        return GoogleGenerativeAIEmbeddings(
+            model=os.getenv("GOOGLE_EMBEDDING_MODEL"),
+            google_api_key=os.environ.get("GOOGLE_API_KEY"),
+            task_type="RETRIEVAL_DOCUMENT",
+            output_dimensionality=1536,
+        )
     
     elif model_provider == "azure_openai":
         return init_embeddings(
-        model=os.environ["AZURE_OPENAI_EMBEDDING_MODEL"],
-        provider=model_provider,
-        azure_deployment=os.environ["AZURE_OPENAI_EMBEDDING_MODEL"],
-        api_version=os.environ["AZURE_OPENAI_API_VERSION"]
-    )
+            model=os.environ["AZURE_OPENAI_EMBEDDING_MODEL"],
+            provider=model_provider,
+            azure_deployment=os.environ["AZURE_OPENAI_EMBEDDING_MODEL"],
+            api_version=os.environ["AZURE_OPENAI_API_VERSION"]
+        )
+    
+    elif model_provider == "openai":
+        # OpenAI official embeddings
+        return init_embeddings(
+            model=os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small"),
+            provider=model_provider,
+            api_key=os.getenv("OPENAI_API_KEY")
+        )
+    
+    elif model_provider in ["local_openai", "anthropic"]:
+        # Local Ollama embeddings for local_openai and anthropic
+        from langchain_ollama import OllamaEmbeddings
+        return OllamaEmbeddings(
+            model=os.environ["LOCAL_EMBEDDING_MODEL"],
+            base_url=os.environ["LOCAL_EMBEDDING_BASE_URL"],
+        )
+    
+    
+    else:
+        raise ValueError(f"Unsupported provider: {model_provider}")
+
 
 
 class LLM:
     def __init__(self):
         self.model=initialize_llm_model()
-        # self.model = init_chat_model(
-        # model=os.environ["AZURE_OPENAI_MODEL"],
-        # model_provider=os.environ["LC_PROVIDER"],
-        # azure_deployment=os.environ["AZURE_OPENAI_DEPLOYMENT_NAME"],
-        # api_version=os.environ["AZURE_OPENAI_API_VERSION"],
-        # temperature=0
-        #  )
-    def invoke(self, input: str | list[dict | tuple | BaseMessage] | PromptValue):       
+        self.model_provider = os.getenv("MODEL_PROVIDER", "azure_openai")
+        self.model_name = self._get_model_name()
+        
+    def _get_model_name(self):
+        """Get the model name based on provider"""
+        provider = self.model_provider.lower()
+        if provider == "google_genai":
+            return os.getenv("GOOGLE_MODEL", "unknown")
+        elif provider == "azure_openai":
+            return os.getenv("AZURE_OPENAI_MODEL", "unknown")
+        elif provider == "openai":
+            return os.getenv("OPENAI_MODEL", "unknown")
+        elif provider == "local_openai":
+            return os.getenv("LOCAL_OPENAI_MODEL", "unknown")
+        elif provider == "anthropic":
+            return os.getenv("ANTHROPIC_MODEL", "unknown")
+        return "unknown"
+    
+    def _truncate_text(self, text: str, max_length: int = 100) -> str:
+        """Truncate text for logging"""
+        if len(text) <= max_length:
+            return text
+        return text[:max_length] + "..."
+    
+    def _format_input_for_log(self, input: str | list[dict | tuple | BaseMessage] | PromptValue) -> str:
+        """Format input for logging"""
+        if isinstance(input, str):
+            return self._truncate_text(input)
+        elif isinstance(input, list):
+            if len(input) > 0 and isinstance(input[0], dict):
+                # Extract content from message dicts
+                contents = []
+                for msg in input[:2]:  # Only log first 2 messages
+                    if isinstance(msg, dict) and "content" in msg:
+                        contents.append(f"{msg.get('role', 'unknown')}: {self._truncate_text(str(msg['content']), 50)}")
+                return " | ".join(contents)
+            return self._truncate_text(str(input))
+        else:
+            return self._truncate_text(str(input))
+    
+    def invoke(self, input: str | list[dict | tuple | BaseMessage] | PromptValue):
+        import time
+        
+        # Log input
+        input_preview = self._format_input_for_log(input)
+        logger.info(f"🤖 LLM Invoke START | Provider: {self.model_provider} | Model: {self.model_name}")
+        logger.info(f"📝 Input: {input_preview}")
+        
+        # Measure latency
+        start_time = time.time()
         response = self.model.invoke(input)
+        latency = time.time() - start_time
+        
+        # Log output
+        output_preview = self._truncate_text(str(response.content))
+        logger.info(f"✅ LLM Invoke END | Latency: {latency:.2f}s")
+        logger.info(f"📤 Output: {output_preview}")
+        
         return response.content
 
     def get_model(self):
