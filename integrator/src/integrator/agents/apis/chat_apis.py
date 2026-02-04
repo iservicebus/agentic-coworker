@@ -248,9 +248,23 @@ async def send_chat_message(
         if messages:
             last_message = messages[-1]
             if hasattr(last_message, "content"):
-                agent_response = last_message.content
+                content = last_message.content
+                # Handle Gemini 2.5 Flash multimodal content format
+                # Content can be a list of dicts with 'type' and 'text' keys
+                if isinstance(content, list):
+                    # Extract text from all text parts
+                    text_parts = [part.get("text", "") for part in content if isinstance(part, dict) and part.get("type") == "text"]
+                    agent_response = "".join(text_parts)
+                else:
+                    agent_response = content
             elif isinstance(last_message, dict):
-                agent_response = last_message.get("content", "")
+                content = last_message.get("content", "")
+                # Handle dict content that might also be a list
+                if isinstance(content, list):
+                    text_parts = [part.get("text", "") for part in content if isinstance(part, dict) and part.get("type") == "text"]
+                    agent_response = "".join(text_parts)
+                else:
+                    agent_response = content
         
         logger.info(f"Processed message in session {session.session_id}")
         
@@ -258,13 +272,31 @@ async def send_chat_message(
         serializable_messages = []
         for msg in messages:
             if hasattr(msg, "dict"):
-                serializable_messages.append(msg.dict())
+                msg_dict = msg.dict()
             elif hasattr(msg, "model_dump"):
-                serializable_messages.append(msg.model_dump())
+                msg_dict = msg.model_dump()
             elif isinstance(msg, dict):
-                serializable_messages.append(msg)
+                msg_dict = msg
             else:
-                serializable_messages.append({"content": str(msg)})
+                msg_dict = {"content": str(msg)}
+            
+            # Ensure content is always a string for frontend compatibility
+            # Anthropic and Gemini may return list content
+            if "content" in msg_dict and isinstance(msg_dict["content"], list):
+                # Convert list content to string
+                text_parts = []
+                for part in msg_dict["content"]:
+                    if isinstance(part, dict):
+                        if part.get("type") == "text":
+                            text_parts.append(part.get("text", ""))
+                        else:
+                            # For other types, convert to string
+                            text_parts.append(str(part))
+                    else:
+                        text_parts.append(str(part))
+                msg_dict["content"] = " ".join(text_parts)
+            
+            serializable_messages.append(msg_dict)
         
         return ChatMessageResponse(
             session_id=session.session_id,

@@ -22,6 +22,7 @@ from langchain_core.messages import (
     AIMessage,
     AnyMessage,
     BaseMessage,
+    HumanMessage,
     SystemMessage,
     ToolMessage,
 )
@@ -41,7 +42,7 @@ from langgraph.errors import ErrorCode, create_error_message
 from langgraph.graph import END, StateGraph
 from langgraph.graph.message import add_messages
 from langgraph.managed import RemainingSteps
-from langgraph.prebuilt.tool_node import ToolNode
+from langgraph.prebuilt import ToolNode
 from langgraph.store.base import BaseStore
 from langgraph.types import Checkpointer, Send
 from langgraph.warnings import LangGraphDeprecatedSinceV10
@@ -237,16 +238,17 @@ class BaseAgent:
 
     def _sanitize_chat_history(self, messages: Sequence[BaseMessage]) -> list[BaseMessage]:
         """
-        Sanitize chat history by adding error ToolMessages for any tool calls without results.
-        This prevents the chat from breaking when tool execution fails.
+        Sanitize chat history by removing orphaned ToolMessages and adding error ToolMessages 
+        for any tool calls without results. This prevents the chat from breaking when tool 
+        execution fails or when there are malformed message sequences.
         
         Args:
             messages: The message history to sanitize
             
         Returns:
-            Sanitized list of messages with ToolMessages added for missing tool results
+            Sanitized list of messages with proper tool call/response pairing
         """
-        # Find all tool calls
+        # Find all tool calls from AIMessages
         all_tool_calls = [
             (message, tool_call)
             for message in messages
@@ -259,6 +261,9 @@ class BaseAgent:
             message.tool_call_id for message in messages if isinstance(message, ToolMessage)
         }
         
+        # Find valid tool call IDs (those that have a corresponding AIMessage)
+        valid_tool_call_ids = {tool_call["id"] for _, tool_call in all_tool_calls}
+        
         # Find tool calls without results
         tool_calls_without_results = [
             (msg, tool_call)
@@ -266,11 +271,20 @@ class BaseAgent:
             if tool_call["id"] not in tool_call_ids_with_results
         ]
         
-        if not tool_calls_without_results:
-            return list(messages)
-        
-        # Create a mutable copy of messages
-        sanitized_messages = list(messages)
+        # Create a mutable copy of messages, filtering out orphaned ToolMessages
+        sanitized_messages = []
+        for message in messages:
+            # Remove ToolMessages that don't have a corresponding AIMessage with tool_calls
+            if isinstance(message, ToolMessage):
+                if message.tool_call_id in valid_tool_call_ids:
+                    sanitized_messages.append(message)
+                else:
+                    logger.warning(
+                        f"Removed orphaned ToolMessage: tool_call_id={message.tool_call_id}, "
+                        f"tool_name={message.name}"
+                    )
+            else:
+                sanitized_messages.append(message)
         
         # Add error ToolMessages for missing tool results
         for ai_message, tool_call in tool_calls_without_results:
@@ -304,7 +318,20 @@ class BaseAgent:
 
         # Sanitize chat history instead of just validating
         # This will add error ToolMessages for any missing tool results
+        # and remove orphaned ToolMessages
         sanitized_messages = self._sanitize_chat_history(messages)
+        
+        # Log the sanitized messages for debugging
+        logger.info(f"Sanitized {len(messages)} messages to {len(sanitized_messages)} messages")
+        for i, msg in enumerate(sanitized_messages):
+            msg_type = type(msg).__name__
+            if isinstance(msg, ToolMessage):
+                logger.info(f"  [{i}] {msg_type}: tool_call_id={msg.tool_call_id}, name={msg.name}")
+            elif isinstance(msg, AIMessage):
+                tool_calls = getattr(msg, 'tool_calls', [])
+                logger.info(f"  [{i}] {msg_type}: tool_calls={len(tool_calls)}")
+            else:
+                logger.info(f"  [{i}] {msg_type}")
         
         # we're passing messages under `messages` key, as this is expected by the prompt
         if isinstance(self.state_schema, type) and issubclass(self.state_schema, BaseModel):
@@ -316,10 +343,104 @@ class BaseAgent:
 
     async def call_model(self, state: StateSchema, config: RunnableConfig
     ) -> StateSchema:
+        import time
+        import os
+        
         model_input = self._get_model_input_state(state)
         messages = self._get_state_value(model_input, "messages")
 
-        response = cast(AIMessage, await self.model.ainvoke(messages, config))  # type: ignore[arg-type]
+        # Check if we need to filter ToolMessages (only for local_openai/MLX models)
+        model_provider = os.getenv("MODEL_PROVIDER", "unknown")
+        should_filter_tool_messages = model_provider == "local_openai"
+        
+        if should_filter_tool_messages:
+            # For local MLX models that don't support ToolMessages,
+            # we need to provide context about tool results in a different way
+            # Build a simplified message list that includes tool results as text
+            filtered_messages = []
+            
+            # Track the last few messages to provide context
+            # We'll convert ToolMessages to text and append to the previous AIMessage
+            i = 0
+            while i < len(messages):
+                msg = messages[i]
+                
+                if isinstance(msg, ToolMessage):
+                    # Skip ToolMessages - they'll be handled by looking ahead
+                    i += 1
+                    continue
+                elif isinstance(msg, AIMessage) and msg.tool_calls:
+                    # This AIMessage has tool calls, check if there are ToolMessages following it
+                    tool_results = []
+                    j = i + 1
+                    while j < len(messages) and isinstance(messages[j], ToolMessage):
+                        tool_msg = messages[j]
+                        tool_results.append(f"Tool '{tool_msg.name}' returned: {tool_msg.content}")
+                        j += 1
+                    
+                    # Create a new AIMessage with tool results appended as text
+                    if tool_results:
+                        # Combine the original content with tool results
+                        # Handle both string and list content (Anthropic returns list)
+                        original_content = msg.content if msg.content else ""
+                        if isinstance(original_content, list):
+                            # Convert list content to string (e.g., Anthropic's multimodal format)
+                            original_content = " ".join(str(part) for part in original_content)
+                        combined_content = str(original_content) + "\n\n" + "\n".join(tool_results)
+                        # Create a new AIMessage without tool_calls to prevent re-execution
+                        new_msg = AIMessage(content=combined_content)
+                        filtered_messages.append(new_msg)
+                        logger.info(f"Converted AIMessage with {len(tool_results)} tool results to text")
+                    else:
+                        filtered_messages.append(msg)
+                    
+                    i = j  # Skip past the ToolMessages we just processed
+                else:
+                    # Regular message (HumanMessage, SystemMessage, etc.)
+                    filtered_messages.append(msg)
+                    i += 1
+        else:
+            # For Azure OpenAI, Anthropic, Gemini, and official OpenAI - use messages as-is
+            # These providers properly support ToolMessages
+            filtered_messages = list(messages)
+        
+        # Get model info for logging
+        model_name = "unknown"
+        if model_provider == "google_genai":
+            model_name = os.getenv("GOOGLE_MODEL", "unknown")
+        elif model_provider == "azure_openai":
+            model_name = os.getenv("AZURE_OPENAI_MODEL", "unknown")
+        elif model_provider == "openai":
+            model_name = os.getenv("OPENAI_MODEL", "unknown")
+        elif model_provider == "local_openai":
+            model_name = os.getenv("LOCAL_OPENAI_MODEL", "unknown")
+        elif model_provider == "anthropic":
+            model_name = os.getenv("ANTHROPIC_MODEL", "unknown")
+        
+        # Format input preview for logging
+        input_preview = ""
+        if filtered_messages:
+            last_msg = filtered_messages[-1]
+            if isinstance(last_msg, HumanMessage):
+                content = str(last_msg.content)[:100]
+                input_preview = f"user: {content}..."
+            elif hasattr(last_msg, 'content'):
+                content = str(last_msg.content)[:100]
+                input_preview = f"{type(last_msg).__name__}: {content}..."
+        
+        logger.info(f"🤖 LLM Invoke START | Provider: {model_provider} | Model: {model_name}")
+        logger.info(f"📝 Input: {input_preview}")
+        logger.info(f"Sending {len(filtered_messages)} messages to model (filtered from {len(messages)})")
+        
+        # Measure latency
+        start_time = time.time()
+        response = cast(AIMessage, await self.model.ainvoke(filtered_messages, config))  # type: ignore[arg-type]
+        latency = time.time() - start_time
+        
+        # Log output
+        output_content = str(response.content)[:100] if response.content else ""
+        logger.info(f"✅ LLM Invoke END | Latency: {latency:.2f}s")
+        logger.info(f"📤 Output: {output_content}...")
 
         # add agent name to the AIMessage
         response.name = self.name

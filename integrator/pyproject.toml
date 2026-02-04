@@ -34,8 +34,11 @@ dependencies = [
     "langchain-openai",
     "openai>=1.0.0,<2.0.0",
     "langchain-google-genai",
+    "langchain-anthropic",
+    "langchain-ollama",
     "langchain-core>=1.2.7",
-    "langgraph",
+    "langgraph==1.0.7",
+    "langgraph-prebuilt==1.0.7",
     "jinja2",
     "langchain-mcp-adapters>=0.2.1"
 ]
