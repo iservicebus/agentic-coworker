@@ -1,22 +1,49 @@
-# Agentic Coworker
+# Agentic Coworker — Governed AI Agents for Social and Enterprise
 
-> A comprehensive AI agent platform with multi-service architecture for building intelligent automation workflows
+> Empower AI agents to work autonomously across your entire business ecosystem—from social platforms like LinkedIn, to productivity tools like Google Workspace (Gmail, Calendar, Drive) and GitHub, to enterprise systems like SAP and ServiceNow. Agents automatically acquire skills and integrate with any REST API, while enterprise governance ensures they have the right permissions, access the right tools, and operate within your security boundaries. Built for organizations that want powerful agents with human oversight.
 
-Agentic Coworker is a production-ready platform that enables teams to build, deploy, and manage AI agents with integrated access to multiple external services. Built with a microservices architecture and fully containerized for easy deployment.
+
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com/)
 
-## ✨ Features
+## ✨ What Your Agents Can Do
 
-- 🤖 **Multi-Agent Architecture** - Orchestrate multiple AI agents with different capabilities
-- 🔌 **Extensive Integrations** - Pre-built connectors for GitHub, Gmail, Google Drive, LinkedIn, ServiceNow, and more
-- 🎯 **Model Context Protocol (MCP)** - Standardized tool and skill management
-- 🔐 **Enterprise-Ready Auth** - OAuth2 integration with Keycloak for secure authentication
-- 📊 **Graph-Based Knowledge** - Neo4j for relationship mapping and knowledge graphs
-- 🚀 **Docker-First** - Complete containerized deployment with Docker Compose
-- 🔄 **Event-Driven** - NATS-based messaging for real-time agent coordination
-- 🎨 **Modern UI** - Next.js-based management interface
+### Measure Your Agentic Readiness
+
+- 📊 **AI Integration Readiness Dashboard** - Visualize your organization's readiness for AI agents by measuring MCP tool availability across business workflows. See which processes have automation potential, identify integration gaps, and track coverage metrics across workflow steps. Understand your path to full agent deployment with clear metrics on tool availability and workflow readiness.
+
+### Agents Work Across Your Entire Business
+
+- 🔌 **Connect to Any API Instantly** - Agents automatically acquire new skills from REST APIs using multiple sources: API documentation websites, OpenAPI specs, and Postman collections. They validate and test new capabilities before using them in production workflows.
+
+- 🏢 **Understand Your Business Context** - Agents organize their capabilities by your business structure: Role → Domain → Capability → Skill → Tool. They know which tools to use for which job, matching their actions to your organization's responsibilities and workflows.
+
+- 🔐 **Operate Securely Within Boundaries** - Agents authenticate using OAuth 2.0 across Google, GitHub, LinkedIn, ServiceNow, and more. Their credentials are encrypted (AES-256-GCM), automatically refreshed, and completely isolated per tenant. They never cross security boundaries.
+
+- 👥 **Work Under Human Governance** - Agents operate with fine-grained permissions based on their assigned roles. They only access tools they're authorized to use, work within resource limits, and maintain audit trails of all actions. Humans stay in control through owner/member/viewer relationships.
+
+### How Agents Evolve and Learn
+
+1. **Acquire Skills** - Agents import new capabilities from various API formats, understand them through semantic metadata, and validate them with built-in testing before deployment.
+
+2. **Organize Knowledge** - Agents structure their tools hierarchically by business domains, making intelligent decisions about which capabilities to use for each task.
+
+3. **Execute Autonomously** - Agents run workflows across multiple services, manage OAuth credentials automatically, and operate at scale across isolated tenants.
+
+### Agent Intelligence Features
+
+- ✅ **Self-Testing Capabilities** - Agents validate their tools with sample data and schema verification before using them
+- 🏗️ **Tenant-Aware Operations** - Agents maintain complete isolation of data, tools, and credentials across organizational boundaries
+- 🔍 **Semantic Tool Discovery** - Agents find the right tools using vector embeddings and similarity matching
+- 🔑 **Autonomous Credential Management** - Agents handle OAuth tokens, refresh cycles, and encryption automatically
+- 🤝 **Human Collaboration** - Agents work with multiple humans in owner, member, or viewer capacities
+- 📊 **Business Process Awareness** - Agents map their actions to business workflows and domain-specific metrics
+- 🤖 **Multi-Agent Coordination** - Multiple agents orchestrate together, each with specialized capabilities
+- 🎯 **Standardized Communication** - Agents use Model Context Protocol (MCP) for consistent tool interaction
+- 📈 **Knowledge Graph Navigation** - Agents leverage relationship mapping to understand complex connections
+- 🚀 **Cloud-Native Deployment** - Agents run in containerized environments with automatic scaling
+- 🔄 **Event-Driven Coordination** - Agents communicate and coordinate through real-time messaging
 
 ## 🚀 Quick Start
 
@@ -53,6 +80,9 @@ docker-compose ps
 Once running, access:
 
 - **Agent Studio**: http://localhost:3000
+  - **Readiness Dashboard**: View your organization's agentic AI readiness metrics
+  - **Tool Importer**: Import and manage API integrations
+  - **Agent Management**: Configure agent roles and permissions
 - **API Services**: http://localhost:6060
 - **Admin Dashboard**: http://localhost:8888 (admin/admin)
 
@@ -238,9 +268,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-Built with:
-- [Next.js](https://nextjs.org/) - React framework
-- [PostgreSQL](https://www.postgresql.org/) - Relational database
+Built with modern technologies:
+- [Next.js 15](https://nextjs.org/) - React framework
+- [React 19](https://react.dev/) - UI library
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe development
+- [PostgreSQL + pgvector](https://www.postgresql.org/) - Relational database with vector search
+- [NextAuth.js](https://next-auth.js.org/) - Authentication for Next.js
+- [OAuth 2.0](https://oauth.net/2/) - Industry-standard authorization
+- [MCP Protocol](https://modelcontextprotocol.io/) - Model Context Protocol
 - [Neo4j](https://neo4j.com/) - Graph database
 - [Keycloak](https://www.keycloak.org/) - Identity management
 - [Docker](https://www.docker.com/) - Containerization
