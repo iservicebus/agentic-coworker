@@ -1,0 +1,424 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Increased gap for better separation */
+  padding: 1rem;
+  border: 1px solid #e2e8f0; /* Light gray border */
+  border-radius: 0.375rem; /* md rounded */
+  background-color: #f9fafb; /* Very light gray background */
+}
+
+.block {
+  padding: 1rem;
+  border: 1px solid #cbd5e1; /* Slightly darker gray border for blocks */
+  border-radius: 0.375rem;
+  background-color: #ffffff; /* White background for blocks */
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06); /* Subtle shadow */
+}
+
+.blockHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.blockHeader h3 {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* semibold */
+  color: #1f2937; /* gray-800 */
+  margin-right: auto; /* Push other controls to the right */
+}
+
+.blockControls {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Space between mode toggle and edit button */
+}
+
+.modeToggle {
+  display: flex;
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 0.375rem; /* rounded-md */
+  overflow: hidden; /* Ensures rounded corners are applied to children */
+}
+
+.modeButton {
+  padding: 0.375rem 0.75rem; /* py-1.5 px-3 */
+  font-size: 0.875rem; /* text-sm */
+  background-color: #ffffff; /* bg-white */
+  color: #374151; /* text-gray-700 */
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.modeButton:not(:last-child) {
+  border-right: 1px solid #d1d5db; /* Separator line */
+}
+
+.modeButton.activeMode {
+  background-color: #3b82f6; /* bg-blue-500 */
+  color: white;
+}
+
+.modeButton:disabled {
+  /* Styles for the active/disabled button */
+  background-color: #3b82f6; /* bg-blue-500 */
+  color: white;
+  cursor: default;
+}
+
+.modeButton:not(:disabled):hover {
+  background-color: #eff6ff; /* bg-blue-50 for hover on non-active */
+}
+
+.structuredEditorContainer {
+  padding: 0.5rem;
+  border: 1px solid #e5e7eb; /* gray-200 */
+  border-radius: 0.25rem;
+  background-color: #f9fafb; /* gray-50, slightly different from block bg for nesting */
+}
+
+.fieldGroup {
+  margin-bottom: 1rem;
+}
+
+.fieldLabel {
+  display: block;
+  font-weight: 600; /* semibold for better visibility */
+  color: #111827; /* gray-900 - much darker for better contrast */
+  margin-bottom: 0.25rem;
+  font-size: 0.875rem;
+}
+
+.subHeader {
+  font-size: 1rem; /* text-base */
+  font-weight: 600; /* semibold */
+  color: #1f2937; /* gray-800 */
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #e5e7eb; /* gray-200 */
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.listItem .input {
+  flex-grow: 1;
+  /* Ensure dark background for inputs within structured editor too */
+  background-color: #1f2937; 
+  color: #f3f4f6;
+  border: 1px solid #4b5563;
+}
+
+.addButton,
+.removeButton {
+  padding: 0.25rem 0.625rem; /* py-1 px-2.5 */
+  font-size: 0.75rem; /* text-xs */
+  border-radius: 0.25rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  background-color: #ffffff; /* white */
+  color: #374151; /* gray-700 */
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.addButton:hover,
+.removeButton:hover {
+  background-color: #f3f4f6; /* gray-100 */
+}
+
+.removeButton {
+  background-color: #fee2e2; /* red-100 */
+  border-color: #fca5a5; /* red-300 */
+  color: #b91c1c; /* red-700 */
+}
+.removeButton:hover {
+  background-color: #fecaca; /* red-200 */
+}
+
+.select {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  background-color: #1f2937; /* Dark background */
+  color: #f3f4f6; /* Light text */
+  font-size: 0.875rem;
+}
+.select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 1px #2563eb;
+}
+
+.infoText {
+  font-size: 0.875rem;
+  color: #6b7280; /* gray-500 */
+  margin-top: 1rem;
+  font-style: italic;
+}
+
+/* Styles for JsonPropertyEditor and InputSchemaStructuredEditor */
+.jsonPropertyEditor {
+  border: 1px solid #d1d5db; /* gray-300 */
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  background-color: #ffffff; /* white */
+}
+
+.propertyHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.propertyName {
+  font-weight: 600; /* semibold */
+  color: #111827; /* gray-900 */
+}
+
+.propertyRemoveButton {
+  font-size: 0.75rem; /* text-xs */
+  padding: 0.2rem 0.4rem;
+}
+
+.fieldGroupInline {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.fieldGroupInline .fieldLabel {
+  margin-bottom: 0; /* Override default margin */
+  white-space: nowrap;
+}
+
+.fieldGroupInline .select {
+  flex-grow: 1;
+}
+
+.nestedProperties {
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid #e5e7eb; /* gray-200 */
+  margin-top: 0.75rem;
+}
+
+.nestedHeader {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* medium */
+  color: #4b5563; /* gray-600 */
+  margin-bottom: 0.5rem;
+}
+
+.checkboxItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.checkboxItem input[type="checkbox"] {
+  margin-right: 0.5rem;
+  height: 1rem; /* 4 */
+  width: 1rem; /* 4 */
+  border-radius: 0.25rem; /* rounded */
+  border-color: #9ca3af; /* gray-400 */
+  color: #3b82f6; /* blue-500 */
+}
+.checkboxItem input[type="checkbox"]:focus {
+  ring-color: #60a5fa; /* blue-300 */
+}
+
+.checkboxItem label {
+  font-size: 0.875rem;
+  color: #374151; /* gray-700 */
+}
+
+.toggleAdvancedButton {
+  background-color: transparent;
+  border: none;
+  color: #3b82f6; /* blue-500 */
+  cursor: pointer;
+  padding: 0.25rem 0;
+  text-align: left;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+.toggleAdvancedButton:hover {
+  text-decoration: underline;
+}
+
+
+.editButton {
+  padding: 0.375rem 0.75rem; /* py-1.5 px-3 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* medium */
+  border-radius: 0.375rem;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.editButton:hover {
+  opacity: 0.9;
+}
+
+.editButton:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #2563eb; /* ring-2 ring-blue-500 */
+}
+
+/* Specific styling for Edit/Save states */
+.editButton {
+  background-color: #3b82f6; /* bg-blue-500 */
+  color: white;
+}
+.editButton:hover {
+  background-color: #2563eb; /* hover:bg-blue-600 */
+}
+
+.cancelButton {
+  padding: 0.375rem 0.75rem; /* py-1.5 px-3 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* medium */
+  border-radius: 0.375rem;
+  border: 1px solid #d1d5db; /* gray-300 */
+  background-color: #f3f4f6; /* gray-100 */
+  color: #374151; /* gray-700 */
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.cancelButton:hover {
+  background-color: #e5e7eb; /* gray-200 */
+  border-color: #9ca3af; /* gray-400 */
+}
+
+.cancelButton:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #9ca3af; /* ring-2 ring-gray-400 */
+}
+
+
+/* If we want a different color for "Save"
+.saveButton {
+  background-color: #16a34a; // bg-green-600
+  color: white;
+}
+.saveButton:hover {
+  background-color: #15803d; // hover:bg-green-700
+}
+*/
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem; /* px-3 py-2 */
+  border: 1px solid #d1d5db; /* border-gray-300 */
+  border-radius: 0.375rem; /* rounded-md */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+  font-family: inherit;
+  font-size: 0.875rem; /* sm:text-sm */
+  color: #f3f4f6; /* Light text for dark background */
+  background-color: #1f2937; /* Dark background for edit mode */
+  border: 1px solid #4b5563; /* Darker border for dark inputs */
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #2563eb; /* focus:border-indigo-500 (using blue for consistency) */
+  box-shadow: 0 0 0 1px #2563eb; /* focus:ring-indigo-500 (using blue for consistency) */
+}
+
+.textarea {
+  min-height: 80px; /* Default min height for textareas */
+  font-family: 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", monospace; /* font-mono */
+}
+
+.textareaError {
+  border-color: #ef4444; /* border-red-500 */
+}
+
+.textareaError:focus {
+  border-color: #ef4444; /* focus:border-red-500 */
+  box-shadow: 0 0 0 1px #ef4444; /* focus:ring-red-500 */
+}
+
+.displayValue {
+  padding: 0.5rem;
+  background-color: #ffffff; /* white background for view mode */
+  border: 1px solid #e2e8f0; /* Light border for view mode */
+  border-radius: 0.25rem; /* rounded-sm */
+  color: #1f2937; /* Dark text for white background */
+  white-space: pre-wrap; /* Allow wrapping for long descriptions */
+  word-break: break-word;
+}
+
+.preformattedText {
+  padding: 0.75rem;
+  background-color: #ffffff; /* white background for view mode */
+  color: #1f2937; /* Dark text for white background */
+  border: 1px solid #e2e8f0; /* Light border for view mode */
+  border-radius: 0.375rem;
+  overflow-x: auto; /* Allow horizontal scrolling for long JSON */
+  font-family: 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", monospace; /* font-mono */
+  font-size: 0.875rem;
+  white-space: pre; /* Preserve whitespace strictly for JSON */
+}
+
+.errorMessage {
+  margin-top: 0.5rem;
+  color: #dc2626; /* red-600 */
+  font-size: 0.875rem;
+}
+
+/* Spinner animation for loading indicator */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Dark mode considerations (optional, if your app supports it) */
+/*
+@media (prefers-color-scheme: dark) {
+  .container {
+    border-color: #374151; // dark:border-gray-700
+    background-color: #1f2937; // dark:bg-gray-800
+  }
+  .block {
+    border-color: #4b5563; // dark:border-gray-600
+    background-color: #111827; // dark:bg-gray-900
+  }
+  .blockHeader h3 {
+    color: #f3f4f6; // dark:text-gray-100
+  }
+  .input, .textarea {
+    border-color: #4b5563; // dark:border-gray-600
+    color: #f9fafb; // dark:text-neutral-100
+    background-color: #374151; // dark:bg-neutral-800 (example)
+  }
+  .displayValue {
+    background-color: #374151; // dark:bg-gray-700
+    color: #d1d5db; // dark:text-gray-300
+  }
+  .preformattedText {
+    background-color: #030712; // A very dark background for code
+    color: #e5e7eb; // Lighter text for dark code bg
+  }
+  .errorMessage {
+    color: #f87171; // red-400 for dark mode
+  }
+}
+*/

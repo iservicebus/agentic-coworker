@@ -1,0 +1,589 @@
+{
+  "default": [
+    {
+      "capability_name": "content_creation_publishing",
+      "skill_name": "generate_personalized_greeting",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "identity_access_management",
+      "skill_name": "retrieve_auth_provider_authorization_url",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "skill_name": "compose_rfc2822_email_payload",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "skill_name": "compose_and_send_plain_text_gmail_message",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "skill_name": "send_email_and_remove_sent_copy_via_upload",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "skill_name": "send_email_and_remove_sent_copy",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "skill_name": "search_and_delete_gmail_message",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "skill_name": "list_events_for_selected_google_calendar",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "skill_name": "view_selected_google_calendar_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "skill_name": "schedule_event_in_selected_google_calendar",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "skill_name": "review_events_and_schedule_event_in_selected_calendar",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "feeds_recommendations",
+      "skill_name": "list_youtube_most_popular_videos_by_region",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "skill_name": "create_and_retrieve_google_calendar_event",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "skill_name": "duplicate_google_calendar_event",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "skill_name": "list_google_drive_content",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "skill_name": "delete_selected_google_drive_file",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "feeds_recommendations",
+      "skill_name": "find_and_enrich_youtube_videos",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "skill_name": "retrieve_google_drive_about_metadata",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "skill_name": "view_google_shared_drive_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "skill_name": "create_and_retrieve_google_shared_drive_metadata",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "skill_name": "delete_selected_shared_drive",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "skill_name": "find_and_retrieve_google_drive_file",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "skill_name": "download_selected_google_drive_file",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "skill_name": "google_drive_upload_and_download_roundtrip",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "skill_name": "google_drive_upload_then_retrieve_metadata",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "skill_name": "create_and_verify_google_drive_item",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "skill_name": "validate_google_drive_create_delete_permissions",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "enumerate_github_organizations",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "select_and_view_github_organization_profile",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "update_github_organization_settings",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "retrieve_authenticated_github_user_profile",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "profiles_identity_graph",
+      "skill_name": "update_own_github_public_profile",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "browse_and_view_github_user_profile_by_username",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "browse_and_view_github_user_profile_by_account_id",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "browse_github_users_and_view_user_context",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "github_code_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "search_github_commits_default_branch",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "search_and_view_github_user_context",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "search_and_view_github_user_profile",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "search_and_view_github_user_profile_by_id",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "search_github_issues_and_prs",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "github_repository_discovery",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "update_github_repo_settings_from_code_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "update_github_repo_settings_from_repository_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "delete_repository_via_code_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "delete_repository_for_searched_user",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "search_and_delete_github_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "artifact_registry",
+      "skill_name": "list_github_actions_artifacts_for_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_repository_branches_by_organization_selection",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_repository_branches_by_user_selection",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_repository_branches_from_code_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_repository_branches_from_user_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "search_github_repositories_and_list_branches",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "search_repositories_and_fetch_branch_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_branches_and_get_branch_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "secure_dev_compliance",
+      "skill_name": "list_code_scanning_analyses_for_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "secure_dev_compliance",
+      "skill_name": "select_and_delete_github_code_scanning_analysis",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "rename_github_repository_branch",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "secure_dev_compliance",
+      "skill_name": "inspect_repo_code_scanning_analysis",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "audit_repo_commit_comments_from_code_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "audit_repo_commit_comments_from_repo_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "inspect_specific_commit_comment_in_repo",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "search_github_code_and_fetch_content",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "search_repositories_and_fetch_path_content",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "upsert_github_repository_file_with_pre_read",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_forks_for_repo_found_via_code_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_forks_for_repo_found_via_repository_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "review_forks_then_delete_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "review_forks_then_update_repository_settings",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "review_repo_discussions_from_code_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "review_repo_discussions_from_repo_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "explore_forks_and_review_discussions",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "delete_file_found_by_github_code_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "delete_repository_file_by_path_with_sha_resolution",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "fork_repository_into_selected_organization",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "find_code_and_fork_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "search_repository_and_fork",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "review_forks_then_fork_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "fork_repository_and_verify_forks",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "fork_repository_and_fetch_content",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "fork_repository_and_list_branches",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "fork_and_configure_github_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "release_management_handoff",
+      "skill_name": "list_github_repository_releases",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "fork_selected_github_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_issue_and_pr_comments_for_selected_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_forks_for_selected_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "retrieve_repository_content_by_path_for_selected_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_commit_comments_for_selected_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_branches_for_selected_github_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "delete_selected_github_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "update_settings_for_selected_github_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "skill_name": "servicenow_create_and_delete_temporary_record",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "skill_name": "create_and_retrieve_servicenow_record",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "skill_name": "create_and_update_servicenow_record",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "order_capture_orchestration",
+      "skill_name": "retrieve_sap_customer_orders",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "skill_name": "update_servicenow_record_via_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "skill_name": "view_servicenow_record_details_via_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "skill_name": "delete_servicenow_record_via_search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_search_discovery",
+      "skill_name": "search_arxiv_preprints",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "view_profile_and_list_public_repos_by_selection",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "discover_user_and_list_public_repos",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "search_user_and_list_public_repos",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "select_repo_and_fork_from_user_listing",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "review_issue_pr_comments_for_selected_repo",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "enumerate_forks_for_user_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "fetch_repository_content_by_path_for_user_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_commit_comments_for_user_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "retrieve_branch_details_for_user_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "list_branches_for_user_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "select_and_delete_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "skill_name": "update_settings_for_selected_repository",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "identity_access_management",
+      "skill_name": "retrieve_linkedin_oidc_userinfo",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "investor_relations_comms",
+      "skill_name": "search_sec_edgar_filings",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_engineering_integration",
+      "skill_name": "retrieve_intraday_equity_bars",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_engineering_integration",
+      "skill_name": "retrieve_daily_equity_ohlcv",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_governance",
+      "skill_name": "search_fred_time_series",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "skill_name": "delete_servicenow_record_by_query",
+      "tenant_name": "default"
+    }
+  ]
+}

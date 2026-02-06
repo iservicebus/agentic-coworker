@@ -1,0 +1,60 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: monospace;
+  resize: vertical;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.error {
+  color: #c00;
+  margin-top: 10px;
+}
+
+.result {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  color: #333;
+  overflow-x: auto;
+  max-width: 100%;
+  max-height: 400px;
+  /* Prevents the result from exceeding the display window */
+}
+
+.result pre {
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+  margin: 0;
+  background: none;
+}
+
+.button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}

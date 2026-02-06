@@ -1,0 +1,34 @@
+{
+  "default": [
+    {
+      "username": "admin",
+      "agent_id": "agent-admin",
+      "role": "owner",
+      "context": {}
+    },
+    {
+      "username": "admin",
+      "agent_id": "agent-dev",
+      "role": "admin",
+      "context": {}
+    },
+    {
+      "username": "admin",
+      "agent_id": "agent-ops",
+      "role": "admin",
+      "context": {}
+    },
+    {
+      "username": "dev",
+      "agent_id": "agent-dev",
+      "role": "owner",
+      "context": {}
+    },
+    {
+      "username": "ops",
+      "agent_id": "agent-ops",
+      "role": "owner",
+      "context": {}
+    }
+  ]
+}

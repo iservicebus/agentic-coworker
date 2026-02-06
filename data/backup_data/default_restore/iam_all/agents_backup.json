@@ -1,0 +1,28 @@
+{
+  "default": [
+    {
+      "id": "3eb3db3f-4d71-42a4-a2ec-01f4cb9df730",
+      "name": "agent-admin",
+      "agent_id": "agent-admin",
+      "tenant_name": "default",
+      "encrypted_secret": "ede9caac322dd058099fbfc1923bb57e092bf4cd5667c1f444d6",
+      "iv": "bbbca5a7cc1409e6907d9774"
+    },
+    {
+      "id": "f6f4893a-10a4-40f4-9ec9-2d2cbd3c06e5",
+      "name": "agent-dev",
+      "agent_id": "agent-dev",
+      "tenant_name": "default",
+      "encrypted_secret": "ea28de418d0404550bc57477294bd56c098cb0efa853a9cbfb64",
+      "iv": "cc73ee9cca64d511d2629523"
+    },
+    {
+      "id": "cfba4754-9c5d-401f-a677-eb1d3429f4c7",
+      "name": "agent-ops",
+      "agent_id": "agent-ops",
+      "tenant_name": "default",
+      "encrypted_secret": "d02c2fe21b3ae5355af6ce23ebffb3405cf97d79886ebd6e9da9",
+      "iv": "6db1d4b84fc50106563980e3"
+    }
+  ]
+}

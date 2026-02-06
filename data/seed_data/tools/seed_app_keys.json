@@ -1,0 +1,47 @@
+{
+  "default":[
+  {
+    "app_url": "https://sandbox.api.sap.com",
+    "agent_id": "agent-admin",
+    "secrets": {
+      "headers": {
+        "APIKey": "SPACAQ42m1FVOrDpWcIRiAoRMa1Xk4hb"
+      }
+    }
+  },
+  {
+
+    "app_url": "https://api.stlouisfed.org",
+    "agent_id": "agent-admin",
+    "secrets": {
+        "query":
+            {
+                "api_key": "f878542889b0e64a6873cb8c81ae1403"
+            }
+    }
+  },
+  {
+    "app_url": "https://api.sec-api.io",
+    "agent_id": "agent-admin",
+    "secrets": {
+      "headers":
+            {
+                "Authorization": "cc17e0ab45e6b81c403582a747755229dcae94a6720cb5c32cbf5eefae90647a"
+            }
+
+      }
+  },
+  {
+    "app_url": "https://www.alphavantage.co/documentation/",
+    "agent_id": "agent-admin",
+    "secrets": {
+
+            "query":
+            {
+                "apikey": "AI7DB1K16B0K47LD"
+            }
+        }
+    }
+
+]
+}

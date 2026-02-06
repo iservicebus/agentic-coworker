@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  agent-ops:
+    build:
+      context: ..
+      dockerfile: agent_ops/Dockerfile
+    image: ghcr.io/jingnanzhou/agent-ops:latest
+    container_name: agent-ops
+
+    # Environment variables (override these as needed)
+    environment:
+      - PYTHONUNBUFFERED=1
+
+    # Mount volumes for backup data and environment files
+    volumes:
+      # Mount backup directory
+      - ${BACKUP_PATH:-./backup_data}:/app/backup_data
+      # Mount custom .env file if needed (overrides the built-in .env.docker)
+      # The load_env() expects .env at /app/agent_ops/.env
+      - ${ENV_FILE:-./.env.docker}:/app/agent_ops/.env:ro
+
+    # Override command - examples:
+    # docker-compose run agent-ops backup --backup-path /app/backup_data
+    # docker-compose run agent-ops backup --backup-path /app/backup_data --tenant-name mytenant
+    command: ["--help"]
+
+    # Connect to the same network as the platform services
+    networks:
+      - aintegrator-backend
+
+networks:
+  aintegrator-backend:
+    external: true
+    name: aintegrator-backend
+
+# Example usage:
+# docker-compose build
+# docker-compose run --rm agent-ops backup --backup-path /app/backup_data
+# docker-compose run --rm agent-ops backup --backup-path /app/backup_data --tenant-name mytenant
+#
+# To use custom .env file (from agent-ops directory):
+# ENV_FILE=./.env.custom docker-compose run --rm agent-ops backup --backup-path /app/backup_data

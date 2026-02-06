@@ -1,0 +1,1191 @@
+{
+  "default": {
+    "generate_greeting": [
+      {
+        "skill_name": "generate_personalized_greeting",
+        "step_index": 1,
+        "step_intent": "Produce a concise, personalized salutation addressing the provided name for use in communications."
+      }
+    ],
+    "get_auth_provider_url": [
+      {
+        "skill_name": "retrieve_auth_provider_authorization_url",
+        "step_index": 1,
+        "step_intent": "Obtain the provider-specific authorization URL needed to redirect users and start the OAuth/OIDC login process."
+      }
+    ],
+    "compose_email_message": [
+      {
+        "skill_name": "compose_rfc2822_email_payload",
+        "step_index": 1,
+        "step_intent": "Generate a send-ready, encoded raw email message from provided fields for downstream email delivery APIs."
+      },
+      {
+        "skill_name": "compose_and_send_plain_text_gmail_message",
+        "step_index": 1,
+        "step_intent": "Compose and base64url-encode a plain-text RFC 2822 email from the recipient, body, and optional sender/subject to create a raw message payload."
+      }
+    ],
+    "send_email_by_gmail": [
+      {
+        "skill_name": "compose_and_send_plain_text_gmail_message",
+        "step_index": 2,
+        "step_intent": "Send the composed raw message from the authenticated Gmail account (using 'me' or a UI-selected account), creating a sent message in Gmail."
+      },
+      {
+        "skill_name": "send_email_and_remove_sent_copy",
+        "step_index": 1,
+        "step_intent": "Send an email through Gmail using the provided raw MIME payload."
+      }
+    ],
+    "send_email_by_gmail_w_upload": [
+      {
+        "skill_name": "send_email_and_remove_sent_copy_via_upload",
+        "step_index": 1,
+        "step_intent": "Transmit the email via Gmail using a provided raw MIME payload as the authenticated user."
+      }
+    ],
+    "delete_email_message_by_id": [
+      {
+        "skill_name": "send_email_and_remove_sent_copy_via_upload",
+        "step_index": 2,
+        "step_intent": "Permanently remove the just-sent message from the sender\u2019s mailbox using the returned message ID."
+      },
+      {
+        "skill_name": "send_email_and_remove_sent_copy",
+        "step_index": 2,
+        "step_intent": "Permanently remove the sent message from the mailbox using the message ID returned by the send operation."
+      },
+      {
+        "skill_name": "search_and_delete_gmail_message",
+        "step_index": 2,
+        "step_intent": "Permanently delete the selected message using its ID obtained from the listing step."
+      }
+    ],
+    "list_gmail_messages": [
+      {
+        "skill_name": "search_and_delete_gmail_message",
+        "step_index": 1,
+        "step_intent": "Identify candidate messages by listing message IDs that match a supplied search query and/or filters."
+      }
+    ],
+    "list_google_calendars": [
+      {
+        "skill_name": "list_events_for_selected_google_calendar",
+        "step_index": 1,
+        "step_intent": "Discover which calendars the user can access so the user (via UI selection) or default logic can choose a target calendar."
+      },
+      {
+        "skill_name": "view_selected_google_calendar_details",
+        "step_index": 1,
+        "step_intent": "Enumerate calendars the user can access to obtain valid calendar IDs and allow the user to select the target calendar."
+      },
+      {
+        "skill_name": "schedule_event_in_selected_google_calendar",
+        "step_index": 1,
+        "step_intent": "Identify available calendars and present them for user selection of a target calendar."
+      },
+      {
+        "skill_name": "review_events_and_schedule_event_in_selected_calendar",
+        "step_index": 1,
+        "step_intent": "Identify and present calendars the user can access for target selection."
+      }
+    ],
+    "list_calendar_events": [
+      {
+        "skill_name": "list_events_for_selected_google_calendar",
+        "step_index": 2,
+        "step_intent": "Retrieve events from the selected calendar, applying any desired filters, and return results with pagination and/or sync tokens."
+      },
+      {
+        "skill_name": "review_events_and_schedule_event_in_selected_calendar",
+        "step_index": 2,
+        "step_intent": "Retrieve and review existing events in the selected calendar using optional filters to assess scheduling constraints."
+      }
+    ],
+    "get_google_calendar_by_id": [
+      {
+        "skill_name": "view_selected_google_calendar_details",
+        "step_index": 2,
+        "step_intent": "Retrieve detailed metadata for the selected calendar using the calendarId obtained from the previous step."
+      }
+    ],
+    "create_google_calendar_event": [
+      {
+        "skill_name": "schedule_event_in_selected_google_calendar",
+        "step_index": 2,
+        "step_intent": "Create the event in the selected calendar using the provided timing and details, optionally notifying attendees."
+      },
+      {
+        "skill_name": "review_events_and_schedule_event_in_selected_calendar",
+        "step_index": 3,
+        "step_intent": "Create a new event in the selected calendar with the provided timing and details, optionally notifying attendees."
+      },
+      {
+        "skill_name": "create_and_retrieve_google_calendar_event",
+        "step_index": 1,
+        "step_intent": "Create an event in the chosen calendar using provided timing and details, optionally notifying attendees and adding conferencing."
+      },
+      {
+        "skill_name": "duplicate_google_calendar_event",
+        "step_index": 2,
+        "step_intent": "Create a new event using the retrieved details (and any user-specified adjustments) on the selected target calendar."
+      }
+    ],
+    "list_youtube_videos": [
+      {
+        "skill_name": "list_youtube_most_popular_videos_by_region",
+        "step_index": 1,
+        "step_intent": "Fetch the most popular videos for a given region with the requested metadata parts."
+      },
+      {
+        "skill_name": "find_and_enrich_youtube_videos",
+        "step_index": 2,
+        "step_intent": "Retrieve detailed metadata (requested parts) for the discovered video IDs to support analysis and decision-making."
+      }
+    ],
+    "get_google_calendar_event": [
+      {
+        "skill_name": "create_and_retrieve_google_calendar_event",
+        "step_index": 2,
+        "step_intent": "Retrieve the newly created event by its event ID to confirm details and capture the canonical server representation (e.g., in a specified time zone)."
+      },
+      {
+        "skill_name": "duplicate_google_calendar_event",
+        "step_index": 1,
+        "step_intent": "Fetch the source event\u2019s complete details to serve as the template for duplication."
+      }
+    ],
+    "list_google_drive_files": [
+      {
+        "skill_name": "list_google_drive_content",
+        "step_index": 1,
+        "step_intent": "Retrieve a paginated inventory of accessible Drive items matching optional criteria for discovery, reporting, and follow-up actions."
+      },
+      {
+        "skill_name": "delete_selected_google_drive_file",
+        "step_index": 1,
+        "step_intent": "Present a scoped, filterable list of Drive items to allow the user to select the exact file for deletion and confirm the correct context (e.g., shared drives)."
+      },
+      {
+        "skill_name": "find_and_retrieve_google_drive_file",
+        "step_index": 1,
+        "step_intent": "List and filter Google Drive items (including shared drives if desired) so the user can select a specific file to open."
+      },
+      {
+        "skill_name": "download_selected_google_drive_file",
+        "step_index": 1,
+        "step_intent": "Discover and present a paginated list of accessible Google Drive items so the user can select the specific file to download."
+      }
+    ],
+    "delete_google_drive_file_by_id": [
+      {
+        "skill_name": "delete_selected_google_drive_file",
+        "step_index": 2,
+        "step_intent": "Permanently delete the user-selected file by its fileId, applying shared drive support if required."
+      },
+      {
+        "skill_name": "validate_google_drive_create_delete_permissions",
+        "step_index": 2,
+        "step_intent": "Clean up by permanently deleting the temporary item using its returned file ID, confirming delete permissions."
+      }
+    ],
+    "search_youtube_content": [
+      {
+        "skill_name": "find_and_enrich_youtube_videos",
+        "step_index": 1,
+        "step_intent": "Discover candidate YouTube videos by keyword and filters, returning video IDs and snippet metadata."
+      }
+    ],
+    "get_google_drive_metadata": [
+      {
+        "skill_name": "retrieve_google_drive_about_metadata",
+        "step_index": 1,
+        "step_intent": "Retrieve only the specified About fields to understand quotas, formats, limits, and capabilities before performing Drive operations."
+      }
+    ],
+    "list_shared_google_drives": [
+      {
+        "skill_name": "view_google_shared_drive_details",
+        "step_index": 1,
+        "step_intent": "Discover accessible shared drives and present them for selection; capture the chosen drive\u2019s ID from the listing."
+      },
+      {
+        "skill_name": "delete_selected_shared_drive",
+        "step_index": 1,
+        "step_intent": "Discover and present accessible shared drives to enable accurate user selection of the target drive for deletion."
+      }
+    ],
+    "get_google_drive_by_id": [
+      {
+        "skill_name": "view_google_shared_drive_details",
+        "step_index": 2,
+        "step_intent": "Retrieve the selected shared drive\u2019s canonical metadata using its ID for detailed review."
+      },
+      {
+        "skill_name": "create_and_retrieve_google_shared_drive_metadata",
+        "step_index": 2,
+        "step_intent": "Fetch the canonical metadata of the newly created shared drive using its returned drive ID for confirmation and reference."
+      }
+    ],
+    "create_shared_google_drive": [
+      {
+        "skill_name": "create_and_retrieve_google_shared_drive_metadata",
+        "step_index": 1,
+        "step_intent": "Provision a new shared drive with the desired name and properties."
+      }
+    ],
+    "delete_shared_google_drive": [
+      {
+        "skill_name": "delete_selected_shared_drive",
+        "step_index": 2,
+        "step_intent": "Permanently delete the user-selected shared drive, optionally deleting all items inside when using domain admin access."
+      }
+    ],
+    "retrieve_google_drive_file_by_id": [
+      {
+        "skill_name": "find_and_retrieve_google_drive_file",
+        "step_index": 2,
+        "step_intent": "Fetch the selected file\u2019s metadata or content using its fileId produced by the listing step."
+      },
+      {
+        "skill_name": "google_drive_upload_then_retrieve_metadata",
+        "step_index": 2,
+        "step_intent": "Retrieve the newly created file\u2019s JSON metadata (or content if alt=media is specified) using its fileId, optionally including labels or the 'published' permissions view."
+      },
+      {
+        "skill_name": "create_and_verify_google_drive_item",
+        "step_index": 2,
+        "step_intent": "Fetch the newly created item's metadata by its id to confirm creation and capture full details."
+      }
+    ],
+    "download_google_drive_file_by_id": [
+      {
+        "skill_name": "download_selected_google_drive_file",
+        "step_index": 2,
+        "step_intent": "Retrieve the binary content of the selected Google Drive file using its fileId, optionally exporting Google Workspace documents to a desired format."
+      },
+      {
+        "skill_name": "google_drive_upload_and_download_roundtrip",
+        "step_index": 2,
+        "step_intent": "Fetch the file\u2019s binary content by referencing the newly created file\u2019s fileId; optionally export Google Workspace documents to a specified MIME type."
+      }
+    ],
+    "upload_google_drive_file": [
+      {
+        "skill_name": "google_drive_upload_and_download_roundtrip",
+        "step_index": 1,
+        "step_intent": "Create the file in Google Drive using media or multipart mode and obtain the resulting file metadata, including fileId."
+      },
+      {
+        "skill_name": "google_drive_upload_then_retrieve_metadata",
+        "step_index": 1,
+        "step_intent": "Create the file in Google Drive using media or multipart mode and capture the returned fileId from the resulting metadata."
+      }
+    ],
+    "create_google_drive_file_metadata": [
+      {
+        "skill_name": "create_and_verify_google_drive_item",
+        "step_index": 1,
+        "step_intent": "Create a new Google Drive item with the specified metadata to obtain its unique identifier."
+      },
+      {
+        "skill_name": "validate_google_drive_create_delete_permissions",
+        "step_index": 1,
+        "step_intent": "Create a temporary Drive item to validate creation rights or stage a placeholder without uploading content."
+      }
+    ],
+    "list_github_organizations": [
+      {
+        "skill_name": "enumerate_github_organizations",
+        "step_index": 1,
+        "step_intent": "List a page of GitHub organizations in ascending ID order, optionally using a cursor and page size to control pagination."
+      },
+      {
+        "skill_name": "select_and_view_github_organization_profile",
+        "step_index": 1,
+        "step_intent": "Provide a paginated, browseable list of organizations so the user can choose a target organization via UI selection."
+      },
+      {
+        "skill_name": "update_github_organization_settings",
+        "step_index": 1,
+        "step_intent": "Enumerate organizations so the operator can select the target organization (capturing its login from the returned records)."
+      },
+      {
+        "skill_name": "list_repository_branches_by_organization_selection",
+        "step_index": 1,
+        "step_intent": "Surface organizations so the user can identify and select the correct owner account for the target repository."
+      },
+      {
+        "skill_name": "fork_repository_into_selected_organization",
+        "step_index": 1,
+        "step_intent": "List available organizations so the user can choose a destination for the fork."
+      }
+    ],
+    "get_github_organization_by_id": [
+      {
+        "skill_name": "select_and_view_github_organization_profile",
+        "step_index": 2,
+        "step_intent": "Fetch the selected organization's public metadata using its login to confirm details and capture identifiers for follow-on actions."
+      }
+    ],
+    "update_github_organization_by_id": [
+      {
+        "skill_name": "update_github_organization_settings",
+        "step_index": 2,
+        "step_intent": "Apply the chosen configuration updates to the selected organization using its login and a partial body of settings."
+      }
+    ],
+    "get_github_user_profile": [
+      {
+        "skill_name": "retrieve_authenticated_github_user_profile",
+        "step_index": 1,
+        "step_intent": "Retrieve the authenticated user's full profile from GitHub to power personalization and authorization decisions."
+      }
+    ],
+    "update_github_user_profile": [
+      {
+        "skill_name": "update_own_github_public_profile",
+        "step_index": 1,
+        "step_intent": "Update permitted public profile fields for the authenticated GitHub account and return the updated profile."
+      }
+    ],
+    "list_github_users": [
+      {
+        "skill_name": "browse_and_view_github_user_profile_by_username",
+        "step_index": 1,
+        "step_intent": "Browse a chronological page of users so an operator can select a target user and capture the corresponding username for lookup."
+      },
+      {
+        "skill_name": "browse_and_view_github_user_profile_by_account_id",
+        "step_index": 1,
+        "step_intent": "Display a chronological page of users so an operator can select a target and capture the corresponding account_id."
+      },
+      {
+        "skill_name": "browse_github_users_and_view_user_context",
+        "step_index": 1,
+        "step_intent": "Browse a chronological page of GitHub users to identify a candidate for further inspection."
+      },
+      {
+        "skill_name": "list_repository_branches_by_user_selection",
+        "step_index": 1,
+        "step_intent": "Browse users so the user can identify and select the account that owns the target repository."
+      },
+      {
+        "skill_name": "discover_user_and_list_public_repos",
+        "step_index": 1,
+        "step_intent": "Browse a paginated list of users to surface candidate accounts for selection."
+      }
+    ],
+    "retrieve_github_user_profile_by_username": [
+      {
+        "skill_name": "browse_and_view_github_user_profile_by_username",
+        "step_index": 2,
+        "step_intent": "Retrieve the selected user\u2019s public profile using the username obtained from the browsing step."
+      },
+      {
+        "skill_name": "search_and_view_github_user_profile",
+        "step_index": 2,
+        "step_intent": "Open the selected user's public profile to review identity and activity details."
+      }
+    ],
+    "get_github_public_user_by_id": [
+      {
+        "skill_name": "browse_and_view_github_user_profile_by_account_id",
+        "step_index": 2,
+        "step_intent": "Retrieve the selected user\u2019s public profile using the account_id from the prior step."
+      },
+      {
+        "skill_name": "search_and_view_github_user_profile_by_id",
+        "step_index": 2,
+        "step_intent": "Retrieve the selected user's public profile using their durable account_id for consistent lookup."
+      },
+      {
+        "skill_name": "view_profile_and_list_public_repos_by_selection",
+        "step_index": 1,
+        "step_intent": "Fetch the selected user\u2019s public profile by account_id to confirm identity and obtain the canonical login needed for downstream operations."
+      }
+    ],
+    "retrieve_github_user_context_by_username": [
+      {
+        "skill_name": "browse_github_users_and_view_user_context",
+        "step_index": 2,
+        "step_intent": "Fetch public contextual identity metadata for the user selected from the previous listing using the provided username from that record."
+      },
+      {
+        "skill_name": "search_and_view_github_user_context",
+        "step_index": 2,
+        "step_intent": "View the selected user's public contextual identity metadata to assess relevance in a specific context."
+      }
+    ],
+    "search_github_code": [
+      {
+        "skill_name": "github_code_search",
+        "step_index": 1,
+        "step_intent": "Execute a GitHub code search to find source files matching the provided query and return paginated results."
+      },
+      {
+        "skill_name": "update_github_repo_settings_from_code_search",
+        "step_index": 1,
+        "step_intent": "Find repositories by matching code files to a qualifier-based query to identify a target repository for update."
+      },
+      {
+        "skill_name": "delete_repository_via_code_search",
+        "step_index": 1,
+        "step_intent": "Identify candidate repositories by searching for code files that match the provided keywords and qualifiers."
+      },
+      {
+        "skill_name": "list_repository_branches_from_code_search",
+        "step_index": 1,
+        "step_intent": "Find repositories/files matching the code query so a candidate repository can be selected."
+      },
+      {
+        "skill_name": "audit_repo_commit_comments_from_code_search",
+        "step_index": 1,
+        "step_intent": "Find code instances that match the provided query to identify candidate repositories for review."
+      },
+      {
+        "skill_name": "search_github_code_and_fetch_content",
+        "step_index": 1,
+        "step_intent": "Identify code files that match business criteria to locate the precise file and repository context."
+      },
+      {
+        "skill_name": "list_forks_for_repo_found_via_code_search",
+        "step_index": 1,
+        "step_intent": "Locate repositories containing code that matches the query to identify a target repository candidate."
+      },
+      {
+        "skill_name": "review_repo_discussions_from_code_search",
+        "step_index": 1,
+        "step_intent": "Identify repositories by locating code files that match a targeted query, yielding candidate repositories for further review."
+      },
+      {
+        "skill_name": "delete_file_found_by_github_code_search",
+        "step_index": 1,
+        "step_intent": "Identify candidate files and gather repository owner/name, file path, and blob SHA for the file to be removed."
+      },
+      {
+        "skill_name": "find_code_and_fork_repository",
+        "step_index": 1,
+        "step_intent": "Locate repositories containing files that match a code search query so the user can choose a target repository to fork."
+      }
+    ],
+    "search_github_commits": [
+      {
+        "skill_name": "search_github_commits_default_branch",
+        "step_index": 1,
+        "step_intent": "Locate relevant commit records by executing a keyword-and-qualifier search on the default branch with optional pagination and sorting."
+      }
+    ],
+    "search_github_users": [
+      {
+        "skill_name": "search_and_view_github_user_context",
+        "step_index": 1,
+        "step_intent": "Find candidate GitHub users that match business criteria (e.g., recruiting, outreach, partnership discovery)."
+      },
+      {
+        "skill_name": "search_and_view_github_user_profile",
+        "step_index": 1,
+        "step_intent": "Find relevant GitHub users for outreach or analysis using keywords and qualifiers."
+      },
+      {
+        "skill_name": "search_and_view_github_user_profile_by_id",
+        "step_index": 1,
+        "step_intent": "Identify candidate users matching search criteria for potential engagement or analysis."
+      },
+      {
+        "skill_name": "delete_repository_for_searched_user",
+        "step_index": 1,
+        "step_intent": "Find and select the repository owner by searching for user accounts that match the provided criteria."
+      },
+      {
+        "skill_name": "list_repository_branches_from_user_search",
+        "step_index": 1,
+        "step_intent": "Discover and select the account that owns the target repository."
+      },
+      {
+        "skill_name": "search_user_and_list_public_repos",
+        "step_index": 1,
+        "step_intent": "Find candidate users via keyword-and-qualifier search and present results for selection."
+      }
+    ],
+    "search_github_issues": [
+      {
+        "skill_name": "search_github_issues_and_prs",
+        "step_index": 1,
+        "step_intent": "Search across GitHub issues and pull requests using a keyword-and-qualifier query to retrieve a paginated result set for triage or analysis."
+      }
+    ],
+    "search_github_repositories": [
+      {
+        "skill_name": "github_repository_discovery",
+        "step_index": 1,
+        "step_intent": "Execute a qualifier-based repository search to surface repositories meeting the specified criteria."
+      },
+      {
+        "skill_name": "update_github_repo_settings_from_repository_search",
+        "step_index": 1,
+        "step_intent": "Discover candidate repositories that match qualifier-based search criteria to select the target."
+      },
+      {
+        "skill_name": "search_and_delete_github_repository",
+        "step_index": 1,
+        "step_intent": "Find target repository candidates that match the user's qualifier-based search criteria."
+      },
+      {
+        "skill_name": "search_github_repositories_and_list_branches",
+        "step_index": 1,
+        "step_intent": "Find candidate repositories that match a qualifier-based search query to identify potential targets."
+      },
+      {
+        "skill_name": "search_repositories_and_fetch_branch_details",
+        "step_index": 1,
+        "step_intent": "Locate candidate repositories that match business-relevant criteria so a target repository can be selected for branch inspection."
+      },
+      {
+        "skill_name": "audit_repo_commit_comments_from_repo_search",
+        "step_index": 1,
+        "step_intent": "Discover repositories that match the specified search qualifiers to identify candidates for review."
+      },
+      {
+        "skill_name": "search_repositories_and_fetch_path_content",
+        "step_index": 1,
+        "step_intent": "Find candidate repositories that match defined criteria (language, stars, org, etc.)."
+      },
+      {
+        "skill_name": "list_forks_for_repo_found_via_repository_search",
+        "step_index": 1,
+        "step_intent": "Discover repositories that match the provided query to identify a target repository."
+      },
+      {
+        "skill_name": "review_repo_discussions_from_repo_search",
+        "step_index": 1,
+        "step_intent": "Find candidate repositories that meet specified search criteria for subsequent evaluation."
+      },
+      {
+        "skill_name": "search_repository_and_fork",
+        "step_index": 1,
+        "step_intent": "Find repositories that match the user\u2019s criteria to identify a target for forking."
+      }
+    ],
+    "update_github_repository_by_owner": [
+      {
+        "skill_name": "update_github_repo_settings_from_code_search",
+        "step_index": 2,
+        "step_intent": "Apply the specified configuration changes to the selected repository."
+      },
+      {
+        "skill_name": "update_github_repo_settings_from_repository_search",
+        "step_index": 2,
+        "step_intent": "Modify the selected repository\u2019s configuration with the specified fields."
+      },
+      {
+        "skill_name": "review_forks_then_update_repository_settings",
+        "step_index": 2,
+        "step_intent": "Apply one or more repository setting updates (e.g., visibility, features, defaults, security)."
+      },
+      {
+        "skill_name": "fork_and_configure_github_repository",
+        "step_index": 2,
+        "step_intent": "Apply repository configuration updates (e.g., name, description, visibility, features, security settings) to the newly created fork."
+      },
+      {
+        "skill_name": "update_settings_for_selected_github_repository",
+        "step_index": 2,
+        "step_intent": "Apply the requested configuration changes to the selected repository and return the updated repository record."
+      },
+      {
+        "skill_name": "update_settings_for_selected_repository",
+        "step_index": 2,
+        "step_intent": "Apply the specified configuration changes to the selected repository and return the updated record."
+      }
+    ],
+    "delete_github_repository_by_owner": [
+      {
+        "skill_name": "delete_repository_via_code_search",
+        "step_index": 2,
+        "step_intent": "Permanently delete the selected repository using its owner and repository name."
+      },
+      {
+        "skill_name": "delete_repository_for_searched_user",
+        "step_index": 2,
+        "step_intent": "Permanently delete the specified repository under the selected owner using the owner handle and repository name."
+      },
+      {
+        "skill_name": "search_and_delete_github_repository",
+        "step_index": 2,
+        "step_intent": "Permanently delete the user-selected repository using its owner and repository name."
+      },
+      {
+        "skill_name": "review_forks_then_delete_repository",
+        "step_index": 2,
+        "step_intent": "Permanently delete the specified repository after review."
+      },
+      {
+        "skill_name": "delete_selected_github_repository",
+        "step_index": 2,
+        "step_intent": "Permanently delete the selected repository using its owner and name from the prior step."
+      },
+      {
+        "skill_name": "select_and_delete_repository",
+        "step_index": 2,
+        "step_intent": "Permanently delete the selected repository if permissions and policies allow."
+      }
+    ],
+    "list_repository_artifacts_by_id": [
+      {
+        "skill_name": "list_github_actions_artifacts_for_repository",
+        "step_index": 1,
+        "step_intent": "Enumerate artifact metadata for the given repository to support audit, inventory, or follow-up actions like download or deletion."
+      }
+    ],
+    "list_github_repository_branches": [
+      {
+        "skill_name": "list_repository_branches_by_organization_selection",
+        "step_index": 2,
+        "step_intent": "Retrieve the branches for the specified repository within the selected organization owner."
+      },
+      {
+        "skill_name": "list_repository_branches_by_user_selection",
+        "step_index": 2,
+        "step_intent": "Retrieve the list of branches for the specified repository owned by the selected user."
+      },
+      {
+        "skill_name": "list_repository_branches_from_code_search",
+        "step_index": 2,
+        "step_intent": "List branches for the repository chosen from the code search results."
+      },
+      {
+        "skill_name": "list_repository_branches_from_user_search",
+        "step_index": 2,
+        "step_intent": "Retrieve the branches for the specified repository under the selected account."
+      },
+      {
+        "skill_name": "search_github_repositories_and_list_branches",
+        "step_index": 2,
+        "step_intent": "List branches for the user-selected repository from the search results to review branch structure."
+      },
+      {
+        "skill_name": "list_branches_and_get_branch_details",
+        "step_index": 1,
+        "step_intent": "List available branches for the selected repository so a specific branch can be chosen."
+      },
+      {
+        "skill_name": "fork_repository_and_list_branches",
+        "step_index": 2,
+        "step_intent": "List the branches in the newly created fork to understand available branch options and protection status."
+      },
+      {
+        "skill_name": "list_branches_for_selected_github_repository",
+        "step_index": 2,
+        "step_intent": "List branches for the selected repository, optionally filtering by protection status and using pagination as needed."
+      },
+      {
+        "skill_name": "list_branches_for_user_repository",
+        "step_index": 2,
+        "step_intent": "Retrieve the branch list for the selected repository to support branch-focused tasks."
+      }
+    ],
+    "get_github_repository_branch_by_id": [
+      {
+        "skill_name": "search_repositories_and_fetch_branch_details",
+        "step_index": 2,
+        "step_intent": "Retrieve the metadata (including head commit identifier) for the specified branch within the selected repository."
+      },
+      {
+        "skill_name": "list_branches_and_get_branch_details",
+        "step_index": 2,
+        "step_intent": "Retrieve detailed metadata (including head commit identifier) for the selected branch."
+      },
+      {
+        "skill_name": "retrieve_branch_details_for_user_repository",
+        "step_index": 2,
+        "step_intent": "Retrieve metadata for the specified branch (by exact branch name) in the selected repository."
+      }
+    ],
+    "list_github_code_scanning_analyses": [
+      {
+        "skill_name": "list_code_scanning_analyses_for_repository",
+        "step_index": 1,
+        "step_intent": "Fetch a paginated, ordered list of code scanning analyses for the specified repository with optional filters for PR, ref, SARIF upload, or tool."
+      },
+      {
+        "skill_name": "select_and_delete_github_code_scanning_analysis",
+        "step_index": 1,
+        "step_intent": "Enumerate available analyses in the target repository to locate and select the specific analysis_id for deletion."
+      },
+      {
+        "skill_name": "inspect_repo_code_scanning_analysis",
+        "step_index": 1,
+        "step_intent": "Identify and review the available code scanning analyses for the target repository, using pagination and optional filters to locate the desired analysis."
+      }
+    ],
+    "delete_github_code_scanning_analysis": [
+      {
+        "skill_name": "select_and_delete_github_code_scanning_analysis",
+        "step_index": 2,
+        "step_intent": "Delete the selected analysis using its analysis_id, applying confirm_delete when necessary and capturing next/confirm URLs to guide safe sequential deletions."
+      }
+    ],
+    "rename_github_repository_branch": [
+      {
+        "skill_name": "rename_github_repository_branch",
+        "step_index": 1,
+        "step_intent": "Initiate the branch rename to align naming conventions or reflect project changes without immediate disruption."
+      }
+    ],
+    "get_code_scanning_analysis_by_id": [
+      {
+        "skill_name": "inspect_repo_code_scanning_analysis",
+        "step_index": 2,
+        "step_intent": "Fetch the selected analysis\u2019s details (metadata or SARIF subset) by its analysis_id obtained from the listing step."
+      }
+    ],
+    "list_github_repository_commit_comments": [
+      {
+        "skill_name": "audit_repo_commit_comments_from_code_search",
+        "step_index": 2,
+        "step_intent": "Retrieve commit comments for a selected repository from the search results to audit commit-level discussions."
+      },
+      {
+        "skill_name": "audit_repo_commit_comments_from_repo_search",
+        "step_index": 2,
+        "step_intent": "Retrieve commit comments for a selected repository to analyze commit discussions and history."
+      },
+      {
+        "skill_name": "inspect_specific_commit_comment_in_repo",
+        "step_index": 1,
+        "step_intent": "Enumerate commit comments in the repository so a target comment can be selected."
+      },
+      {
+        "skill_name": "list_commit_comments_for_selected_repository",
+        "step_index": 2,
+        "step_intent": "List repository-wide commit comments for the selected repository with pagination and selectable body representation."
+      },
+      {
+        "skill_name": "list_commit_comments_for_user_repository",
+        "step_index": 2,
+        "step_intent": "Retrieve a paginated list of commit comments for the selected repository."
+      }
+    ],
+    "get_github_repository_commit_comment": [
+      {
+        "skill_name": "inspect_specific_commit_comment_in_repo",
+        "step_index": 2,
+        "step_intent": "Retrieve the selected commit comment by its identifier for detailed inspection."
+      }
+    ],
+    "get_github_repository_content_by_path": [
+      {
+        "skill_name": "search_github_code_and_fetch_content",
+        "step_index": 2,
+        "step_intent": "Retrieve the content of the selected matched file (or list directory entries) using owner, repo, and path from the code search result."
+      },
+      {
+        "skill_name": "search_repositories_and_fetch_path_content",
+        "step_index": 2,
+        "step_intent": "Fetch content or list entries at a provided path within the selected repository using its owner and repo name."
+      },
+      {
+        "skill_name": "upsert_github_repository_file_with_pre_read",
+        "step_index": 1,
+        "step_intent": "Determine if the file exists at the specified path and, if so, obtain its current blob SHA to decide between update versus create."
+      },
+      {
+        "skill_name": "delete_repository_file_by_path_with_sha_resolution",
+        "step_index": 1,
+        "step_intent": "Fetch the target file\u2019s metadata (including its current blob SHA) at the specified path and optional ref."
+      },
+      {
+        "skill_name": "fork_repository_and_fetch_content",
+        "step_index": 2,
+        "step_intent": "Retrieve specific file content or a directory listing from the newly created fork using its owner and repo along with a provided path."
+      },
+      {
+        "skill_name": "retrieve_repository_content_by_path_for_selected_repository",
+        "step_index": 2,
+        "step_intent": "Retrieve the file or directory content at the specified path (and optional ref) from the selected repository."
+      },
+      {
+        "skill_name": "fetch_repository_content_by_path_for_user_repository",
+        "step_index": 2,
+        "step_intent": "Retrieve file contents or a directory listing at the specified path in the selected repository, optionally at a given ref."
+      }
+    ],
+    "upsert_github_repository_file": [
+      {
+        "skill_name": "upsert_github_repository_file_with_pre_read",
+        "step_index": 2,
+        "step_intent": "Commit the provided Base64-encoded content with a commit message to create or update the file, supplying the SHA when updating."
+      }
+    ],
+    "list_github_repository_forks": [
+      {
+        "skill_name": "list_forks_for_repo_found_via_code_search",
+        "step_index": 2,
+        "step_intent": "Enumerate forks of the selected repository to assess community engagement and activity."
+      },
+      {
+        "skill_name": "list_forks_for_repo_found_via_repository_search",
+        "step_index": 2,
+        "step_intent": "List forks of the selected repository to understand adoption and collaboration patterns."
+      },
+      {
+        "skill_name": "review_forks_then_delete_repository",
+        "step_index": 1,
+        "step_intent": "Assess fork activity and adoption to inform the deletion decision."
+      },
+      {
+        "skill_name": "review_forks_then_update_repository_settings",
+        "step_index": 1,
+        "step_intent": "Provide context on forks and community engagement before making configuration changes."
+      },
+      {
+        "skill_name": "explore_forks_and_review_discussions",
+        "step_index": 1,
+        "step_intent": "Identify and rank forks of a repository to find actively maintained or popular derivatives."
+      },
+      {
+        "skill_name": "review_forks_then_fork_repository",
+        "step_index": 1,
+        "step_intent": "Review existing forks for the target repository to inform the decision to create a new fork."
+      },
+      {
+        "skill_name": "fork_repository_and_verify_forks",
+        "step_index": 2,
+        "step_intent": "Retrieve the list of forks for the upstream repository to confirm the new fork is present."
+      },
+      {
+        "skill_name": "list_forks_for_selected_repository",
+        "step_index": 2,
+        "step_intent": "Fetch and optionally sort the list of forks for the selected repository with pagination controls."
+      },
+      {
+        "skill_name": "enumerate_forks_for_user_repository",
+        "step_index": 2,
+        "step_intent": "Retrieve a paginated list of forks for the selected repository."
+      }
+    ],
+    "list_github_issues_pull_requests": [
+      {
+        "skill_name": "review_repo_discussions_from_code_search",
+        "step_index": 2,
+        "step_intent": "From a selected repository discovered via code search, gather recent discussions by listing issue and pull request comments."
+      },
+      {
+        "skill_name": "review_repo_discussions_from_repo_search",
+        "step_index": 2,
+        "step_intent": "For a selected repository, collect issue and pull request comments to understand recent discussions and engagement."
+      },
+      {
+        "skill_name": "explore_forks_and_review_discussions",
+        "step_index": 2,
+        "step_intent": "From a selected fork, gather issue and pull request comments to evaluate discussion topics and activity levels."
+      },
+      {
+        "skill_name": "list_issue_and_pr_comments_for_selected_repository",
+        "step_index": 2,
+        "step_intent": "Retrieve paginated issue and pull request comments for the selected repository with optional filters and sort."
+      },
+      {
+        "skill_name": "review_issue_pr_comments_for_selected_repo",
+        "step_index": 2,
+        "step_intent": "Retrieve a paginated list of comments across issues and PRs for the selected repository, with optional sorting and time-based filtering."
+      }
+    ],
+    "delete_github_repository_file": [
+      {
+        "skill_name": "delete_file_found_by_github_code_search",
+        "step_index": 2,
+        "step_intent": "Commit the deletion of the selected file on the specified (or default) branch using the file\u2019s blob SHA and a clear commit message."
+      },
+      {
+        "skill_name": "delete_repository_file_by_path_with_sha_resolution",
+        "step_index": 2,
+        "step_intent": "Create a commit that deletes the file using the retrieved blob SHA and a descriptive commit message on the intended branch."
+      }
+    ],
+    "create_github_repository_fork": [
+      {
+        "skill_name": "fork_repository_into_selected_organization",
+        "step_index": 2,
+        "step_intent": "Create a fork of the specified upstream repository under the selected organization (or the authenticated user if no organization is chosen)."
+      },
+      {
+        "skill_name": "find_code_and_fork_repository",
+        "step_index": 2,
+        "step_intent": "Fork the selected repository under the authenticated user or a chosen organization."
+      },
+      {
+        "skill_name": "search_repository_and_fork",
+        "step_index": 2,
+        "step_intent": "Create a fork of the selected repository under the authenticated user or specified organization."
+      },
+      {
+        "skill_name": "review_forks_then_fork_repository",
+        "step_index": 2,
+        "step_intent": "Create a new fork of the same upstream repository under the authenticated user or a selected organization."
+      },
+      {
+        "skill_name": "fork_repository_and_verify_forks",
+        "step_index": 1,
+        "step_intent": "Create a fork of the target repository under the chosen destination."
+      },
+      {
+        "skill_name": "fork_repository_and_fetch_content",
+        "step_index": 1,
+        "step_intent": "Establish a personal or organization-owned fork of the target repository to enable isolated work and consistent references."
+      },
+      {
+        "skill_name": "fork_repository_and_list_branches",
+        "step_index": 1,
+        "step_intent": "Create a forked copy of the source repository under the authenticated user or a chosen organization."
+      },
+      {
+        "skill_name": "fork_and_configure_github_repository",
+        "step_index": 1,
+        "step_intent": "Create a new fork of the specified source repository under the authenticated user or a chosen organization."
+      },
+      {
+        "skill_name": "fork_selected_github_repository",
+        "step_index": 2,
+        "step_intent": "Create a fork of the selected repository under the user or a specified organization, optionally customizing the fork name and default-branch-only behavior."
+      },
+      {
+        "skill_name": "select_repo_and_fork_from_user_listing",
+        "step_index": 2,
+        "step_intent": "Create a fork of the selected repository under the authenticated user or target organization."
+      }
+    ],
+    "list_github_repository_releases": [
+      {
+        "skill_name": "list_github_repository_releases",
+        "step_index": 1,
+        "step_intent": "Obtain a paginated list of releases for a specified repository to analyze release history, monitor versions, or support reporting and planning."
+      }
+    ],
+    "list_github_repositories_for_authenticated_user": [
+      {
+        "skill_name": "fork_selected_github_repository",
+        "step_index": 1,
+        "step_intent": "Surface repositories the signed-in user can access so a target repository can be selected."
+      },
+      {
+        "skill_name": "list_issue_and_pr_comments_for_selected_repository",
+        "step_index": 1,
+        "step_intent": "Provide a list of repositories the user can access to choose the target repository."
+      },
+      {
+        "skill_name": "list_forks_for_selected_repository",
+        "step_index": 1,
+        "step_intent": "Present the user's accessible repositories to select the target repository."
+      },
+      {
+        "skill_name": "retrieve_repository_content_by_path_for_selected_repository",
+        "step_index": 1,
+        "step_intent": "Allow the user to choose the repository whose contents will be inspected."
+      },
+      {
+        "skill_name": "list_commit_comments_for_selected_repository",
+        "step_index": 1,
+        "step_intent": "Provide a selectable list of repositories the user can access."
+      },
+      {
+        "skill_name": "list_branches_for_selected_github_repository",
+        "step_index": 1,
+        "step_intent": "Discover accessible repositories so the user can select a specific repository without manually providing internal identifiers."
+      },
+      {
+        "skill_name": "delete_selected_github_repository",
+        "step_index": 1,
+        "step_intent": "Enumerate accessible repositories to enable safe selection of the exact repository to delete using outputs from this step."
+      },
+      {
+        "skill_name": "update_settings_for_selected_github_repository",
+        "step_index": 1,
+        "step_intent": "Identify and select the target repository using outputs from this step."
+      }
+    ],
+    "post_servicenow_records_in_now_table": [
+      {
+        "skill_name": "servicenow_create_and_delete_temporary_record",
+        "step_index": 1,
+        "step_intent": "Create a temporary record in the selected ServiceNow table and capture its sys_id from the returned record."
+      },
+      {
+        "skill_name": "create_and_retrieve_servicenow_record",
+        "step_index": 1,
+        "step_intent": "Create a new record in the specified ServiceNow table with the provided field values and response formatting options."
+      },
+      {
+        "skill_name": "create_and_update_servicenow_record",
+        "step_index": 1,
+        "step_intent": "Create the initial record in the selected ServiceNow table and capture its returned data, including sys_id."
+      }
+    ],
+    "get_servicenow_records_in_table_by_id": [
+      {
+        "skill_name": "create_and_retrieve_servicenow_record",
+        "step_index": 2,
+        "step_intent": "Retrieve the newly created record by its sys_id to return a canonical set of fields and display options for downstream use or confirmation."
+      },
+      {
+        "skill_name": "view_servicenow_record_details_via_search",
+        "step_index": 2,
+        "step_intent": "Retrieve comprehensive details of the selected record using its sys_id from the search results."
+      }
+    ],
+    "update_servicenow_record_in_table_by_id": [
+      {
+        "skill_name": "create_and_update_servicenow_record",
+        "step_index": 2,
+        "step_intent": "Use the newly acquired sys_id to apply follow-up updates to the created record and return the finalized representation."
+      },
+      {
+        "skill_name": "update_servicenow_record_via_search",
+        "step_index": 2,
+        "step_intent": "Apply the requested field-value updates to the selected record using its sys_id from the search results."
+      }
+    ],
+    "list_sap_customer_orders": [
+      {
+        "skill_name": "retrieve_sap_customer_orders",
+        "step_index": 1,
+        "step_intent": "Retrieve customer orders with optional filters, sorting, pagination, field selection, expansions, and inline count for analysis and reporting."
+      }
+    ],
+    "get_servicenow_records_by_tableName": [
+      {
+        "skill_name": "update_servicenow_record_via_search",
+        "step_index": 1,
+        "step_intent": "Find candidate records in the specified ServiceNow table using table name and optional filters to identify the target for update."
+      },
+      {
+        "skill_name": "view_servicenow_record_details_via_search",
+        "step_index": 1,
+        "step_intent": "Locate candidate records in the target table using table name and optional query filters."
+      },
+      {
+        "skill_name": "delete_servicenow_record_via_search",
+        "step_index": 1,
+        "step_intent": "Identify candidate records for removal within the specified table using search criteria if needed."
+      },
+      {
+        "skill_name": "delete_servicenow_record_by_query",
+        "step_index": 1,
+        "step_intent": "Identify the target record by querying the specified ServiceNow table using business-friendly filters and capture its sys_id."
+      }
+    ],
+    "search_arxiv_research_papers": [
+      {
+        "skill_name": "search_arxiv_preprints",
+        "step_index": 1,
+        "step_intent": "Retrieve arXiv preprint records matching the user's search query, with optional pagination and sorting to curate the result set."
+      }
+    ],
+    "list_github_public_repositories_by_user": [
+      {
+        "skill_name": "view_profile_and_list_public_repos_by_selection",
+        "step_index": 2,
+        "step_intent": "List the selected user\u2019s public repositories for exploration, optionally filtered and sorted."
+      },
+      {
+        "skill_name": "discover_user_and_list_public_repos",
+        "step_index": 2,
+        "step_intent": "Enumerate public repositories for the selected user handle, with optional filtering and sorting."
+      },
+      {
+        "skill_name": "search_user_and_list_public_repos",
+        "step_index": 2,
+        "step_intent": "List public repositories for the selected user account to assess their open-source work."
+      },
+      {
+        "skill_name": "select_repo_and_fork_from_user_listing",
+        "step_index": 1,
+        "step_intent": "Present the user\u2019s public repositories for selection of a specific upstream repository to fork."
+      },
+      {
+        "skill_name": "review_issue_pr_comments_for_selected_repo",
+        "step_index": 1,
+        "step_intent": "Surface the user\u2019s public repositories so a target repository can be selected."
+      },
+      {
+        "skill_name": "enumerate_forks_for_user_repository",
+        "step_index": 1,
+        "step_intent": "Enumerate the user's public repositories to allow selecting the target repository."
+      },
+      {
+        "skill_name": "fetch_repository_content_by_path_for_user_repository",
+        "step_index": 1,
+        "step_intent": "Enumerate the user's public repositories to select the target repository."
+      },
+      {
+        "skill_name": "list_commit_comments_for_user_repository",
+        "step_index": 1,
+        "step_intent": "Enumerate the user's public repositories to select the repository of interest."
+      },
+      {
+        "skill_name": "retrieve_branch_details_for_user_repository",
+        "step_index": 1,
+        "step_intent": "Enumerate the user's public repositories to select the target repository."
+      },
+      {
+        "skill_name": "list_branches_for_user_repository",
+        "step_index": 1,
+        "step_intent": "Identify and present the user's public repositories so a target repository can be selected."
+      },
+      {
+        "skill_name": "select_and_delete_repository",
+        "step_index": 1,
+        "step_intent": "Present the user's public repositories so that the target repository can be chosen for deletion."
+      },
+      {
+        "skill_name": "update_settings_for_selected_repository",
+        "step_index": 1,
+        "step_intent": "Provide the user's public repositories for selecting the repository to update."
+      }
+    ],
+    "get_linkedin_user_info": [
+      {
+        "skill_name": "retrieve_linkedin_oidc_userinfo",
+        "step_index": 1,
+        "step_intent": "Obtain the authenticated LinkedIn member\u2019s OIDC userinfo claims for identity and profile data."
+      }
+    ],
+    "search_sec_filings": [
+      {
+        "skill_name": "search_sec_edgar_filings",
+        "step_index": 1,
+        "step_intent": "Discover filings matching specified keywords and optional filters to compile a relevant result set for analysis."
+      }
+    ],
+    "retrieve_equity_bars_intraday": [
+      {
+        "skill_name": "retrieve_intraday_equity_bars",
+        "step_index": 1,
+        "step_intent": "Retrieve intraday OHLCV time series for a specified equity symbol and interval, with optional adjustments, extended-hours inclusion, month filtering, output size control, and response format selection."
+      }
+    ],
+    "retrieve_equity_ohlcv_daily": [
+      {
+        "skill_name": "retrieve_daily_equity_ohlcv",
+        "step_index": 1,
+        "step_intent": "Retrieve the daily unadjusted OHLCV time series for the specified equity ticker in the desired output format and size."
+      }
+    ],
+    "fred_economic_data_search": [
+      {
+        "skill_name": "search_fred_time_series",
+        "step_index": 1,
+        "step_intent": "Identify relevant economic time series by keyword and optional filters to compile a shortlist for analysis or reporting."
+      }
+    ],
+    "delete_servicenow_record_in_table_by_sys_id": [
+      {
+        "skill_name": "delete_servicenow_record_by_query",
+        "step_index": 2,
+        "step_intent": "Delete the located record from the same table using the sys_id obtained from the prior step."
+      }
+    ]
+  }
+}

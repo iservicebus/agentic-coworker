@@ -1,0 +1,331 @@
+services:
+  # ==========================================
+  # PLATFORM SERVICES (Infrastructure Layer)
+  # ==========================================
+
+  # Keycloak - Identity and Access Management
+  keycloak:
+    image: quay.io/keycloak/keycloak:23.0.4
+    container_name: keycloak
+    command: start-dev
+    restart: unless-stopped
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+      # Disable HTTPS requirement for development
+      KC_HOSTNAME_STRICT_HTTPS: "false"
+      KC_HTTP_ENABLED: "true"
+      KC_HOSTNAME_STRICT: "false"
+      # This helps Keycloak understand the port discrepancy
+      KC_PROXY: "edge"
+      # Disable SSL requirement for all realms
+      KC_SPI_TRUSTSTORE_FILE_FILE: ""
+      KC_SPI_TRUSTSTORE_FILE_PASSWORD: ""
+    ports:
+      - "8888:8080"
+    networks:
+      - aintegrator-backend
+    volumes:
+      - keycloak_data:/opt/keycloak/data
+      - ./deployment/docker-platform/master-realm.json:/opt/keycloak/data/import/master-realm.json
+    healthcheck:
+      test: ["CMD-SHELL", "exec 3<>/dev/tcp/localhost/8080 || exit 1"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 60s
+
+  # Postgres - Primary Database with pgvector support
+  postgres:
+    image: pgvector/pgvector:pg17
+    container_name: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: agent-studio
+    ports:
+      - "5432:5432"
+    networks:
+      - aintegrator-backend
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./deployment/docker-platform/init:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U user -d agent-studio"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+  # Traefik - Reverse Proxy and Load Balancer
+  traefik:
+    image: traefik:v3.0
+    container_name: traefik
+    restart: unless-stopped
+    command:
+      # Enable dashboard
+      - "--api.dashboard=true"
+      - "--api.insecure=true"  # ⚠️ Don't use in production
+      # Entrypoints: HTTP and HTTPS
+      - "--entryPoints.web.address=:80"
+      - "--entryPoints.websecure.address=:443"
+      # Enable access and debug logs
+      - "--log.level=DEBUG"
+      - "--accesslog=true"
+      # Etcd dynamic provider
+      - "--providers.etcd.endpoints=etcd:2379"
+      - "--providers.etcd.rootKey=traefik"
+    ports:
+      - "80:80"
+      - "8080:8080"  # for Traefik dashboard
+    networks:
+      - aintegrator-backend
+    depends_on:
+      - etcd
+
+  # Neo4j - Graph Database
+  neo4j:
+    image: neo4j:5.26
+    container_name: neo4j
+    restart: unless-stopped
+    ports:
+      - "7474:7474"   # HTTP UI
+      - "7687:7687"   # Bolt protocol
+    networks:
+      - aintegrator-backend
+    environment:
+      NEO4J_AUTH: neo4j/password
+      NEO4J_dbms_memory_heap_initial__size: 1G
+      NEO4J_dbms_memory_heap_max__size: 2G
+      NEO4J_dbms_memory_pagecache_size: 1G
+      NEO4J_PLUGINS: '["apoc", "graph-data-science"]'
+      NEO4J_apoc_export_file_enabled: "true"
+      NEO4J_apoc_import_file_enabled: "true"
+      NEO4J_apoc_import_file_use__neo4j__config: "true"
+      NEO4J_dbms_security_procedures_unrestricted: "apoc.*,gds.*"
+    volumes:
+      - neo4j_data:/data
+      - neo4j_logs:/logs
+      - neo4j_import:/var/lib/neo4j/import
+      - neo4j_plugins:/plugins
+
+  # ETCD - Distributed Key-Value Store
+  etcd:
+    image: quay.io/coreos/etcd:v3.5.0
+    restart: unless-stopped
+    container_name: etcd
+    command: /usr/local/bin/etcd --name etcd --listen-peer-urls http://0.0.0.0:2380 --listen-client-urls http://0.0.0.0:2379 --advertise-client-urls http://etcd:2379
+    ports:
+      - "12379:2379"  # Map host 12379 to container 2379
+    networks:
+      - aintegrator-backend
+
+  # NATS - Message Queue with JetStream
+  nats:
+    image: nats:2
+    command: ["-js", "-sd", "/data", "-m", "8222", "-p", "4222"]
+    restart: unless-stopped
+    ports:
+      - "4222:4222"   # client
+      - "8222:8222"   # monitoring
+    networks:
+      - aintegrator-backend
+    volumes:
+      - nats-data:/data
+
+  # ==========================================
+  # APPLICATION SERVICES (Application Layer)
+  # ==========================================
+
+  # Keycloak Initialization - Configure Keycloak before other services
+  keycloak-init:
+    image: quay.io/keycloak/keycloak:23.0.4
+    container_name: keycloak-init
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        echo "Waiting for Keycloak to be ready..."
+        sleep 10
+        echo "Configuring Keycloak admin credentials..."
+        /opt/keycloak/bin/kcadm.sh config credentials --server http://keycloak:8080 --realm master --user admin --password admin
+        echo "Disabling SSL requirement for master realm..."
+        /opt/keycloak/bin/kcadm.sh update realms/master -s sslRequired=none
+        echo "Keycloak configuration completed successfully"
+    networks:
+      - aintegrator-backend
+    restart: "no"
+    depends_on:
+      keycloak:
+        condition: service_healthy
+
+  # Database Initialization - Runs once before app containers start
+  db-init:
+    image: ghcr.io/jingnanzhou/agent-ops:latest
+    container_name: db-init
+    command: init-defaults
+    networks:
+      - aintegrator-backend
+    volumes:
+      - ./.env.docker:/app/agent_ops/.env:ro
+      - ./data:/app/data:ro
+    restart: "no"  # Only run once
+    depends_on:
+      postgres:
+        condition: service_healthy
+      keycloak-init:
+        condition: service_completed_successfully
+
+  # Agent Ops Utility - Long-running container for ad-hoc operations
+  # Usage: docker exec agent-ops python -m agent_ops <command>
+  # Works from any directory - no need to cd to docker-compose location
+  agent-ops:
+    image: ghcr.io/jingnanzhou/agent-ops:latest
+    container_name: agent-ops
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["sleep infinity"]
+    networks:
+      - aintegrator-backend
+    volumes:
+      - ./.env.docker:/app/agent_ops/.env:ro
+      - ./data:/app/data
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  # Agent Studio - Next.js Frontend for AI Agent Management
+  agent-studio:
+    image: ghcr.io/jingnanzhou/agent-studio:latest
+    container_name: agent-studio-app
+    build:
+      context: ./agent-studio
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./.env.docker
+    networks:
+      - aintegrator-backend
+    restart: unless-stopped
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Integrator Service - Main Integration Service
+  integrator:
+    image: ghcr.io/jingnanzhou/integrator:latest
+    container_name: integrator-app
+    build:
+      context: ./integrator
+      dockerfile: Dockerfile
+    ports:
+      - "6060:6060"
+    env_file:
+      - ./.env.docker
+    volumes:
+      # Mount GCP credentials if available (optional)
+      - ${HOME}/.config/gcloud/application_default_credentials.json:/app/gcp_key.json:ro
+    networks:
+      - aintegrator-backend
+    restart: unless-stopped
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+      mcp-services:
+        condition: service_started
+      postgres:
+        condition: service_healthy
+      neo4j:
+        condition: service_started
+      etcd:
+        condition: service_started
+      nats:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:6060')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # MCP Services - Model Context Protocol Services
+  mcp-services:
+    image: ghcr.io/jingnanzhou/mcp-services:latest
+    container_name: mcp-services-app
+    build:
+      context: ./mcp_services
+      dockerfile: Dockerfile
+    ports:
+      - "6666:6666"
+    env_file:
+      - ./.env.docker
+    networks:
+      - aintegrator-backend
+    restart: unless-stopped
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:6666')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Support Services - Supporting API Services
+  support-services:
+    image: ghcr.io/jingnanzhou/support-services:latest
+    container_name: support-services-app
+    build:
+      context: ./support_services
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    env_file:
+      - ./.env.docker
+    networks:
+      - aintegrator-backend
+    restart: unless-stopped
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+      keycloak-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+# ==========================================
+# NETWORKS
+# ==========================================
+networks:
+  aintegrator-backend:
+    driver: bridge
+    name: aintegrator-backend
+
+# ==========================================
+# VOLUMES
+# ==========================================
+volumes:
+  keycloak_data:
+  pgdata:
+  redis-data:
+  nats-data:
+  neo4j_data:
+  neo4j_logs:
+  neo4j_import:
+  neo4j_plugins:

@@ -1,0 +1,1 @@
+docker build -t ghcr.io/jingnanzhou/agent-studio:latest .

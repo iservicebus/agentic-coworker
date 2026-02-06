@@ -1,0 +1,113 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MCPToolSpecification",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "Unique identifier for the tool"
+      },
+      "description": {
+        "type": "string",
+        "description": "A brief explanation of what the tool does"
+      },
+      "input_schema": {
+        "type": "object",
+        "description": "Schema defining the tool's input",
+        "properties": {
+          "section_a": {
+            "type": "object",
+            "description": "Group A input parameters",
+            "properties": {
+              "field_a1": {
+                "type": "string",
+                "description": "String input value"
+              },
+              "field_a2": {
+                "type": "integer",
+                "description": "Integer input value"
+              }
+            },
+            "required": ["field_a1"]
+          },
+          "section_b": {
+            "type": "object",
+            "description": "Group B input parameters",
+            "properties": {
+              "field_b1": {
+                "type": "boolean",
+                "description": "Enable or disable something"
+              },
+              "subsection_b2": {
+                "type": "object",
+                "description": "Nested input group under section B",
+                "properties": {
+                  "field_b2a": {
+                    "type": "string",
+                    "description": "A string field"
+                  },
+                  "field_b2b": {
+                    "type": "array",
+                    "description": "List of numerical values",
+                    "items": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "required": ["field_b2a"]
+              }
+            },
+            "required": ["field_b1", "subsection_b2"]
+          }
+        },
+        "required": ["section_a", "section_b"]
+      },
+      "output_schema": {
+        "type": "object",
+        "description": "Schema describing the tool's output",
+        "properties": {
+          "result": {
+            "type": "string",
+            "description": "Primary result as a string"
+          },
+          "details": {
+            "type": "object",
+            "description": "Optional metadata or diagnostics",
+            "properties": {
+              "status": {
+                "type": "string",
+                "description": "Status message"
+              },
+              "confidence": {
+                "type": "number",
+                "description": "Confidence score (0-1)",
+                "minimum": 0,
+                "maximum": 1
+              }
+            }
+          }
+        },
+        "required": ["result"]
+      },
+      "annotations": {
+        "type": "object",
+        "description": "Metadata annotations for categorization or UI behavior",
+        "properties": {
+          "category": {
+            "type": "string",
+            "description": "Optional tool category (e.g. 'utilities', 'data', etc.)"
+          },
+          "display_name": {
+            "type": "string",
+            "description": "Friendly name for UI display"
+          },
+          "visibility": {
+            "type": "string",
+            "enum": ["public", "private", "internal"],
+            "description": "Visibility setting for UI or agent use"
+          }
+        }
+      }
+    },
+    "required": ["name", "description", "input_schema", "output_schema"]
+  }

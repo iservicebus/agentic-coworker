@@ -1,0 +1,47 @@
+[project]
+name = "mcp-services"
+version = "0.2.0"
+description = "A dynamic MCP server that acts as a proxy to other services."
+authors = [
+    { name = "Jingnan Zhou" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "anyio",
+    "httpx",
+    "mcp",
+    "python-dotenv",
+    "uvicorn",
+    "starlette",
+    "python-jose",
+    "fastapi",
+    "graphiti-core",
+    "openai ==1.75.0",
+    "sqlalchemy",
+    "psycopg2-binary"
+]
+
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+check_untyped_defs = true
+show_error_codes = true
+pretty = true
+# Optional: explicitly define source paths
+# This is not always necessary if you're running `mypy src/`
+mypy_path = "src"
+files = ["src"]

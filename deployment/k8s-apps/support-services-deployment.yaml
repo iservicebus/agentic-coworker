@@ -1,0 +1,103 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: support-services
+  namespace: aintegrator
+  labels:
+    app: support-services
+    component: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: support-services
+  template:
+    metadata:
+      labels:
+        app: support-services
+        component: backend
+    spec:
+      containers:
+      - name: support-services
+        image: support-services:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 5000
+          name: http
+          protocol: TCP
+        env:
+        - name: PORT
+          value: "6666"
+        - name: PYTHONPATH
+          value: "/app/src"
+        # VLLM Configuration
+        - name: VLLM_MODEL
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: SUPPORT_VLLM_MODEL
+        - name: MAX_TEXT_EXTRACTION_LENGTH
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: MAX_TEXT_EXTRACTION_LENGTH
+        # Integrator Configuration
+        - name: INTEGRATOR_URL
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: PORTAL_URL
+        # IAM Configuration
+        - name: IAM_URL
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: IAM_URL
+        - name: REALM
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: REALM
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 5000
+          initialDelaySeconds: 40
+          periodSeconds: 30
+          timeoutSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 5000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+      restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: support-services-service
+  namespace: aintegrator
+  labels:
+    app: support-services
+spec:
+  type: NodePort
+  selector:
+    app: support-services
+  ports:
+  - port: 5000
+    targetPort: 5000
+    nodePort: 30500
+    protocol: TCP
+    name: http

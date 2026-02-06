@@ -1,0 +1,113 @@
+/* Ensure full height layout */
+html, body, #__next {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent body scrollbars when components manage their own scroll */
+}
+
+.layout-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  background-color: var(--background); /* Use CSS variable */
+  color: var(--foreground); /* Ensure default text color applies */
+}
+
+.layout-header {
+  height: 64px; /* Slightly taller header */
+  /* Tailwind classes now handle background, text color, padding, and shadow */
+  display: flex;
+  align-items: center;
+  z-index: 10; /* Ensure header is above other content */
+  justify-content: space-between;
+}
+
+.layout-body {
+  display: flex;
+  flex-grow: 1; /* Take remaining vertical space */
+  overflow: hidden; /* Prevent layout body itself from scrolling */
+  position: relative; /* Needed for absolute positioning of the resizer */
+}
+
+.layout-sidebar {
+  flex-shrink: 0;
+  background-color: #f8fafc; /* Tailwind's slate-50 for consistency */
+  overflow: hidden;
+  position: relative;
+  transition: width 0.3s ease, transform 0.3s ease; /* Added transform for potential future use */
+  border-right: 1px solid #e2e8f0; /* Tailwind's slate-200 for border */
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-sidebar.collapsed {
+  width: 0 !important;
+  border-right: none;
+  overflow: hidden;
+}
+
+.sidebar-content {
+    padding: 1rem; /* Consistent padding */
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.resizer {
+  position: absolute;
+  top: 0;
+  right: -3px; /* Adjust to overlap slightly for easier grabbing */
+  width: 6px;
+  height: 100%;
+  cursor: col-resize;
+  background-color: transparent; /* Make it invisible by default */
+  z-index: 5;
+  transition: background-color 0.2s ease;
+}
+
+.resizer:hover,
+body[style*="cursor: col-resize"] .resizer {
+  background-color: #cbd5e1; /* Tailwind's slate-300 on hover/drag */
+}
+
+.layout-content {
+  flex-grow: 1;
+  background-color: var(--background); /* Use CSS variable for background */
+  color: var(--foreground);
+  padding: 1.5rem; /* More padding for content */
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+/* Menu button styling is now handled by Tailwind in Header.tsx */
+.menu-button {
+  /* Styles moved to Header.tsx for better co-location with the component */
+  /* This class can be removed if not used elsewhere, but keeping for now */
+  display: none; 
+}
+
+/* Show menu button on smaller screens (Tailwind md breakpoint is 768px) */
+/* We use a direct media query here for clarity, complementing the md:hidden in JSX */
+@media (max-width: 767px) {
+  .menu-button {
+    display: inline-block; /* Show the button */
+  }
+
+  /* Ensure sidebar is fully hidden visually when collapsed on small screens */
+  /* The JS sets width to 0, this ensures no padding/border issues */
+   .layout-sidebar.collapsed {
+      border: none;
+      padding: 0;
+  }
+
+  /* If the sidebar is toggled open on a small screen, maybe overlay it */
+  /* Optional: Add overlay styles if needed when toggled open on small screens */
+  /* .layout-sidebar:not(.collapsed) { ... } */
+
+}
+
+/* Hide resizer when sidebar is collapsed */
+.layout-sidebar.collapsed .resizer {
+    display: none;
+}

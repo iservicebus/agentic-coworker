@@ -1,0 +1,106 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portal
+  namespace: aintegrator
+  labels:
+    app: portal
+    component: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: portal
+  template:
+    metadata:
+      labels:
+        app: portal
+        component: frontend
+    spec:
+      containers:
+      - name: portal
+        image: portal:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+          name: http
+          protocol: TCP
+        env:
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: PORTAL_PORT
+        - name: NEXTAUTH_URL
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: NEXTAUTH_URL
+        - name: NEXT_TELEMETRY_DISABLED
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: NEXT_TELEMETRY_DISABLED
+        - name: NODE_ENV
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: NODE_ENV
+        - name: NEXTAUTH_SECRET
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: NEXTAUTH_SECRET
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: DATABASE_URL
+        - name: SECRET_KEY
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: SECRET_KEY
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 40
+          periodSeconds: 30
+          timeoutSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+      restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: portal-service
+  namespace: aintegrator
+  labels:
+    app: portal
+spec:
+  type: NodePort
+  selector:
+    app: portal
+  ports:
+  - port: 3000
+    targetPort: 3000
+    nodePort: 30000
+    protocol: TCP
+    name: http

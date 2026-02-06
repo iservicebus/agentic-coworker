@@ -1,0 +1,55 @@
+{
+  "default": [
+    {
+      "username": "admin",
+      "firstName": "",
+      "lastName": "",
+      "email": "admin@example.com",
+      "enabled": true,
+      "credentials": [],
+      "attributes": {
+        "user_type": [
+          "human"
+        ]
+      },
+      "emailVerified": false,
+      "realmRoles": "",
+      "clientRoles": "",
+      "groups": ""
+    },
+    {
+      "username": "dev",
+      "firstName": "",
+      "lastName": "",
+      "email": "dev@example.com",
+      "enabled": true,
+      "credentials": [],
+      "attributes": {
+        "user_type": [
+          "human"
+        ]
+      },
+      "emailVerified": false,
+      "realmRoles": "",
+      "clientRoles": "",
+      "groups": ""
+    },
+    {
+      "username": "ops",
+      "firstName": "",
+      "lastName": "",
+      "email": "ops@example.com",
+      "enabled": true,
+      "credentials": [],
+      "attributes": {
+        "user_type": [
+          "human"
+        ]
+      },
+      "emailVerified": false,
+      "realmRoles": "",
+      "clientRoles": "",
+      "groups": ""
+    }
+  ]
+}

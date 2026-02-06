@@ -1,0 +1,139 @@
+{
+  "default":
+{
+    "agents":[
+        {
+            "username": "agent-admin",
+            "email": "aadmin@example.com",
+            "enabled": true,
+            "credentials": [{
+            "type": "password",
+            "value": "securepass",
+            "temporary": false
+            }],
+            "attributes": {
+                "user_type": ["agent"]
+            }
+
+        },
+        {
+            "username": "agent-dev",
+            "email": "adev@example.com",
+            "enabled": true,
+            "credentials": [{
+            "type": "password",
+            "value": "securepass",
+            "temporary": false
+            }],
+            "attributes": {
+                "user_type": ["agent"]
+            }
+
+        },
+        {
+            "username": "agent-ops",
+            "email": "aops@example.com",
+            "enabled": true,
+            "credentials": [{
+            "type": "password",
+            "value": "securepass",
+            "temporary": false
+            }],
+            "attributes": {
+                "user_type": ["agent"]
+            }
+
+        }   
+
+    ],
+
+    "users":[
+        {
+            "username": "admin",
+            "email": "admin@example.com",
+            "enabled": true,
+            "credentials": [{
+            "type": "password",
+            "value": "securepass",
+            "temporary": false
+            }],
+            "attributes": {
+                "user_type": ["human"]
+            },
+            "agents":[
+
+                {
+                "agent_id":"agent-admin",
+                "role": "owner",
+                "context":{}
+
+                },
+                {
+                "agent_id":"agent-dev",
+                "role": "admin",
+                "context":{}
+
+                },
+
+                {
+                "agent_id":"agent-ops",
+                "role": "admin",
+                "context":{}
+
+                }
+
+            ]
+        },
+        {
+            "username": "dev",
+            "email": "dev@example.com",
+            "enabled": true,
+            "credentials": [{
+            "type": "password",
+            "value": "securepass",
+            "temporary": false
+            }],
+
+            "attributes": {
+                "user_type": ["human"]
+            },
+
+
+
+            "agents":[
+
+                {
+                "agent_id":"agent-dev",
+                "role": "owner",
+                "context":{}
+
+                }
+
+
+            ]
+        },
+        {
+            "username": "ops",
+            "email": "ops@example.com",
+            "enabled": true,
+            "credentials": [{
+            "type": "password",
+            "value": "securepass",
+            "temporary": false
+            }],
+            "attributes": {
+                "user_type": ["human"]
+            },
+
+            "agents":[
+                {
+                "agent_id":"agent-ops",
+                "role": "owner",
+                "context":{}
+
+                }
+            ]
+        }   
+    ]
+}
+}

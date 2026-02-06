@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "000dd373-8651-47b7-9fcd-5d90baceb2e3",
+		"name": "external_connection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43844075"
+	},
+	"item": [
+		{
+			"name": "arxiv",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://export.arxiv.org/api/query?search_query=all:quantum+computing&start=0&max_results=3",
+					"protocol": "http",
+					"host": [
+						"export",
+						"arxiv",
+						"org"
+					],
+					"path": [
+						"api",
+						"query"
+					],
+					"query": [
+						{
+							"key": "search_query",
+							"value": "all:quantum+computing"
+						},
+						{
+							"key": "start",
+							"value": "0"
+						},
+						{
+							"key": "max_results",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "github",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "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",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.github.com/user/repos",
+					"protocol": "https",
+					"host": [
+						"api",
+						"github",
+						"com"
+					],
+					"path": [
+						"user",
+						"repos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

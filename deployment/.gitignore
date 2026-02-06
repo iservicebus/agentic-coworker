@@ -1,0 +1,7 @@
+# Ignore Kubernetes secrets (Docker uses existing .env.docker files from each project)
+kubernetes/secret.yaml
+
+# Ignore any generated or temporary files
+*.log
+*.tmp
+.DS_Store

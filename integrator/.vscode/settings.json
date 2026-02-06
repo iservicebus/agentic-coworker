@@ -1,0 +1,14 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "server": "localhost",
+            "port": 5432,
+            "driver": "PostgreSQL",
+            "name": "agent-portal",
+            "database": "agent-portal",
+            "username": "user",
+            "password": "password"
+        }
+    ]
+}

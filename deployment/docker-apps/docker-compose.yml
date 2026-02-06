@@ -1,0 +1,137 @@
+version: '3.8'
+
+services:
+  # Database Initialization - Runs once before app containers start
+  db-init:
+    image: ghcr.io/jingnanzhou/agent-ops:latest
+    container_name: db-init
+    command: init-defaults
+    #command: init-db
+
+    networks:
+      - aintegrator-backend
+    volumes:
+      - ../../integrator/.env.docker:/app/agent_ops/.env:ro
+      - ../../data:/app/data:ro
+    restart: "no"  # Only run once
+
+  # Agent Ops Utility - Long-running container for ad-hoc operations
+  # Starts automatically with docker-compose up
+  # Usage: docker exec agent-ops python -m agent_ops <command>
+  # Works from any directory - no need to cd to docker-compose location
+  agent-ops:
+    image: ghcr.io/jingnanzhou/agent-ops:latest
+    container_name: agent-ops
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["sleep infinity"]
+    networks:
+      - aintegrator-backend
+    volumes:
+      - ../../integrator/.env.docker:/app/agent_ops/.env:ro
+      - ../../data:/app/data
+    restart: unless-stopped
+
+  # Agent Studio - Next.js Frontend for AI Agent Management
+  agent-studio:
+    image: ghcr.io/jingnanzhou/agent-studio:latest
+    container_name: agent-studio-app
+    build:
+      context: ../../agent-studio
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    env_file:
+      - ../../agent-studio/.env.docker
+    networks:
+      - aintegrator-backend
+    restart: unless-stopped
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:3000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Integrator Service - Main Integration Service
+  integrator:
+    image: ghcr.io/jingnanzhou/integrator:latest
+    container_name: integrator-app
+    build:
+      context: ../../integrator
+      dockerfile: Dockerfile
+    ports:
+      - "6060:6060"
+    env_file:
+      - ../../integrator/.env.docker
+    volumes:
+      # Mount GCP credentials if available (optional)
+      - ${HOME}/.config/gcloud/application_default_credentials.json:/app/gcp_key.json:ro
+    networks:
+      - aintegrator-backend
+    restart: unless-stopped
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+      mcp-services:
+        condition: service_started
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:6060')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # MCP Services - Model Context Protocol Services
+  mcp-services:
+    image: ghcr.io/jingnanzhou/mcp-services:latest
+    container_name: mcp-services-app
+    build:
+      context: ../../mcp_services
+      dockerfile: Dockerfile
+    ports:
+      - "6666:6666"
+    env_file:
+      - ../../mcp_services/.env.docker
+    networks:
+      - aintegrator-backend
+    restart: unless-stopped
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:6666')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+  # Support Services - Supporting API Services
+  support-services:
+    image: ghcr.io/jingnanzhou/support-services:latest
+    container_name: support-services-app
+    build:
+      context: ../../support_services
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    env_file:
+      - ../../support_services/.env.docker
+    networks:
+      - aintegrator-backend
+    restart: unless-stopped
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:5000')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  aintegrator-backend:
+    external: true

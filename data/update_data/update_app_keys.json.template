@@ -1,0 +1,47 @@
+{
+  "default":[
+  {
+    "app_url": "https://sandbox.api.sap.com",
+    "agent_id": "agent-admin",
+    "secrets": {
+      "headers": {
+        "APIKey": "<Your APIKey>"
+      }
+    }
+  },
+  {
+
+    "app_url": "https://api.stlouisfed.org",
+    "agent_id": "agent-admin",
+    "secrets": {
+        "query":
+            {
+                "api_key": "<your api_key>"
+            }
+    }
+  },
+  {
+    "app_url": "https://api.sec-api.io",
+    "agent_id": "agent-admin",
+    "secrets": {
+      "headers":
+            {
+                "Authorization": "<your sec token>"
+            }
+
+      }
+  },
+  {
+    "app_url": "https://www.alphavantage.co/documentation/",
+    "agent_id": "agent-admin",
+    "secrets": {
+
+            "query":
+            {
+                "apikey": "<your apiKey>"
+            }
+        }
+    }
+
+]
+}

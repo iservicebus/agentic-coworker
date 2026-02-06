@@ -1,0 +1,35 @@
+{
+  "default":[
+    
+    {
+        "provider_id": "google",
+        "provider_name": "Google",
+        "provider_type": "google",
+        "clientId": "<your google client id>",
+        "clientSecret": "<your google client secret>"
+    },
+    {
+        "provider_id": "linkedin",
+        "provider_name": "Linkedin",
+        "provider_type": "linkedin",
+        "clientId": "<your linkedin client id>",
+        "clientSecret": "<your linkedin client secret>"
+    },
+    {
+        "provider_id": "github",
+        "provider_name": "Github",
+        "provider_type": "github",
+        "clientId": "<your github client id>",
+        "clientSecret": "<your github client secret>"
+    },
+    {
+        "provider_id": "servicenow",
+        "provider_name":"ServiceNow",
+        "provider_type":"servicenow",
+        "clientId": "<your servicenow client id>",
+        "clientSecret": "<your servicenow client secret>"
+
+    }
+
+]
+}

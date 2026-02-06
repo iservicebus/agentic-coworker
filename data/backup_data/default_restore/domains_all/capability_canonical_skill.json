@@ -1,0 +1,3799 @@
+{
+  "default": [
+    {
+      "capability_name": "marketing_automation_campaigns",
+      "canonical_skill_name": "marketing_automation_campaigns__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "marketing_automation_campaigns",
+      "canonical_skill_name": "marketing_automation_campaigns__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "marketing_automation_campaigns",
+      "canonical_skill_name": "marketing_automation_campaigns__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "marketing_automation_campaigns",
+      "canonical_skill_name": "marketing_automation_campaigns__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "marketing_automation_campaigns",
+      "canonical_skill_name": "marketing_automation_campaigns__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "lead_management_routing",
+      "canonical_skill_name": "lead_management_routing__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "lead_management_routing",
+      "canonical_skill_name": "lead_management_routing__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "lead_management_routing",
+      "canonical_skill_name": "lead_management_routing__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "lead_management_routing",
+      "canonical_skill_name": "lead_management_routing__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "lead_management_routing",
+      "canonical_skill_name": "lead_management_routing__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "crm_data_stewardship",
+      "canonical_skill_name": "crm_data_stewardship__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "crm_data_stewardship",
+      "canonical_skill_name": "crm_data_stewardship__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "crm_data_stewardship",
+      "canonical_skill_name": "crm_data_stewardship__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "crm_data_stewardship",
+      "canonical_skill_name": "crm_data_stewardship__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "crm_data_stewardship",
+      "canonical_skill_name": "crm_data_stewardship__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sales_operations_forecasting",
+      "canonical_skill_name": "sales_operations_forecasting__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sales_operations_forecasting",
+      "canonical_skill_name": "sales_operations_forecasting__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sales_operations_forecasting",
+      "canonical_skill_name": "sales_operations_forecasting__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sales_operations_forecasting",
+      "canonical_skill_name": "sales_operations_forecasting__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "cpq_deal_desk",
+      "canonical_skill_name": "cpq_deal_desk__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "cpq_deal_desk",
+      "canonical_skill_name": "cpq_deal_desk__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "cpq_deal_desk",
+      "canonical_skill_name": "cpq_deal_desk__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "cpq_deal_desk",
+      "canonical_skill_name": "cpq_deal_desk__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "order_capture_orchestration",
+      "canonical_skill_name": "order_capture_orchestration__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "order_capture_orchestration",
+      "canonical_skill_name": "order_capture_orchestration__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "order_capture_orchestration",
+      "canonical_skill_name": "order_capture_orchestration__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "order_capture_orchestration",
+      "canonical_skill_name": "order_capture_orchestration__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "order_capture_orchestration",
+      "canonical_skill_name": "order_capture_orchestration__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "commercial_billing_cash_coordination",
+      "canonical_skill_name": "commercial_billing_cash_coordination__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "commercial_billing_cash_coordination",
+      "canonical_skill_name": "commercial_billing_cash_coordination__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "commercial_billing_cash_coordination",
+      "canonical_skill_name": "commercial_billing_cash_coordination__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_service_case_management",
+      "canonical_skill_name": "customer_service_case_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_service_case_management",
+      "canonical_skill_name": "customer_service_case_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_service_case_management",
+      "canonical_skill_name": "customer_service_case_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_service_case_management",
+      "canonical_skill_name": "customer_service_case_management__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_service_case_management",
+      "canonical_skill_name": "customer_service_case_management__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_knowledge_self_service",
+      "canonical_skill_name": "customer_knowledge_self_service__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_knowledge_self_service",
+      "canonical_skill_name": "customer_knowledge_self_service__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_knowledge_self_service",
+      "canonical_skill_name": "customer_knowledge_self_service__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_knowledge_self_service",
+      "canonical_skill_name": "customer_knowledge_self_service__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_knowledge_self_service",
+      "canonical_skill_name": "customer_knowledge_self_service__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_knowledge_self_service",
+      "canonical_skill_name": "customer_knowledge_self_service__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_success_lifecycle",
+      "canonical_skill_name": "customer_success_lifecycle__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_success_lifecycle",
+      "canonical_skill_name": "customer_success_lifecycle__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_success_lifecycle",
+      "canonical_skill_name": "customer_success_lifecycle__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_success_lifecycle",
+      "canonical_skill_name": "customer_success_lifecycle__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_health_retention_analytics",
+      "canonical_skill_name": "customer_health_retention_analytics__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_health_retention_analytics",
+      "canonical_skill_name": "customer_health_retention_analytics__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_health_retention_analytics",
+      "canonical_skill_name": "customer_health_retention_analytics__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_health_retention_analytics",
+      "canonical_skill_name": "customer_health_retention_analytics__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "contract_lifecycle_management",
+      "canonical_skill_name": "contract_lifecycle_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "contract_lifecycle_management",
+      "canonical_skill_name": "contract_lifecycle_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "contract_lifecycle_management",
+      "canonical_skill_name": "contract_lifecycle_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "contract_lifecycle_management",
+      "canonical_skill_name": "contract_lifecycle_management__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "contract_lifecycle_management",
+      "canonical_skill_name": "contract_lifecycle_management__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "contract_lifecycle_management",
+      "canonical_skill_name": "contract_lifecycle_management__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "contract_lifecycle_management",
+      "canonical_skill_name": "contract_lifecycle_management__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "partner_channel_management",
+      "canonical_skill_name": "partner_channel_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "partner_channel_management",
+      "canonical_skill_name": "partner_channel_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "partner_channel_management",
+      "canonical_skill_name": "partner_channel_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "partner_channel_management",
+      "canonical_skill_name": "partner_channel_management__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "partner_channel_management",
+      "canonical_skill_name": "partner_channel_management__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "partner_channel_management",
+      "canonical_skill_name": "partner_channel_management__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mdf_incentives_programs",
+      "canonical_skill_name": "mdf_incentives_programs__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mdf_incentives_programs",
+      "canonical_skill_name": "mdf_incentives_programs__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mdf_incentives_programs",
+      "canonical_skill_name": "mdf_incentives_programs__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mdf_incentives_programs",
+      "canonical_skill_name": "mdf_incentives_programs__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mdf_incentives_programs",
+      "canonical_skill_name": "mdf_incentives_programs__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mdf_incentives_programs",
+      "canonical_skill_name": "mdf_incentives_programs__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mdf_incentives_programs",
+      "canonical_skill_name": "mdf_incentives_programs__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "portfolio_roadmap_governance",
+      "canonical_skill_name": "portfolio_roadmap_governance__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "portfolio_roadmap_governance",
+      "canonical_skill_name": "portfolio_roadmap_governance__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "portfolio_roadmap_governance",
+      "canonical_skill_name": "portfolio_roadmap_governance__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "portfolio_roadmap_governance",
+      "canonical_skill_name": "portfolio_roadmap_governance__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "portfolio_roadmap_governance",
+      "canonical_skill_name": "portfolio_roadmap_governance__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "requirements_backlog",
+      "canonical_skill_name": "requirements_backlog__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "finops",
+      "canonical_skill_name": "finops__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "requirements_backlog",
+      "canonical_skill_name": "requirements_backlog__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "requirements_backlog",
+      "canonical_skill_name": "requirements_backlog__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "design_systems_research",
+      "canonical_skill_name": "design_systems_research__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "design_systems_research",
+      "canonical_skill_name": "design_systems_research__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "design_systems_research",
+      "canonical_skill_name": "design_systems_research__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "plm_change_control",
+      "canonical_skill_name": "plm_change_control__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "plm_change_control",
+      "canonical_skill_name": "plm_change_control__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "plm_change_control",
+      "canonical_skill_name": "plm_change_control__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "plm_change_control",
+      "canonical_skill_name": "plm_change_control__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "software_engineering_delivery",
+      "canonical_skill_name": "software_engineering_delivery__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "software_engineering_delivery",
+      "canonical_skill_name": "software_engineering_delivery__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "software_engineering_delivery",
+      "canonical_skill_name": "software_engineering_delivery__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "software_engineering_delivery",
+      "canonical_skill_name": "software_engineering_delivery__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "canonical_skill_name": "source_control_code_review__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "canonical_skill_name": "source_control_code_review__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_control_code_review",
+      "canonical_skill_name": "source_control_code_review__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "secure_dev_compliance",
+      "canonical_skill_name": "secure_dev_compliance__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "secure_dev_compliance",
+      "canonical_skill_name": "secure_dev_compliance__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "secure_dev_compliance",
+      "canonical_skill_name": "secure_dev_compliance__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "secure_dev_compliance",
+      "canonical_skill_name": "secure_dev_compliance__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "secure_dev_compliance",
+      "canonical_skill_name": "secure_dev_compliance__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "artifact_registry",
+      "canonical_skill_name": "artifact_registry__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "artifact_registry",
+      "canonical_skill_name": "artifact_registry__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "artifact_registry",
+      "canonical_skill_name": "artifact_registry__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "artifact_registry",
+      "canonical_skill_name": "artifact_registry__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "release_management_handoff",
+      "canonical_skill_name": "release_management_handoff__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "release_management_handoff",
+      "canonical_skill_name": "release_management_handoff__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "release_management_handoff",
+      "canonical_skill_name": "release_management_handoff__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "release_management_handoff",
+      "canonical_skill_name": "release_management_handoff__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "release_management_handoff",
+      "canonical_skill_name": "release_management_handoff__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "release_management_handoff",
+      "canonical_skill_name": "release_management_handoff__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "dev_productivity_telemetry",
+      "canonical_skill_name": "dev_productivity_telemetry__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "dev_productivity_telemetry",
+      "canonical_skill_name": "dev_productivity_telemetry__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "dev_productivity_telemetry",
+      "canonical_skill_name": "dev_productivity_telemetry__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "dev_productivity_telemetry",
+      "canonical_skill_name": "dev_productivity_telemetry__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "dev_productivity_telemetry",
+      "canonical_skill_name": "dev_productivity_telemetry__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "gtm_readiness_launch",
+      "canonical_skill_name": "gtm_readiness_launch__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "gtm_readiness_launch",
+      "canonical_skill_name": "gtm_readiness_launch__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "gtm_readiness_launch",
+      "canonical_skill_name": "gtm_readiness_launch__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "gtm_readiness_launch",
+      "canonical_skill_name": "gtm_readiness_launch__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "gtm_readiness_launch",
+      "canonical_skill_name": "gtm_readiness_launch__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "value_pricing_configuration",
+      "canonical_skill_name": "value_pricing_configuration__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "value_pricing_configuration",
+      "canonical_skill_name": "value_pricing_configuration__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "value_pricing_configuration",
+      "canonical_skill_name": "value_pricing_configuration__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "value_pricing_configuration",
+      "canonical_skill_name": "value_pricing_configuration__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "value_pricing_configuration",
+      "canonical_skill_name": "value_pricing_configuration__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "demand_planning",
+      "canonical_skill_name": "demand_planning__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "demand_planning",
+      "canonical_skill_name": "demand_planning__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "demand_planning",
+      "canonical_skill_name": "demand_planning__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "demand_planning",
+      "canonical_skill_name": "demand_planning__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "demand_planning",
+      "canonical_skill_name": "demand_planning__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "demand_planning",
+      "canonical_skill_name": "demand_planning__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sop_ibp",
+      "canonical_skill_name": "sop_ibp__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sop_ibp",
+      "canonical_skill_name": "sop_ibp__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sop_ibp",
+      "canonical_skill_name": "sop_ibp__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sop_ibp",
+      "canonical_skill_name": "sop_ibp__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_to_pay",
+      "canonical_skill_name": "source_to_pay__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_to_pay",
+      "canonical_skill_name": "source_to_pay__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "source_to_pay",
+      "canonical_skill_name": "source_to_pay__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "supplier_management",
+      "canonical_skill_name": "supplier_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "supplier_management",
+      "canonical_skill_name": "supplier_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "supplier_management",
+      "canonical_skill_name": "supplier_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "supplier_management",
+      "canonical_skill_name": "supplier_management__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "supplier_management",
+      "canonical_skill_name": "supplier_management__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "manufacturing_execution",
+      "canonical_skill_name": "manufacturing_execution__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "manufacturing_execution",
+      "canonical_skill_name": "manufacturing_execution__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "manufacturing_execution",
+      "canonical_skill_name": "manufacturing_execution__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "manufacturing_execution",
+      "canonical_skill_name": "manufacturing_execution__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "quality_management",
+      "canonical_skill_name": "quality_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "quality_management",
+      "canonical_skill_name": "quality_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "quality_management",
+      "canonical_skill_name": "quality_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "quality_management",
+      "canonical_skill_name": "quality_management__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "logistics_inventory_ops",
+      "canonical_skill_name": "logistics_inventory_ops__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "logistics_inventory_ops",
+      "canonical_skill_name": "logistics_inventory_ops__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "logistics_inventory_ops",
+      "canonical_skill_name": "logistics_inventory_ops__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "fulfillment_returns",
+      "canonical_skill_name": "fulfillment_returns__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "fulfillment_returns",
+      "canonical_skill_name": "fulfillment_returns__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "fulfillment_returns",
+      "canonical_skill_name": "fulfillment_returns__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "fulfillment_returns",
+      "canonical_skill_name": "fulfillment_returns__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "control_tower_visibility",
+      "canonical_skill_name": "control_tower_visibility__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "control_tower_visibility",
+      "canonical_skill_name": "control_tower_visibility__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "control_tower_visibility",
+      "canonical_skill_name": "control_tower_visibility__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "control_tower_visibility",
+      "canonical_skill_name": "control_tower_visibility__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "control_tower_visibility",
+      "canonical_skill_name": "control_tower_visibility__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "procurement_requisition_po",
+      "canonical_skill_name": "procurement_requisition_po__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "procurement_requisition_po",
+      "canonical_skill_name": "procurement_requisition_po__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "procurement_requisition_po",
+      "canonical_skill_name": "procurement_requisition_po__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "procurement_requisition_po",
+      "canonical_skill_name": "procurement_requisition_po__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "receiving_3way_match",
+      "canonical_skill_name": "receiving_3way_match__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "receiving_3way_match",
+      "canonical_skill_name": "receiving_3way_match__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "receiving_3way_match",
+      "canonical_skill_name": "receiving_3way_match__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "receiving_3way_match",
+      "canonical_skill_name": "receiving_3way_match__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "general_ledger",
+      "canonical_skill_name": "general_ledger__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "general_ledger",
+      "canonical_skill_name": "general_ledger__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "general_ledger",
+      "canonical_skill_name": "general_ledger__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "general_ledger",
+      "canonical_skill_name": "general_ledger__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "close_consolidation",
+      "canonical_skill_name": "close_consolidation__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "close_consolidation",
+      "canonical_skill_name": "close_consolidation__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "close_consolidation",
+      "canonical_skill_name": "close_consolidation__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "close_consolidation",
+      "canonical_skill_name": "close_consolidation__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "close_consolidation",
+      "canonical_skill_name": "close_consolidation__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "close_consolidation",
+      "canonical_skill_name": "close_consolidation__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "management_reporting_bi",
+      "canonical_skill_name": "management_reporting_bi__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "management_reporting_bi",
+      "canonical_skill_name": "management_reporting_bi__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "management_reporting_bi",
+      "canonical_skill_name": "management_reporting_bi__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "planning_budgeting_forecasting",
+      "canonical_skill_name": "planning_budgeting_forecasting__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "planning_budgeting_forecasting",
+      "canonical_skill_name": "planning_budgeting_forecasting__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "planning_budgeting_forecasting",
+      "canonical_skill_name": "planning_budgeting_forecasting__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "planning_budgeting_forecasting",
+      "canonical_skill_name": "planning_budgeting_forecasting__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "planning_budgeting_forecasting",
+      "canonical_skill_name": "planning_budgeting_forecasting__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "planning_budgeting_forecasting",
+      "canonical_skill_name": "planning_budgeting_forecasting__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "treasury_cash",
+      "canonical_skill_name": "treasury_cash__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "treasury_cash",
+      "canonical_skill_name": "treasury_cash__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "treasury_cash",
+      "canonical_skill_name": "treasury_cash__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "treasury_cash",
+      "canonical_skill_name": "treasury_cash__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ap_ar_operations",
+      "canonical_skill_name": "ap_ar_operations__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ap_ar_operations",
+      "canonical_skill_name": "ap_ar_operations__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ap_ar_operations",
+      "canonical_skill_name": "ap_ar_operations__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ap_ar_operations",
+      "canonical_skill_name": "ap_ar_operations__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "revenue_recognition",
+      "canonical_skill_name": "revenue_recognition__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "revenue_recognition",
+      "canonical_skill_name": "revenue_recognition__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "revenue_recognition",
+      "canonical_skill_name": "revenue_recognition__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "revenue_recognition",
+      "canonical_skill_name": "revenue_recognition__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "revenue_recognition",
+      "canonical_skill_name": "revenue_recognition__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "tax_management",
+      "canonical_skill_name": "tax_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "tax_management",
+      "canonical_skill_name": "tax_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "tax_management",
+      "canonical_skill_name": "tax_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "tax_management",
+      "canonical_skill_name": "tax_management__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "statutory_reporting_audit",
+      "canonical_skill_name": "statutory_reporting_audit__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "statutory_reporting_audit",
+      "canonical_skill_name": "statutory_reporting_audit__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "statutory_reporting_audit",
+      "canonical_skill_name": "statutory_reporting_audit__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "statutory_reporting_audit",
+      "canonical_skill_name": "statutory_reporting_audit__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "statutory_reporting_audit",
+      "canonical_skill_name": "statutory_reporting_audit__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "strategy_okrs",
+      "canonical_skill_name": "strategy_okrs__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "strategy_okrs",
+      "canonical_skill_name": "strategy_okrs__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "strategy_okrs",
+      "canonical_skill_name": "strategy_okrs__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "strategy_okrs",
+      "canonical_skill_name": "strategy_okrs__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_portfolio_management",
+      "canonical_skill_name": "enterprise_portfolio_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_portfolio_management",
+      "canonical_skill_name": "enterprise_portfolio_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_portfolio_management",
+      "canonical_skill_name": "enterprise_portfolio_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_portfolio_management",
+      "canonical_skill_name": "enterprise_portfolio_management__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "pmo_delivery_governance",
+      "canonical_skill_name": "pmo_delivery_governance__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "pmo_delivery_governance",
+      "canonical_skill_name": "pmo_delivery_governance__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "pmo_delivery_governance",
+      "canonical_skill_name": "pmo_delivery_governance__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "pmo_delivery_governance",
+      "canonical_skill_name": "pmo_delivery_governance__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "pmo_delivery_governance",
+      "canonical_skill_name": "pmo_delivery_governance__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "pmo_delivery_governance",
+      "canonical_skill_name": "pmo_delivery_governance__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "capital_planning_benefits",
+      "canonical_skill_name": "capital_planning_benefits__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "capital_planning_benefits",
+      "canonical_skill_name": "capital_planning_benefits__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "capital_planning_benefits",
+      "canonical_skill_name": "capital_planning_benefits__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "capital_planning_benefits",
+      "canonical_skill_name": "capital_planning_benefits__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "capital_planning_benefits",
+      "canonical_skill_name": "capital_planning_benefits__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ma_divestitures",
+      "canonical_skill_name": "ma_divestitures__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ma_divestitures",
+      "canonical_skill_name": "ma_divestitures__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ma_divestitures",
+      "canonical_skill_name": "ma_divestitures__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ma_divestitures",
+      "canonical_skill_name": "ma_divestitures__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "legal_matter_contract",
+      "canonical_skill_name": "legal_matter_contract__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "legal_matter_contract",
+      "canonical_skill_name": "legal_matter_contract__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "legal_matter_contract",
+      "canonical_skill_name": "legal_matter_contract__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "legal_matter_contract",
+      "canonical_skill_name": "legal_matter_contract__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "legal_matter_contract",
+      "canonical_skill_name": "legal_matter_contract__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "legal_matter_contract",
+      "canonical_skill_name": "legal_matter_contract__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "investor_relations_comms",
+      "canonical_skill_name": "investor_relations_comms__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "investor_relations_comms",
+      "canonical_skill_name": "investor_relations_comms__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "investor_relations_comms",
+      "canonical_skill_name": "investor_relations_comms__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "investor_relations_comms",
+      "canonical_skill_name": "investor_relations_comms__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "investor_relations_comms",
+      "canonical_skill_name": "investor_relations_comms__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "professional_services_automation",
+      "canonical_skill_name": "professional_services_automation__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "professional_services_automation",
+      "canonical_skill_name": "professional_services_automation__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "professional_services_automation",
+      "canonical_skill_name": "professional_services_automation__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "professional_services_automation",
+      "canonical_skill_name": "professional_services_automation__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_accounting",
+      "canonical_skill_name": "project_accounting__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_accounting",
+      "canonical_skill_name": "project_accounting__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_accounting",
+      "canonical_skill_name": "project_accounting__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_accounting",
+      "canonical_skill_name": "project_accounting__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_accounting",
+      "canonical_skill_name": "project_accounting__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_accounting",
+      "canonical_skill_name": "project_accounting__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "shared_services_catalog",
+      "canonical_skill_name": "shared_services_catalog__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "shared_services_catalog",
+      "canonical_skill_name": "shared_services_catalog__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "shared_services_catalog",
+      "canonical_skill_name": "shared_services_catalog__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "shared_services_catalog",
+      "canonical_skill_name": "shared_services_catalog__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "shared_services_catalog",
+      "canonical_skill_name": "shared_services_catalog__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "shared_services_catalog",
+      "canonical_skill_name": "shared_services_catalog__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "service_performance_improvement",
+      "canonical_skill_name": "service_performance_improvement__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "service_performance_improvement",
+      "canonical_skill_name": "service_performance_improvement__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "service_performance_improvement",
+      "canonical_skill_name": "service_performance_improvement__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "service_performance_improvement",
+      "canonical_skill_name": "service_performance_improvement__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "service_performance_improvement",
+      "canonical_skill_name": "service_performance_improvement__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "real_estate_facilities",
+      "canonical_skill_name": "real_estate_facilities__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "real_estate_facilities",
+      "canonical_skill_name": "real_estate_facilities__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "real_estate_facilities",
+      "canonical_skill_name": "real_estate_facilities__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "real_estate_facilities",
+      "canonical_skill_name": "real_estate_facilities__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "real_estate_facilities",
+      "canonical_skill_name": "real_estate_facilities__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "real_estate_facilities",
+      "canonical_skill_name": "real_estate_facilities__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sustainability_esg",
+      "canonical_skill_name": "sustainability_esg__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sustainability_esg",
+      "canonical_skill_name": "sustainability_esg__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sustainability_esg",
+      "canonical_skill_name": "sustainability_esg__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sustainability_esg",
+      "canonical_skill_name": "sustainability_esg__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "automation_process_optimization",
+      "canonical_skill_name": "automation_process_optimization__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "automation_process_optimization",
+      "canonical_skill_name": "automation_process_optimization__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "automation_process_optimization",
+      "canonical_skill_name": "automation_process_optimization__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "automation_process_optimization",
+      "canonical_skill_name": "automation_process_optimization__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "canonical_skill_name": "itsm__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "canonical_skill_name": "itsm__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "canonical_skill_name": "itsm__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "itsm",
+      "canonical_skill_name": "itsm__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sre_observability",
+      "canonical_skill_name": "sre_observability__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sre_observability",
+      "canonical_skill_name": "sre_observability__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sre_observability",
+      "canonical_skill_name": "sre_observability__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sre_observability",
+      "canonical_skill_name": "sre_observability__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sre_observability",
+      "canonical_skill_name": "sre_observability__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "cloud_infrastructure_ops",
+      "canonical_skill_name": "cloud_infrastructure_ops__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "cloud_infrastructure_ops",
+      "canonical_skill_name": "cloud_infrastructure_ops__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "cloud_infrastructure_ops",
+      "canonical_skill_name": "cloud_infrastructure_ops__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "developer_experience_platform",
+      "canonical_skill_name": "developer_experience_platform__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "developer_experience_platform",
+      "canonical_skill_name": "developer_experience_platform__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "developer_experience_platform",
+      "canonical_skill_name": "developer_experience_platform__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "developer_experience_platform",
+      "canonical_skill_name": "developer_experience_platform__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "devops_ci_cd",
+      "canonical_skill_name": "devops_ci_cd__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "devops_ci_cd",
+      "canonical_skill_name": "devops_ci_cd__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "devops_ci_cd",
+      "canonical_skill_name": "devops_ci_cd__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "devops_ci_cd",
+      "canonical_skill_name": "devops_ci_cd__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "identity_access_management",
+      "canonical_skill_name": "identity_access_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "identity_access_management",
+      "canonical_skill_name": "identity_access_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "identity_access_management",
+      "canonical_skill_name": "identity_access_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "identity_access_management",
+      "canonical_skill_name": "identity_access_management__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_engineering_integration",
+      "canonical_skill_name": "data_engineering_integration__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_engineering_integration",
+      "canonical_skill_name": "data_engineering_integration__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_engineering_integration",
+      "canonical_skill_name": "data_engineering_integration__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_engineering_integration",
+      "canonical_skill_name": "data_engineering_integration__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_engineering_integration",
+      "canonical_skill_name": "data_engineering_integration__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_engineering_integration",
+      "canonical_skill_name": "data_engineering_integration__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_governance",
+      "canonical_skill_name": "data_governance__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_governance",
+      "canonical_skill_name": "data_governance__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_governance",
+      "canonical_skill_name": "data_governance__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "data_governance",
+      "canonical_skill_name": "data_governance__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "privacy_compliance",
+      "canonical_skill_name": "privacy_compliance__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "privacy_compliance",
+      "canonical_skill_name": "privacy_compliance__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "privacy_compliance",
+      "canonical_skill_name": "privacy_compliance__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "privacy_compliance",
+      "canonical_skill_name": "privacy_compliance__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mlops_ai_platform",
+      "canonical_skill_name": "mlops_ai_platform__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mlops_ai_platform",
+      "canonical_skill_name": "mlops_ai_platform__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mlops_ai_platform",
+      "canonical_skill_name": "mlops_ai_platform__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mlops_ai_platform",
+      "canonical_skill_name": "mlops_ai_platform__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mlops_ai_platform",
+      "canonical_skill_name": "mlops_ai_platform__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "mlops_ai_platform",
+      "canonical_skill_name": "mlops_ai_platform__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "security_operations",
+      "canonical_skill_name": "security_operations__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "security_operations",
+      "canonical_skill_name": "security_operations__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "security_operations",
+      "canonical_skill_name": "security_operations__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "api_integration_platform",
+      "canonical_skill_name": "api_integration_platform__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "api_integration_platform",
+      "canonical_skill_name": "api_integration_platform__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "api_integration_platform",
+      "canonical_skill_name": "api_integration_platform__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "api_integration_platform",
+      "canonical_skill_name": "api_integration_platform__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "api_integration_platform",
+      "canonical_skill_name": "api_integration_platform__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "finops",
+      "canonical_skill_name": "finops__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "finops",
+      "canonical_skill_name": "finops__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "finops",
+      "canonical_skill_name": "finops__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "finops",
+      "canonical_skill_name": "finops__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_data_platform_cdp",
+      "canonical_skill_name": "customer_data_platform_cdp__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_data_platform_cdp",
+      "canonical_skill_name": "customer_data_platform_cdp__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_data_platform_cdp",
+      "canonical_skill_name": "customer_data_platform_cdp__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "usage_metering_billing",
+      "canonical_skill_name": "usage_metering_billing__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "usage_metering_billing",
+      "canonical_skill_name": "usage_metering_billing__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "usage_metering_billing",
+      "canonical_skill_name": "usage_metering_billing__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "usage_metering_billing",
+      "canonical_skill_name": "usage_metering_billing__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "platform_product_management",
+      "canonical_skill_name": "platform_product_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "platform_product_management",
+      "canonical_skill_name": "platform_product_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "platform_product_management",
+      "canonical_skill_name": "platform_product_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "platform_product_management",
+      "canonical_skill_name": "platform_product_management__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "platform_product_management",
+      "canonical_skill_name": "platform_product_management__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "application_security_devsecops",
+      "canonical_skill_name": "application_security_devsecops__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "application_security_devsecops",
+      "canonical_skill_name": "application_security_devsecops__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "application_security_devsecops",
+      "canonical_skill_name": "application_security_devsecops__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "application_security_devsecops",
+      "canonical_skill_name": "application_security_devsecops__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "security_architecture_risk_compliance",
+      "canonical_skill_name": "security_architecture_risk_compliance__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "security_architecture_risk_compliance",
+      "canonical_skill_name": "security_architecture_risk_compliance__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "security_architecture_risk_compliance",
+      "canonical_skill_name": "security_architecture_risk_compliance__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "security_architecture_risk_compliance",
+      "canonical_skill_name": "security_architecture_risk_compliance__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "security_architecture_risk_compliance",
+      "canonical_skill_name": "security_architecture_risk_compliance__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "genai_platform_guardrails",
+      "canonical_skill_name": "genai_platform_guardrails__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "genai_platform_guardrails",
+      "canonical_skill_name": "genai_platform_guardrails__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "genai_platform_guardrails",
+      "canonical_skill_name": "genai_platform_guardrails__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "genai_platform_guardrails",
+      "canonical_skill_name": "genai_platform_guardrails__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "genai_platform_guardrails",
+      "canonical_skill_name": "genai_platform_guardrails__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "genai_platform_guardrails",
+      "canonical_skill_name": "genai_platform_guardrails__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_risk_management",
+      "canonical_skill_name": "enterprise_risk_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_risk_management",
+      "canonical_skill_name": "enterprise_risk_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_risk_management",
+      "canonical_skill_name": "enterprise_risk_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_risk_management",
+      "canonical_skill_name": "enterprise_risk_management__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_risk_management",
+      "canonical_skill_name": "enterprise_risk_management__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_risk_management",
+      "canonical_skill_name": "enterprise_risk_management__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "policy_control_management",
+      "canonical_skill_name": "policy_control_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "policy_control_management",
+      "canonical_skill_name": "policy_control_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "policy_control_management",
+      "canonical_skill_name": "policy_control_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "policy_control_management",
+      "canonical_skill_name": "policy_control_management__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "policy_control_management",
+      "canonical_skill_name": "policy_control_management__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "internal_audit",
+      "canonical_skill_name": "internal_audit__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "internal_audit",
+      "canonical_skill_name": "internal_audit__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "internal_audit",
+      "canonical_skill_name": "internal_audit__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "internal_audit",
+      "canonical_skill_name": "internal_audit__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "internal_audit",
+      "canonical_skill_name": "internal_audit__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "internal_audit",
+      "canonical_skill_name": "internal_audit__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "issue_remediation_management",
+      "canonical_skill_name": "issue_remediation_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "issue_remediation_management",
+      "canonical_skill_name": "issue_remediation_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "issue_remediation_management",
+      "canonical_skill_name": "issue_remediation_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "issue_remediation_management",
+      "canonical_skill_name": "issue_remediation_management__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "issue_remediation_management",
+      "canonical_skill_name": "issue_remediation_management__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "issue_remediation_management",
+      "canonical_skill_name": "issue_remediation_management__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "third_party_risk_management",
+      "canonical_skill_name": "third_party_risk_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "third_party_risk_management",
+      "canonical_skill_name": "third_party_risk_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "third_party_risk_management",
+      "canonical_skill_name": "third_party_risk_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "third_party_risk_management",
+      "canonical_skill_name": "third_party_risk_management__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "privacy_compliance_risk",
+      "canonical_skill_name": "privacy_compliance_risk__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "privacy_compliance_risk",
+      "canonical_skill_name": "privacy_compliance_risk__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "privacy_compliance_risk",
+      "canonical_skill_name": "privacy_compliance_risk__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "privacy_compliance_risk",
+      "canonical_skill_name": "privacy_compliance_risk__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "privacy_compliance_risk",
+      "canonical_skill_name": "privacy_compliance_risk__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "business_continuity_dr",
+      "canonical_skill_name": "business_continuity_dr__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "business_continuity_dr",
+      "canonical_skill_name": "business_continuity_dr__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "business_continuity_dr",
+      "canonical_skill_name": "business_continuity_dr__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "business_continuity_dr",
+      "canonical_skill_name": "business_continuity_dr__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ethics_training",
+      "canonical_skill_name": "ethics_training__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ethics_training",
+      "canonical_skill_name": "ethics_training__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ethics_training",
+      "canonical_skill_name": "ethics_training__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ethics_training",
+      "canonical_skill_name": "ethics_training__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ethics_training",
+      "canonical_skill_name": "ethics_training__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ethics_training",
+      "canonical_skill_name": "ethics_training__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ethics_training",
+      "canonical_skill_name": "ethics_training__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "profiles_identity_graph",
+      "canonical_skill_name": "profiles_identity_graph__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "profiles_identity_graph",
+      "canonical_skill_name": "profiles_identity_graph__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "profiles_identity_graph",
+      "canonical_skill_name": "profiles_identity_graph__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "profiles_identity_graph",
+      "canonical_skill_name": "profiles_identity_graph__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "profiles_identity_graph",
+      "canonical_skill_name": "profiles_identity_graph__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "profiles_identity_graph",
+      "canonical_skill_name": "profiles_identity_graph__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "messaging",
+      "canonical_skill_name": "messaging__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "messaging",
+      "canonical_skill_name": "messaging__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "messaging",
+      "canonical_skill_name": "messaging__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "messaging",
+      "canonical_skill_name": "messaging__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "canonical_skill_name": "email_experiences__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "canonical_skill_name": "email_experiences__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "canonical_skill_name": "email_experiences__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "canonical_skill_name": "email_experiences__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "email_experiences",
+      "canonical_skill_name": "email_experiences__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "voice_video_meetings",
+      "canonical_skill_name": "voice_video_meetings__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "voice_video_meetings",
+      "canonical_skill_name": "voice_video_meetings__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "voice_video_meetings",
+      "canonical_skill_name": "voice_video_meetings__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "live_streaming",
+      "canonical_skill_name": "live_streaming__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "live_streaming",
+      "canonical_skill_name": "live_streaming__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "live_streaming",
+      "canonical_skill_name": "live_streaming__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "feeds_recommendations",
+      "canonical_skill_name": "feeds_recommendations__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "feeds_recommendations",
+      "canonical_skill_name": "feeds_recommendations__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "feeds_recommendations",
+      "canonical_skill_name": "feeds_recommendations__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "communities_governance",
+      "canonical_skill_name": "communities_governance__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "communities_governance",
+      "canonical_skill_name": "communities_governance__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "communities_governance",
+      "canonical_skill_name": "communities_governance__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "communities_governance",
+      "canonical_skill_name": "communities_governance__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "communities_governance",
+      "canonical_skill_name": "communities_governance__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_creation_publishing",
+      "canonical_skill_name": "content_creation_publishing__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_creation_publishing",
+      "canonical_skill_name": "content_creation_publishing__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_creation_publishing",
+      "canonical_skill_name": "content_creation_publishing__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_creation_publishing",
+      "canonical_skill_name": "content_creation_publishing__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_creation_publishing",
+      "canonical_skill_name": "content_creation_publishing__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_creation_publishing",
+      "canonical_skill_name": "content_creation_publishing__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "trust_safety",
+      "canonical_skill_name": "trust_safety__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "trust_safety",
+      "canonical_skill_name": "trust_safety__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "trust_safety",
+      "canonical_skill_name": "trust_safety__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "trust_safety",
+      "canonical_skill_name": "trust_safety__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "notifications_growth",
+      "canonical_skill_name": "notifications_growth__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "notifications_growth",
+      "canonical_skill_name": "notifications_growth__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "notifications_growth",
+      "canonical_skill_name": "notifications_growth__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "notifications_growth",
+      "canonical_skill_name": "notifications_growth__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "notifications_growth",
+      "canonical_skill_name": "notifications_growth__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "creator_tools_analytics",
+      "canonical_skill_name": "creator_tools_analytics__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "creator_tools_analytics",
+      "canonical_skill_name": "creator_tools_analytics__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "creator_tools_analytics",
+      "canonical_skill_name": "creator_tools_analytics__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "creator_tools_analytics",
+      "canonical_skill_name": "creator_tools_analytics__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "creator_tools_analytics",
+      "canonical_skill_name": "creator_tools_analytics__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "privacy_encryption",
+      "canonical_skill_name": "privacy_encryption__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "privacy_encryption",
+      "canonical_skill_name": "privacy_encryption__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "privacy_encryption",
+      "canonical_skill_name": "privacy_encryption__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "loyalty_referrals_rewards",
+      "canonical_skill_name": "loyalty_referrals_rewards__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "loyalty_referrals_rewards",
+      "canonical_skill_name": "loyalty_referrals_rewards__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "loyalty_referrals_rewards",
+      "canonical_skill_name": "loyalty_referrals_rewards__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "loyalty_referrals_rewards",
+      "canonical_skill_name": "loyalty_referrals_rewards__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "loyalty_referrals_rewards",
+      "canonical_skill_name": "loyalty_referrals_rewards__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "document_sheet_slide_editors",
+      "canonical_skill_name": "document_sheet_slide_editors__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "document_sheet_slide_editors",
+      "canonical_skill_name": "document_sheet_slide_editors__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "document_sheet_slide_editors",
+      "canonical_skill_name": "document_sheet_slide_editors__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "document_sheet_slide_editors",
+      "canonical_skill_name": "document_sheet_slide_editors__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "document_sheet_slide_editors",
+      "canonical_skill_name": "document_sheet_slide_editors__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "document_sheet_slide_editors",
+      "canonical_skill_name": "document_sheet_slide_editors__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "document_sheet_slide_editors",
+      "canonical_skill_name": "document_sheet_slide_editors__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "real_time_coauthoring",
+      "canonical_skill_name": "real_time_coauthoring__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "real_time_coauthoring",
+      "canonical_skill_name": "real_time_coauthoring__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "real_time_coauthoring",
+      "canonical_skill_name": "real_time_coauthoring__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "real_time_coauthoring",
+      "canonical_skill_name": "real_time_coauthoring__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "real_time_coauthoring",
+      "canonical_skill_name": "real_time_coauthoring__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "comments_approvals",
+      "canonical_skill_name": "comments_approvals__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "comments_approvals",
+      "canonical_skill_name": "comments_approvals__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "comments_approvals",
+      "canonical_skill_name": "comments_approvals__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "comments_approvals",
+      "canonical_skill_name": "comments_approvals__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "comments_approvals",
+      "canonical_skill_name": "comments_approvals__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "comments_approvals",
+      "canonical_skill_name": "comments_approvals__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "knowledge_base_wiki",
+      "canonical_skill_name": "knowledge_base_wiki__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "knowledge_base_wiki",
+      "canonical_skill_name": "knowledge_base_wiki__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "knowledge_base_wiki",
+      "canonical_skill_name": "knowledge_base_wiki__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "knowledge_base_wiki",
+      "canonical_skill_name": "knowledge_base_wiki__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "knowledge_base_wiki",
+      "canonical_skill_name": "knowledge_base_wiki__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "knowledge_base_wiki",
+      "canonical_skill_name": "knowledge_base_wiki__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "whiteboards_diagramming",
+      "canonical_skill_name": "whiteboards_diagramming__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "whiteboards_diagramming",
+      "canonical_skill_name": "whiteboards_diagramming__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "whiteboards_diagramming",
+      "canonical_skill_name": "whiteboards_diagramming__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "whiteboards_diagramming",
+      "canonical_skill_name": "whiteboards_diagramming__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "canonical_skill_name": "file_storage_sync__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "canonical_skill_name": "file_storage_sync__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "file_storage_sync",
+      "canonical_skill_name": "file_storage_sync__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sharing_permissions",
+      "canonical_skill_name": "sharing_permissions__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sharing_permissions",
+      "canonical_skill_name": "sharing_permissions__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sharing_permissions",
+      "canonical_skill_name": "sharing_permissions__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "sharing_permissions",
+      "canonical_skill_name": "sharing_permissions__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "meeting_notes_transcription",
+      "canonical_skill_name": "meeting_notes_transcription__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "meeting_notes_transcription",
+      "canonical_skill_name": "meeting_notes_transcription__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "meeting_notes_transcription",
+      "canonical_skill_name": "meeting_notes_transcription__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "meeting_notes_transcription",
+      "canonical_skill_name": "meeting_notes_transcription__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_search_discovery",
+      "canonical_skill_name": "enterprise_search_discovery__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_search_discovery",
+      "canonical_skill_name": "enterprise_search_discovery__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_search_discovery",
+      "canonical_skill_name": "enterprise_search_discovery__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "enterprise_search_discovery",
+      "canonical_skill_name": "enterprise_search_discovery__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "retention_ediscovery",
+      "canonical_skill_name": "retention_ediscovery__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "retention_ediscovery",
+      "canonical_skill_name": "retention_ediscovery__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "retention_ediscovery",
+      "canonical_skill_name": "retention_ediscovery__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "retention_ediscovery",
+      "canonical_skill_name": "retention_ediscovery__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "retention_ediscovery",
+      "canonical_skill_name": "retention_ediscovery__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "integrations_apis",
+      "canonical_skill_name": "integrations_apis__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "integrations_apis",
+      "canonical_skill_name": "integrations_apis__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "integrations_apis",
+      "canonical_skill_name": "integrations_apis__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "integrations_apis",
+      "canonical_skill_name": "integrations_apis__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_cms_dam",
+      "canonical_skill_name": "content_cms_dam__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_cms_dam",
+      "canonical_skill_name": "content_cms_dam__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_cms_dam",
+      "canonical_skill_name": "content_cms_dam__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_cms_dam",
+      "canonical_skill_name": "content_cms_dam__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_cms_dam",
+      "canonical_skill_name": "content_cms_dam__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_cms_dam",
+      "canonical_skill_name": "content_cms_dam__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "content_cms_dam",
+      "canonical_skill_name": "content_cms_dam__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "catalog_listings",
+      "canonical_skill_name": "catalog_listings__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "catalog_listings",
+      "canonical_skill_name": "catalog_listings__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "catalog_listings",
+      "canonical_skill_name": "catalog_listings__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "catalog_listings",
+      "canonical_skill_name": "catalog_listings__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "catalog_listings",
+      "canonical_skill_name": "catalog_listings__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "catalog_listings",
+      "canonical_skill_name": "catalog_listings__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "catalog_listings",
+      "canonical_skill_name": "catalog_listings__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "catalog_listings",
+      "canonical_skill_name": "catalog_listings__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "search_merchandising",
+      "canonical_skill_name": "search_merchandising__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "search_merchandising",
+      "canonical_skill_name": "search_merchandising__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "search_merchandising",
+      "canonical_skill_name": "search_merchandising__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "search_merchandising",
+      "canonical_skill_name": "search_merchandising__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "pricing_promotions",
+      "canonical_skill_name": "pricing_promotions__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "pricing_promotions",
+      "canonical_skill_name": "pricing_promotions__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "pricing_promotions",
+      "canonical_skill_name": "pricing_promotions__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "pricing_promotions",
+      "canonical_skill_name": "pricing_promotions__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "pricing_promotions",
+      "canonical_skill_name": "pricing_promotions__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "cart_checkout",
+      "canonical_skill_name": "cart_checkout__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "cart_checkout",
+      "canonical_skill_name": "cart_checkout__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "cart_checkout",
+      "canonical_skill_name": "cart_checkout__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "cart_checkout",
+      "canonical_skill_name": "cart_checkout__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "cart_checkout",
+      "canonical_skill_name": "cart_checkout__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "order_lifecycle_oms",
+      "canonical_skill_name": "order_lifecycle_oms__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "order_lifecycle_oms",
+      "canonical_skill_name": "order_lifecycle_oms__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "order_lifecycle_oms",
+      "canonical_skill_name": "order_lifecycle_oms__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "order_lifecycle_oms",
+      "canonical_skill_name": "order_lifecycle_oms__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "order_lifecycle_oms",
+      "canonical_skill_name": "order_lifecycle_oms__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "order_lifecycle_oms",
+      "canonical_skill_name": "order_lifecycle_oms__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "returns_rma",
+      "canonical_skill_name": "returns_rma__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "returns_rma",
+      "canonical_skill_name": "returns_rma__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "returns_rma",
+      "canonical_skill_name": "returns_rma__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "returns_rma",
+      "canonical_skill_name": "returns_rma__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "returns_rma",
+      "canonical_skill_name": "returns_rma__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "seller_tools_onboarding",
+      "canonical_skill_name": "seller_tools_onboarding__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "seller_tools_onboarding",
+      "canonical_skill_name": "seller_tools_onboarding__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "seller_tools_onboarding",
+      "canonical_skill_name": "seller_tools_onboarding__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "seller_tools_onboarding",
+      "canonical_skill_name": "seller_tools_onboarding__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "seller_tools_onboarding",
+      "canonical_skill_name": "seller_tools_onboarding__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "seller_tools_onboarding",
+      "canonical_skill_name": "seller_tools_onboarding__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "risk_marketplace_trust",
+      "canonical_skill_name": "risk_marketplace_trust__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "risk_marketplace_trust",
+      "canonical_skill_name": "risk_marketplace_trust__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "risk_marketplace_trust",
+      "canonical_skill_name": "risk_marketplace_trust__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_service_tools",
+      "canonical_skill_name": "customer_service_tools__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_service_tools",
+      "canonical_skill_name": "customer_service_tools__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_service_tools",
+      "canonical_skill_name": "customer_service_tools__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_service_tools",
+      "canonical_skill_name": "customer_service_tools__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "customer_service_tools",
+      "canonical_skill_name": "customer_service_tools__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "disputes_chargebacks",
+      "canonical_skill_name": "disputes_chargebacks__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "disputes_chargebacks",
+      "canonical_skill_name": "disputes_chargebacks__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "disputes_chargebacks",
+      "canonical_skill_name": "disputes_chargebacks__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "disputes_chargebacks",
+      "canonical_skill_name": "disputes_chargebacks__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "disputes_chargebacks",
+      "canonical_skill_name": "disputes_chargebacks__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "commerce_analytics_bi",
+      "canonical_skill_name": "commerce_analytics_bi__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "commerce_analytics_bi",
+      "canonical_skill_name": "commerce_analytics_bi__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "commerce_analytics_bi",
+      "canonical_skill_name": "commerce_analytics_bi__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "commerce_analytics_bi",
+      "canonical_skill_name": "commerce_analytics_bi__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "commerce_analytics_bi",
+      "canonical_skill_name": "commerce_analytics_bi__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "store_ops_pos",
+      "canonical_skill_name": "store_ops_pos__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "store_ops_pos",
+      "canonical_skill_name": "store_ops_pos__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "store_ops_pos",
+      "canonical_skill_name": "store_ops_pos__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "bopis_boris",
+      "canonical_skill_name": "bopis_boris__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "bopis_boris",
+      "canonical_skill_name": "bopis_boris__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "bopis_boris",
+      "canonical_skill_name": "bopis_boris__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "bopis_boris",
+      "canonical_skill_name": "bopis_boris__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "bopis_boris",
+      "canonical_skill_name": "bopis_boris__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "bopis_boris",
+      "canonical_skill_name": "bopis_boris__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "identity_proofing",
+      "canonical_skill_name": "identity_proofing__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "identity_proofing",
+      "canonical_skill_name": "identity_proofing__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "identity_proofing",
+      "canonical_skill_name": "identity_proofing__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "identity_proofing",
+      "canonical_skill_name": "identity_proofing__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "authentication",
+      "canonical_skill_name": "authentication__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "authentication",
+      "canonical_skill_name": "authentication__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "authentication",
+      "canonical_skill_name": "authentication__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "authentication",
+      "canonical_skill_name": "authentication__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "authorization_entitlements",
+      "canonical_skill_name": "authorization_entitlements__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "authorization_entitlements",
+      "canonical_skill_name": "authorization_entitlements__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "authorization_entitlements",
+      "canonical_skill_name": "authorization_entitlements__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "consent_privacy",
+      "canonical_skill_name": "consent_privacy__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "consent_privacy",
+      "canonical_skill_name": "consent_privacy__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "consent_privacy",
+      "canonical_skill_name": "consent_privacy__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "risk_scoring_fraud",
+      "canonical_skill_name": "risk_scoring_fraud__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "risk_scoring_fraud",
+      "canonical_skill_name": "risk_scoring_fraud__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "risk_scoring_fraud",
+      "canonical_skill_name": "risk_scoring_fraud__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "payment_processing",
+      "canonical_skill_name": "payment_processing__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "payment_processing",
+      "canonical_skill_name": "payment_processing__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "payment_processing",
+      "canonical_skill_name": "payment_processing__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "payment_processing",
+      "canonical_skill_name": "payment_processing__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "payment_processing",
+      "canonical_skill_name": "payment_processing__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "bank_linking_payouts",
+      "canonical_skill_name": "bank_linking_payouts__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "bank_linking_payouts",
+      "canonical_skill_name": "bank_linking_payouts__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "bank_linking_payouts",
+      "canonical_skill_name": "bank_linking_payouts__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "bank_linking_payouts",
+      "canonical_skill_name": "bank_linking_payouts__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "bank_linking_payouts",
+      "canonical_skill_name": "bank_linking_payouts__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "wallets_cards",
+      "canonical_skill_name": "wallets_cards__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "wallets_cards",
+      "canonical_skill_name": "wallets_cards__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "wallets_cards",
+      "canonical_skill_name": "wallets_cards__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "wallets_cards",
+      "canonical_skill_name": "wallets_cards__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "recurring_billing_dunning",
+      "canonical_skill_name": "recurring_billing_dunning__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "recurring_billing_dunning",
+      "canonical_skill_name": "recurring_billing_dunning__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "recurring_billing_dunning",
+      "canonical_skill_name": "recurring_billing_dunning__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "recurring_billing_dunning",
+      "canonical_skill_name": "recurring_billing_dunning__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "disputes",
+      "canonical_skill_name": "disputes__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "disputes",
+      "canonical_skill_name": "disputes__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "disputes",
+      "canonical_skill_name": "disputes__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "disputes",
+      "canonical_skill_name": "disputes__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "disputes",
+      "canonical_skill_name": "disputes__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ledger_reporting",
+      "canonical_skill_name": "ledger_reporting__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ledger_reporting",
+      "canonical_skill_name": "ledger_reporting__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ledger_reporting",
+      "canonical_skill_name": "ledger_reporting__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "ledger_reporting",
+      "canonical_skill_name": "ledger_reporting__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "regulatory_operations",
+      "canonical_skill_name": "regulatory_operations__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "regulatory_operations",
+      "canonical_skill_name": "regulatory_operations__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "regulatory_operations",
+      "canonical_skill_name": "regulatory_operations__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "regulatory_operations",
+      "canonical_skill_name": "regulatory_operations__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "regulatory_operations",
+      "canonical_skill_name": "regulatory_operations__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "developer_apis_sandbox",
+      "canonical_skill_name": "developer_apis_sandbox__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "developer_apis_sandbox",
+      "canonical_skill_name": "developer_apis_sandbox__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "developer_apis_sandbox",
+      "canonical_skill_name": "developer_apis_sandbox__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "developer_apis_sandbox",
+      "canonical_skill_name": "developer_apis_sandbox__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "entitlement_service",
+      "canonical_skill_name": "entitlement_service__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "entitlement_service",
+      "canonical_skill_name": "entitlement_service__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "entitlement_service",
+      "canonical_skill_name": "entitlement_service__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "refunds_credits",
+      "canonical_skill_name": "refunds_credits__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "refunds_credits",
+      "canonical_skill_name": "refunds_credits__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "refunds_credits",
+      "canonical_skill_name": "refunds_credits__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "refunds_credits",
+      "canonical_skill_name": "refunds_credits__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "refunds_credits",
+      "canonical_skill_name": "refunds_credits__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "task_management",
+      "canonical_skill_name": "task_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "task_management",
+      "canonical_skill_name": "task_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "task_management",
+      "canonical_skill_name": "task_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "task_management",
+      "canonical_skill_name": "task_management__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "task_management",
+      "canonical_skill_name": "task_management__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "task_management",
+      "canonical_skill_name": "task_management__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_portfolio",
+      "canonical_skill_name": "project_portfolio__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_portfolio",
+      "canonical_skill_name": "project_portfolio__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_portfolio",
+      "canonical_skill_name": "project_portfolio__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_portfolio",
+      "canonical_skill_name": "project_portfolio__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_portfolio",
+      "canonical_skill_name": "project_portfolio__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_portfolio",
+      "canonical_skill_name": "project_portfolio__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "project_portfolio",
+      "canonical_skill_name": "project_portfolio__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "okr_goal_management",
+      "canonical_skill_name": "okr_goal_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "okr_goal_management",
+      "canonical_skill_name": "okr_goal_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "okr_goal_management",
+      "canonical_skill_name": "okr_goal_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "okr_goal_management",
+      "canonical_skill_name": "okr_goal_management__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "canonical_skill_name": "calendars_scheduling__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "canonical_skill_name": "calendars_scheduling__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "canonical_skill_name": "calendars_scheduling__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "canonical_skill_name": "calendars_scheduling__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "calendars_scheduling",
+      "canonical_skill_name": "calendars_scheduling__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "dashboards_reporting",
+      "canonical_skill_name": "dashboards_reporting__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "dashboards_reporting",
+      "canonical_skill_name": "dashboards_reporting__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "dashboards_reporting",
+      "canonical_skill_name": "dashboards_reporting__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "dashboards_reporting",
+      "canonical_skill_name": "dashboards_reporting__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "dashboards_reporting",
+      "canonical_skill_name": "dashboards_reporting__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "forms_surveys",
+      "canonical_skill_name": "forms_surveys__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "forms_surveys",
+      "canonical_skill_name": "forms_surveys__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "forms_surveys",
+      "canonical_skill_name": "forms_surveys__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "forms_surveys",
+      "canonical_skill_name": "forms_surveys__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "approvals_workflows",
+      "canonical_skill_name": "approvals_workflows__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "approvals_workflows",
+      "canonical_skill_name": "approvals_workflows__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "approvals_workflows",
+      "canonical_skill_name": "approvals_workflows__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "approvals_workflows",
+      "canonical_skill_name": "approvals_workflows__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "approvals_workflows",
+      "canonical_skill_name": "approvals_workflows__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "e_signature_agreements",
+      "canonical_skill_name": "e_signature_agreements__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "e_signature_agreements",
+      "canonical_skill_name": "e_signature_agreements__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "e_signature_agreements",
+      "canonical_skill_name": "e_signature_agreements__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "e_signature_agreements",
+      "canonical_skill_name": "e_signature_agreements__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "meeting_productivity",
+      "canonical_skill_name": "meeting_productivity__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "meeting_productivity",
+      "canonical_skill_name": "meeting_productivity__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "meeting_productivity",
+      "canonical_skill_name": "meeting_productivity__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "meeting_productivity",
+      "canonical_skill_name": "meeting_productivity__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "admin_policies_integrations",
+      "canonical_skill_name": "admin_policies_integrations__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "admin_policies_integrations",
+      "canonical_skill_name": "admin_policies_integrations__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "admin_policies_integrations",
+      "canonical_skill_name": "admin_policies_integrations__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "admin_policies_integrations",
+      "canonical_skill_name": "admin_policies_integrations__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "experiment_platform",
+      "canonical_skill_name": "experiment_platform__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "experiment_platform",
+      "canonical_skill_name": "experiment_platform__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "experiment_platform",
+      "canonical_skill_name": "experiment_platform__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "experiment_platform",
+      "canonical_skill_name": "experiment_platform__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "talent_acquisition",
+      "canonical_skill_name": "talent_acquisition__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "talent_acquisition",
+      "canonical_skill_name": "talent_acquisition__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "talent_acquisition",
+      "canonical_skill_name": "talent_acquisition__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "talent_acquisition",
+      "canonical_skill_name": "talent_acquisition__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "onboarding_offboarding",
+      "canonical_skill_name": "onboarding_offboarding__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "onboarding_offboarding",
+      "canonical_skill_name": "onboarding_offboarding__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "onboarding_offboarding",
+      "canonical_skill_name": "onboarding_offboarding__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "onboarding_offboarding",
+      "canonical_skill_name": "onboarding_offboarding__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "org_position_management",
+      "canonical_skill_name": "org_position_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "org_position_management",
+      "canonical_skill_name": "org_position_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "org_position_management",
+      "canonical_skill_name": "org_position_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "org_position_management",
+      "canonical_skill_name": "org_position_management__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "org_position_management",
+      "canonical_skill_name": "org_position_management__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "time_payroll",
+      "canonical_skill_name": "time_payroll__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "time_payroll",
+      "canonical_skill_name": "time_payroll__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "time_payroll",
+      "canonical_skill_name": "time_payroll__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "time_payroll",
+      "canonical_skill_name": "time_payroll__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "benefits_administration",
+      "canonical_skill_name": "benefits_administration__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "benefits_administration",
+      "canonical_skill_name": "benefits_administration__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "benefits_administration",
+      "canonical_skill_name": "benefits_administration__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "benefits_administration",
+      "canonical_skill_name": "benefits_administration__create",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "benefits_administration",
+      "canonical_skill_name": "benefits_administration__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "benefits_administration",
+      "canonical_skill_name": "benefits_administration__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "benefits_administration",
+      "canonical_skill_name": "benefits_administration__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "benefits_administration",
+      "canonical_skill_name": "benefits_administration__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "compensation_management",
+      "canonical_skill_name": "compensation_management__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "compensation_management",
+      "canonical_skill_name": "compensation_management__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "compensation_management",
+      "canonical_skill_name": "compensation_management__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "compensation_management",
+      "canonical_skill_name": "compensation_management__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "compensation_management",
+      "canonical_skill_name": "compensation_management__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "compensation_management",
+      "canonical_skill_name": "compensation_management__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "talent_development_learning",
+      "canonical_skill_name": "talent_development_learning__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "talent_development_learning",
+      "canonical_skill_name": "talent_development_learning__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "talent_development_learning",
+      "canonical_skill_name": "talent_development_learning__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "talent_development_learning",
+      "canonical_skill_name": "talent_development_learning__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "workforce_planning_scheduling",
+      "canonical_skill_name": "workforce_planning_scheduling__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "workforce_planning_scheduling",
+      "canonical_skill_name": "workforce_planning_scheduling__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "workforce_planning_scheduling",
+      "canonical_skill_name": "workforce_planning_scheduling__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "workforce_planning_scheduling",
+      "canonical_skill_name": "workforce_planning_scheduling__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "workforce_planning_scheduling",
+      "canonical_skill_name": "workforce_planning_scheduling__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "employee_relations_ehs",
+      "canonical_skill_name": "employee_relations_ehs__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "employee_relations_ehs",
+      "canonical_skill_name": "employee_relations_ehs__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "employee_relations_ehs",
+      "canonical_skill_name": "employee_relations_ehs__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "employee_relations_ehs",
+      "canonical_skill_name": "employee_relations_ehs__close_delete",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "employee_relations_ehs",
+      "canonical_skill_name": "employee_relations_ehs__monitor",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "employee_relations_ehs",
+      "canonical_skill_name": "employee_relations_ehs__report_export",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "external_talent_marketplace",
+      "canonical_skill_name": "external_talent_marketplace__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "external_talent_marketplace",
+      "canonical_skill_name": "external_talent_marketplace__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "external_talent_marketplace",
+      "canonical_skill_name": "external_talent_marketplace__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "external_talent_marketplace",
+      "canonical_skill_name": "external_talent_marketplace__execute",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "skills_credentials",
+      "canonical_skill_name": "skills_credentials__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "skills_credentials",
+      "canonical_skill_name": "skills_credentials__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "skills_credentials",
+      "canonical_skill_name": "skills_credentials__search",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "skills_credentials",
+      "canonical_skill_name": "skills_credentials__update",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "skills_credentials",
+      "canonical_skill_name": "skills_credentials__notify",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "skills_credentials",
+      "canonical_skill_name": "skills_credentials__approve",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "people_analytics_bi",
+      "canonical_skill_name": "people_analytics_bi__discover_list",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "people_analytics_bi",
+      "canonical_skill_name": "people_analytics_bi__get_details",
+      "tenant_name": "default"
+    },
+    {
+      "capability_name": "people_analytics_bi",
+      "canonical_skill_name": "people_analytics_bi__search",
+      "tenant_name": "default"
+    }
+  ]
+}

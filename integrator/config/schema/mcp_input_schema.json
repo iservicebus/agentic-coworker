@@ -1,0 +1,59 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "A JSON Schema that defines the structure of dynamic input parameters expected from the tool client. These parameters are mapped to the HTTP request and must conform to this schema.",
+    "type": "object",
+    "properties": {
+        "type": {
+            "type": "string",
+            "const": "object",
+            "description": "Ensures the top-level type of the dynamic input schema is always an object."
+        },
+        "description": {
+            "type": "string",
+            "description": "A human-readable description for the entire dynamic input schema, providing context on its purpose."
+        },
+        "properties": {
+            "type": "object",
+            "description": "Defines the individual dynamic input parameters and how they are mapped to HTTP request components (path, query, header, or body).",
+            "additionalProperties": false,
+            "properties": {
+                "aint_path": {
+                    "type": "object",
+                    "description": "A map of dynamic path parameters, where each key corresponds to a segment in the URL path. Values must be strings, numbers, or booleans.",
+                    "additionalProperties": {
+                        "type": ["string", "number", "boolean"]
+                    }
+                },
+                "aint_query": {
+                    "type": "object",
+                    "description": "A map of query parameters to be serialized into the URL. Each key-value pair represents a query parameter name and its value.",
+                    "additionalProperties": {
+                        "type": ["string", "number", "boolean"]
+                    }
+                },
+                "aint_headers": {
+                    "type": "object",
+                    "description": "A set of HTTP headers to be provided dynamically by the client. Each key-value pair represents a header name and its value.",
+                    "additionalProperties": {
+                        "type": ["string", "number", "boolean"]
+                    }
+                },
+                "aint_body": {
+                    "description": "Describes the HTTP request body's expected format. This can be defined as a JSON Schema object for structured payloads, or as a literal string to indicate a simple, unstructured text body.",
+                    "oneOf": [
+                        {
+                            "type": "string",
+                            "description": "If the request body itself is a simple, unstructured string (e.g., 'text/plain'). The consumer will interpret this as the content type is text/plain with no further schema."
+                        },
+                        {
+                            "description": "A JSON Schema object defining the structure of a structured request body (e.g., 'application/json').",
+                            "$ref": "http://json-schema.org/draft-07/schema#"
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "required": ["type", "properties"],
+    "additionalProperties": false
+}
