@@ -1,0 +1,76 @@
+# Root-level .dockerignore for multi-service builds
+# This applies when build context is the project root
+
+# Environment files (should be mounted at runtime)
+**/.env
+**/.env.*
+.env
+.env.*
+
+# Secure files (should be mounted at runtime)
+**/.secure.*
+.secure.*
+
+# Git
+.git/
+.gitignore
+**/.gitignore
+
+# IDE
+.vscode/
+.idea/
+**/.vscode/
+**/.idea/
+**/.claude/
+.DS_Store
+**/.DS_Store
+
+# Documentation
+*.md
+docs/
+**/docs/
+
+# Docker files
+**/Dockerfile
+**/docker-compose*.yml
+**/.dockerignore
+
+# Scripts
+**/*.sh
+
+# Python
+**/__pycache__/
+**/*.py[cod]
+**/*$py.class
+**/*.so
+**/.pytest_cache/
+**/.coverage
+**/htmlcov/
+**/.tox/
+**/*.egg-info/
+**/dist/
+**/build/
+
+# Node
+**/node_modules/
+**/npm-debug.log*
+**/.next/
+**/out/
+
+# Logs
+**/*.log
+
+# Temporary files
+**/*.tmp
+**/tmp/
+**/temp/
+
+# Data directories (should be mounted at runtime)
+data/
+**/backup_data/
+**/update_data/
+**/uploads/
+
+# Testing
+**/.fellow-data/
+**/*.session.sql

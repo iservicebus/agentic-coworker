@@ -1,0 +1,2305 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Order and Delivery Scheduling Templates",
+    "description": "You use the Order and Delivery Scheduling Templates service to create, update and retrieve template data that is used to generate order and delivery schedules.",
+    "version": "1.0.0"
+  },
+  "x-sap-api-type": "ODATAV4",
+  "x-odata-version": "4.01",
+  "x-sap-shortText": "Maintain template data that is used to generate order and delivery schedules.",
+  "servers": [
+    {
+      "url": "https://sandbox.api.sap.com:443/OrderandDeliveryScheduling/DeliveryTemplateService",
+      "description": "Order and Delivery Scheduling Template API (Sandbox)"
+    },
+    {
+      "url": "https://app.orderdeliveryscheduling.cloud.sap/api/DeliveryTemplateService",
+      "description": "Order and Delivery Scheduling Template API"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Order and Delivery Scheduling Template Assignments",
+      "description": "Order and Delivery Scheduling Template Assignments"
+    },
+    {
+      "name": "Order and Delivery Scheduling Template Items",
+      "description": "Order and Delivery Scheduling Template Items"
+    },
+    {
+      "name": "Order and Delivery Scheduling Template Links",
+      "description": "Order and Delivery Scheduling Template Links"
+    },
+    {
+      "name": "Order and Delivery Scheduling Templates",
+      "description": "Order and Delivery Scheduling Templates"
+    }
+  ],
+  "paths": {
+    "/DeliveryTemplateAssignments": {
+      "get": {
+        "summary": "Retrieve a list of order and delivery scheduling template assignments.",
+        "tags": [
+          "Order and Delivery Scheduling Template Assignments"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "ID desc",
+                  "supplyNetworkNode_ID",
+                  "supplyNetworkNode_ID desc",
+                  "schedulingGroup_ID",
+                  "schedulingGroup_ID desc",
+                  "supplyingSite_ID",
+                  "supplyingSite_ID desc",
+                  "supplier_ID",
+                  "supplier_ID desc",
+                  "recipient_ID",
+                  "recipient_ID desc",
+                  "deliveryTemplate_ID",
+                  "deliveryTemplate_ID desc",
+                  "validityStartDate",
+                  "validityStartDate desc",
+                  "validityEndDate",
+                  "validityEndDate desc",
+                  "orderDeliveryScheduleType",
+                  "orderDeliveryScheduleType desc",
+                  "modifiedAt",
+                  "modifiedAt desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "supplyNetworkNode_ID",
+                  "schedulingGroup_ID",
+                  "supplyingSite_ID",
+                  "supplier_ID",
+                  "recipient_ID",
+                  "deliveryTemplate_ID",
+                  "validityStartDate",
+                  "validityEndDate",
+                  "orderDeliveryScheduleType",
+                  "modifiedAt"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "The value of $expand query option is a comma-separated list of navigation property names, stream property names, or $value indicating the stream content of a media-entity. The corresponding related entities and stream values will be represented inline, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "deliveryTemplate"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved delivery template assignments",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of DeliveryTemplateAssignments",
+                  "properties": {
+                    "@count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateAssignments"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "You can use this request to retrieve a list of order and delivery scheduling template assignments. Narrow down the result by setting the respective parameters."
+      },
+      "post": {
+        "summary": "Create a single order and delivery scheduling template assignment.",
+        "tags": [
+          "Order and Delivery Scheduling Template Assignments"
+        ],
+        "requestBody": {
+          "description": "Order and Delivery Scheduling Template Assignments",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateAssignments-create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created delivery template assignment",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateAssignments"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Some of the data you provided is not allowed for this order and delivery scheduling template assignment. Provide consistent data for the new order and delivery scheduling template assignment to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "To create an order and delivery template assignment using this request, you must first retrieve the ID of the order and delivery scheduling template you want to assign by using the appropriate API method. To assign order and delivery scheduling templates on scheduling group level, you must also retrieve the scheduling group ID through the Order and Delivery Schedules service.<p>You can create order and delivery template assignments on three different levels. For more information about how order and delivery template assignments are inherited to lower levels, see [Product Assistance for SAP Order and Delivery Scheduling](https://help.sap.com/docs/ORDER_DELIVERY_SCHEDULE_OD/30f4d620eb9e4cd2a7a603c4ac777a21/76fb320394d4456ca76508b31a1a465d.html?version=Cloud).<p>The validity start date must correspond with the first day of the week, and the validity end date must correspond with the last day of the week.<p>If more than one schedule type is enabled in the Manage Settings app, you must specify the schedule type to be used for the assignment. Depending on your configuration, available schedule type IDs are 00, 01, 02 and 03. The schedule type must match the schedule type of the order and delivery scheduling template you want to assign. If you do not provide a schedule type, the schedule type ID 00 is used to assign the order and delivery scheduling template.<p>To specify entire weeks without delivery dates/times, you can assign the preconfigured order and delivery scheduling template <b>SAP1</b> using its ID <b>d860a2d8-4a97-43e5-ace2-f711d6c97c5b</b>. This order and delivery scheduling template can be assigned for all enabled schedule types. For more information, see [Delivery Template: No Planned Delivery](https://help.sap.com/docs/ORDER_DELIVERY_SCHEDULE_OD/30f4d620eb9e4cd2a7a603c4ac777a21/75a270bb2f24424995ca60377b4b1396.html?version=Cloud)."
+      }
+    },
+    "/DeliveryTemplateAssignments({ID})": {
+      "parameters": [
+        {
+          "description": "key: ID",
+          "in": "path",
+          "name": "ID",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve a single order and delivery scheduling template assignment.",
+        "tags": [
+          "Order and Delivery Scheduling Template Assignments"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "supplyNetworkNode_ID",
+                  "schedulingGroup_ID",
+                  "supplyingSite_ID",
+                  "supplier_ID",
+                  "recipient_ID",
+                  "deliveryTemplate_ID",
+                  "validityStartDate",
+                  "validityEndDate",
+                  "orderDeliveryScheduleType",
+                  "modifiedAt"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "The value of $expand query option is a comma-separated list of navigation property names, stream property names, or $value indicating the stream content of a media-entity. The corresponding related entities and stream values will be represented inline, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "deliveryTemplate"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved delivery template assignment",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateAssignments"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "There is no order and delivery scheduling template assignment for the specified ID.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "To carry out the request, you must specify the ID of the order and delivery scheduling template assignment you want to retrieve."
+      },
+      "delete": {
+        "summary": "Delete a single order and delivery scheduling template assignment.",
+        "tags": [
+          "Order and Delivery Scheduling Template Assignments"
+        ],
+        "responses": {
+          "204": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "You cannot delete order and delivery scheduling template assignments if their validity lies in the past.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "There is no order and delivery scheduling template assignment for the specified ID.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Set the value of the 'If-Match' header to the '@etag' value of the order and delivery scheduling template assignment to carry out this request. To disable the etag validation for this request, specify '*' as the value of the 'If-Match' header.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "428": {
+            "description": "Provide the 'If-Match' header and set its value to the '@etag' value of the order and delivery scheduling template assignment to carry out this request. To disable the etag validation for this request, specify '*' as the value of the 'If-Match' header.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "To carry out the request, you must specify the ID of the order and delivery scheduling template assignment you want to delete."
+      }
+    },
+    "/DeliveryTemplateAssignments({ID})/deliveryTemplate": {
+      "parameters": [
+        {
+          "description": "key: ID",
+          "in": "path",
+          "name": "ID",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve the order and delivery scheduling template that is used in a specific order and delivery scheduling template assignment.",
+        "tags": [
+          "Order and Delivery Scheduling Template Assignments",
+          "Order and Delivery Scheduling Templates"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "displayId",
+                  "name",
+                  "orderDeliveryScheduleType",
+                  "numberOfWeeks",
+                  "modifiedAt",
+                  "orderDateCalculationType"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "The value of $expand query option is a comma-separated list of navigation property names, stream property names, or $value indicating the stream content of a media-entity. The corresponding related entities and stream values will be represented inline, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "items",
+                  "links",
+                  "assignments"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved delivery template",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplates"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "To carry out the request, you must specify the ID of the order and delivery scheduling template assignment for which you want to retrieve the template."
+      }
+    },
+    "/DeliveryTemplateItems": {
+      "get": {
+        "summary": "Retrieve a list of order and delivery scheduling template items.",
+        "tags": [
+          "Order and Delivery Scheduling Template Items"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "ID desc",
+                  "week",
+                  "week desc",
+                  "deliveryTimeRangeStart",
+                  "deliveryTimeRangeStart desc",
+                  "deliveryTimeRangeEnd",
+                  "deliveryTimeRangeEnd desc",
+                  "deliveryDayOnMonday",
+                  "deliveryDayOnMonday desc",
+                  "deliveryDayOnTuesday",
+                  "deliveryDayOnTuesday desc",
+                  "deliveryDayOnWednesday",
+                  "deliveryDayOnWednesday desc",
+                  "deliveryDayOnThursday",
+                  "deliveryDayOnThursday desc",
+                  "deliveryDayOnFriday",
+                  "deliveryDayOnFriday desc",
+                  "deliveryDayOnSaturday",
+                  "deliveryDayOnSaturday desc",
+                  "deliveryDayOnSunday",
+                  "deliveryDayOnSunday desc",
+                  "leadTimeInDays",
+                  "leadTimeInDays desc",
+                  "orderTime",
+                  "orderTime desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "week",
+                  "deliveryTimeRangeStart",
+                  "deliveryTimeRangeEnd",
+                  "deliveryDayOnMonday",
+                  "deliveryDayOnTuesday",
+                  "deliveryDayOnWednesday",
+                  "deliveryDayOnThursday",
+                  "deliveryDayOnFriday",
+                  "deliveryDayOnSaturday",
+                  "deliveryDayOnSunday",
+                  "leadTimeInDays",
+                  "orderTime"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "The value of $expand query option is a comma-separated list of navigation property names, stream property names, or $value indicating the stream content of a media-entity. The corresponding related entities and stream values will be represented inline, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "deliveryTemplate"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved delivery template items",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of DeliveryTemplateItems",
+                  "properties": {
+                    "@count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateItems"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "You can use this request to retrieve a list of order and delivery scheduling template items. Narrow down the result by setting the respective parameters."
+      }
+    },
+    "/DeliveryTemplateLinks": {
+      "get": {
+        "summary": "Retrieve a list of order and delivery scheduling template links.",
+        "tags": [
+          "Order and Delivery Scheduling Template Links"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "ID desc",
+                  "linkedTemplate_ID",
+                  "linkedTemplate_ID desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "linkedTemplate_ID"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "The value of $expand query option is a comma-separated list of navigation property names, stream property names, or $value indicating the stream content of a media-entity. The corresponding related entities and stream values will be represented inline, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "linkedTemplate",
+                  "deliveryTemplate"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved delivery template links",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of DeliveryTemplateLinks",
+                  "properties": {
+                    "@count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateLinks"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "You can use this request to retrieve a list of order and delivery scheduling template links. Narrow down the result by setting the respective parameters."
+      }
+    },
+    "/DeliveryTemplates": {
+      "get": {
+        "summary": "Retrieve a list of order and delivery scheduling templates.",
+        "tags": [
+          "Order and Delivery Scheduling Templates"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "ID desc",
+                  "displayId",
+                  "displayId desc",
+                  "name",
+                  "name desc",
+                  "orderDeliveryScheduleType",
+                  "orderDeliveryScheduleType desc",
+                  "numberOfWeeks",
+                  "numberOfWeeks desc",
+                  "modifiedAt",
+                  "modifiedAt desc",
+                  "orderDateCalculationType",
+                  "orderDateCalculationType desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "displayId",
+                  "name",
+                  "orderDeliveryScheduleType",
+                  "numberOfWeeks",
+                  "modifiedAt",
+                  "orderDateCalculationType"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "The value of $expand query option is a comma-separated list of navigation property names, stream property names, or $value indicating the stream content of a media-entity. The corresponding related entities and stream values will be represented inline, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "items",
+                  "links",
+                  "assignments"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved delivery templates",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of DeliveryTemplates",
+                  "properties": {
+                    "@count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplates"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "You can use this request to retrieve a list of order and delivery scheduling templates. Narrow down the result by setting the respective parameters."
+      },
+      "post": {
+        "summary": "Create a single order and delivery scheduling template.",
+        "tags": [
+          "Order and Delivery Scheduling Templates"
+        ],
+        "requestBody": {
+          "description": "Order and Delivery Scheduling Templates",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplates-create"
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Created delivery template",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplates"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Some of the data you provided is not allowed for this order and delivery scheduling template. Provide consistent data for the new order and delivery scheduling template to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "If more than one schedule type is enabled in the Manage Settings app, you can use this request to create an order and delivery scheduling template of a specific schedule type. Depending on your configuration, available schedule type IDs are 00, 01, 02 and 03.<p>To create links between order and delivery scheduling templates of schedule type 00 and templates of other schedule types, you must first retrieve the IDs of the order and delivery scheduling templates you want to link to each other through the appropriate API method."
+      }
+    },
+    "/DeliveryTemplates({ID})": {
+      "parameters": [
+        {
+          "description": "key: ID",
+          "in": "path",
+          "name": "ID",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve a single order and delivery scheduling template.",
+        "tags": [
+          "Order and Delivery Scheduling Templates"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "displayId",
+                  "name",
+                  "orderDeliveryScheduleType",
+                  "numberOfWeeks",
+                  "modifiedAt",
+                  "orderDateCalculationType"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "The value of $expand query option is a comma-separated list of navigation property names, stream property names, or $value indicating the stream content of a media-entity. The corresponding related entities and stream values will be represented inline, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "items",
+                  "links",
+                  "assignments"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved delivery template",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplates"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "There is no order and delivery scheduling template for the specified ID.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "To carry out the request, you must specify the ID of the order and delivery scheduling template you want to retrieve."
+      },
+      "patch": {
+        "summary": "Change a single order and delivery scheduling template.",
+        "tags": [
+          "Order and Delivery Scheduling Templates"
+        ],
+        "requestBody": {
+          "description": "Order and Delivery Scheduling Templates",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplates-update"
+              }
+            }
+          }
+        },
+        "responses": {
+          "204": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "Some of the data you provided is not allowed for this order and delivery scheduling template. Provide consistent data for the order and delivery scheduling template to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "There is no order and delivery scheduling template for the specified ID.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Set the value of the 'If-Match' header to the '@etag' value of the order and delivery scheduling template to carry out this request. To disable the etag validation for this request, specify '*' as the value of the 'If-Match' header.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "428": {
+            "description": "Provide the 'If-Match' header and set its value to the '@etag' value of the order and delivery scheduling template to carry out this request. To disable the etag validation for this request, specify '*' as the value of the 'If-Match' header.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "To carry out the request, you must specify the ID of the order and delivery scheduling template you want to change."
+      },
+      "delete": {
+        "summary": "Delete a single order and delivery scheduling template.",
+        "tags": [
+          "Order and Delivery Scheduling Templates"
+        ],
+        "responses": {
+          "204": {
+            "description": "Success"
+          },
+          "400": {
+            "description": "You cannot delete order and delivery scheduling templates that are assigned to supply network nodes or that are currently being edited.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "There is no order and delivery scheduling template for the specified ID.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "412": {
+            "description": "Set the value of the 'If-Match' header to the '@etag' value of the order and delivery scheduling template to carry out this request. To disable the etag validation for this request, specify '*' as the value of the 'If-Match' header.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          },
+          "428": {
+            "description": "Provide the 'If-Match' header and set its value to the '@etag' value of the order and delivery scheduling template to carry out this request. To disable the etag validation for this request, specify '*' as the value of the 'If-Match' header.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "To carry out the request, you must specify the ID of the order and delivery scheduling template you want to delete."
+      }
+    },
+    "/DeliveryTemplates({ID})/assignments": {
+      "parameters": [
+        {
+          "description": "key: ID",
+          "in": "path",
+          "name": "ID",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve a list of assignments that exist for an order and delivery scheduling template.",
+        "tags": [
+          "Order and Delivery Scheduling Templates",
+          "Order and Delivery Scheduling Template Assignments"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "ID desc",
+                  "supplyNetworkNode_ID",
+                  "supplyNetworkNode_ID desc",
+                  "schedulingGroup_ID",
+                  "schedulingGroup_ID desc",
+                  "supplyingSite_ID",
+                  "supplyingSite_ID desc",
+                  "supplier_ID",
+                  "supplier_ID desc",
+                  "recipient_ID",
+                  "recipient_ID desc",
+                  "deliveryTemplate_ID",
+                  "deliveryTemplate_ID desc",
+                  "validityStartDate",
+                  "validityStartDate desc",
+                  "validityEndDate",
+                  "validityEndDate desc",
+                  "orderDeliveryScheduleType",
+                  "orderDeliveryScheduleType desc",
+                  "modifiedAt",
+                  "modifiedAt desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "supplyNetworkNode_ID",
+                  "schedulingGroup_ID",
+                  "supplyingSite_ID",
+                  "supplier_ID",
+                  "recipient_ID",
+                  "deliveryTemplate_ID",
+                  "validityStartDate",
+                  "validityEndDate",
+                  "orderDeliveryScheduleType",
+                  "modifiedAt"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "The value of $expand query option is a comma-separated list of navigation property names, stream property names, or $value indicating the stream content of a media-entity. The corresponding related entities and stream values will be represented inline, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "deliveryTemplate"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved assignments",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of DeliveryTemplateAssignments",
+                  "properties": {
+                    "@count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateAssignments"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "You can use this request to retrieve a list of assignments that exist for a specific order and delivery scheduling template. To carry out the request, you must specify the ID of the order and delivery scheduling template for which you want to retrieve the list of assignments. Narrow down the result by setting the respective parameters."
+      }
+    },
+    "/DeliveryTemplates({ID})/items": {
+      "parameters": [
+        {
+          "description": "key: ID",
+          "in": "path",
+          "name": "ID",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve a list of items that exist for an order and delivery scheduling template.",
+        "tags": [
+          "Order and Delivery Scheduling Templates",
+          "Order and Delivery Scheduling Template Items"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "ID desc",
+                  "week",
+                  "week desc",
+                  "deliveryTimeRangeStart",
+                  "deliveryTimeRangeStart desc",
+                  "deliveryTimeRangeEnd",
+                  "deliveryTimeRangeEnd desc",
+                  "deliveryDayOnMonday",
+                  "deliveryDayOnMonday desc",
+                  "deliveryDayOnTuesday",
+                  "deliveryDayOnTuesday desc",
+                  "deliveryDayOnWednesday",
+                  "deliveryDayOnWednesday desc",
+                  "deliveryDayOnThursday",
+                  "deliveryDayOnThursday desc",
+                  "deliveryDayOnFriday",
+                  "deliveryDayOnFriday desc",
+                  "deliveryDayOnSaturday",
+                  "deliveryDayOnSaturday desc",
+                  "deliveryDayOnSunday",
+                  "deliveryDayOnSunday desc",
+                  "leadTimeInDays",
+                  "leadTimeInDays desc",
+                  "orderTime",
+                  "orderTime desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "week",
+                  "deliveryTimeRangeStart",
+                  "deliveryTimeRangeEnd",
+                  "deliveryDayOnMonday",
+                  "deliveryDayOnTuesday",
+                  "deliveryDayOnWednesday",
+                  "deliveryDayOnThursday",
+                  "deliveryDayOnFriday",
+                  "deliveryDayOnSaturday",
+                  "deliveryDayOnSunday",
+                  "leadTimeInDays",
+                  "orderTime"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "The value of $expand query option is a comma-separated list of navigation property names, stream property names, or $value indicating the stream content of a media-entity. The corresponding related entities and stream values will be represented inline, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "deliveryTemplate"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved items",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of DeliveryTemplateItems",
+                  "properties": {
+                    "@count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateItems"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "You can use this request to retrieve a list of items that exist for a specific order and delivery scheduling template. To carry out the request, you must specify the ID of the order and delivery scheduling template for which you want to retrieve the list of items. Narrow down the result by setting the respective parameters."
+      }
+    },
+    "/DeliveryTemplates({ID})/links": {
+      "parameters": [
+        {
+          "description": "key: ID",
+          "in": "path",
+          "name": "ID",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve a list of links that exist for an order and delivery scheduling template.",
+        "tags": [
+          "Order and Delivery Scheduling Templates",
+          "Order and Delivery Scheduling Template Links"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "ID desc",
+                  "linkedTemplate_ID",
+                  "linkedTemplate_ID desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "ID",
+                  "linkedTemplate_ID"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "The value of $expand query option is a comma-separated list of navigation property names, stream property names, or $value indicating the stream content of a media-entity. The corresponding related entities and stream values will be represented inline, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "linkedTemplate",
+                  "deliveryTemplate"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Retrieved links",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of DeliveryTemplateLinks",
+                  "properties": {
+                    "@count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateLinks"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error"
+                }
+              }
+            }
+          }
+        },
+        "description": "You can use this request to retrieve a list of links that exist for a specific order and delivery scheduling template. To carry out the request, you must specify the ID of the order and delivery scheduling template for which you want to retrieve the list of links. Narrow down the result by setting the respective parameters."
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "DeliveryTemplateService.DeliveryTemplateAssignments": {
+        "title": "Order and Delivery Scheduling Template Assignments",
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          },
+          "supplyNetworkNode_ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef",
+            "nullable": true
+          },
+          "schedulingGroup_ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef",
+            "nullable": true
+          },
+          "supplyingSite_ID": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          },
+          "supplier_ID": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          },
+          "recipient_ID": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          },
+          "deliveryTemplate": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplates"
+              }
+            ],
+            "nullable": true
+          },
+          "deliveryTemplate_ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef",
+            "nullable": true
+          },
+          "validityStartDate": {
+            "type": "string",
+            "format": "date",
+            "example": "2017-04-13",
+            "nullable": true
+          },
+          "validityEndDate": {
+            "type": "string",
+            "format": "date",
+            "example": "2017-04-13",
+            "nullable": true
+          },
+          "orderDeliveryScheduleType": {
+            "type": "string",
+            "maxLength": 2,
+            "nullable": true
+          },
+          "modifiedAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04.0000000Z",
+            "nullable": true
+          }
+        },
+        "x-sap-odm-entity-name": "OrderAndDeliverySchedulingTemplateAssignment",
+        "x-sap-odm-oid": "ID"
+      },
+      "DeliveryTemplateService.DeliveryTemplateAssignments-create": {
+        "title": "Order and Delivery Scheduling Template Assignments (for create)",
+        "type": "object",
+        "properties": {
+          "supplyNetworkNode_ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef",
+            "nullable": true
+          },
+          "schedulingGroup_ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef",
+            "nullable": true
+          },
+          "supplyingSite_ID": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          },
+          "supplier_ID": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          },
+          "recipient_ID": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          },
+          "deliveryTemplate_ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef",
+            "nullable": true
+          },
+          "validityStartDate": {
+            "type": "string",
+            "format": "date",
+            "example": "2017-04-13",
+            "nullable": true
+          },
+          "validityEndDate": {
+            "type": "string",
+            "format": "date",
+            "example": "2017-04-13",
+            "nullable": true
+          },
+          "orderDeliveryScheduleType": {
+            "type": "string",
+            "maxLength": 2,
+            "nullable": true
+          }
+        },
+        "x-sap-odm-entity-name": "OrderAndDeliverySchedulingTemplateAssignment",
+        "x-sap-odm-oid": "ID"
+      },
+      "DeliveryTemplateService.DeliveryTemplateItems": {
+        "title": "Order and Delivery Scheduling Template Items",
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          },
+          "week": {
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              0,
+              1,
+              2
+            ],
+            "nullable": true
+          },
+          "deliveryTimeRangeStart": {
+            "type": "string",
+            "format": "time",
+            "example": "15:51:04",
+            "nullable": true
+          },
+          "deliveryTimeRangeEnd": {
+            "type": "string",
+            "format": "time",
+            "example": "15:51:04",
+            "nullable": true
+          },
+          "deliveryDayOnMonday": {
+            "type": "boolean",
+            "nullable": true,
+            "default": false
+          },
+          "deliveryDayOnTuesday": {
+            "type": "boolean",
+            "nullable": true,
+            "default": false
+          },
+          "deliveryDayOnWednesday": {
+            "type": "boolean",
+            "nullable": true,
+            "default": false
+          },
+          "deliveryDayOnThursday": {
+            "type": "boolean",
+            "nullable": true,
+            "default": false
+          },
+          "deliveryDayOnFriday": {
+            "type": "boolean",
+            "nullable": true,
+            "default": false
+          },
+          "deliveryDayOnSaturday": {
+            "type": "boolean",
+            "nullable": true,
+            "default": false
+          },
+          "deliveryDayOnSunday": {
+            "type": "boolean",
+            "nullable": true,
+            "default": false
+          },
+          "leadTimeInDays": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "orderTime": {
+            "type": "string",
+            "format": "time",
+            "example": "15:51:04",
+            "nullable": true
+          },
+          "deliveryTemplate": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplates"
+              }
+            ],
+            "nullable": true
+          }
+        }
+      },
+      "DeliveryTemplateService.DeliveryTemplateLinks": {
+        "title": "Order and Delivery Scheduling Template Links",
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          },
+          "linkedTemplate": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplates"
+              }
+            ],
+            "nullable": true
+          },
+          "linkedTemplate_ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef",
+            "nullable": true
+          },
+          "deliveryTemplate": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplates"
+              }
+            ],
+            "nullable": true
+          }
+        }
+      },
+      "DeliveryTemplateService.DeliveryTemplateLinks-create": {
+        "title": "Order and Delivery Scheduling Template Links (for create)",
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          },
+          "linkedTemplate_ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef",
+            "nullable": true
+          }
+        }
+      },
+      "DeliveryTemplateService.DeliveryTemplates": {
+        "title": "Order and Delivery Scheduling Templates",
+        "type": "object",
+        "properties": {
+          "ID": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          },
+          "displayId": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 255,
+            "nullable": true
+          },
+          "orderDeliveryScheduleType": {
+            "type": "string",
+            "maxLength": 2,
+            "nullable": true,
+            "default": "00"
+          },
+          "numberOfWeeks": {
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              1,
+              2,
+              3
+            ],
+            "nullable": true,
+            "example": 1
+          },
+          "modifiedAt": {
+            "type": "string",
+            "format": "date-time",
+            "example": "2017-04-13T15:51:04.0000000Z",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateItems"
+                }
+              ],
+              "example": {
+                "week": 0,
+                "deliveryTimeRangeStart": "08:00",
+                "deliveryTimeRangeEnd": "10:00",
+                "orderTime": "12:00",
+                "leadTimeInDays": 1,
+                "deliveryDayOnMonday": true,
+                "deliveryDayOnTuesday": false,
+                "deliveryDayOnWednesday": false,
+                "deliveryDayOnThursday": false,
+                "deliveryDayOnFriday": false,
+                "deliveryDayOnSaturday": false,
+                "deliveryDayOnSunday": false
+              }
+            }
+          },
+          "items@count": {
+            "$ref": "#/components/schemas/count"
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateLinks"
+                }
+              ],
+              "example": {
+                "linkedTemplate_ID": "01234567-89ab-cdef-0123-456789abcdef"
+              }
+            }
+          },
+          "links@count": {
+            "$ref": "#/components/schemas/count"
+          },
+          "assignments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateAssignments"
+            }
+          },
+          "assignments@count": {
+            "$ref": "#/components/schemas/count"
+          },
+          "orderDateCalculationType": {
+            "type": "string",
+            "maxLength": 30,
+            "enum": [
+              "BY_WORKING_DAYS",
+              "BY_CALENDAR_DAYS"
+            ],
+            "default": "BY_WORKING_DAYS"
+          }
+        },
+        "x-sap-odm-entity-name": "OrderAndDeliverySchedulingTemplate",
+        "x-sap-odm-oid": "ID"
+      },
+      "DeliveryTemplateService.DeliveryTemplates-create": {
+        "title": "Order and Delivery Scheduling Templates (for create)",
+        "type": "object",
+        "properties": {
+          "displayId": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 255,
+            "nullable": true
+          },
+          "orderDeliveryScheduleType": {
+            "type": "string",
+            "maxLength": 2,
+            "nullable": true,
+            "default": "00"
+          },
+          "numberOfWeeks": {
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              1,
+              2,
+              3
+            ],
+            "nullable": true,
+            "example": 1
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateLinks"
+                }
+              ],
+              "example": {
+                "linkedTemplate_ID": "01234567-89ab-cdef-0123-456789abcdef"
+              }
+            }
+          },
+          "orderDateCalculationType": {
+            "type": "string",
+            "maxLength": 30,
+            "enum": [
+              "BY_WORKING_DAYS",
+              "BY_CALENDAR_DAYS"
+            ],
+            "default": "BY_WORKING_DAYS"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateItems"
+                }
+              ],
+              "example": {
+                "week": 0,
+                "deliveryTimeRangeStart": "08:00",
+                "deliveryTimeRangeEnd": "10:00",
+                "orderTime": "12:00",
+                "leadTimeInDays": 1,
+                "deliveryDayOnMonday": true,
+                "deliveryDayOnTuesday": false,
+                "deliveryDayOnWednesday": false,
+                "deliveryDayOnThursday": false,
+                "deliveryDayOnFriday": false,
+                "deliveryDayOnSaturday": false,
+                "deliveryDayOnSunday": false
+              }
+            }
+          }
+        },
+        "x-sap-odm-entity-name": "OrderAndDeliverySchedulingTemplate",
+        "x-sap-odm-oid": "ID"
+      },
+      "DeliveryTemplateService.DeliveryTemplates-update": {
+        "title": "Order and Delivery Scheduling Templates (for update)",
+        "type": "object",
+        "properties": {
+          "displayId": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          },
+          "name": {
+            "type": "string",
+            "maxLength": 255,
+            "nullable": true
+          },
+          "orderDeliveryScheduleType": {
+            "type": "string",
+            "maxLength": 2,
+            "nullable": true,
+            "default": "00"
+          },
+          "numberOfWeeks": {
+            "type": "integer",
+            "format": "int32",
+            "enum": [
+              1,
+              2,
+              3
+            ],
+            "nullable": true,
+            "example": 1
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateLinks"
+                }
+              ],
+              "example": {
+                "linkedTemplate_ID": "01234567-89ab-cdef-0123-456789abcdef"
+              }
+            }
+          },
+          "orderDateCalculationType": {
+            "type": "string",
+            "maxLength": 30,
+            "enum": [
+              "BY_WORKING_DAYS",
+              "BY_CALENDAR_DAYS"
+            ],
+            "default": "BY_WORKING_DAYS"
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "allOf": [
+                {
+                  "$ref": "#/components/schemas/DeliveryTemplateService.DeliveryTemplateItems"
+                }
+              ],
+              "example": {
+                "week": 0,
+                "deliveryTimeRangeStart": "08:00",
+                "deliveryTimeRangeEnd": "10:00",
+                "orderTime": "12:00",
+                "leadTimeInDays": 1,
+                "deliveryDayOnMonday": true,
+                "deliveryDayOnTuesday": false,
+                "deliveryDayOnWednesday": false,
+                "deliveryDayOnThursday": false,
+                "deliveryDayOnFriday": false,
+                "deliveryDayOnSaturday": false,
+                "deliveryDayOnSunday": false
+              }
+            }
+          }
+        },
+        "x-sap-odm-entity-name": "OrderAndDeliverySchedulingTemplate",
+        "x-sap-odm-oid": "ID"
+      },
+      "count": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The number of entities in the collection. Available when using the [$count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount) query option."
+      },
+      "error": {
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "object",
+            "required": [
+              "code",
+              "message"
+            ],
+            "properties": {
+              "code": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              },
+              "target": {
+                "type": "string"
+              },
+              "details": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "code",
+                    "message"
+                  ],
+                  "properties": {
+                    "code": {
+                      "type": "string"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "target": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "innererror": {
+                "type": "object",
+                "description": "The structure of this object is service-specific"
+              }
+            }
+          }
+        }
+      }
+    },
+    "parameters": {
+      "top": {
+        "name": "$top",
+        "in": "query",
+        "description": "Show only the first n items, see [Paging - Top](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptiontop)",
+        "schema": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "example": 50
+      },
+      "skip": {
+        "name": "$skip",
+        "in": "query",
+        "description": "Skip the first n items, see [Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionskip)",
+        "schema": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "count": {
+        "name": "$count",
+        "in": "query",
+        "description": "Include count of items, see [Count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount)",
+        "schema": {
+          "type": "boolean"
+        }
+      },
+      "search": {
+        "name": "$search",
+        "in": "query",
+        "description": "Search items by search phrases, see [Searching](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionsearch)",
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "responses": {
+      "error": {
+        "description": "Error",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/error"
+            }
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "OAuth2": {
+        "description": "Authentication via OAuth2 with client credentials flow",
+        "type": "oauth2",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "https://{subdomain}.authentication.eu20.hana.ondemand.com/oauth/token",
+            "refreshUrl": "https://{subdomain}.authentication.eu20.hana.ondemand.com/oauth/token/refresh",
+            "scopes": {
+              "CustomerSystem.READ": "Permission to read delivery template data.",
+              "CustomerSystem.WRITE": "Permission to write delivery template data."
+            }
+          }
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Documentation for SAP Order and Delivery Scheduling",
+    "url": "https://help.sap.com/docs/ORDER_DELIVERY_SCHEDULE_OD?version=Cloud"
+  }
+}

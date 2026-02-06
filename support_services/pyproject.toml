@@ -1,0 +1,52 @@
+
+
+[project]
+name = "support-services"
+version = "0.1.0"
+description = "implement internal services to support mcp services"
+authors = [
+    { name = "Jingnan Zhou" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "python-dotenv",
+    "python-multipart",
+    # Shared utils dependencies (will be available when shared library is installed)
+    "python-json-logger>=2.0.0",
+    "python-jose[cryptography]>=3.0.0",
+    "httpx>=0.24.0",
+    "cryptography>=41.0.0",
+]
+
+[project.optional-dependencies]
+# For local development with shared utils
+shared-utils = [
+    "aintegrator-shared-utils @ file:///app/shared_utils",
+]
+
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+minversion = "7.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
+
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+ignore_missing_imports = true
+check_untyped_defs = true
+show_error_codes = true
+pretty = true
+# Optional: explicitly define source paths
+# This is not always necessary if you're running `mypy src/`
+mypy_path = "src"
+files = ["src"]

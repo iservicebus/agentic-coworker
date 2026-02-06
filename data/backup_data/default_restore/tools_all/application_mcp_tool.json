@@ -1,0 +1,28 @@
+{
+  "default": [
+    {
+      "app_name": "gmailgoogleapiscom",
+      "tenant_name": "default",
+      "tool_name": "get_gmail_message_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "app_name": "gmailgoogleapiscom",
+      "tenant_name": "default",
+      "tool_name": "delete_email_message_by_id",
+      "tool_tenant": "default"
+    },
+    {
+      "app_name": "gmailgoogleapiscom",
+      "tenant_name": "default",
+      "tool_name": "list_gmail_messages",
+      "tool_tenant": "default"
+    },
+    {
+      "app_name": "dev296096service-nowcom",
+      "tenant_name": "default",
+      "tool_name": "delete_servicenow_record_in_table_by_sys_id",
+      "tool_tenant": "default"
+    }
+  ]
+}

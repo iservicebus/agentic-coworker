@@ -1,0 +1,1854 @@
+{
+  "openapi": "3.0.2",
+  "info": {
+    "title": "Order and Delivery Schedules",
+    "description": "You use the Order and Delivery Schedules service to retrieve data that is used, maintained, and generated in the process of scheduling orders and deliveries, for example, order and delivery schedules, scheduling groups, and scheduling group assignments. Consuming applications can retrieve the data as well as information on whether scheduling groups or associated product assignments were marked for deletion.",
+    "version": "1.0.1"
+  },
+  "x-sap-api-type": "ODATAV4",
+  "x-sap-stateinfo": {
+    "state": "Beta"
+  },
+  "x-sap-shortText": "Retrieve data that is used, maintained, and generated in the process of scheduling orders and deliveries.",
+  "externalDocs": {
+    "description": "Documentation for SAP Order and Delivery Scheduling",
+    "url": "https://help.sap.com/docs/ORDER_DELIVERY_SCHEDULE_OD?version=Cloud"
+  },
+  "servers": [
+    {
+      "url": "https://sandbox.api.sap.com:443/OrderandDeliveryScheduling/OdsService",
+      "description": "ODS Sandbox"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Order and Delivery Schedules"
+    },
+    {
+      "name": "Order and Delivery Schedule Items"
+    },
+    {
+      "name": "Scheduling Groups"
+    },
+    {
+      "name": "Scheduling Group Assignments"
+    }
+  ],
+  "paths": {
+    "/OrderDeliverySchedules": {
+      "get": {
+        "summary": "Retrieve a list of order and delivery schedules.",
+        "description": "When you carry out the request, you get a list of generated order and delivery schedules. You can also narrow down the result by setting the respective parameters. To get additional information about the order and delivery schedules, use the $expand parameter.",
+        "tags": [
+          "Order and Delivery Schedules"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "id desc",
+                  "validityStartDate",
+                  "validityStartDate desc",
+                  "validityEndDate",
+                  "validityEndDate desc",
+                  "isMarkedForDeletion",
+                  "isMarkedForDeletion desc",
+                  "createdAt",
+                  "createdAt desc",
+                  "modifiedAt",
+                  "modifiedAt desc",
+                  "orderDeliveryScheduleType"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "validityStartDate",
+                  "validityEndDate",
+                  "isMarkedForDeletion",
+                  "createdAt",
+                  "modifiedAt",
+                  "orderDeliveryScheduleType"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "supplier",
+                  "supplyingPlant",
+                  "schedulingGroup",
+                  "recipient",
+                  "items"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of order and delivery schedules retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of OrderDeliverySchedules",
+                  "properties": {
+                    "@odata.count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ReadOdsService.OrderDeliverySchedules"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/OrderDeliverySchedules(id={id})": {
+      "parameters": [
+        {
+          "description": "Order and delivery schedule ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve a single order and delivery schedule.",
+        "description": "To carry out this request, you must specify the respective order and delivery schedule ID. To get additional information about the order and delivery schedule, use the $expand parameter.",
+        "tags": [
+          "Order and Delivery Schedules"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "validityStartDate",
+                  "validityEndDate",
+                  "isMarkedForDeletion",
+                  "createdAt",
+                  "modifiedAt",
+                  "orderDeliveryScheduleType"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "supplier",
+                  "supplyingPlant",
+                  "schedulingGroup",
+                  "recipient",
+                  "items"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Order and delivery schedule retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadOdsService.OrderDeliverySchedules"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no order delivery schedules for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/OrderDeliverySchedules(id={id})/supplier": {
+      "parameters": [
+        {
+          "description": "Order and delivery schedule ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve the supplier of an order and delivery schedule.",
+        "description": "You can use this request to retrieve the supplier (external source) of a specific order and delivery schedule. To carry out the request, you must specify the respective order and delivery schedule ID.",
+        "tags": [
+          "Order and Delivery Schedules"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Supplier of order and delivery schedule retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadOdsService.SupplierView"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no order delivery schedules for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/OrderDeliverySchedules(id={id})/supplyingPlant": {
+      "parameters": [
+        {
+          "description": "Order and delivery schedule ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve the internal source of an order and delivery schedule.",
+        "description": "You can use this request to retrieve the internal source of a specific order and delivery schedule. An internal source can be either a supplying distribution center, or a supplying store. To carry out the request, you must specify the respective order and delivery schedule ID.",
+        "tags": [
+          "Order and Delivery Schedules"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Internal source of order and delivery schedule retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadOdsService.PlantView"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no order delivery schedules for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/OrderDeliverySchedules(id={id})/schedulingGroup": {
+      "parameters": [
+        {
+          "description": "Order and delivery schedule ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve the scheduling group of an order and delivery schedule.",
+        "description": "You can use this request to retrieve the scheduling group of a specific order and delivery schedule. To carry out the request, you must specify the respective order and delivery schedule ID.",
+        "tags": [
+          "Order and Delivery Schedules"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Scheduling group of order and delivery schedule retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadOdsService.SchedulingGroupView"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no order delivery schedules for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/OrderDeliverySchedules(id={id})/recipient": {
+      "parameters": [
+        {
+          "description": "Order and delivery schedule ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve the recipient of an order and delivery schedule.",
+        "description": "You can use this request to retrieve the recipient of a specific order and delivery schedule. A recipient can be either a distribution center, or a store. To carry out the request, you must specify the respective order and delivery schedule ID.",
+        "tags": [
+          "Order and Delivery Schedules"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Recipient of order and delivery schedule retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadOdsService.RecipientsView"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no order delivery schedules for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/OrderDeliverySchedules(id={id})/items": {
+      "parameters": [
+        {
+          "description": "Order and delivery schedule ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve a list of order and delivery schedule items of an order and delivery schedule.",
+        "description": "You can use this request to retrieve a list of order and delivery schedule items of one specific order and delivery schedule. To carry out the request, you must specify the respective order and delivery schedule ID.",
+        "tags": [
+          "Order and Delivery Schedules",
+          "Order and Delivery Schedule Items"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "id desc",
+                  "deliveryDate",
+                  "deliveryDate desc",
+                  "deliveryTimeRangeStart",
+                  "deliveryTimeRangeStart desc",
+                  "deliveryTimeRangeEnd",
+                  "deliveryTimeRangeEnd desc",
+                  "orderDate",
+                  "orderDate desc",
+                  "orderTime",
+                  "orderTime desc",
+                  "availabilityDate",
+                  "availabilityDate desc",
+                  "availabilityTime",
+                  "availabilityTime desc",
+                  "stagingDate",
+                  "stagingDate desc",
+                  "stagingTime",
+                  "stagingTime desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "deliveryDate",
+                  "deliveryTimeRangeStart",
+                  "deliveryTimeRangeEnd",
+                  "orderDate",
+                  "orderTime",
+                  "availabilityDate",
+                  "availabilityTime",
+                  "stagingDate",
+                  "stagingTime"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of order and delivery schedule items of order and delivery schedule retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of OrderDeliveryScheduleItems",
+                  "properties": {
+                    "@odata.count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ReadOdsService.OrderDeliveryScheduleItems"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no order delivery schedules for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/OrderDeliveryScheduleItems": {
+      "get": {
+        "summary": "Retrieve a list of order and delivery schedule items.",
+        "description": "When you carry out this request, you get a list of all generated order and delivery schedule items. You can also narrow down the result by setting the respective parameters.",
+        "tags": [
+          "Order and Delivery Schedule Items"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "id desc",
+                  "deliveryDate",
+                  "deliveryDate desc",
+                  "deliveryTimeRangeStart",
+                  "deliveryTimeRangeStart desc",
+                  "deliveryTimeRangeEnd",
+                  "deliveryTimeRangeEnd desc",
+                  "orderDate",
+                  "orderDate desc",
+                  "orderTime",
+                  "orderTime desc",
+                  "availabilityDate",
+                  "availabilityDate desc",
+                  "availabilityTime",
+                  "availabilityTime desc",
+                  "stagingDate",
+                  "stagingDate desc",
+                  "stagingTime",
+                  "stagingTime desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "deliveryDate",
+                  "deliveryTimeRangeStart",
+                  "deliveryTimeRangeEnd",
+                  "orderDate",
+                  "orderTime",
+                  "availabilityDate",
+                  "availabilityTime",
+                  "stagingDate",
+                  "stagingTime"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of order and delivery schedule items retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of OrderDeliveryScheduleItems",
+                  "properties": {
+                    "@odata.count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ReadOdsService.OrderDeliveryScheduleItems"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/OrderDeliveryScheduleItems(id={id})": {
+      "parameters": [
+        {
+          "description": "Order and delivery schedule item ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve a single order and delivery schedule item.",
+        "description": "To carry out this request, you must specify the respective order and delivery schedule item ID.",
+        "tags": [
+          "Order and Delivery Schedule Items"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "deliveryDate",
+                  "deliveryTimeRangeStart",
+                  "deliveryTimeRangeEnd",
+                  "orderDate",
+                  "orderTime",
+                  "availabilityDate",
+                  "availabilityTime",
+                  "stagingDate",
+                  "stagingTime"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Order and delivery schedule item retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadOdsService.OrderDeliveryScheduleItems"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no order delivery schedules for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/SchedulingGroups": {
+      "get": {
+        "summary": "Retrieve a list of scheduling groups.",
+        "description": "When you carry out the request, you get a list of generated scheduling groups. You can also narrow down the result by setting the respective parameters.",
+        "tags": [
+          "Scheduling Groups"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "id desc",
+                  "displayId",
+                  "displayId desc",
+                  "name",
+                  "name desc",
+                  "schedulingGroupType",
+                  "schedulingGroupType desc",
+                  "schedulingGroupStatus",
+                  "schedulingGroupStatus desc",
+                  "isMarkedForDeletion",
+                  "isMarkedForDeletion desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "displayId",
+                  "name",
+                  "schedulingGroupType",
+                  "schedulingGroupStatus",
+                  "isMarkedForDeletion"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of scheduling groups retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of SchedulingGroups",
+                  "properties": {
+                    "@odata.count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ReadOdsService.SchedulingGroups"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/SchedulingGroups(id={id})": {
+      "parameters": [
+        {
+          "description": "Scheduling group ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve a single scheduling group.",
+        "description": "To carry out this request, you must specify the scheduling group ID.",
+        "tags": [
+          "Scheduling Groups"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "displayId",
+                  "name",
+                  "schedulingGroupType",
+                  "schedulingGroupStatus",
+                  "isMarkedForDeletion"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Scheduling group retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadOdsService.SchedulingGroups"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no scheduling groups for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/SchedulingGroupAssignments": {
+      "get": {
+        "summary": "Retrieve a list of scheduling group assignments.",
+        "description": "When you carry out this request, you get a list of all generated scheduling group assignments, that is, the information about which products and sources are assigned to which scheduling groups. To get additional information about the scheduling group assignments, use the $expand parameter.",
+        "tags": [
+          "Scheduling Group Assignments"
+        ],
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/top"
+          },
+          {
+            "$ref": "#/components/parameters/skip"
+          },
+          {
+            "$ref": "#/components/parameters/search"
+          },
+          {
+            "name": "$filter",
+            "description": "Filter items by property values, see [Filtering](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionfilter)",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "$ref": "#/components/parameters/count"
+          },
+          {
+            "name": "$orderby",
+            "description": "Order items by property values, see [Sorting](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionorderby)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "id desc",
+                  "isMarkedForDeletion",
+                  "isMarkedForDeletion desc",
+                  "createdAt",
+                  "createdAt desc",
+                  "modifiedAt",
+                  "modifiedAt desc"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "isMarkedForDeletion",
+                  "createdAt",
+                  "modifiedAt"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "schedulingGroup",
+                  "product",
+                  "supplier",
+                  "supplyingPlant"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of scheduling group assignments retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "title": "Collection of SchedulingGroupAssignments",
+                  "properties": {
+                    "@odata.count": {
+                      "$ref": "#/components/schemas/count"
+                    },
+                    "value": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/ReadOdsService.SchedulingGroupAssignments"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/SchedulingGroupAssignments(id={id})": {
+      "parameters": [
+        {
+          "description": "Scheduling group assignment ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve a single scheduling group assignment.",
+        "description": "To carry out this request, you must specify the respective scheduling group assignment ID. The result will be the information about which product and which source are assigned to the involved scheduling group. To get additional information about the scheduling group assignment, use the $expand parameter.",
+        "tags": [
+          "Scheduling Group Assignments"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id",
+                  "isMarkedForDeletion",
+                  "createdAt",
+                  "modifiedAt"
+                ]
+              }
+            }
+          },
+          {
+            "name": "$expand",
+            "description": "Expand related entities, see [Expand](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionexpand)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "*",
+                  "schedulingGroup",
+                  "product",
+                  "supplier",
+                  "supplyingPlant"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Scheduling group assignment retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadOdsService.SchedulingGroupAssignments"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no scheduling group assignments for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/SchedulingGroupAssignments(id={id})/schedulingGroup": {
+      "parameters": [
+        {
+          "description": "Scheduling group assignment ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve the scheduling group of a scheduling group assignment.",
+        "description": "You can use this request to retrieve the scheduling group of a specific scheduling group assignment. To carry out this request, you must specify the scheduling group assignment ID.",
+        "tags": [
+          "Scheduling Group Assignments"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Scheduling group of scheduling group assignment retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadOdsService.SchedulingGroupView"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no scheduling group assignments for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/SchedulingGroupAssignments(id={id})/product": {
+      "parameters": [
+        {
+          "description": "Scheduling group assignment ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve the product of a scheduling group assignment.",
+        "description": "You can use this request to retrieve the product of a specific scheduling group assignment. To carry out this request, you must specify the scheduling group assignment ID.",
+        "tags": [
+          "Scheduling Group Assignments"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Product of scheduling group assignment retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadOdsService.ProductView"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no scheduling group assignments for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/SchedulingGroupAssignments(id={id})/supplier": {
+      "parameters": [
+        {
+          "description": "Scheduling group assignment ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve the supplier of a scheduling group assignment.",
+        "description": "You can use this request to retrieve the supplier (external source) of a specific scheduling group assignment. To carry out this request, you must specify the scheduling group assignment ID.",
+        "tags": [
+          "Scheduling Group Assignments"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Supplier of scheduling group assignment retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadOdsService.SupplierView"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no scheduling group assignments for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/SchedulingGroupAssignments(id={id})/supplyingPlant": {
+      "parameters": [
+        {
+          "description": "Scheduling group assignment ID",
+          "in": "path",
+          "name": "id",
+          "required": true,
+          "schema": {
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      ],
+      "get": {
+        "summary": "Retrieve the internal source of a scheduling group assignment.",
+        "description": "You can use this request to retrieve the internal source of a specific scheduling group assignment. To carry out this request, you must specify the scheduling group assignment ID. An internal source can either be a supplying distribution center or a supplying store.",
+        "tags": [
+          "Scheduling Group Assignments"
+        ],
+        "parameters": [
+          {
+            "name": "$select",
+            "description": "Select properties to be returned, see [Select](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionselect)",
+            "in": "query",
+            "explode": false,
+            "schema": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "enum": [
+                  "id"
+                ]
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Internal source of scheduling group assignment retrieved successfully.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReadOdsService.PlantView"
+                }
+              }
+            }
+          },
+          "403": {
+            "description": "You do not have the required authorization to carry out this request.",
+            "content": {}
+          },
+          "404": {
+            "description": "There are no scheduling group assignments for the specified IDs.",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/$batch": {}
+  },
+  "security": [
+    {
+      "OrderDeliverySchedulesService_auth": [
+        "{xsappname}.OrderDeliverySchedulesService"
+      ]
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "OrderDeliverySchedulesService_auth": {
+        "description": "To use this API, you need to obtain the OAuth client credentials (client ID and secret) using the SAP BTP cockpit.",
+        "type": "oauth2",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "https://{identityzone}.authentication.eu20.hana.ondemand.com/oauth/token",
+            "scopes": {
+              "{xsappname}.SupplierDpp": "Supplier Data for Data Protection and Privacy"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "ReadOdsService.OrderDeliverySchedules": {
+        "title": "OrderDeliverySchedules",
+        "description": "Order and delivery schedules contain information about possible order and delivery dates and times for scheduling groups in relation to specific sources and recipients.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The technical ID (UUID) of the order and delivery schedule.",
+            "type": "string",
+            "format": "uuid",
+            "example": "01234567-89ab-cdef-0123-456789abcdef"
+          },
+          "supplier": {
+            "description": "The external source that delivers a scheduling group to a recipient. Either this field or the field supplyingPlant must be filled.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ReadOdsService.SupplierView"
+              }
+            ],
+            "nullable": true
+          },
+          "supplyingPlant": {
+            "description": "The internal source, that is, a distribution center, that delivers a scheduling group to a recipient. Either this field or the field supplier must be filled.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ReadOdsService.PlantView"
+              }
+            ],
+            "nullable": true
+          },
+          "schedulingGroup": {
+            "description": "A scheduling group is a group of products that can be handled together in the order and delivery process.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ReadOdsService.SchedulingGroupView"
+              }
+            ],
+            "nullable": true
+          },
+          "recipient": {
+            "description": "The distribution center or the store to which a scheduling group is delivered by a source.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ReadOdsService.RecipientsView"
+              }
+            ],
+            "nullable": true
+          },
+          "validityStartDate": {
+            "description": "The local validity start date of the order and delivery schedule header.",
+            "type": "string",
+            "format": "date",
+            "example": "2023-04-13",
+            "nullable": true
+          },
+          "validityEndDate": {
+            "description": "The local validity end date of the order and delivery schedule header.",
+            "type": "string",
+            "format": "date",
+            "example": "2023-04-20",
+            "nullable": true
+          },
+          "isMarkedForDeletion": {
+            "description": "Specifies whether the order and delivery schedule header is marked for deletion.",
+            "type": "boolean",
+            "nullable": true
+          },
+          "items": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ReadOdsService.OrderDeliveryScheduleItems"
+            }
+          },
+          "items@odata.count": {
+            "$ref": "#/components/schemas/count"
+          },
+          "createdAt": {
+            "description": "The point in time when the order and delivery schedule was created.",
+            "type": "string",
+            "format": "date-time",
+            "example": "2023-04-13T15:51:04.0000000Z",
+            "nullable": true
+          },
+          "modifiedAt": {
+            "description": "The point in time when the order and delivery schedule was last modified.",
+            "type": "string",
+            "format": "date-time",
+            "example": "2023-04-13T15:51:04.0000000Z",
+            "nullable": true
+          },
+          "orderDeliveryScheduleType": {
+            "description": "The schedule type of an order and delivery schedule.",
+            "type": "string",
+            "maxLength": 2,
+            "example": "00",
+            "nullable": false
+          }
+        }
+      },
+      "ReadOdsService.OrderDeliveryScheduleItems": {
+        "title": "OrderDeliveryScheduleItems",
+        "description": "The order and delivery schedule items that are assigned to an order and delivery schedule header. The items contain possible delivery dates and times for the supply network node specified in the header.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The technical ID (UUID) of the order and delivery schedule item.",
+            "type": "string",
+            "format": "uuid",
+            "example": "2234567-89ab-cdef-0123-456789abcdef"
+          },
+          "deliveryDate": {
+            "description": "The local date of the recipient on which goods are delivered.",
+            "type": "string",
+            "format": "date",
+            "example": "2023-04-13",
+            "nullable": true
+          },
+          "deliveryTimeRangeStart": {
+            "description": "The start time (local time of the recipient) of the timeframe within which goods are delivered.",
+            "type": "string",
+            "format": "time",
+            "example": "15:00:00",
+            "nullable": true
+          },
+          "deliveryTimeRangeEnd": {
+            "description": "The end time (local time of the recipient) of the timeframe within which goods are delivered.",
+            "type": "string",
+            "format": "time",
+            "example": "16:00:00",
+            "nullable": true
+          },
+          "orderDate": {
+            "description": "The local date of the recipient before which goods must be ordered so that they can be delivered on time.",
+            "type": "string",
+            "format": "date",
+            "example": "2023-04-12",
+            "nullable": true
+          },
+          "orderTime": {
+            "description": "The time (local time of the recipient) before which goods must be ordered so that they can be delivered on time.",
+            "type": "string",
+            "format": "time",
+            "example": "08:00:00",
+            "nullable": true
+          },
+          "availabilityDate": {
+            "description": "The local date as of which goods are available for further processing at the recipient.",
+            "type": "string",
+            "format": "date",
+            "example": "2023-04-14",
+            "nullable": true
+          },
+          "availabilityTime": {
+            "description": "The time (local time of the recipient) as of which goods are available for further processing at the recipient.",
+            "type": "string",
+            "format": "time",
+            "example": "07:00:00",
+            "nullable": true
+          },
+          "stagingDate": {
+            "description": "The local date on which goods must be available for picking at the source.",
+            "type": "string",
+            "format": "date",
+            "example": "2023-04-12",
+            "nullable": true
+          },
+          "stagingTime": {
+            "description": "The time (local time of the recipient) at which goods must be available for picking at the source.",
+            "type": "string",
+            "format": "time",
+            "example": "12:00:00",
+            "nullable": true
+          }
+        }
+      },
+      "ReadOdsService.SchedulingGroupAssignments": {
+        "title": "SchedulingGroupAssignments",
+        "description": "A scheduling group assignment represents an assignment of a product and an optional source to a scheduling group.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The technical ID (UUID) of the scheduling group assignment",
+            "type": "string",
+            "format": "uuid",
+            "example": "SGA01234-89ab-cdef-0123-456789abcdef"
+          },
+          "schedulingGroup": {
+            "description": "A scheduling group is a group of products that can be handled together in the order and delivery process.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ReadOdsService.SchedulingGroupView"
+              }
+            ],
+            "nullable": true
+          },
+          "product": {
+            "description": "The product that is assigned to the scheduling group.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ReadOdsService.ProductView"
+              }
+            ],
+            "nullable": true
+          },
+          "supplier": {
+            "description": "Represents the external source of goods. Depending on the configuration of the scheduling group, the field can either be filled or empty. To find the scheduling group, a two-step approach must be performed. In a first read, it is required to search for a scheduling group using product and supplier as filter criteria. If no scheduling group was found in the first read, it is required to search for it in a second read, using only product as filter criterion. Either this field or the field supplyingPlant can be filled.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ReadOdsService.SupplierView"
+              }
+            ],
+            "nullable": true
+          },
+          "supplyingPlant": {
+            "description": "Represents the internal source of goods (a plant of type distribution center). Depending on the configuration of the scheduling group, the field can either be filled or empty. To find the scheduling group, a two-step approach must be performed. In a first read, it is required to search for a scheduling group using product and plant as filter criteria. If no scheduling group was found in the first read, it is required to search for it in a second read, using only product as filter criterion. Either this field or the field supplier can be filled.",
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/ReadOdsService.PlantView"
+              }
+            ],
+            "nullable": true
+          },
+          "isMarkedForDeletion": {
+            "description": "Determines whether a scheduling group assignment is marked for deletion.",
+            "type": "boolean",
+            "nullable": true
+          },
+          "createdAt": {
+            "description": "The point in time when the scheduling group assignment was created.",
+            "type": "string",
+            "format": "date-time",
+            "example": "2023-04-10T15:51:04.0000000Z",
+            "nullable": true
+          },
+          "modifiedAt": {
+            "description": "The point in time when the scheduling group assignment was last modified.",
+            "type": "string",
+            "format": "date-time",
+            "example": "2023-04-11T15:51:04.0000000Z",
+            "nullable": true
+          }
+        }
+      },
+      "ReadOdsService.SchedulingGroups": {
+        "title": "SchedulingGroups",
+        "description": "A scheduling group is a group of products that can be handled together in the order and delivery process.",
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The technical ID (UUID) of the scheduling",
+            "type": "string",
+            "format": "uuid",
+            "example": "78234567-89ab-cdef-0123-456789abcdef"
+          },
+          "displayId": {
+            "description": "The ID that is displayed on the user interface.",
+            "type": "string",
+            "nullable": true
+          },
+          "name": {
+            "description": "The name of the scheduling group.",
+            "type": "string",
+            "nullable": true
+          },
+          "schedulingGroupType": {
+            "description": "Determines whether a scheduling group is delivered by a supplier (external) or by a distribution center (internal).",
+            "type": "integer",
+            "format": "int32",
+            "nullable": true,
+            "example": 1
+          },
+          "schedulingGroupStatus": {
+            "description": "Determines whether a scheduling group is active or inactive.",
+            "type": "string",
+            "enum": [
+              "ACTIVE",
+              "INACTIVE"
+            ],
+            "nullable": true
+          },
+          "isMarkedForDeletion": {
+            "description": "Determines whether a scheduling group is marked for deletion.",
+            "type": "boolean",
+            "nullable": true,
+            "example": false
+          }
+        }
+      },
+      "ReadOdsService.RecipientsView": {
+        "title": "RecipientsView",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          }
+        }
+      },
+      "ReadOdsService.SupplierView": {
+        "title": "SupplierView",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          }
+        }
+      },
+      "ReadOdsService.PlantView": {
+        "title": "PlantView",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          }
+        }
+      },
+      "ReadOdsService.SchedulingGroupView": {
+        "title": "SchedulingGroupView",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "example": "55234567-89ab-cdef-0123-456789abcdef"
+          }
+        }
+      },
+      "ReadOdsService.ProductView": {
+        "title": "ProductView",
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "maxLength": 40,
+            "nullable": true
+          }
+        }
+      },
+      "count": {
+        "anyOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "description": "The number of entities in the collection. Available when using the [$count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount) query option."
+      }
+    },
+    "parameters": {
+      "top": {
+        "name": "$top",
+        "in": "query",
+        "description": "Show only the first n items, see [Paging - Top](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptiontop)",
+        "schema": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "example": 50
+      },
+      "skip": {
+        "name": "$skip",
+        "in": "query",
+        "description": "Skip the first n items, see [Paging - Skip](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionskip)",
+        "schema": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "count": {
+        "name": "$count",
+        "in": "query",
+        "description": "Include count of items, see [Count](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptioncount)",
+        "schema": {
+          "type": "boolean"
+        }
+      },
+      "search": {
+        "name": "$search",
+        "in": "query",
+        "description": "Search items by search phrases, see [Searching](http://docs.oasis-open.org/odata/odata/v4.01/odata-v4.01-part1-protocol.html#sec_SystemQueryOptionsearch)",
+        "schema": {
+          "type": "string"
+        }
+      }
+    },
+    "responses": {}
+  }
+}

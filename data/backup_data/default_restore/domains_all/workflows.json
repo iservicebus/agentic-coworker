@@ -1,0 +1,73 @@
+{
+  "default": [
+    {
+      "id": "0c03763c-9f0e-4f18-82e3-79110e24167b",
+      "name": "strategy_plan_portfolio_execute_improve",
+      "tenant_name": "default",
+      "label": "Strategy \u2192 Plan \u2192 Portfolio \u2192 Execute \u2192 Improve",
+      "description": "When the enterprise needs to change or steer the business, we align strategy, portfolio, and execution so the organization delivers the right work and continuously learns and adjusts.",
+      "value_metrics": [
+        "Strategic OKR attainment",
+        "Portfolio spend aligned to strategy",
+        "Time from strategy decision to first value"
+      ],
+      "created_at": null
+    },
+    {
+      "id": "7147dc6b-5a2b-4038-a5c1-6a1831674ef8",
+      "name": "design_build_secure_release_operate",
+      "tenant_name": "default",
+      "label": "Design \u2192 Build \u2192 Secure \u2192 Release \u2192 Operate",
+      "description": "When a product, feature, or change is needed, we design, build, secure, release, and operate it so customers get reliable, secure products and platforms that keep improving.",
+      "value_metrics": [
+        "Deployment frequency",
+        "Change failure rate",
+        "Mean time to recover (MTTR)",
+        "Service availability"
+      ],
+      "created_at": null
+    },
+    {
+      "id": "9f890891-8196-4c47-89c2-210b6c79ea3e",
+      "name": "market_sell_order_fulfill_bill_recognize",
+      "tenant_name": "default",
+      "label": "Market \u2192 Sell \u2192 Order \u2192 Fulfill \u2192 Bill \u2192 Recognize",
+      "description": "When a potential customer shows intent, we orchestrate the end-to-end lead-to-cash journey to turn that intent into profitable, compliant revenue and a durable relationship.",
+      "value_metrics": [
+        "Net revenue retention (NRR)",
+        "Gross margin",
+        "Lead-to-cash cycle time",
+        "Customer NPS"
+      ],
+      "created_at": null
+    },
+    {
+      "id": "464002be-1534-4f4d-8fd2-506038ab1068",
+      "name": "workforce_lifecycle_acquire_enable_work_develop_pay_analyze",
+      "tenant_name": "default",
+      "label": "Workforce Lifecycle: Acquire \u2192 Enable \u2192 Work \u2192 Develop \u2192 Pay \u2192 Analyze",
+      "description": "When a work need or role exists or changes, we plan, acquire, enable, organize, develop, and reward people so we have a sustainable, productive workforce aligned to strategy and economics.",
+      "value_metrics": [
+        "Employee engagement",
+        "Time to fill critical roles",
+        "Voluntary attrition rate",
+        "Productivity per FTE"
+      ],
+      "created_at": null
+    },
+    {
+      "id": "67f29eb8-4a58-4d8f-8933-4d2e9585eccc",
+      "name": "protect_comply_govern_assure_recover",
+      "tenant_name": "default",
+      "label": "Protect \u2192 Comply \u2192 Govern \u2192 Assure \u2192 Recover",
+      "description": "Because the enterprise faces constant risks and obligations, we protect, comply, govern, assure, and recover so we operate within risk appetite, meet obligations, and withstand disruptions.",
+      "value_metrics": [
+        "Number of material risk incidents",
+        "Regulatory findings and audit issues",
+        "Time to detect and remediate incidents",
+        "Critical service availability during disruptions"
+      ],
+      "created_at": null
+    }
+  ]
+}

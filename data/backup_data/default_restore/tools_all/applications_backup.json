@@ -1,0 +1,64 @@
+{
+  "default": [
+    {
+      "app_name": "gmailgoogleapiscom",
+      "tenant_name": "default",
+      "app_note": "{\"host\": [\"gmail\", \"googleapis\", \"com\"], \"path\": [\"gmail\", \"v1\", \"users\", \"$userId\", \"messages\", \"$id\"], \"protocol\": \"https\"}"
+    },
+    {
+      "app_name": "hostdockerinternal5000",
+      "tenant_name": "default",
+      "app_note": "http://host.docker.internal:5000"
+    },
+    {
+      "app_name": "dev296096service-nowcom",
+      "tenant_name": "default",
+      "app_note": "{\"host\": [\"dev296096\", \"service-now\", \"com\"], \"path\": [\"api\", \"now\", \"table\", \"${tableName}\", \"${sys_id}\"], \"query\": {}, \"protocol\": \"https\"}"
+    },
+    {
+      "app_name": "sandboxapisapcom",
+      "tenant_name": "default",
+      "app_note": "https://sandbox.api.sap.com"
+    },
+    {
+      "app_name": "exportarxivorg",
+      "tenant_name": "default",
+      "app_note": "https://export.arxiv.org"
+    },
+    {
+      "app_name": "apigithubcom",
+      "tenant_name": "default",
+      "app_note": "https://api.github.com"
+    },
+    {
+      "app_name": "apisec-apiio",
+      "tenant_name": "default",
+      "app_note": "https://api.sec-api.io"
+    },
+    {
+      "app_name": "wwwalphavantageco",
+      "tenant_name": "default",
+      "app_note": "https://www.alphavantage.co"
+    },
+    {
+      "app_name": "apistlouisfedorg",
+      "tenant_name": "default",
+      "app_note": "https://api.stlouisfed.org"
+    },
+    {
+      "app_name": "dev341424service-nowcom",
+      "tenant_name": "default",
+      "app_note": "https://dev341424.service-now.com"
+    },
+    {
+      "app_name": "wwwgoogleapiscom",
+      "tenant_name": "default",
+      "app_note": "https://www.googleapis.com"
+    },
+    {
+      "app_name": "apilinkedincom",
+      "tenant_name": "default",
+      "app_note": "https://api.linkedin.com"
+    }
+  ]
+}

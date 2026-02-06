@@ -1,0 +1,28 @@
+{
+  "default": [
+    {
+      "id": "51b261b8-5ab8-4a59-b016-b805d43df316",
+      "username": "admin",
+      "tenant_name": "default",
+      "email": "admin@example.com",
+      "encrypted_credentials": "1d92b2cf970f74c8a571c46631930b6046e6a17c8a35bc7fef32702c8855147d108211f8d599c95a6732fef3d6e112980439855e40dde4833877dfac002e389ae6a1d19e40b3a0bf885bda9bb68f623323",
+      "iv": "a8e28801878ac46c23547628"
+    },
+    {
+      "id": "36e56dfd-7ce2-44cd-9433-4240e4d1ad2b",
+      "username": "dev",
+      "tenant_name": "default",
+      "email": "dev@example.com",
+      "encrypted_credentials": "75f4e22bfc132590253033beacf021a71b0493c78dc4c2c74f2e831a3eb86466642f8bc8f32a7b53cb8b2e21a4b73e30cc86ba50e53aa7617135979597a43480add2b0570403cbc303aec12b57494ecf16",
+      "iv": "4b545524f189cf51b43dade9"
+    },
+    {
+      "id": "9325dc39-e969-4e4f-910c-dbe382a615d3",
+      "username": "ops",
+      "tenant_name": "default",
+      "email": "ops@example.com",
+      "encrypted_credentials": "60d06eb4834181f4aae58880ef17418bd83ed97dae14851e0ceff2a3e36b6a53d72d41cb80d8b44cd6a348ea472631bb3c9d35482e3c7d05f02025e2162f2fdc6c9a42d0931c5e16ffbf7864e23cc381e5",
+      "iv": "41ee1eb669241406620dce57"
+    }
+  ]
+}

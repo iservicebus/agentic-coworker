@@ -1,0 +1,55 @@
+{
+  "default": [
+    {
+      "username": "agent-admin",
+      "firstName": "",
+      "lastName": "",
+      "email": "aadmin@example.com",
+      "enabled": true,
+      "credentials": [],
+      "attributes": {
+        "user_type": [
+          "agent"
+        ]
+      },
+      "emailVerified": false,
+      "realmRoles": "",
+      "clientRoles": "",
+      "groups": ""
+    },
+    {
+      "username": "agent-dev",
+      "firstName": "",
+      "lastName": "",
+      "email": "adev@example.com",
+      "enabled": true,
+      "credentials": [],
+      "attributes": {
+        "user_type": [
+          "agent"
+        ]
+      },
+      "emailVerified": false,
+      "realmRoles": "",
+      "clientRoles": "",
+      "groups": ""
+    },
+    {
+      "username": "agent-ops",
+      "firstName": "",
+      "lastName": "",
+      "email": "aops@example.com",
+      "enabled": true,
+      "credentials": [],
+      "attributes": {
+        "user_type": [
+          "agent"
+        ]
+      },
+      "emailVerified": false,
+      "realmRoles": "",
+      "clientRoles": "",
+      "groups": ""
+    }
+  ]
+}

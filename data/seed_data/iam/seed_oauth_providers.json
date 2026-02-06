@@ -1,0 +1,116 @@
+{
+  "default":[
+    {
+        "provider_id": "keycloak",
+        "provider_name":"Keycloak",
+        "provider_type":"keycloak",
+        "type": "oauth",
+        "clientId": "agent-host",
+        "clientSecret": "host-secret",
+        "is_built_in":true,
+        "options":{       
+            "issuer": "http://host.docker.internal:8888/realms/default",
+
+            "authorization": {
+                "url": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/auth",
+                "params": { "scope": "openid email profile" }
+            },
+            "token": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/token",
+    
+            "userinfo": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/userinfo",
+            "jwks_endpoint": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/certs"
+        }
+    },
+
+    {
+        "provider_id": "google",
+        "provider_name": "Google",
+        "provider_type": "google",
+        "type": "oauth",
+        "is_built_in":true,
+        "options": {
+            "authorization": {
+            "params": {
+                "scope": "openid https://mail.google.com/ https://www.googleapis.com/auth/contacts profile https://www.googleapis.com/auth/gmail.send https://www.googleapis.com/auth/calendar https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/documents https://www.googleapis.com/auth/youtube  https://www.googleapis.com/auth/spreadsheets",
+                "access_type": "offline",
+                "prompt": "consent"
+            }
+            }
+        }
+    },
+    {
+        "provider_id": "linkedin",
+        "provider_name": "Linkedin",
+        "provider_type": "linkedin",
+
+        "type": "oauth",
+        "is_built_in":true,
+        "options": {
+            "authorization": {
+            "url": "https://www.linkedin.com/oauth/v2/authorization",
+            "params": {
+                "scope": "openid profile email w_member_social" 
+            }
+            }
+        }
+    },
+    {
+        "provider_id": "github",
+        "provider_name": "Github",
+        "provider_type": "github",
+
+        "type": "oauth",
+
+        "is_built_in":true,
+        "options": {
+            "authorization":{
+                "params": {
+                "scope": "user repo admin:org"
+                }
+            }
+        }
+    },
+    {
+        "provider_id": "aintegrator",
+        "provider_name":"Aintegrator",
+        "provider_type":"keycloak",
+        "type": "oauth",
+        "clientId": "agent-host",
+        "clientSecret": "host-secret",
+        "is_built_in":true,
+        "options":{       
+            "issuer": "http://host.docker.internal:8888/realms/default",
+
+            "authorization": {
+                "url": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/auth",
+                "params": { "scope": "openid email profile" }
+            },
+            "token": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/token",
+    
+            "userinfo": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/userinfo",
+            "jwks_endpoint": "http://host.docker.internal:8888/realms/default/protocol/openid-connect/certs"
+        }
+    },
+    {
+        "provider_id": "servicenow",
+        "provider_name":"ServiceNow",
+        "provider_type":"servicenow",
+        "type": "oauth",
+
+        "is_built_in":true,
+        "options":{       
+
+
+            "authorization": {
+            "url": "https://dev296096.service-now.com/oauth_auth.do",
+            "params": {
+                "state": false
+            }
+            },
+            "token": "https://dev296096.service-now.com/oauth_token.do",
+            "userinfo": "https://dev296096.service-now.com/api/now/table/sys_user?sysparm_limit=1"
+        }
+    }
+
+]
+}

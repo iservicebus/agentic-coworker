@@ -1,0 +1,168 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mcp-services
+  namespace: aintegrator
+  labels:
+    app: mcp-services
+    component: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mcp-services
+  template:
+    metadata:
+      labels:
+        app: mcp-services
+        component: backend
+    spec:
+      containers:
+      - name: mcp-services
+        image: mcp-services:latest
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 6666
+          name: http
+          protocol: TCP
+        env:
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: MCP_PORT
+        - name: PYTHONPATH
+          value: "/app/src"
+        # IAM Configuration
+        - name: IAM_URL
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: IAM_URL
+        - name: REALM
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: REALM
+        # Transport Configuration
+        - name: TRANSPORT
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: TRANSPORT
+        - name: AUTHORIZATION_ENABLED
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: AUTHORIZATION_ENABLED
+        - name: AUTHORIZATION_HOST
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: AUTHORIZATION_HOST
+        - name: INTEGRATOR_URL
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: INTEGRATOR_URL
+        - name: PROXY_URL
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: PROXY_URL
+        # Database
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: DATABASE_URL
+        # Graphiti Configuration
+        - name: GRAPHITI_ENABLED
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: GRAPHITI_ENABLED
+        - name: GRAPHITI_URI
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: GRAPHITI_URI
+        - name: GRAPHITI_USER
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: GRAPHITI_USER
+        - name: GRAPHITI_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: GRAPHITI_PASSWORD
+        # Azure Configuration
+        - name: AZURE_ENDPOINT
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: AZURE_ENDPOINT
+        - name: AZURE_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: aintegrator-secrets
+              key: AZURE_API_KEY
+        - name: AZURE_API_VERSION
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: AZURE_API_VERSION
+        - name: AZURE_LLM_DEPLOYMENT
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: AZURE_LLM_DEPLOYMENT
+        - name: AZURE_EMBEDDING_DEPLOYMENT
+          valueFrom:
+            configMapKeyRef:
+              name: aintegrator-config
+              key: AZURE_EMBEDDING_DEPLOYMENT
+        resources:
+          requests:
+            memory: "512Mi"
+            cpu: "500m"
+          limits:
+            memory: "1Gi"
+            cpu: "1000m"
+        livenessProbe:
+          httpGet:
+            path: /
+            port: 6666
+          initialDelaySeconds: 40
+          periodSeconds: 30
+          timeoutSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 6666
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+      restartPolicy: Always
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mcp-services-service
+  namespace: aintegrator
+  labels:
+    app: mcp-services
+spec:
+  type: NodePort
+  selector:
+    app: mcp-services
+  ports:
+  - port: 6666
+    targetPort: 6666
+    nodePort: 30666
+    protocol: TCP
+    name: http

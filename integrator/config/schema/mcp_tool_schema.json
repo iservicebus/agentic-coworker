@@ -1,0 +1,150 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "description": "The Model Context Protocol (MCP) tool schema defines a generic structure for agent tools, but it does not include the necessary details for making HTTP API requests. To support HTTP-based tools, we extend the schema by adding fixed request elements using staticInput. The inputSchema provides instructions for how the agent should map user-provided input into the expected request format. By combining dynamic input (from the agent) with static values (from staticInput), the agent can construct and execute a complete HTTP request.",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "The name of the functional tool.",
+            "type": "string"
+        },
+        "description": {
+            "description": "A human-readable description of the function tool.\n\nThis can be used by clients to improve the LLM's understanding of available tools. It can be thought of like a \"hint\" to the model.",
+            "type": "string"
+        },
+        "transport": {
+            "type": "string",
+            "enum": ["http"],
+            "default": "http",
+            "description": "Specifies the communication protocol used by this tool's underlying framework to interact with the external API. This ensures the tool will always operate over 'http' at a higher level, irrespective of the external API's protocol defined within `staticInput.url.protocol`. This 'transport' refers to the communication channel used by the tool, not the API's own protocol."
+        },
+        "appName": {
+            "description": "The name of application which the tool belongs to.",
+            "type": "string"
+        },
+        "tool_type": {
+            "description": "The type of the tool. Default is 'general'.",
+            "type": "string",
+            "default": "general"
+        },
+
+        "auth": {
+            "type": "object",
+            "description": "Authorization provider to be used for API access protection. It is optional, If it is provided, it will overwrite the authorzaition in static input",
+            "properties": {
+                "provider": {
+                    "type": "string",
+                    "description": "the name of authorization provider (e.g. github, linkedin et al)"
+                }
+            }
+        },
+
+        "staticInput": {
+            "type": "object",
+            "description": "Defines fixed protocol parameters required for HTTP communication, such as the request method, URL, and headers. These values are predefined by the tool developer and are not provided by the tool client at runtime.",
+            "properties": {
+                "method": {
+                    "type": "string",
+                    "enum": ["GET", "POST", "PUT", "DELETE", "PATCH", "HEAD", "OPTIONS"],
+                    "description": "The HTTP method to use when sending the request (e.g., GET for read operations, POST for creation, etc.)."
+                },
+                "url": {
+                    "type": "object",
+                    "description": "The full specification of the request URL, broken down into protocol, host, port, path, and query parameters.",
+                    "properties": {
+                        "protocol": {
+                            "type": "string",
+                            "enum": ["http", "https"],
+                            "description": "The protocol used by the target API (e.g., 'http' or 'https'). This defines how the external API expects to be addressed."
+                        },
+                        "host": {
+                            "type": "array",
+                            "items": { "type": "string" },
+                            "description": "The host portion of the URL as an array of strings (e.g., ['api', 'example', 'com'] representing api.example.com)."
+                        },
+                        "port": {
+                            "type": "string",
+                            "description": "The port number to use for the request, if different from the protocol default (e.g., '8080')."
+                        },
+                        "path": {
+                            "type": "array",
+                            "items": { "type": "string" },
+                            "description": "An array of path segments appended to the host (e.g., ['v1', 'users'] becomes /v1/users)."
+                        },
+                        "query": {
+                            "type": "object",
+                            "additionalProperties": { "type": "string" },
+                            "description": "An object representing query string parameters, where each key-value pair will be serialized into the URL as `key=value`."
+                        }
+                    },
+                    "required": ["protocol", "host"]
+                },
+                "headers": {
+                    "type": "object",
+                    "additionalProperties": { "type": "string" },
+                    "description": "A set of HTTP headers to include in the request. Each key-value pair represents a header name and its value."
+                }
+            },
+            "required": ["method", "url"]
+        },
+        "inputSchema":
+        {
+            "description": "A JSON Schema that defines the structure of dynamic input parameters expected from the tool client. These parameters are mapped to the HTTP request and must conform to this schema.",
+            "type": "object",
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "const": "object",
+                    "description": "Ensures the top-level type of the dynamic input schema is always an object."
+                },
+                "description": {
+                    "type": "string",
+                    "description": "A human-readable description for the entire dynamic input schema, providing context on its purpose."
+                },
+                "properties": {
+                    "type": "object",
+                    "description": "Defines the individual dynamic input parameters and how they are mapped to HTTP request components (path, query, header, or body).",
+                    "additionalProperties": false,
+                    "properties": {
+                        "aint_path": {
+                            "type": "object",
+                            "description": "A map of dynamic path parameters, where each key corresponds to a segment in the URL path. Values must be strings, numbers, or booleans.",
+                            "additionalProperties": {
+                                "type": ["string", "number", "boolean"]
+                            }
+                        },
+                        "aint_query": {
+                            "type": "object",
+                            "description": "A map of query parameters to be serialized into the URL. Each key-value pair represents a query parameter name and its value.",
+                            "additionalProperties": {
+                                "type": ["string", "number", "boolean"]
+                            }
+                        },
+                        "aint_headers": {
+                            "type": "object",
+                            "description": "A set of HTTP headers to be provided dynamically by the client. Each key-value pair represents a header name and its value.",
+                            "additionalProperties": {
+                                "type": ["string", "number", "boolean"]
+                            }
+                        },
+                        "aint_body": {
+                            "description": "Describes the HTTP request body's expected format. This can be defined as a JSON Schema object for structured payloads, or as a literal string to indicate a simple, unstructured text body.",
+                            "oneOf": [
+                                {
+                                    "type": "string",
+                                    "description": "If the request body itself is a simple, unstructured string (e.g., 'text/plain'). The consumer will interpret this as the content type is text/plain with no further schema."
+                                },
+                                {
+                                    "description": "A JSON Schema object defining the structure of a structured request body (e.g., 'application/json').",
+                                    "$ref": "http://json-schema.org/draft-07/schema#"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "required": ["type", "properties"],
+            "additionalProperties": false
+        }
+
+    }
+}
