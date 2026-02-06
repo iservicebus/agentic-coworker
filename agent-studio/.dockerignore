@@ -18,6 +18,19 @@ build
 .env.test.local
 .env.production.local
 
+# Secure files (should be mounted at runtime)
+.secure.*
+
+# Scripts (not needed in container)
+*.sh
+scripts/
+
+# Session files
+*.session.sql
+
+# Fellow data
+.fellow-data/
+
 # Git
 .git
 .gitignore
