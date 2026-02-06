@@ -85,6 +85,8 @@ Once running, access:
   - **Readiness Dashboard**: View your organization's agentic AI readiness metrics
   - **Tool Importer**: Import and manage API integrations
   - **Agent Management**: Configure agent roles and permissions
+  - **Test User Login**: `admin` / `securepass`
+  - **Test Agent Login**: `agent-admin` / `securepass`
 - **API Services**: http://localhost:6060
 - **Admin Dashboard**: http://localhost:8888 (admin/admin)
 

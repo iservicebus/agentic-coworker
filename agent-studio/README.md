@@ -115,6 +115,20 @@ docker run -p 3000:3000 \
   agent-studio
 ```
 
+### Test Credentials
+
+For development and testing, use these default credentials:
+
+**Test User Login:**
+- Username: `admin`
+- Password: `securepass`
+
+**Test Agent Login:**
+- Username: `agent-admin`
+- Password: `securepass`
+
+> Note: Change these credentials in production environments.
+
 ## Project Structure
 
 ```

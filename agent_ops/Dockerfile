@@ -10,8 +10,9 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy agent_ops package first
-COPY agent_ops /app/agent_ops
+# Copy only required files from agent_ops package
+COPY agent_ops/pyproject.toml /app/agent_ops/
+COPY agent_ops/src /app/agent_ops/src
 
 # Copy integrator source code to agent_ops/src
 # Only the source code is needed from integrator - all operational config stays in agent_ops

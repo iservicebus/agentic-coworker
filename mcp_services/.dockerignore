@@ -59,6 +59,9 @@ docker-compose.yml
 .env
 .env.*
 
+# Secure files (should be mounted at runtime)
+.secure.*
+
 # Temporary files
 *.tmp
 tmp/
