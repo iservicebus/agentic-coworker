@@ -9,9 +9,6 @@
 
 ## ✨ What Your Agents Can Do
 
-### Measure Your Agentic Readiness
-
-- 📊 **AI Integration Readiness Dashboard** - Visualize your organization's readiness for AI agents by measuring MCP tool availability across business workflows. See which processes have automation potential, identify integration gaps, and track coverage metrics across workflow steps. Understand your path to full agent deployment with clear metrics on tool availability and workflow readiness.
 
 ### Agents Work Across Your Entire Business
 
@@ -45,6 +42,11 @@
 - 🚀 **Cloud-Native Deployment** - Agents run in containerized environments with automatic scaling
 - 🔄 **Event-Driven Coordination** - Agents communicate and coordinate through real-time messaging
 
+### Measure Your Agentic Readiness
+
+- 📊 **AI Integration Readiness Dashboard** - Visualize your organization's readiness for AI agents by measuring MCP tool availability across business workflows. See which processes have automation potential, identify integration gaps, and track coverage metrics across workflow steps. Understand your path to full agent deployment with clear metrics on tool availability and workflow readiness.
+
+
 ## 🚀 Quick Start
 
 ### Prerequisites
@@ -64,7 +66,7 @@ cd agentic-coworker
 
 # Configure environment
 cp .env.docker.sample .env.docker
-# Edit .env.docker and add your Azure OpenAI or Google AI credentials
+# Edit .env.docker and add your OpenAI, or Azure OpenAI or Google AI credentials
 
 # Start the platform
 docker-compose up -d
@@ -90,23 +92,87 @@ Once running, access:
 
 ### Required: AI Model Setup
 
-Edit `.env.docker` and configure your AI provider:
+Edit `.env.docker` and configure your AI provider. The platform supports multiple LLM providers:
 
-**Azure OpenAI:**
+#### Azure OpenAI (Cloud)
 ```bash
+MODEL_PROVIDER=azure_openai
 AZURE_OPENAI_API_KEY=your-api-key-here
 AZURE_OPENAI_ENDPOINT=https://your-resource.openai.azure.com/
+AZURE_OPENAI_MODEL=gpt-5
+AZURE_OPENAI_DEPLOYMENT_NAME=gpt-5
+AZURE_OPENAI_EMBEDDING_MODEL=text-embedding-3-small
+AZURE_OPENAI_API_VERSION=2024-12-01-preview
 ```
 
-**Google AI (Alternative):**
+#### OpenAI (Cloud)
+```bash
+MODEL_PROVIDER=openai
+OPENAI_API_KEY=your-openai-api-key-here
+OPENAI_MODEL=gpt-4o
+OPENAI_EMBEDDING_MODEL=text-embedding-3-small
+```
+
+#### Google AI (Cloud)
 ```bash
 MODEL_PROVIDER=google_genai
 GOOGLE_API_KEY=your-google-api-key-here
+GOOGLE_MODEL=gemini-2.5-flash
+GOOGLE_EMBEDDING_MODEL=models/gemini-embedding-001
 ```
+
+#### Anthropic Claude (Cloud)
+```bash
+MODEL_PROVIDER=anthropic
+ANTHROPIC_API_KEY=your-anthropic-api-key-here
+ANTHROPIC_MODEL=claude-sonnet-4-5-20250929
+LOCAL_EMBEDDING_MODEL=rjmalagon/gte-qwen2-1.5b-instruct-embed-f16
+LOCAL_EMBEDDING_BASE_URL=http://host.docker.internal:11434
+```
+
+#### Local OpenAI / MLX (On-Premises)
+```bash
+MODEL_PROVIDER=local_openai
+LOCAL_OPENAI_BASE_URL=http://host.docker.internal:5555/v1
+LOCAL_OPENAI_API_KEY="local"
+LOCAL_OPENAI_MODEL=gpt-oss-20b  # or gpt-oss-120b for larger model
+LOCAL_EMBEDDING_MODEL=rjmalagon/gte-qwen2-1.5b-instruct-embed-f16
+LOCAL_EMBEDDING_BASE_URL=http://host.docker.internal:11434  # Ollama server
+```
+
+**Local Model Notes**:
+- Supports **gpt-oss-20b** (20 billion parameters) and **gpt-oss-120b** (120 billion parameters)
+- Embeddings run via **Ollama** with **gte-qwen2** model (port 11434)
+- Requires local model server running (MLX or compatible OpenAI-compatible server)
+- No API keys or external dependencies
+- Full data privacy and control
+- Ideal for air-gapped environments or data-sensitive deployments
 
 ### Optional: External Service Credentials
 
-Add OAuth and API credentials for external services:
+Add OAuth and API credentials for external services to enable your agents to access external platforms and data sources.
+
+#### OAuth 2.0 Providers
+
+Follow these guides to obtain OAuth credentials:
+
+- **[Google OAuth Setup](docs/setup-guides/google-oauth-setup.md)** - Gmail, Calendar, Drive, and other Google services
+- **[GitHub OAuth Setup](docs/setup-guides/github-oauth-setup.md)** - Repository access, issues, and pull requests
+- **[LinkedIn OAuth Setup](docs/setup-guides/linkedin-oauth-setup.md)** - Profile data and social features
+- **[ServiceNow OAuth Setup](docs/setup-guides/servicenow-api-setup.md)** - ITSM integration (OAuth or API key)
+
+#### API Key Providers
+
+Follow these guides to obtain API keys:
+
+- **[SAP API Key Setup](docs/setup-guides/sap-api-key-setup.md)** - SAP Business APIs and enterprise data
+- **[FRED API Key Setup](docs/setup-guides/fred-api-key-setup.md)** - Federal Reserve economic data
+- **[SEC API Key Setup](docs/setup-guides/sec-api-key-setup.md)** - SEC EDGAR filings and financial data
+- **[Alpha Vantage API Key Setup](docs/setup-guides/alphavantage-api-key-setup.md)** - Stock market and financial data
+
+#### Apply Configuration
+
+After obtaining credentials, configure them:
 
 ```bash
 cd data/update_data
@@ -115,15 +181,23 @@ cd data/update_data
 cp update_app_keys.json.template update_app_keys.json
 cp update_oauth_providers.json.template update_oauth_providers.json
 
-# Edit with your credentials, then apply
+# Edit with your credentials from the guides above, then apply
 docker exec agent-ops python -m agent_ops update
 ```
 
-Supported integrations:
-- **OAuth**: Google, GitHub, LinkedIn, ServiceNow
-- **API Keys**: SAP, FRED Economic Data, SEC Edgar, Alpha Vantage
-
 ## 🏗️ Architecture
+
+### System Overview
+
+The Agentic Coworker platform enables AI agents to work autonomously across your entire business ecosystem with enterprise governance and security.
+
+![Agentic Coworker Architecture](docs/images/agentic-coworker-architecture.png)
+
+**Architecture Layers:**
+
+- **Human Interaction Layer**: Web interface and chat apps (Slack, Discord, Teams) for human-agent collaboration
+- **Agentic Coworker Platform**: Core components including Agent Factory, MCP Gateway, Agent Identity, Agent Governance, Agent Skill Acquisition, Agent Tool Annotator, and API Gateway
+- **Integration Layer**: Connects to Social Apps (LinkedIn), Workplace Productivity tools (Gmail, Calendar, GitHub), and Enterprise Applications (SAP, ServiceNow)
 
 ### Platform Services
 
@@ -230,6 +304,30 @@ ports:
 
 ## 📚 Documentation
 
+### Core Documentation
+
+- **[Architecture Documentation](docs/guides/ARCHITECTURE.md)** - Complete system architecture, design patterns, and technical details
+- **[Deployment Guide](docs/guides/DEPLOYMENT.md)** - Comprehensive deployment instructions for dev, staging, and production
+- **[User Guide](docs/guides/USER_GUIDE.md)** - Complete guide for platform users and administrators
+- **[Developer Guide](docs/guides/DEVELOPER_GUIDE.md)** - Development setup, coding standards, and contribution workflow
+- **[Contributing Guidelines](docs/guides/CONTRIBUTING.md)** - How to contribute to the project
+
+### Setup Guides
+
+**OAuth 2.0 Configuration:**
+- [Google OAuth Setup](docs/setup-guides/google-oauth-setup.md) - Configure Google authentication and API access
+- [GitHub OAuth Setup](docs/setup-guides/github-oauth-setup.md) - Configure GitHub authentication and repository access
+- [LinkedIn OAuth Setup](docs/setup-guides/linkedin-oauth-setup.md) - Configure LinkedIn authentication and social features
+- [ServiceNow Setup](docs/setup-guides/servicenow-api-setup.md) - Configure ServiceNow (OAuth or API key)
+
+**API Key Configuration:**
+- [SAP API Key Setup](docs/setup-guides/sap-api-key-setup.md) - Configure SAP Business Hub API access
+- [FRED API Key Setup](docs/setup-guides/fred-api-key-setup.md) - Configure Federal Reserve economic data access
+- [SEC API Key Setup](docs/setup-guides/sec-api-key-setup.md) - Configure SEC EDGAR filings access
+- [Alpha Vantage API Key Setup](docs/setup-guides/alphavantage-api-key-setup.md) - Configure stock market data access
+
+### Operations Guides
+
 - [Quick Reference Guide](agent_ops/QUICK_REFERENCE.md) - Database operations and common tasks
 - [Operations Manual](agent_ops/OPERATIONS.md) - Detailed operational procedures
 - [Docker Environment Guide](agent_ops/DOCKER-ENV.md) - Docker-specific configuration
@@ -243,6 +341,10 @@ agentic-coworker/
 ├── mcp_services/          # Model Context Protocol services
 ├── support_services/      # Supporting API services
 ├── agent_ops/             # Database operations utilities
+├── docs/                  # Complete documentation
+│   ├── guides/           # Core documentation (Architecture, Deployment, User, Developer, Contributing)
+│   ├── setup-guides/     # OAuth and API key setup guides
+│   └── images/           # Diagrams and images
 ├── data/
 │   ├── seed_data/        # Initial platform data
 │   ├── backup_data/      # Database backups
@@ -254,13 +356,28 @@ agentic-coworker/
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+We welcome contributions from the community! Whether you're fixing bugs, adding features, improving documentation, or reporting issues, your help makes this project better.
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+### How to Contribute
+
+1. Read the [Contributing Guidelines](docs/guides/CONTRIBUTING.md)
+2. Fork the repository
+3. Create your feature branch (`git checkout -b feature/amazing-feature`)
+4. Make your changes following our [coding standards](docs/guides/DEVELOPER_GUIDE.md#coding-standards)
+5. Write tests for your changes
+6. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+7. Push to your branch (`git push origin feature/amazing-feature`)
+8. Open a Pull Request
+
+### Development Resources
+
+- **[Developer Guide](docs/guides/DEVELOPER_GUIDE.md)** - Setup instructions and development workflow
+- **[Contributing Guidelines](docs/guides/CONTRIBUTING.md)** - Detailed contribution process
+- **[Architecture Documentation](docs/guides/ARCHITECTURE.md)** - Understand the system design
+
+### Code of Conduct
+
+We are committed to providing a welcoming and inclusive environment. Please read our Code of Conduct in [CONTRIBUTING.md](docs/guides/CONTRIBUTING.md#code-of-conduct).
 
 ## 📄 License
 
@@ -284,9 +401,9 @@ Built with modern technologies:
 
 ## 📞 Support
 
-- **Issues**: [GitHub Issues](https://github.com/YOUR_USERNAME/agentic-coworker/issues)
-- **Documentation**: [Wiki](https://github.com/YOUR_USERNAME/agentic-coworker/wiki)
+- **Issues**: [GitHub Issues](https://github.com/iservicebus/agentic-coworker/issues)
+- **Documentation**: [Wiki](https://github.com/iservicebus/agentic-coworker/wiki)
 
 ---
 
-**Made with ❤️ by the Agentic Coworker Team**
+**Made with ❤️ by Jingnan Zhou**
