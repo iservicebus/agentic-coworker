@@ -19,7 +19,7 @@ from typing import Optional
 
 
 # Keycloak configuration
-AUTH_URL = "http://localhost:8888"
+AUTH_URL = "http://host.docker.internal:8888"
 
 
 TENANT = "default"
@@ -62,7 +62,8 @@ def get_auth_headers():
     # === Step 2: Send API request with token and client ID ===
     headers = {
         "Authorization": f"Bearer {access_token}",
-        "X-Agent-ID": AGENT_ID
+        "X-Agent-ID": AGENT_ID,
+        "X-Tenant": TENANT
     }
     return headers
 

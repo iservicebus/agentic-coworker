@@ -1,5 +1,5 @@
 # Stage 1: Builder
-FROM mcr.microsoft.com/playwright:v1.57.0-jammy AS builder
+FROM mcr.microsoft.com/playwright:v1.58.0-jammy AS builder
 
 WORKDIR /app
 
@@ -21,7 +21,7 @@ COPY src ./src
 RUN pip3 install --no-cache-dir -e .
 
 # Stage 2: Runner
-FROM mcr.microsoft.com/playwright:v1.57.0-jammy AS runner
+FROM mcr.microsoft.com/playwright:v1.58.0-jammy AS runner
 
 WORKDIR /app
 

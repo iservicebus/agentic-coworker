@@ -291,63 +291,6 @@ class BaseAgent:
         # Otherwise if there is, we continue
         else:
                 return "tools"
-        
-    async def build(self,
-                checkpointer: Optional[Checkpointer] = None,
-                store: Optional[BaseStore] = None,
-                interrupt_before: Optional[list[str]] = None,
-                interrupt_after: Optional[list[str]] = None,
-    
-                    ):
-
-        # Define a new graph
-        self.graph = StateGraph(
-            state_schema=self.state_schema or AgentState, context_schema=self.context_schema
-        )
-
-        # Define the two nodes we will cycle between
-        self.graph.add_node(
-            "llm",
-            self.call_model,
-        )
-        self.graph.add_node("tools", self.tool_node)
-
-        entrypoint = "llm"
-
-        # Set the entrypoint as `agent`
-        # This means that this node is the first one called
-        self.graph.set_entry_point(entrypoint)
-
-        agent_paths = []
-
-        agent_paths.append("tools")
-
-        # Add a structured output node if response_format is provided
-        if self.response_format is not None:
-            self.graph.add_node(
-                "generate_structured_response",
-                self.generate_structured_response,
-            )
-            agent_paths.append("generate_structured_response")
-        else:
-            agent_paths.append(END)
-
-        self.graph.add_conditional_edges(
-            "llm",
-            self.should_continue,
-            path_map=agent_paths,
-        )
-        self.graph.add_edge("tools", entrypoint)
-
-        self.graph=self.graph.compile(
-            checkpointer=checkpointer,
-            store=store,
-            interrupt_before=interrupt_before,
-            interrupt_after=interrupt_after,
-            debug=self.debug,
-            name=self.name,
-        )
-        return self
 
     from langgraph.typing import ContextT, InputT, OutputT, StateT
     from langgraph.types import (
@@ -409,3 +352,60 @@ class BaseAgent:
             durability=durability,
             **kwargs,
         )
+        
+    async def build(self,
+                checkpointer: Optional[Checkpointer] = None,
+                store: Optional[BaseStore] = None,
+                interrupt_before: Optional[list[str]] = None,
+                interrupt_after: Optional[list[str]] = None,
+    
+                    ):
+
+        # Define a new graph
+        self.graph = StateGraph(
+            state_schema=self.state_schema or AgentState, context_schema=self.context_schema
+        )
+
+        # Define the two nodes we will cycle between
+        self.graph.add_node(
+            "llm",
+            self.call_model,
+        )
+        self.graph.add_node("tools", self.tool_node)
+
+        entrypoint = "llm"
+
+        # Set the entrypoint as `agent`
+        # This means that this node is the first one called
+        self.graph.set_entry_point(entrypoint)
+
+        agent_paths = []
+
+        agent_paths.append("tools")
+
+        # Add a structured output node if response_format is provided
+        if self.response_format is not None:
+            self.graph.add_node(
+                "generate_structured_response",
+                self.generate_structured_response,
+            )
+            agent_paths.append("generate_structured_response")
+        else:
+            agent_paths.append(END)
+
+        self.graph.add_conditional_edges(
+            "llm",
+            self.should_continue,
+            path_map=agent_paths,
+        )
+        self.graph.add_edge("tools", entrypoint)
+
+        self.graph=self.graph.compile(
+            checkpointer=checkpointer,
+            store=store,
+            interrupt_before=interrupt_before,
+            interrupt_after=interrupt_after,
+            debug=self.debug,
+            name=self.name,
+        )
+        return self

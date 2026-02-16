@@ -129,6 +129,30 @@ async def favicon():
     # A more robust solution would serve an actual favicon file
     return Response(content='', media_type='image/x-icon', status_code=200)
 
+# Add health check endpoint for Docker container health monitoring
+@app.get('/health', include_in_schema=False)
+async def health_check():
+    """
+    Health check endpoint for Docker container monitoring.
+    Returns a simple status response to indicate the service is running.
+    """
+    return {"status": "healthy", "service": "support-services"}
+
+# Add root endpoint to handle Docker health checks and provide API info
+@app.get('/', include_in_schema=False)
+async def root():
+    """
+    Root endpoint that provides basic API information.
+    Useful for Docker health checks and quick service verification.
+    """
+    return {
+        "service": "Support Services API",
+        "status": "running",
+        "version": "1.0.0",
+        "docs": "/docs",
+        "health": "/health"
+    }
+
 if __name__ == "__main__":
     # Load environment variables using shared utility
     # This will automatically find the .env file or use a custom path

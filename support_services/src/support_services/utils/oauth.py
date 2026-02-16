@@ -28,7 +28,7 @@ def validate_token(request: Request):
     headers = dict(request.headers)
     auth_header = headers.get("Authorization".lower())
     client_id_header = headers.get("X-Agent-ID".lower())
-    tenant_name = headers.get("X-Tenant")
+    tenant_name = headers.get("X-Tenant".lower())
     return validate_auth(auth_header, client_id_header, tenant_name)
 
 

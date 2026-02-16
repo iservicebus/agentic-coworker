@@ -69,7 +69,7 @@ const DashboardPage: React.FC = () => {
     <Layout>
       <div className={styles.container}>
         <div className={styles.hero}>
-          <h1 className={styles.title}>AI Integration Readiness Dashboard</h1>
+          <h1 className={styles.title}>Agentic AI Readiness Dashboard</h1>
           <p className={styles.subtitle}>
             MCP Tool Availability Across Business Workflows
           </p>
