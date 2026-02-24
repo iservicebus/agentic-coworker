@@ -46,9 +46,9 @@
       "app_note": "https://api.stlouisfed.org"
     },
     {
-      "app_name": "dev341424service-nowcom",
+      "app_name": "dev181724service-nowcom",
       "tenant_name": "default",
-      "app_note": "https://dev341424.service-now.com"
+      "app_note": "https://dev181724.service-now.com"
     },
     {
       "app_name": "wwwgoogleapiscom",

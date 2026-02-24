@@ -72,8 +72,13 @@ def validate_agent_id(sess, payload, agent_id):
     if user_type=="agent" and username==agent_id:
         return True
     elif user_type=="human":
-
-        agents = get_agents_by_username(sess, username)
+        # Get user to extract tenant_name
+        user_obj = get_user_by_username(sess, username, "default")  # TODO: Get actual tenant from context
+        if not user_obj:
+            return False
+        
+        tenant_name = user_obj.tenant_name
+        agents = get_agents_by_username(sess, username, tenant_name)
         if not agents:
             return False
 

@@ -4034,7 +4034,7 @@
       "tool_type": "general"
     },
     {
-      "name": "search_github_commits",
+      "name": "",
       "description": "Retrieval tool for searching commits in version_control: finds commit records on a repository\u2019s default branch using keyword terms and GitHub search qualifiers, returning a paginated list of commit summaries (sha, author, committer, dates, message, URLs). Call when you need to locate commits by text or qualifiers and optionally sort by author-date or committer-date and paginate through results. Do not call when you need code content search, a single commit by SHA, or commits from a non-default branch; use a code search or a specific commit/branch listing tool instead. Requires: q string with keywords and qualifiers (e.g., repo:owner/name, author:username, committer:username); optional sort in ['author-date','committer-date'], optional order in ['asc','desc'] only when sort is set; per_page integer 1\u2013100 (default 30); page integer >=1 (default 1). Rules: searches only the default branch; if per_page > 100 it is capped at 100; if sort is omitted, order is ignored; combining keywords and qualifiers narrows results; operation is read-only and idempotent. Keywords: commit search, GitHub commits, repository default branch, search qualifiers, pagination, author-date sorting, committer-date sorting, version control.",
       "document": {
         "id": "8dee1381-d3d5-4e5f-bceb-c850853e0252",
@@ -7072,7 +7072,7 @@
         "id": "ff2d5ccb-5a2f-4428-8c5a-14b2f140a84f",
         "auth": null,
         "name": "post_servicenow_records_in_now_table",
-        "appName": "dev341424service-nowcom",
+        "appName": "dev181724service-nowcom",
         "tool_type": "general",
         "transport": "http",
         "description": "Create a servicenow record in existing table names, such as   incident \u2014 Contains incident records used for break/fix issues.\nproblem \u2014 Contains problem records used for root cause analysis.\nchange_request \u2014 Used to store change requests, including standard, normal, and emergency changes.\ntask \u2014 The parent table for all task-type records, including incidents, problems, and changes.\nsc_request \u2014 Represents a Service Catalog request (REQ), the container for requested items.\nsc_req_item \u2014 Represents individual Service Catalog request items (RITM) inside a request.\nsc_task \u2014 Tasks associated with catalog request items (e.g., approvals, fulfillment steps).\ncmdb_ci \u2014 The core table for all configuration items in the CMDB.\ncmdb_ci_server \u2014 Stores server CIs (physical, virtual, cloud).\ncmdb_ci_app \u2014 Stores application-related configuration items.\nsys_user \u2014 Stores user accounts and profile data.\nsys_user_group \u2014 Stores group definitions (e.g., support groups, assignment groups).\nsys_choice \u2014 Stores the selectable values (choices) for dropdown fields.\nsys_properties \u2014 Stores system-wide configuration properties.",
@@ -7124,7 +7124,7 @@
         "staticInput": {
           "url": {
             "host": [
-              "dev341424",
+              "dev181724",
               "service-now",
               "com"
             ],
@@ -8168,7 +8168,7 @@
         "id": "648b2378-8476-466f-8864-642cd0285947",
         "auth": null,
         "name": "get_servicenow_records_by_tableName",
-        "appName": "dev341424service-nowcom",
+        "appName": "dev181724service-nowcom",
         "tool_type": "general",
         "transport": "http",
         "description": "Retrieve records from  existing tables.\n\nincident \u2014 Contains incident records used for break/fix issues.\nproblem \u2014 Contains problem records used for root cause analysis.\nchange_request \u2014 Used to store change requests, including standard, normal, and emergency changes.\ntask \u2014 The parent table for all task-type records, including incidents, problems, and changes.\nsc_request \u2014 Represents a Service Catalog request (REQ), the container for requested items.\nsc_req_item \u2014 Represents individual Service Catalog request items (RITM) inside a request.\nsc_task \u2014 Tasks associated with catalog request items (e.g., approvals, fulfillment steps).\ncmdb_ci \u2014 The core table for all configuration items in the CMDB.\ncmdb_ci_server \u2014 Stores server CIs (physical, virtual, cloud).\ncmdb_ci_app \u2014 Stores application-related configuration items.\nsys_user \u2014 Stores user accounts and profile data.\nsys_user_group \u2014 Stores group definitions (e.g., support groups, assignment groups).\nsys_choice \u2014 Stores the selectable values (choices) for dropdown fields.\nsys_properties \u2014 Stores system-wide configuration properties.",
@@ -8228,7 +8228,7 @@
         "staticInput": {
           "url": {
             "host": [
-              "dev341424",
+              "dev181724",
               "service-now",
               "com"
             ],
@@ -8273,7 +8273,7 @@
         "id": "89edd85f-cf95-4a4d-a15a-6405bc5a429f",
         "auth": null,
         "name": "update_servicenow_record_in_table_by_id",
-        "appName": "dev341424service-nowcom",
+        "appName": "dev181724service-nowcom",
         "tool_type": "general",
         "transport": "http",
         "description": "Modify a servicenow record in table by sys-id ",
@@ -8333,7 +8333,7 @@
         "staticInput": {
           "url": {
             "host": [
-              "dev341424",
+              "dev181724",
               "service-now",
               "com"
             ],
@@ -8382,7 +8382,7 @@
         "id": "bbc7944b-7cd5-46bb-a65a-8096810d87e1",
         "auth": null,
         "name": "get_servicenow_records_in_table_by_id",
-        "appName": "dev341424service-nowcom",
+        "appName": "dev181724service-nowcom",
         "tool_type": "general",
         "transport": "http",
         "description": "Retrieve a servicenow record for specific record id or sys_id in recorded ",
@@ -8432,7 +8432,7 @@
         "staticInput": {
           "url": {
             "host": [
-              "dev341424",
+              "dev181724",
               "service-now",
               "com"
             ],
@@ -9063,7 +9063,7 @@
         "id": "a035d537-8211-4528-9aa2-8f8c315a735f",
         "auth": null,
         "name": "delete_servicenow_record_in_table_by_sys_id",
-        "appName": "dev296096service-nowcom",
+        "appName": "dev181724service-nowcom",
         "tool_type": "general",
         "transport": "http",
         "description": "Delete a servicenow record in table by using record id or sys id",
@@ -9101,7 +9101,7 @@
         "staticInput": {
           "url": {
             "host": [
-              "dev296096",
+              "dev181724",
               "service-now",
               "com"
             ],
