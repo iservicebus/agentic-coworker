@@ -1333,7 +1333,7 @@ def delete_agent_by_user(
         raise HTTPException(status_code=404, detail=f"Tenant '{tenant_name}' not found")
     
     # Check if the authenticated user is an administrator
-    is_admin = is_admin_user(db, user)
+    is_admin = is_admin_user(db, user, tenant_name)
     
     # Get authenticated username
     authenticated_username = user.get("preferred_username")

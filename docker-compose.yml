@@ -145,9 +145,20 @@ services:
     entrypoint: ["/bin/sh", "-c"]
     command:
       - |
-        echo "Waiting for Keycloak to be ready..."
+        echo "Checking if Keycloak is already configured..."
         sleep 10
-        echo "Configuring Keycloak admin credentials..."
+
+        # Try to authenticate - if successful, Keycloak is already configured
+        if /opt/keycloak/bin/kcadm.sh config credentials --server http://keycloak:8080 --realm master --user admin --password admin 2>/dev/null; then
+            # Check if SSL is already disabled
+            SSL_REQUIRED=$$(/opt/keycloak/bin/kcadm.sh get realms/master --fields sslRequired 2>/dev/null | grep -o '"sslRequired" : "[^"]*"' | cut -d'"' -f4)
+            if [ "$$SSL_REQUIRED" = "none" ] || [ "$$SSL_REQUIRED" = "NONE" ]; then
+                echo "Keycloak already configured, skipping initialization..."
+                exit 0
+            fi
+        fi
+
+        echo "Configuring Keycloak..."
         /opt/keycloak/bin/kcadm.sh config credentials --server http://keycloak:8080 --realm master --user admin --password admin
         echo "Disabling SSL requirement for master realm..."
         /opt/keycloak/bin/kcadm.sh update realms/master -s sslRequired=none
@@ -163,7 +174,34 @@ services:
   db-init:
     image: ghcr.io/jingnanzhou/agent-ops:latest
     container_name: db-init
-    command: init-defaults
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - |
+        # Check if database is already initialized by checking for tenants table
+        if python3 -c "
+        from integrator.utils.env import load_env
+        load_env()
+        from integrator.utils.db import get_db_cm
+        from sqlalchemy import text
+        import sys
+
+        try:
+            with get_db_cm() as session:
+                result = session.execute(text('SELECT COUNT(*) FROM tenants')).scalar()
+                if result is not None:
+                    print('Database already initialized (tenants table exists), skipping initialization...')
+                    sys.exit(0)
+                else:
+                    sys.exit(1)
+        except Exception:
+            # Table doesn't exist, need to initialize
+            sys.exit(1)
+        "; then
+            echo "Skipping initialization - database already initialized"
+        else
+            echo "Running database initialization..."
+            python3 -m agent_ops init-defaults
+        fi
     networks:
       - aintegrator-backend
     volumes:

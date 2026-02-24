@@ -425,12 +425,12 @@ def get_roles_by_agent_id(sess, agent_id, tenant_name):
     return roles
 
 
-def is_admin_user(sess, user:dict, admin_role: str="administrator"):
+def is_admin_user(sess, user:dict, tenant_name:str, admin_role: str="administrator"):
     """
     get the working agent for the current user.
     """
     username = user["preferred_username"]
-    roles =get_roles_by_username(sess,username)
+    roles =get_roles_by_username(sess,username, tenant_name)
     admin = next((role for role in roles if role.name == admin_role), None)
     if admin:
         return True
@@ -801,7 +801,6 @@ def main():
 
     with get_db_cm() as sess:
 
-        role=is_admin_user(sess, {"preferred_username":"agent-user"})
         for tenant_data in iam_config.get("tenants", []):
             tenant_name = tenant_data.get("name")
             if not tenant_name:
